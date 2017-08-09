@@ -1,0 +1,32 @@
+/*Starts amcharts css*/
+#linechartdiv {
+    width: 100%;
+    height: 550px;
+}
+
+#piechartdiv {
+    width		: 100%;
+    height	: 500px;
+    font-size	: 11px;
+}
+
+.amcharts-chart-div a{
+    display:none !important;
+}
+
+.blue .amcharts-pie-slice {
+    fill: #63abf3;
+}
+
+.green .amcharts-pie-slice {
+    fill: #6ce9a5;
+}
+
+.red .amcharts-pie-slice {
+    fill: #f57a7d;
+}
+
+.orange .amcharts-pie-slice {
+    fill: #f2d380;
+}
+/*End amcharts css*/

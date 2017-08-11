@@ -16,8 +16,8 @@ class CreatePagesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->text('content');
-            $table->string('status');
+            $table->longtext('content');
+            $table->integer('status')->default(1);
             $table->string('url');
             $table->string('title');
             $table->integer('page_menu_order');

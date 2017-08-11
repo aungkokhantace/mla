@@ -74,7 +74,7 @@ class CreateCoreTable extends Migration
 
             $table->string('country',2)->default('');
             $table->string('language',10)->default('en');
-            $table->integer('status')->default(1);;
+            $table->integer('status')->default(1);
             $table->dateTime('last_activity')->nullable();
             $table->rememberToken();
 

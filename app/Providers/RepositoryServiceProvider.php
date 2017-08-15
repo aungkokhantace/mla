@@ -35,5 +35,10 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind('App\Backend\Country\CountryRepositoryInterface','App\Backend\Country\CountryRepository');
         $this->app->bind('App\Backend\City\CityRepositoryInterface','App\Backend\City\CityRepository');
         $this->app->bind('App\Backend\Township\TownshipRepositoryInterface','App\Backend\Township\TownshipRepository');
+
+        $this->app->bind('App\Backend\Page\PageRepositoryInterface','App\Backend\Page\PageRepository');
+        $this->app->bind('App\Backend\Post\PostRepositoryInterface','App\Backend\Post\PostRepository');
+        $this->app->bind('App\Backend\Event\EventRepositoryInterface','App\Backend\Event\EventRepository');
+        $this->app->bind('App\Backend\Template\TemplateRepositoryInterface','App\Backend\Template\TemplateRepository');
     }
 }

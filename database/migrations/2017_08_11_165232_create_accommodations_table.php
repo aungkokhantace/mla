@@ -15,8 +15,8 @@ class CreateAccommodationsTable extends Migration
          Schema::create('accommodations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name,50');
-            $table->string('description,255');
-            $table->string('image,255');
+            $table->string('description',255);
+            $table->string('image',255);
             $table->integer('stars')->default(1);
             $table->integer('status')->default(1);
 

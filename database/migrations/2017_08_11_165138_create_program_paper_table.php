@@ -14,12 +14,12 @@ class CreateProgramPaperTable extends Migration
     {
          Schema::create('program_paper', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('first_author,255');
-            $table->string('email,50');
+            $table->string('first_author',255);
+            $table->string('email',50);
             $table->string('address',255);
-            $table->string('second_author,255');
-            $table->string('third_author,255');
-            $table->string('abstract,255');
+            $table->string('second_author',255);
+            $table->string('third_author',255);
+            $table->string('abstract',255);
             $table->integer('status')->default(1);
 
             //common to all tables...

@@ -20,6 +20,44 @@
                 </ul>
             </li>
 
+            <li class="nav-header">Backend</li>
+            <li nav-id='report'  class="has-sub" >
+                <a href="javascript:;">
+                    <b class="caret pull-right"></b>
+                    <i class="fa fa-calendar"></i>
+                    <span>Setup</span>
+                </a>
+
+                <ul class="sub-menu">
+                     @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
+                    <li nav-id="modifier-create" class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret pull-right"></b>
+                            <span>Page</span>
+                        </a>
+
+                        <ul class="sub-menu">
+                            <li nav-id="modifier-create-modifier"><a href="/backend/page/create">Entry</a></li>
+                            <li nav-id="modifier-create-modifierpanel"><a href="/backend/page">List</a></li>
+                        </ul>
+                    </li>
+                    @endif
+
+                    @if(Auth::guard('User')->user()->role_id == '1')
+                    <li nav-id="modifier-create" class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret pull-right"></b>
+                            <span>Post</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li nav-id="modifier-create-modifier"><a href="/backend/post/create">Entry</a></li>
+                            <li nav-id="modifier-create-modifierpanel"><a href="/backend/post">List</a></li>
+                        </ul>
+                    </li>
+                    @endif
+                </ul>
+            </li>
+
 
             <li class="nav-header">AcePlus Backend</li>
 

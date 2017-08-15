@@ -94,6 +94,20 @@ Route::group(['middleware' => 'web'], function () {
             Route::post('township/update', array('as'=>'backend/township/update', 'uses'=>'Backend\TownshipController@update'));
             Route::post('township/destroy', array('as'=>'backend/township/destroy', 'uses'=>'Backend\TownshipController@destroy'));
 
+            Route::get('page', array('as'=>'backend/page','uses'=>'Backend\PageController@index'));
+            Route::get('page/create',  array('as'=>'backend/page/create','uses'=>'Backend\PageController@create'));
+            Route::post('page/store', array('as'=>'backend/page/store','uses'=>'Backend\PageController@store'));
+            Route::get('page/edit/{id}',  array('as'=>'backend/page/edit','uses'=>'Backend\PageController@edit'));
+            Route::post('page/update',  array('as'=>'backend/page/update','uses'=>'Backend\PageController@update'));
+            Route::post('page/destroy',  array('as'=>'backend/page/destroy','uses'=>'Backend\PageController@destroy'));
+            
+            //Post
+            Route::get('post', array('as'=>'backend/post','uses'=>'Backend\PostController@index'));
+            Route::get('post/create', array('as'=>'backend/post/create','uses'=>'Backend\PostController@create'));
+            Route::get('post/edit/{id}', array('as'=>'backend/post/edit','uses'=>'Backend\PostController@edit'));
+            Route::post('post/store', array('as'=>'backend/post/store','uses'=>'Backend\PostController@store'));
+            Route::post('post/update', array('as'=>'backend/post/update','uses'=>'Backend\PostController@update'));
+            Route::post('post/destroy', array('as'=>'backend/post/destroy','uses'=>'Backend\PostController@destroy'));
         });
 
     });

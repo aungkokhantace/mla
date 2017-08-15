@@ -14,8 +14,8 @@ class CreateImageGalleryTable extends Migration
     {
         Schema::create('image_gallery', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name,50');
-            $table->string('path,255');
+            $table->string('name',50);
+            $table->string('path',255);
             $table->integer('status')->default(1);
 
             //common to all tables...

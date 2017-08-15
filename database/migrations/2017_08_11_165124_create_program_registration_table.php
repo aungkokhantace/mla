@@ -15,12 +15,12 @@ class CreateProgramRegistrationTable extends Migration
          Schema::create('program_registration', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title',50);
-            $table->string('first_name,50');
-            $table->string('last_name,50');
-            $table->string('organisation,255');
+            $table->string('first_name',50);
+            $table->string('last_name',50);
+            $table->string('organisation',255);
             $table->string('email,50');
             $table->integer('country_id');
-            $table->string('phone,50');
+            $table->string('phone',50);
             $table->integer('registration_category_id');            
             $table->integer('payment_type_id');
             $table->integer('status')->default(1);

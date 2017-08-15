@@ -89,6 +89,22 @@ class Default_PermissionSeeder extends Seeder
             ['id'=>74,'module'=>'Township','name'=>'Update','description'=>'Township Update','url'=>'backend/township/update'],
             ['id'=>75,'module'=>'Township','name'=>'Destroy','description'=>'Township Destroy','url'=>'backend/township/destroy'],
 
+            // Pages
+            ['id'=>80,'module'=>'Page','name'=>'Listing','description'=>'Page Listing','url'=>'backend/page'],
+            ['id'=>81,'module'=>'Page','name'=>'New','description'=>'Page New','url'=>'backend/page/create'],
+            ['id'=>82,'module'=>'Page','name'=>'Store','description'=>'Page Store','url'=>'backend/page/store'],
+            ['id'=>83,'module'=>'Page','name'=>'Edit','description'=>'Page Edit','url'=>'backend/page/edit'],
+            ['id'=>84,'module'=>'Page','name'=>'Update','description'=>'Page Update','url'=>'backend/page/update'],
+            ['id'=>85,'module'=>'Page','name'=>'Destroy','description'=>'Page Destroy','url'=>'backend/page/destroy'],
+
+             //Post
+            ['id'=>90,'module'=>'Post','name'=>'Listing','description'=>'Post Listing','url'=>'backend/post'],
+            ['id'=>91,'module'=>'Post','name'=>'Create','description'=>'Post Create','url'=>'backend/post/create'],
+            ['id'=>92,'module'=>'Post','name'=>'Store','description'=>'Post Store','url'=>'backend/post/store'],
+            ['id'=>93,'module'=>'Post','name'=>'Edit','description'=>'Post Edit','url'=>'backend/post/edit'],
+            ['id'=>94,'module'=>'Post','name'=>'Update','description'=>'Post Update','url'=>'backend/post/update'],
+            ['id'=>95,'module'=>'Post','name'=>'Destroy','description'=>'Post Destroy','url'=>'backend/post/destroy'],
+
         );
 
         DB::table('core_permissions')->insert($permissions);

@@ -1,0 +1,6 @@
+@include('layouts.partial.header_frontend')
+@yield('script')
+@yield('page_script')
+@yield('content')
+@include('layouts.partial.footer_frontend')
+@include('sweet::alert')

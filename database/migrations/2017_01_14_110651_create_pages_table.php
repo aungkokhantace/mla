@@ -16,13 +16,14 @@ class CreatePagesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->longtext('content');
-            $table->integer('status')->default(1);
-            $table->string('url');
+            $table->text('content');
+            $table->string('status');
+            $table->string('url')->unique();
             $table->string('title');
             $table->integer('page_menu_order');
-            $table->integer('events_id');
-            $table->integer('templates_id');
+            $table->integer('events_id')->nullable();
+            $table->integer('templates_id')->nullable();
+            $table->tinyInteger('allow_edit');
 
             //Common to all table ----------------------------------------------
             $table->string('created_by',100)->nullable();

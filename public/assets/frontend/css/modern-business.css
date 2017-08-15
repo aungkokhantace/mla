@@ -1,0 +1,385 @@
+/*!
+ * Start Bootstrap - Modern Business (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+    font-family:verdana;
+}
+
+body {
+    /*padding-top: 50px; *//* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/*Sidebar Page*/
+div.sidebar-page 
+{
+    margin-bottom:150px;
+}
+.sidebar-page h2
+{
+    color:#3f5ba5;
+    font-size:16pt;
+}
+/* Home Page Carousel */
+
+header.carousel {
+    height: 50%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+.fa-facebook-square:before
+{
+    font-size:15pt;
+}
+
+.fa-twitter-square:before
+{
+    font-size:15pt;
+}
+
+
+/*Header*/
+.navbar-inverse .navbar-nav>li>a:hover
+{
+    text-decoration:underline;
+}
+
+a.active
+{
+    text-decoration:underline;
+}
+
+a.active-sub
+{
+    background-color: #334994;
+}
+
+/*my home page*/
+header.my-carousel
+{
+    margin-bottom:30px;
+}
+
+.home-left h2,.home-right h2,.home-bottom h2,.p-topic h2,.poster h2,.reg_fee_payment h2,
+.letter_invitation h2,.visa_requirement h2,.sponsor h2,.exhibit h2
+{
+    color:#3f5ba5;
+    font-size:16pt;
+    margin-top:0px;
+    margin-bottom:20px;
+}
+
+h2.gallery
+{
+   color:#3f5ba5;
+    font-size:16pt;
+    margin-top:0px; 
+    margin-bottom:20px;
+    text-align:left;
+}
+
+.home-bottom h2{
+    text-align:center;
+}
+
+.home-left img
+{
+    margin:0 auto;
+}
+
+.home-right .panel-body img
+{
+    float:left;
+    margin-right:10px;
+}
+
+p.date{
+    color:#3f5ba5;
+}
+
+a.btn.btn-success.btn-custom
+{
+    border-radius:20px;
+    background-color:#8fd43b;
+    color:#FFF;
+}
+
+.home-bottom div h3
+{
+    font-size:10pt;
+    color:#343434;
+    margin-bottom:-10px;
+    font-weight:bold;
+}
+
+footer
+{
+    background-color:#3f5ba5;
+    margin:30px 0 0 0;
+    color:#fff;
+}
+
+footer p
+{
+    padding: 20px 0 20px 0;
+    margin:0px;
+    font-size:10pt;
+}
+
+nav.navbar.navbar-inverse
+{
+    background-color: #3f5ba5;
+    color:#FFF;
+    font-size:10pt;
+    border-color:#3f5ba5;
+    margin-bottom:0px;
+    border-radius:0px;
+}
+.navbar-inverse .navbar-nav>li>a
+{
+    color:#FFF;
+}
+.nav>li>a
+{
+    padding:13px 12px;
+}
+section.head-top img
+{
+    margin:15px 0;
+    max-height:100px;
+}
+div.input-group
+{
+    margin-top:76px;
+}
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group
+{
+    background-color:#3f5ba5;
+    color:#FFF;
+}
+
+/*Contact Us*/
+div.contact
+{
+    margin-bottom:150px;
+}
+
+/*Sidebar*/
+.list-group-item
+{
+    background-color: #405aa5;
+}
+
+a.list-group-item, button.list-group-item
+{
+    color:#FFF;
+}
+
+a.list-group-item:hover
+{
+    background-color: #334994;
+    color:#fff;
+}
+
+/*.list-group-item.active{
+    z-index: 0;
+    color: #fff;
+    background-color: #334994;
+     border-color: #334994; 
+}
+*/
+.list-group-item:first-child
+{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;       
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.p-topic h2
+{
+    margin-bottom:20px;
+}
+ul.p-list
+{
+    line-height: 30px;
+    margin-bottom:130px;
+}
+
+/*Poster Sessions*/
+.poster h2 
+{
+    margin:0 0 40px 0;
+}
+
+.poster
+{
+    margin-bottom:170px;
+}
+
+.form-horizontal .control-label
+{
+    text-align:left;
+}
+
+.form-control
+{
+    border-radius:0px;
+    width:auto;
+    height:34px;
+}
+
+textarea.form-control
+{
+    width:128%;
+    height:auto;
+}
+
+.btn-primary
+{
+    border-radius:0px;
+}
+
+/*Call for Paper*/    
+.call_for_paper input.form-control
+{
+    width:128%;
+}
+
+.call_for_paper textarea.form-control
+{
+    height:80px;
+}
+
+.paper h4
+{
+    margin-top:20px;
+}
+
+/*Registration Fees and Payments*/
+.reg_fee_payment
+{
+    margin-bottom: 170px;
+}
+
+/*Visa Registration*/
+.visa_requirement
+{
+    margin-bottom:170px;
+}
+
+/*Sponsor Supporter*/
+.sponsor h3
+{
+font-size:13pt;
+margin-bottom:-10px;
+}
+
+/* Responsive Styles */
+@media (min-width: 350px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+    header.carousel .carousel {
+        height: 70%;
+    }
+     a.btn.btn-success.btn-custom
+    {
+        margin-bottom:20px;
+    }
+    .home-right h2
+   {
+    text-align:center;
+   }
+   .home-left h2
+   {
+    margin-top:10px;
+   }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  a.btn.btn-success.btn-custom
+  {
+    margin-bottom:20px;
+  }
+  .home-right h2
+  {
+    text-align:center;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 992px;
+  }
+}

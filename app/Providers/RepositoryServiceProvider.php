@@ -40,5 +40,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind('App\Backend\Post\PostRepositoryInterface','App\Backend\Post\PostRepository');
         $this->app->bind('App\Backend\Event\EventRepositoryInterface','App\Backend\Event\EventRepository');
         $this->app->bind('App\Backend\Template\TemplateRepositoryInterface','App\Backend\Template\TemplateRepository');
+        $this->app->bind('App\Backend\GalleryImage\ImageGalleryRepositoryInterface','App\Backend\GalleryImage\ImageGalleryRepository');
+        $this->app->bind('App\Backend\LatestNew\LatestNewRepositoryInterface','App\Backend\LatestNew\LatestNewRepository');
+        $this->app->bind('App\Backend\PostConferenceTravel\PostConferenceTravelRepositoryInterface','App\Backend\PostConferenceTravel\PostConferenceTravelRepository');
+        $this->app->bind('App\Backend\LibraryCulture\LibraryCultureRepositoryInterface','App\Backend\LibraryCulture\LibraryCultureRepository');
+        $this->app->bind('App\Backend\Accommodation\AccommodationRepositoryInterface','App\Backend\Accommodation\AccommodationRepository');
+
     }
 }

@@ -55,6 +55,66 @@
                         </ul>
                     </li>
                     @endif
+                         @if(Auth::guard('User')->user()->role_id == '1')
+                             <li nav-id="modifier-create" class="has-sub">
+                                 <a href="javascript:;">
+                                     <b class="caret pull-right"></b>
+                                     <span>Latest New</span>
+                                 </a>
+                                 <ul class="sub-menu">
+                                     <li nav-id="modifier-create-modifier"><a href="/backend/latest_new/create">Entry</a></li>
+                                     <li nav-id="modifier-create-modifierpanel"><a href="/backend/latest_new">List</a></li>
+                                 </ul>
+                             </li>
+                         @endif
+                         @if(Auth::guard('User')->user()->role_id == '1')
+                             <li nav-id="modifier-create" class="has-sub">
+                                 <a href="javascript:;">
+                                     <b class="caret pull-right"></b>
+                                     <span>Image Gallery</span>
+                                 </a>
+                                 <ul class="sub-menu">
+                                     <li nav-id="modifier-create-modifier"><a href="/backend/image_gallery/create">Entry</a></li>
+                                     <li nav-id="modifier-create-modifierpanel"><a href="/backend/image_gallery">List</a></li>
+                                 </ul>
+                             </li>
+                         @endif
+                         @if(Auth::guard('User')->user()->role_id == '1')
+                             <li nav-id="modifier-create" class="has-sub">
+                                 <a href="javascript:;">
+                                     <b class="caret pull-right"></b>
+                                     <span>Post Conference Travel</span>
+                                 </a>
+                                 <ul class="sub-menu">
+                                     <li nav-id="modifier-create-modifier"><a href="/backend/post_conference_travel/create">Entry</a></li>
+                                     <li nav-id="modifier-create-modifierpanel"><a href="/backend/post_conference_travel">List</a></li>
+                                 </ul>
+                             </li>
+                         @endif
+                         @if(Auth::guard('User')->user()->role_id == '1')
+                             <li nav-id="modifier-create" class="has-sub">
+                                 <a href="javascript:;">
+                                     <b class="caret pull-right"></b>
+                                     <span>Library & Culture Visit</span>
+                                 </a>
+                                 <ul class="sub-menu">
+                                     <li nav-id="modifier-create-modifier"><a href="/backend/library_culture/create">Entry</a></li>
+                                     <li nav-id="modifier-create-modifierpanel"><a href="/backend/library_culture">List</a></li>
+                                 </ul>
+                             </li>
+                         @endif
+                         @if(Auth::guard('User')->user()->role_id == '1')
+                             <li nav-id="modifier-create" class="has-sub">
+                                 <a href="javascript:;">
+                                     <b class="caret pull-right"></b>
+                                     <span>Accommodation</span>
+                                 </a>
+                                 <ul class="sub-menu">
+                                     <li nav-id="modifier-create-modifier"><a href="/backend/accommodation/create">Entry</a></li>
+                                     <li nav-id="modifier-create-modifierpanel"><a href="/backend/accommodation">List</a></li>
+                                 </ul>
+                             </li>
+                         @endif
                 </ul>
             </li>
 

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccommodationsTable extends Migration
+class CreateLibraryCulturesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,10 @@ class CreateAccommodationsTable extends Migration
      */
     public function up()
     {
-         Schema::create('accommodations', function (Blueprint $table) {
+        Schema::create('library_cultures', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name,50');
-            $table->string('description',255);
-            $table->string('image',255);
-            $table->integer('stars')->default(1);
+            $table->string('name',50);
+            $table->string('image',225);
             $table->integer('status')->default(1);
 
             //common to all tables...
@@ -36,6 +34,6 @@ class CreateAccommodationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('accommodations');
+        Schema::drop('library_cultures');
     }
 }

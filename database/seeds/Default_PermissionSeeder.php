@@ -105,6 +105,45 @@ class Default_PermissionSeeder extends Seeder
             ['id'=>94,'module'=>'Post','name'=>'Update','description'=>'Post Update','url'=>'backend/post/update'],
             ['id'=>95,'module'=>'Post','name'=>'Destroy','description'=>'Post Destroy','url'=>'backend/post/destroy'],
 
+            //ImageGallery
+            ['id'=>100,'module'=>'ImageGallery','name'=>'Listing','description'=>'ImageGallery Listing','url'=>'backend/image_gallery'],
+            ['id'=>101,'module'=>'ImageGallery','name'=>'Create','description'=>'ImageGallery Create','url'=>'backend/image_gallery/create'],
+            ['id'=>102,'module'=>'ImageGallery','name'=>'Store','description'=>'ImageGallery Store','url'=>'backend/image_gallery/store'],
+            ['id'=>103,'module'=>'ImageGallery','name'=>'Edit','description'=>'ImageGallery Edit','url'=>'backend/image_gallery/edit'],
+            ['id'=>104,'module'=>'ImageGallery','name'=>'Update','description'=>'ImageGallery Update','url'=>'backend/image_gallery/update'],
+            ['id'=>105,'module'=>'ImageGallery','name'=>'Destroy','description'=>'ImageGallery Destroy','url'=>'backend/image_gallery/destroy'],
+
+            //Latest New
+            ['id'=>110,'module'=>'LatestNew','name'=>'Listing','description'=>'LatestNew Listing','url'=>'backend/latest_new'],
+            ['id'=>111,'module'=>'LatestNew','name'=>'Create','description'=>'LatestNew Create','url'=>'backend/latest_new/create'],
+            ['id'=>112,'module'=>'LatestNew','name'=>'Store','description'=>'LatestNew Store','url'=>'backend/latest_new/store'],
+            ['id'=>113,'module'=>'LatestNew','name'=>'Edit','description'=>'LatestNew Edit','url'=>'backend/latest_new/edit'],
+            ['id'=>114,'module'=>'LatestNew','name'=>'Update','description'=>'LatestNew Update','url'=>'backend/latest_new/update'],
+            ['id'=>115,'module'=>'LatestNew','name'=>'Destroy','description'=>'LatestNew Destroy','url'=>'backend/latest_new/destroy'],
+
+            //Post Conference Travel
+            ['id'=>120,'module'=>'PostConferenceTravel','name'=>'Listing','description'=>'PostConferenceTravel Listing','url'=>'backend/post_conference_travel'],
+            ['id'=>121,'module'=>'PostConferenceTravel','name'=>'Create','description'=>'PostConferenceTravel Create','url'=>'backend/post_conference_travel/create'],
+            ['id'=>122,'module'=>'PostConferenceTravel','name'=>'Store','description'=>'PostConferenceTravel Store','url'=>'backend/post_conference_travel/store'],
+            ['id'=>123,'module'=>'PostConferenceTravel','name'=>'Edit','description'=>'PostConferenceTravel Edit','url'=>'backend/post_conference_travel/edit'],
+            ['id'=>124,'module'=>'PostConferenceTravel','name'=>'Update','description'=>'PostConferenceTravel Update','url'=>'backend/post_conference_travel/update'],
+            ['id'=>125,'module'=>'PostConferenceTravel','name'=>'Destroy','description'=>'PostConferenceTravel Destroy','url'=>'backend/post_conference_travel/destroy'],
+
+            //Library Culture
+            ['id'=>130,'module'=>'LibraryCulture','name'=>'Listing','description'=>'LibraryCulture Listing','url'=>'backend/library_culture'],
+            ['id'=>131,'module'=>'LibraryCulture','name'=>'Create','description'=>'LibraryCulture Create','url'=>'backend/library_culture/create'],
+            ['id'=>132,'module'=>'LibraryCulture','name'=>'Store','description'=>'LibraryCulture Store','url'=>'backend/library_culture/store'],
+            ['id'=>133,'module'=>'LibraryCulture','name'=>'Edit','description'=>'LibraryCulture Edit','url'=>'backend/library_culture/edit'],
+            ['id'=>134,'module'=>'LibraryCulture','name'=>'Update','description'=>'LibraryCulture Update','url'=>'backend/library_culture/update'],
+            ['id'=>135,'module'=>'LibraryCulture','name'=>'Destroy','description'=>'LibraryCulture Destroy','url'=>'backend/library_culture/destroy'],
+
+            //Accommodation
+            ['id'=>140,'module'=>'Accommodation','name'=>'Listing','description'=>'Accommodation Listing','url'=>'backend/accommodation'],
+            ['id'=>141,'module'=>'Accommodation','name'=>'Create','description'=>'Accommodation Create','url'=>'backend/accommodation/create'],
+            ['id'=>142,'module'=>'Accommodation','name'=>'Store','description'=>'Accommodation Store','url'=>'backend/accommodation/store'],
+            ['id'=>143,'module'=>'Accommodation','name'=>'Edit','description'=>'Accommodation Edit','url'=>'backend/accommodation/edit'],
+            ['id'=>144,'module'=>'Accommodation','name'=>'Update','description'=>'Accommodation Update','url'=>'backend/accommodation/update'],
+            ['id'=>145,'module'=>'Accommodation','name'=>'Destroy','description'=>'Accommodation Destroy','url'=>'backend/accommodation/destroy'],
         );
 
         DB::table('core_permissions')->insert($permissions);

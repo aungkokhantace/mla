@@ -13,7 +13,11 @@ class PageEntryRequest extends Request
      */
     public function authorize()
     {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> heinkhantlin
     }
 
     /**
@@ -32,7 +36,10 @@ class PageEntryRequest extends Request
             "templates_id"      =>"required",
         ];
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> heinkhantlin
     public function messages(){
         return [
             "name.required"             => "Page Name is required",

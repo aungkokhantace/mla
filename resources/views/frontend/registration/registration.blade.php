@@ -1,105 +1,7 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Modern Business - Start Bootstrap Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-    <section class="head-top">
-       <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-            <img src="images/head1.jpg" class="img-responsive">
-            </div>
-            <div class="col-md-3">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="SEARCH">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                    </span>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html" class="active">HOME</a>
-                    </li>
-                    <li>
-                        <a href="program_topic.html">PROGRAM</a>
-                    </li>
-                    <li>
-                        <a href="conference_registration_form.html">REGISTRATION</a>
-                    </li>
-                    <li>
-                        <a href="sponsor_supporter.html">EXHIBITION & SPONSORSHIP</a>
-                    </li>
-                    <li>
-                        <a href="post_conference_travel.html">TRAVEL & ACCOMMODATION</a>
-                    </li>
-                    <li>
-                        <a href="gallery.html">GALLERY</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">CONTACT US</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Header Carousel -->
-    <header class="my-carousel">
-                <img src="images/slide1.jpg" class="img-responsive">
-    </header>
-
-
-
-    <!-- Page Content -->
+@extends('layouts.master_frontend')
+@section('title','Dashboard')
+@section('content')
+    <!-- Page Content-->
     <div class="container">
 
         <div class="row">
@@ -114,14 +16,20 @@
             </div>
             <div class="col-md-9 reg_fee_payment">
              <h2>PROGRAM >> CONFERENCE REGISTRATION FORM</h2>
-             <form class="form-horizontal">
+                @if(Session::has('message'))
+                    <div class="col-md-8 well bg-success">
+                        {{Session::get('message')['body']}}
+                    </div>
+                @endif
+             <form class="form-horizontal" method="post" action="{{url('registration/store')}}" id="reg_form">
+                 {{csrf_field()}}
                 <fieldset>
-
                 <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">First Name</label>  
                   <div class="col-md-4">
-                  <input id="first_name" name="first_name" type="text" placeholder="" class="form-control input-md">
+                  <input id="first_name" name="first_name" type="text" placeholder="Enter Your First Name" class="form-control input-md">
+                      <p class="text-danger">{{$errors->first('first_name')}}</p>
                   </div>
                 </div>
 
@@ -129,7 +37,8 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Middle Name</label>  
                   <div class="col-md-4">
-                  <input id="middle_name" name="middle_name" type="text" placeholder="" class="form-control input-md">
+                  <input id="middle_name" name="middle_name" type="text" placeholder="Enter Your Middle Name" class="form-control input-md">
+                      <p class="text-danger">{{$errors->first('middle_name')}}</p>
                   </div>
                 </div>
 
@@ -137,7 +46,8 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Last Name</label>  
                   <div class="col-md-4">
-                  <input id="last_name" name="last_name" type="text" placeholder="" class="form-control input-md">
+                  <input id="last_name" name="last_name" type="text" placeholder="Enter Your Last Name" class="form-control input-md">
+                      <p class="text-danger">{{$errors->first('last_name')}}</p>
                   </div>
                 </div>
 
@@ -145,7 +55,8 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Organization</label>  
                   <div class="col-md-4">
-                  <input id="organization" name="organization" type="text" placeholder="" class="form-control input-md">
+                  <input id="organization" name="organization" type="text" placeholder="Enter Your Organization" class="form-control input-md">
+                      <p class="text-danger">{{$errors->first('organization')}}</p>
                   </div>
                 </div>
 
@@ -153,7 +64,8 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Email</label>  
                   <div class="col-md-4">
-                  <input id="email" name="email" type="email" placeholder="" class="form-control input-md">
+                  <input id="email" name="email" type="email" placeholder="Enter Your Email" class="form-control input-md">
+                      <p class="text-danger">{{$errors->first('email')}}</p>
                   </div>
                 </div>
 
@@ -162,9 +74,12 @@
                   <label class="col-md-4 control-label" for="selectbasic">Country</label>
                   <div class="col-md-4">
                     <select id="country" name="country" class="form-control select_custom">
-                      <option value="1">Option one</option>
-                      <option value="2">Option two</option>
+                        <option value="" selected disabled>Select Country</option>
+                        @foreach($countries as $country)
+                            <option value="{{$country->id}}">{{$country->name}}</option>
+                            @endforeach
                     </select>
+                      <p class="text-danger">{{$errors->first('country')}}</p>
                   </div>
                 </div>
 
@@ -172,7 +87,8 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Phone No</label>  
                   <div class="col-md-4">
-                  <input id="phone_no" name="phone_no" type="text" placeholder="" class="form-control input-md">
+                  <input id="ph_no" name="ph_no" type="text" placeholder="Enter Your Phone" class="form-control input-md">
+                      <p class="text-danger">{{$errors->first('ph_no')}}</p>
                   </div>
                 </div>
 
@@ -180,10 +96,12 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="selectbasic">Registration Category</label>
                   <div class="col-md-4">
-                    <select id="reg_category" name="reg_category" class="form-control">
+                    <select id="registration_category" name="registration_category" class="form-control">
+                        <option value="" selected disabled>Select Registration Category</option>
                       <option value="1">Option one</option>
                       <option value="2">Option two</option>
                     </select>
+                      <p class="text-danger">{{$errors->first('registration_category')}}</p>
                   </div>
                 </div>
 
@@ -192,9 +110,11 @@
                   <label class="col-md-4 control-label" for="selectbasic">Payment Type</label>
                   <div class="col-md-4">
                     <select id="payment_type" name="payment_type" class="form-control">
-                      <option value="1">Option one</option>
-                      <option value="2">Option two</option>
+                        <option value="" selected disabled>Select Payment Type</option>
+                      <option value="Cash">Cash</option>
+                      <option value="2">Bank Transfer</option>
                     </select>
+                      <p class="text-danger">{{$errors->first('payment_type')}}</p>
                   </div>
                 </div>
 
@@ -202,7 +122,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="submit"></label>
                   <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+                    <input id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary">
                   </div>
                 </div>
 
@@ -222,33 +142,39 @@
         </div>
         <!-- /.row -->
     </div>
-     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p>copyright&copy;consalxvii</p>
-                </div>
-                <div class="col-lg-6" style="text-align:right;padding-top:20px;">
-                    <i class="fa fa-facebook"></i>&nbsp;&nbsp;<i class="fa fa-twitter"></i>
-                </div>
-            </div>
-        </div>
-        </footer>
+@stop
+@section('page_script')
+    <script type="text/javascript">
+        $(document).ready(function() {
 
-  
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
+            $('#reg_form').validate({
+                rules: {
+                    first_name:'required',
+                    middle_name:'required',
+                    last_name:'required',
+                    organization: 'required',
+                    email:{required:true,email:true},
+                    country:'required',
+                    ph_no:{required:true,number:true},
+                    registration_category:'required',
+                    payment_type:'required'
+                },
+                messages: {
+                    first_name:'First Name is required',
+                    middle_name:'Middle Name is required',
+                    last_name:'Last Name is required',
+                    organization: 'Organization is required',
+                    email:{required:'Email is required',email:'Please input email format.'},
+                    country:'Country is required',
+                    ph_no:{required:'Phone is required',number:'Only number accepted'},
+                    registration_category:'Registration category is required',
+                    payment_type:'Payment type is required'
+                },
+                submitHandler: function (form) {
+                    $('input[type="submit"]').attr('disabled', 'disabled');
+                    form.submit();
+                }
+            });
+        });
     </script>
-
-</body>
-
-</html>
+@endsection

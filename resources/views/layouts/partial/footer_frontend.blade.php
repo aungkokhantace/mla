@@ -17,7 +17,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/assets/frontend/js/bootstrap.min.js"></script>
-
+    <script src="/assets/frontend/js/validation/jquery.validate.js"></script>
+    <script src="/assets/frontend/js/validation/validation.js"></script>
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({

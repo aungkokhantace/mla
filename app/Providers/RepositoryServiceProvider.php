@@ -45,6 +45,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind('App\Backend\PostConferenceTravel\PostConferenceTravelRepositoryInterface','App\Backend\PostConferenceTravel\PostConferenceTravelRepository');
         $this->app->bind('App\Backend\LibraryCulture\LibraryCultureRepositoryInterface','App\Backend\LibraryCulture\LibraryCultureRepository');
         $this->app->bind('App\Backend\Accommodation\AccommodationRepositoryInterface','App\Backend\Accommodation\AccommodationRepository');
+        $this->app->bind('App\Frontend\ConferenceRegistration\ConferenceRegistrationRepositoryInterface','App\Frontend\ConferenceRegistration\ConferenceRegistrationRepository');
 
     }
 }

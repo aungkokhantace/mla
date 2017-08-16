@@ -336,6 +336,11 @@ font-size:13pt;
 margin-bottom:-10px;
 }
 
+.error{
+    color:red;
+    font-weight: bold;
+}
+
 /* Responsive Styles */
 @media (min-width: 350px) {
     .img-portfolio {

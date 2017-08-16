@@ -27,6 +27,7 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/program_pre_conference', 'Frontend\ProgramController@program_pre_conference');
 
         Route::get('/registration', 'Frontend\RegistrationController@index');
+        Route::post('/registration/store', 'Frontend\RegistrationController@store');
         Route::get('/registration_cancellation', 'Frontend\RegistrationController@registration_cancellation');
         Route::get('/registration_fee', 'Frontend\RegistrationController@registration_fee');
         Route::get('/registration_letter', 'Frontend\RegistrationController@registration_letter');

@@ -20,12 +20,12 @@ class DatabaseSeeder extends Seeder
         $this->call(Default_Syncs_TablesSeeder::class);
         $this->call(Default_CountriesSeeder::class);
         $this->call(Default_CitySeeder::class);
-        $this->call(Default_TownshipSeeder::class);                
+        $this->call(Default_TownshipSeeder::class);
         $this->call(TestTableSeeder::class);
 
         $this->call(Default_PageSeeder::class);
         $this->call(Default_PostSeeder::class);
-        $this->call(Default_EventSeeder::class);        
+        $this->call(Default_EventSeeder::class);
         $this->call(Default_TemplateSeeder::class);
 
 

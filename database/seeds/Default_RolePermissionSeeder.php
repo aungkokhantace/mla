@@ -98,6 +98,46 @@ class Default_RolePermissionSeeder extends Seeder
             ['role_id'=>1, 'permission_id'=>93],
             ['role_id'=>1, 'permission_id'=>94],
             ['role_id'=>1, 'permission_id'=>95],
+
+            //ImageGallery
+            ['role_id'=>1, 'permission_id'=>100],
+            ['role_id'=>1, 'permission_id'=>101],
+            ['role_id'=>1, 'permission_id'=>102],
+            ['role_id'=>1, 'permission_id'=>103],
+            ['role_id'=>1, 'permission_id'=>104],
+            ['role_id'=>1, 'permission_id'=>105],
+
+            //LatestNew
+            ['role_id'=>1, 'permission_id'=>110],
+            ['role_id'=>1, 'permission_id'=>111],
+            ['role_id'=>1, 'permission_id'=>112],
+            ['role_id'=>1, 'permission_id'=>113],
+            ['role_id'=>1, 'permission_id'=>114],
+            ['role_id'=>1, 'permission_id'=>115],
+
+            //Post Conference Travel
+            ['role_id'=>1, 'permission_id'=>120],
+            ['role_id'=>1, 'permission_id'=>121],
+            ['role_id'=>1, 'permission_id'=>122],
+            ['role_id'=>1, 'permission_id'=>123],
+            ['role_id'=>1, 'permission_id'=>124],
+            ['role_id'=>1, 'permission_id'=>125],
+
+            //Library Culture
+            ['role_id'=>1, 'permission_id'=>130],
+            ['role_id'=>1, 'permission_id'=>131],
+            ['role_id'=>1, 'permission_id'=>132],
+            ['role_id'=>1, 'permission_id'=>133],
+            ['role_id'=>1, 'permission_id'=>134],
+            ['role_id'=>1, 'permission_id'=>135],
+
+            //Accommodation
+            ['role_id'=>1, 'permission_id'=>140],
+            ['role_id'=>1, 'permission_id'=>141],
+            ['role_id'=>1, 'permission_id'=>142],
+            ['role_id'=>1, 'permission_id'=>143],
+            ['role_id'=>1, 'permission_id'=>144],
+            ['role_id'=>1, 'permission_id'=>145],
         );
 
         DB::table('core_permission_role')->insert($roles);

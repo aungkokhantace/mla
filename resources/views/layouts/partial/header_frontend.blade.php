@@ -58,25 +58,25 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                  <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html" class="active">HOME</a>
+                        <a href="/home" class="active">HOME</a>
                     </li>
                     <li>
-                        <a href="program_topic.html">PROGRAM</a>
+                        <a href="/program">PROGRAM</a>
                     </li>
                     <li>
-                        <a href="conference_registration_form.html">REGISTRATION</a>
+                        <a href="/registration">REGISTRATION</a>
                     </li>
                     <li>
-                        <a href="sponsor_supporter.html">EXHIBITION & SPONSORSHIP</a>
+                        <a href="/exhibition">EXHIBITION & SPONSORSHIP</a>
                     </li>
                     <li>
-                        <a href="post_conference_travel.html">TRAVEL & ACCOMMODATION</a>
+                        <a href="/travel">TRAVEL & ACCOMMODATION</a>
                     </li>
                     <li>
-                        <a href="gallery.html">GALLERY</a>
+                        <a href="/gallery">GALLERY</a>
                     </li>
                     <li>
-                        <a href="contact.html">CONTACT US</a>
+                        <a href="/contact">CONTACT US</a>
                     </li>
                 </ul>
             </div>

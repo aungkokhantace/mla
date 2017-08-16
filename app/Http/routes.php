@@ -5,6 +5,36 @@ Route::group(['middleware' => 'web'], function () {
 
         //Frontend
         Route::get('/', 'Frontend\HomeController@index');
+        Route::get('/home', 'Frontend\HomeController@index');
+
+        Route::get('/contact', 'Frontend\ContactController@index');
+
+        Route::get('/exhibition', 'Frontend\ExhibitionController@index');
+        Route::get('/exhibition_agrement', 'Frontend\ExhibitionController@exhibition_agrement');
+        Route::get('/exhibition_booth', 'Frontend\HomeController@exhibition_booth');
+        Route::get('/exhibition_exhibitor', 'Frontend\HomeController@exhibition_exhibitor');
+        Route::get('/exhibition_floor_plan', 'Frontend\HomeController@exhibition_floor_plan');
+        Route::get('/exhibition_sponsorship', 'Frontend\HomeController@exhibition_sponsorship');
+
+        Route::get('/gallery', 'Frontend\GalleryController@index');
+        
+        Route::get('/program', 'Frontend\ProgramController@index');
+        Route::get('/program_call', 'Frontend\ProgramController@program_call');
+        Route::get('/program_conference', 'Frontend\ProgramController@program_conference');
+        Route::get('/program_guideline', 'Frontend\ProgramController@program_guideline');
+        Route::get('/program_library', 'Frontend\ProgramController@program_library');
+        Route::get('/program_poster', 'Frontend\ProgramController@program_poster');
+        Route::get('/program_pre_conference', 'Frontend\ProgramController@program_pre_conference');
+
+        Route::get('/registration', 'Frontend\RegistrationController@index');
+        Route::get('/registration_cancellation', 'Frontend\RegistrationController@registration_cancellation');
+        Route::get('/registration_fee', 'Frontend\RegistrationController@registration_fee');
+        Route::get('/registration_letter', 'Frontend\RegistrationController@registration_letter');
+        Route::get('/registration_visa', 'Frontend\RegistrationController@registration_visa');
+
+        Route::get('/travel', 'Frontend\TravelController@index');
+        Route::get('/travel_accommodation', 'Frontend\TravelController@index');
+
 
         //Backend
         Route::group(['prefix' => 'backend'], function () {

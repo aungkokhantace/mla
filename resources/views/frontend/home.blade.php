@@ -12,20 +12,15 @@
         <div class="col-md-8 home-left">
 
             <!-- First Blog Post -->
-            <h2>
-                CONSAL Information
-            </h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-            <p class="date"><i class="fa fa-calendar"></i> May 2-5,2018&nbsp;&nbsp;&nbsp;&nbsp;Naypyitaw,Myanmar</p>
-            <br/>
-            <img src="./assets/frontend/images/date.jpg" class="img-responsive">
-            <br/>
-            <h2>
-                Greeting From National Organizing Committee
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-            <a class="btn btn-success btn-custom" href="#">Read More</a>
-
+            
+            @if(isset($page->content) && $page->content !== "")
+            {!! $page->content !!}
+            <br>
+            @endif
+            @foreach($posts as $post)
+                {!! $post->content !!}<br>
+            @endforeach
+            
         </div>
 
         <!-- Blog Sidebar Widgets Column -->

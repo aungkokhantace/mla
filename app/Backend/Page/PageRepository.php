@@ -45,8 +45,7 @@ class PageRepository implements PageRepositoryInterface
     public function getPageIDByURL($url){
         if($url == "/"){
             $url = "home";
-        }
-
+        }        
         $page_id = DB::table('pages')->where('url',$url)->whereNull('deleted_at')->first()->id;
         return $page_id;
     }

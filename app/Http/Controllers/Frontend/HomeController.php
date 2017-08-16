@@ -14,6 +14,10 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Redirect;
 
+use App\Backend\Page\PageRepository;
+use App\Backend\Post\PostRepository;
+use Illuminate\Support\Facades\Route;
+
 class HomeController extends Controller
 {
 
@@ -23,7 +27,18 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
-        return view('frontend.home');
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.home')
+            ->with('page',$page)
+            ->with('posts',$posts);
     }
 
 }

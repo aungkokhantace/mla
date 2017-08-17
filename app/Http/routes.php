@@ -37,7 +37,7 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/registration_visa', 'Frontend\RegistrationController@registration_visa');
 
         Route::get('/travel', 'Frontend\TravelController@index');
-        Route::get('/travel_accommodation', 'Frontend\TravelController@index');
+        Route::get('/travel_accommodation', 'Frontend\TravelController@travel_accommodation');
 
 
         //Backend

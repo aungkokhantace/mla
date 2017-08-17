@@ -93,9 +93,33 @@ class Default_PostSeeder extends Seeder
             'status' =>'active', 'url' =>'', 'title' =>'TRAVEL & ACCOMMODATIONs', 'post_order' =>1, 'pages_id' =>5, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         ['name'=>'GALLERY','description'=>'','content'=>'',
             'status' =>'active', 'url' =>'', 'title' =>'GALLERY', 'post_order' =>1, 'pages_id' =>6, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
-        ['name'=>'CONTACT US','description'=>'','content'=>'',
+        ['name'=>'CONTACT US','description'=>'','content'=>'
+                <div class="col-md-6">
+                <h3>Contact Us</h3>
+                    <p> 
+                        Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  Maha Thukha Road, Naypyidaw, Myanmar
+                    </p>
+                    <br/>
+                    <p>
+                        Email/Gmail&nbsp;: consal@sample.com</p>
+                    </br/>
+                    <p> 
+                    Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +959 111 111 111</p>
+                    <ul class="list-unstyled list-inline list-social-icons">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1qh12QBAgnozfHPAHd_1KAOoY80U" width="500" height="400"></iframe>
+                </div>',
             'status' =>'active', 'url' =>'', 'title' =>'CONTACT US', 'post_order' =>1, 'pages_id' =>7, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],       
-        ['name'=>'PROGREAM PRE-CONFERENCE','description'=>'','content'=>'<h2>PROGRAM >> PRE-CONFERENCE CONVENING</h2>
+        
+            ['name'=>'PROGREAM PRE-CONFERENCE','description'=>'','content'=>'<h2>PROGRAM >> PRE-CONFERENCE CONVENING</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

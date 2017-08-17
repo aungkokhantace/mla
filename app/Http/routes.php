@@ -13,6 +13,7 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/exhibition_agrement', 'Frontend\ExhibitionController@exhibition_agrement');
         Route::get('/exhibition_booth', 'Frontend\ExhibitionController@exhibition_booth');
         Route::get('/exhibition_exhibitor', 'Frontend\ExhibitionController@exhibition_exhibitor');
+        Route::post('/exhibition_exhibitor/store', 'Frontend\ExhibitionController@exhibition_exhibitor_store');
         Route::get('/exhibition_floor_plan', 'Frontend\ExhibitionController@exhibition_floor_plan');
         Route::get('/exhibition_sponsorship', 'Frontend\ExhibitionController@exhibition_sponsorship');
 
@@ -20,10 +21,12 @@ Route::group(['middleware' => 'web'], function () {
         
         Route::get('/program', 'Frontend\ProgramController@index');
         Route::get('/program_call', 'Frontend\ProgramController@program_call');
+        Route::post('/program_call/store', 'Frontend\ProgramController@program_call_store');
         Route::get('/program_conference', 'Frontend\ProgramController@program_conference');
         Route::get('/program_guideline', 'Frontend\ProgramController@program_guideline');
         Route::get('/program_library', 'Frontend\ProgramController@program_library');
         Route::get('/program_poster', 'Frontend\ProgramController@program_poster');
+        Route::post('/program_poster/store', 'Frontend\ProgramController@program_poster_store');
         Route::get('/program_pre_conference', 'Frontend\ProgramController@program_pre_conference');
 
         Route::get('/registration', 'Frontend\RegistrationController@index');

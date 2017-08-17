@@ -39,7 +39,7 @@ class RegistrationEntryFormRequest extends Request
         return [
             "first_name.required"                 => "First Name is required",
             "middle_name.required"                => "Middle Name is required",
-            "last_name.unique"                    => "Last Name is required",
+            "last_name.required"                    => "Last Name is required",
             "organization.required"               => "Organization is required",
             "email.required"                      => "Email is required",
             "country.required"                    => "Country is required",

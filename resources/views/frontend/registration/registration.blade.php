@@ -14,13 +14,15 @@
                     <a href="poster.html#poster" class="list-group-item">visa Requirement</a>
                 </div>
             </div>
+
+            @if(Session::has('message'))
+                <div class="col-md-8 well bg-success">
+                    {{Session::get('message')['body']}}
+                </div>
+            @endif
             <div class="col-md-9 reg_fee_payment">
-             <h2>PROGRAM >> CONFERENCE REGISTRATION FORM</h2>
-                @if(Session::has('message'))
-                    <div class="col-md-8 well bg-success">
-                        {{Session::get('message')['body']}}
-                    </div>
-                @endif
+
+                <h2>PROGRAM >> CONFERENCE REGISTRATION FORM</h2>
              <form class="form-horizontal" method="post" action="{{url('registration/store')}}" id="reg_form">
                  {{csrf_field()}}
                 <fieldset>

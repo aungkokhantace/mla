@@ -46,6 +46,9 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind('App\Backend\LibraryCulture\LibraryCultureRepositoryInterface','App\Backend\LibraryCulture\LibraryCultureRepository');
         $this->app->bind('App\Backend\Accommodation\AccommodationRepositoryInterface','App\Backend\Accommodation\AccommodationRepository');
         $this->app->bind('App\Frontend\ConferenceRegistration\ConferenceRegistrationRepositoryInterface','App\Frontend\ConferenceRegistration\ConferenceRegistrationRepository');
+        $this->app->bind('App\Frontend\Program\ProgramPosterRepositoryInterface','App\Frontend\Program\ProgramPosterRepository');
+        $this->app->bind('App\Frontend\Program\ProgramCallRepositoryInterface','App\Frontend\Program\ProgramCallRepository');
+        $this->app->bind('App\Frontend\Exhibition\ExhibitorRepositoryInterface','App\Frontend\Exhibition\ExhibitorRepository');
 
     }
 }

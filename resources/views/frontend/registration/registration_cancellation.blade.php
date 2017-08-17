@@ -1,5 +1,5 @@
 @extends('layouts.master_frontend')
-@section('title','Registration Visa Informmation')
+@section('title','Registration Cancellation')
 @section('content')
 @include('layouts.partial.nav_registration')
 

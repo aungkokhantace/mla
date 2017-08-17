@@ -1,19 +1,7 @@
 @extends('layouts.master_frontend')
 @section('title','Dashboard')
-@section('content')
-    <!-- Page Content-->
-    <div class="container">
-
-        <div class="row">
-        <div class="col-md-3">
-                <div class="list-group">
-                    <a href="conference_reg_form.html#conference_reg_form" class="list-group-item active-sub">Conference Registration Form</a>
-                    <a href="registration_fee_payment.html#reg_fee_payment" class="list-group-item">Registration Fees and Payment</a>
-                    <a href="cancellations.html#cancellations" class="list-group-item">Cancellations</a>
-                    <a href="letter_invitation.html#invitation" class="list-group-item">Letter of Invitation</a>
-                    <a href="poster.html#poster" class="list-group-item">visa Requirement</a>
-                </div>
-            </div>
+@section('content')    
+@include('layouts.partial.nav_registration')
 
             @if(Session::has('message'))
                 <div class="col-md-8 well bg-success">

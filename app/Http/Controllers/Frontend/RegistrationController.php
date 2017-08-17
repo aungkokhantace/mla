@@ -12,6 +12,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
+use App\Backend\Page\PageRepository;
+use App\Backend\Post\PostRepository;
+use Illuminate\Support\Facades\Route;
 
 class RegistrationController extends Controller
 {
@@ -21,19 +24,6 @@ class RegistrationController extends Controller
     {
         $this->repo = $repo;
     }
-    /*public function index(Request $request)
-    {
-        try{
-            if (Auth::guard('User')->check()) {
-                $accommodations      = $this->repo->getAccommodation();
-                return view('backend.accommodation.index')->with('accommodations', $accommodations);
-            }
-            return redirect('/');
-        }
-        catch(\Exception $e){
-            return redirect('/error/204/post');
-        }
-    }*/
 
     public function index(){
             $countries = $this->repo->getCountry();
@@ -139,5 +129,69 @@ class RegistrationController extends Controller
         return redirect()->action('Backend\AccommodationController@index')
             ->withMessage(FormatGenerator::message('Success', 'Accommodation deleted ...'));
 
+    }
+
+    public function registration_letter(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.registration.registration_letter')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
+    public function registration_fee(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.registration.registration_fee')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
+    public function registration_cancellation(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.registration.registration_cancellation')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
+    public function registration_visa(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.registration.registration_visa')
+            ->with('page',$page)
+            ->with('posts',$posts);
     }
 }

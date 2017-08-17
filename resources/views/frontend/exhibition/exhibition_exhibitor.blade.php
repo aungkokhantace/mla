@@ -1,19 +1,8 @@
 @extends('layouts.master_frontend')
-@section('title','Dashboard')
+@section('title','Exhibition Exhibitor')
 @section('content')
-    <div class="container">
-
-        <div class="row">
-            <div class="col-md-3 col-sm-12 col-xs-12">
-                <div class="list-group">
-                    <a href="sponsor_support.html#sponsor_support" class="list-group-item">Sponsors and Supporters</a>
-                    <a href="exhibit_sponsorship.html#exhibit" class="list-group-item">Exhibit and Sponsorship Opportunities</a>
-                    <a href="exhibitor_sponsor_form.html#exhibit_form" class="list-group-item">Exhibit and Sponsor Form</a>
-                    <a href="booth_price_facilities.html#booth" class="list-group-item active-sub">Booth Price and Facilities</a>
-                    <a href="floor_plan_exhibition.html#floor_plan" class="list-group-item">Floor Plan and Exhibition</a>
-                    <a href="exhibitor_sponsor_agreement.html#agreement" class="list-group-item">Exhibitors and Sponsor Agreement</a>
-                </div>
-            </div>
+@include('layouts.partial.nav_exhibition')
+    
             <div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="exhibit_form">
                 <h2>EXHIBITION & SPONSORSHIP >> EXHIBITOR AND SPONSOR FORM</h2>
                 <div class="col-md-12">
@@ -85,11 +74,12 @@
                     </div>
                 </div>
             </div>
-
-        </div>
     </div>
-    <!-- /.row -->
-    @stop
+
+
+</div>
+
+@stop
 @section('page_script')
     <script type="text/javascript">
         $(document).ready(function() {

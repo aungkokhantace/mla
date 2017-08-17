@@ -8,10 +8,13 @@ use App\Frontend\Exhibition\ExhibitionExhibitor;
 use App\Frontend\Exhibition\ExhibitorRepositoryInterface;
 use App\Frontend\Infrastructure\Forms\ExhibitorEntryFormRequest;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
+use Redirect;
+use App\Backend\Page\PageRepository;
+use App\Backend\Post\PostRepository;
+use Illuminate\Support\Facades\Route;
 
 class ExhibitionController extends Controller
 {
@@ -22,9 +25,90 @@ class ExhibitionController extends Controller
         $this->exhibitorRepository = $exhibitorRepository;
     }
 
+    public function index(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.exhibition.exhibition')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
+    public function exhibition_sponsorship(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.exhibition.exhibition_sponsorship')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
+    public function exhibition_booth(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.exhibition.exhibition_booth')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
+    public function exhibition_floor_plan(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.exhibition.exhibition_floor_plan')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
+    public function exhibition_agreement(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.exhibition.exhibition_agrement')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
     public function exhibition_exhibitor(){
         return view('frontend.exhibition.exhibition_exhibitor');
     }
+
     public function exhibition_exhibitor_store(ExhibitorEntryFormRequest $request){
         $request->validate();
 
@@ -54,4 +138,5 @@ class ExhibitionController extends Controller
                 ->withMessage(FormatGenerator::message('Fail', 'Exhibitor or Sponsor did not create ...'));
         }
     }
+
 }

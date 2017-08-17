@@ -10,7 +10,7 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/contact', 'Frontend\ContactController@index');
 
         Route::get('/exhibition', 'Frontend\ExhibitionController@index');
-        Route::get('/exhibition_agrement', 'Frontend\ExhibitionController@exhibition_agrement');
+        Route::get('/exhibition_agreement', 'Frontend\ExhibitionController@exhibition_agreement');
         Route::get('/exhibition_booth', 'Frontend\ExhibitionController@exhibition_booth');
         Route::get('/exhibition_exhibitor', 'Frontend\ExhibitionController@exhibition_exhibitor');
         Route::post('/exhibition_exhibitor/store', 'Frontend\ExhibitionController@exhibition_exhibitor_store');

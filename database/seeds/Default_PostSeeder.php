@@ -52,9 +52,44 @@ class Default_PostSeeder extends Seeder
         
         ['name'=>'REGISTRATION','description'=>'','content'=>'',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION', 'post_order' =>1, 'pages_id' =>3, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
-        ['name'=>'EXHIBITION & SPONSORSHIP','description'=>'','content'=>'',
-            'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION & SPONSORSHIP', 'post_order' =>1, 'pages_id' =>4, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
-        ['name'=>'TRAVEL & ACCOMMODATION','description'=>'','content'=>'',
+        
+            ['name'=>'EXHIBITION & SUPPORTERS','description'=>'','content'=>'<div class="col-md-9 col-sm-12 col-xs-12 sponsor" id="sponsor_support">
+            <h2>EXHIBITION & SPONSORSHIP >> SPONSORS AND SUPPORTERS </h2>
+           <div class="col-md-12">
+               <div class="row">
+                   <h3>Platinum Package</h3>
+                   <hr>
+                   <img style="margin-bottom:30px;" src="/assets/frontend/images/bottom1.jpg">
+               </div>
+           </div> 
+           <br/> 
+            <div class="col-md-12">
+               <div class="row">
+                   <h3>Gold Package</h3>
+                   <hr>
+                   <img style="margin-bottom:30px;" src="/assets/frontend/images/bottom2.jpg">
+               </div>
+           </div> 
+           <br/>
+            <div class="col-md-12">
+               <div class="row">
+                   <h3>Silver Package</h3>
+                   <hr>
+                   <img src="/assets/frontend/images/bottom3.jpg">
+               </div>
+           </div> 
+           <br/>
+            <div class="col-md-12">
+               <div class="row">
+                   <h3>Bronze Package</h3>
+                   <hr>
+                   <img src="/assets/frontend/images/bottom4.jpg">
+               </div>
+           </div> 
+           </div>',
+            'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION & SUPPORTER', 'post_order' =>1, 'pages_id' =>4, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
+        
+            ['name'=>'TRAVEL & ACCOMMODATION','description'=>'','content'=>'',
             'status' =>'active', 'url' =>'', 'title' =>'TRAVEL & ACCOMMODATIONs', 'post_order' =>1, 'pages_id' =>5, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         ['name'=>'GALLERY','description'=>'','content'=>'',
             'status' =>'active', 'url' =>'', 'title' =>'GALLERY', 'post_order' =>1, 'pages_id' =>6, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
@@ -361,19 +396,166 @@ Email:  hlaingyu2010@gmail.com</p>
         ['name'=>'REGISTRATION VISA','description'=>'','content'=>'',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION VISA', 'post_order' =>1, 'pages_id' =>17, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION SPONSORSHIP','description'=>'','content'=>'',
+        ['name'=>'EXHIBITION SPONSORSHIP','description'=>'','content'=>'<div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="exhibit">
+        <h2>EXHIBITION & SPONSORSHIP >> EXHIBIT & SPONSORSHIPS </h2>
+       <div class="col-md-12">
+           <div class="row">
+               <p>
+                   The Organizing Committee of the Congress of Southeast Asian Libraries (CONXAL XVII) offers the opportunity to become a sponsor/partner in order to support for the development of libraries in the region. This opportunity will bring you to gain the great experience and successful marketing image for your business.
+               </p>
+
+               <div class="table-responsive">
+                 <table class="table table-bordered">
+                   <tr>
+                       <td>No</td>
+                       <td>Type/Value</td>
+                       <td>Facilities</td>
+                   </tr>
+                   <tr>
+                       <td>1</td>
+                       <td>Platinum Package <br/><br/> 12,500 $</td>
+                       <td>
+                           <ul>
+                               <li>Logo featured on each banner, backdrop, promotional materials</li>
+                           <li>One allocated exhibition booth with the size of 3m 3m</li>
+                           <li>30 minutes promotional session in the Conference</li>
+                           <li>Conference Folder,2 Conference Participants</li>
+                           <li>Media advertising as a sponsor of CONSAL XVII</li>
+                           </ul>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>2</td>
+                       <td>Gold Package<br/><br/> 10,000 $</td>
+                       <td>
+                           <ul>
+                               <li>Logo featured on each banner, backdrop, promotional materials</li>
+                               <li>One allocated exhibition booth with the size of 3m 3m</li>
+                               <li>25 minutes promotional session in the Conference</li>
+                               <li>Conference Folder,1 Conference Participants</li>
+                           </ul>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>3</td>
+                       <td>Silver Package<br/><br/> 5000 $</td>
+                       <td>
+                           <ul>
+                               <li>One allocated exhibition booth with the size of 3m 3m</li>
+                               <li>20 minutes promotional session in the Conference</li>
+                               <li>Conference Folder</li>
+                           </ul>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>4</td>
+                       <td>Bronze Package<br/><br/> 3000 $</td>
+                       <td>
+                           <ul>
+                               <li>One allocated exhibition booth with the size of 3m 3m</li>
+                               <li>Conference Folder</li>
+                           </ul>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>5</td>
+                       <td>Local Business Package <br/><br/> 500 $</td>
+                       <td>
+                           <ul>
+                               <li>One allocated exhibition booth with the size of 3m 3m</li>
+                           </ul>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>6</td>
+                       <td>Other forms of Sponsorship</td>
+                       <td>
+                           <ul>
+                               <li>Evening Reception Host Sponsor</li>
+                               <li>Delegate lunch sponsor</li>
+                               <li>Coffee & Tea Sponsor</li>
+                               <li>Registration Sponsor</li>
+                           </ul>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td></td>
+                       <td></td>
+                       <td>
+                           <ul>
+                               <li>Exhibition Sponsor</li>
+                               <li>Conferece Folder Sponsor</li>
+                           </ul>
+                       </td>
+                   </tr>
+                 </table>
+                 <p>Contact information for further information on the packages or any of your business ideas regarding sponsorship.</p>
+                   <span style="font-weight:bold;">President</span><br/>
+                   U Than Aung<br/>
+                   Phone : 09795624209<br/>
+                   email: thanaungmla@gmail.com
+                   <br/>
+                   <br/>
+                    <span style="font-weight:bold;">Vice President 1</span><br/>
+                   Daw Ah Win<br/>
+                   Phone : 00959250354354<br/>
+                   email: ahwin2006@gmail.com
+                   <br/><br/>
+                    <span style="font-weight:bold;">Vice-President 2</span><br/>
+                   Daw Myat Sann Nyein<br/>
+                   Phone : 009595186398<br/>
+                   email: myatsann.nyein@gmail.com
+                   <br/><br/>
+                    <span style="font-weight:bold;">Secretary General</span><br/>
+                   Daw Mya Oo<br/>
+                   Phone : 00959420728446<br/>
+                   email: mya.myanmar65@gmail.com  
+               </div>
+           </div>
+       </div> 
+       
+       </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION SPONSORSHIP', 'post_order' =>1, 'pages_id' =>18, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
         ['name'=>'EXHIBITION EXHIBITOR','description'=>'','content'=>'',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION EXHIBITOR', 'post_order' =>1, 'pages_id' =>19, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION BOOTH','description'=>'','content'=>'',
+        ['name'=>'EXHIBITION BOOTH','description'=>'','content'=>'<div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="booth">
+        <h2>EXHIBITION & SPONSORSHIP >> BOOTH PRICE AND FACILITES</h2>
+           <div class="col-md-12">
+               <div class="row">
+                   <p>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                       doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi archite
+                       cto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+                   </p>
+               </div>
+           </div>
+       </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION BOOTH', 'post_order' =>1, 'pages_id' =>20, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION FLOOR PLAN','description'=>'','content'=>'',
+        ['name'=>'EXHIBITION FLOOR PLAN','description'=>'','content'=>'   <div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="floor_plan">
+        <h2>EXHIBITION & SPONSORSHIP >> FLOOR PLAN AND EXHIBITIONS</h2>
+           <div class="col-md-12" style="margin-bottom:170px;">
+               <div class="row">
+                   <img src="assets/frontend/images/floor_plan.jpg" class="img-responsive">
+               </div>
+           </div>
+       </div> ',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION FLOOR PLAN', 'post_order' =>1, 'pages_id' =>21, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION AGREMEENT','description'=>'','content'=>'',
+        ['name'=>'EXHIBITION AGREMEENT','description'=>'','content'=>' <div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="agreement">
+        <h2>EXHIBITION & SPONSORSHIP >> EXHIBITORS AND SPONSOR AGREEMENT</h2>
+           <div class="col-md-12" style="margin-bottom: 170px;">
+               <div class="row">
+                   <p>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                       doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi archite
+                       cto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+                   </p>
+               </div>
+           </div>
+       </div> ',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION AGREMEENT', 'post_order' =>1, 'pages_id' =>22, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
         ['name'=>'TRAVEL ACCOMMODATION','description'=>'','content'=>'',

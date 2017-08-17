@@ -11,10 +11,10 @@ Route::group(['middleware' => 'web'], function () {
 
         Route::get('/exhibition', 'Frontend\ExhibitionController@index');
         Route::get('/exhibition_agrement', 'Frontend\ExhibitionController@exhibition_agrement');
-        Route::get('/exhibition_booth', 'Frontend\HomeController@exhibition_booth');
-        Route::get('/exhibition_exhibitor', 'Frontend\HomeController@exhibition_exhibitor');
-        Route::get('/exhibition_floor_plan', 'Frontend\HomeController@exhibition_floor_plan');
-        Route::get('/exhibition_sponsorship', 'Frontend\HomeController@exhibition_sponsorship');
+        Route::get('/exhibition_booth', 'Frontend\ExhibitionController@exhibition_booth');
+        Route::get('/exhibition_exhibitor', 'Frontend\ExhibitionController@exhibition_exhibitor');
+        Route::get('/exhibition_floor_plan', 'Frontend\ExhibitionController@exhibition_floor_plan');
+        Route::get('/exhibition_sponsorship', 'Frontend\ExhibitionController@exhibition_sponsorship');
 
         Route::get('/gallery', 'Frontend\GalleryController@index');
         

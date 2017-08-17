@@ -90,5 +90,3 @@
     <header class="my-carousel">
                 <img src="/assets/frontend/images/slide1.jpg" class="img-responsive">
     </header>
-
-

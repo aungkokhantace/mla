@@ -17,6 +17,7 @@ use Redirect;
 use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
 use Illuminate\Support\Facades\Route;
+use App\Backend\Accommodation\AccommodationRepository;
 
 class TravelController extends Controller
 {
@@ -52,9 +53,13 @@ class TravelController extends Controller
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
 
+        $accommoRepo    = new AccommodationRepository();
+        $accommos       = $accommoRepo->getAccommodation();
+        
         return view('frontend.travel.travel_accommodation')
             ->with('page',$page)
-            ->with('posts',$posts);
+            ->with('posts',$posts)
+            ->with('accommos',$accommos);
     }
 
 }

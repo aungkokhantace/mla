@@ -20,6 +20,7 @@ use App\Frontend\Program\ProgramPosterRepositoryInterface;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Redirect;
 
@@ -54,7 +55,35 @@ class ProgramController extends Controller
             ->with('page',$page)
             ->with('posts',$posts);
     }
-
+    public function all_program_call(Request $request)
+    {
+        try{
+            if (Auth::guard('User')->check()) {
+                $program_calls      = $this->programCallRepository->getProgramCall();
+                return view('backend.program_call_registration.index')->with('program_calls', $program_calls);
+            }
+            return redirect('/');
+        }
+        catch(\Exception $e){
+            return redirect('/error/204/post');
+        }
+    }
+    public function program_call_detail($id){
+        if (Auth::guard('User')->check()) {
+            $program_call = $this->programCallRepository->getObjByID($id);
+            return view('backend.program_call_registration.detail')->with('program_call',$program_call);
+        }
+        return redirect('/');
+    }
+    public function program_call_status_change($status,$id){
+        if($status == 2){
+            ProgramCall::where('id',$id)->update(['status'=>$status]);
+            return redirect()->action('Frontend\ProgramController@all_program_call')->with('status',$status);
+        }elseif($status == 3){
+            ProgramCall::where('id',$id)->update(['status'=>$status]);
+            return redirect()->action('Frontend\ProgramController@all_program_call')->with('status',$status);
+        }
+    }
     public function program_call(Request $request)
     {
         $url = Route::getCurrentRoute()->getPath();
@@ -149,6 +178,35 @@ class ProgramController extends Controller
         return view('frontend.program.program_library')
             ->with('page',$page)
             ->with('posts',$posts);
+    }
+    public function all_program_poster(Request $request)
+    {
+        try{
+            if (Auth::guard('User')->check()) {
+                $program_posters     = $this->programPosterRepository->getProgramPoster();
+                return view('backend.program_poster_registration.index')->with('program_posters', $program_posters);
+            }
+            return redirect('/');
+        }
+        catch(\Exception $e){
+            return redirect('/error/204/post');
+        }
+    }
+    public function program_poster_status_change($status,$id){
+        if($status == 2){
+            ProgramPoster::where('id',$id)->update(['status'=>$status]);
+            return redirect()->action('Frontend\ProgramController@all_program_poster')->with('status',$status);
+        }elseif($status == 3){
+            ProgramPoster::where('id',$id)->update(['status'=>$status]);
+            return redirect()->action('Frontend\ProgramController@all_program_poster')->with('status',$status);
+        }
+    }
+    public function program_poster_detail($id){
+        if (Auth::guard('User')->check()) {
+            $program_poster = $this->programPosterRepository->getObjByID($id);
+            return view('backend.program_poster_registration.detail')->with('program_poster',$program_poster);
+        }
+        return redirect('/');
     }
 
     public function program_poster(Request $request)

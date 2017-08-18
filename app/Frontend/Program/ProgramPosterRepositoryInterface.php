@@ -11,7 +11,7 @@ namespace App\Frontend\Program;
 
 interface ProgramPosterRepositoryInterface
 {
-    public function getConferenceRegistration();
+    public function getProgramPoster();
     public function create($paramObj);
     public function update($paramObj);
     public function getObjByID($id);

@@ -144,6 +144,30 @@ class Default_PermissionSeeder extends Seeder
             ['id'=>143,'module'=>'Accommodation','name'=>'Edit','description'=>'Accommodation Edit','url'=>'backend/accommodation/edit'],
             ['id'=>144,'module'=>'Accommodation','name'=>'Update','description'=>'Accommodation Update','url'=>'backend/accommodation/update'],
             ['id'=>145,'module'=>'Accommodation','name'=>'Destroy','description'=>'Accommodation Destroy','url'=>'backend/accommodation/destroy'],
+
+            //Conference Registration
+            ['id'=>150,'module'=>'ConferenceRegistration','name'=>'Listing','description'=>'ConferenceRegistration Listing','url'=>'backend/conference_registration'],
+            ['id'=>151,'module'=>'ConferenceRegistration','name'=>'Detail','description'=>'ConferenceRegistration Detail','url'=>'backend/conference_registration/detail'],
+            ['id'=>152,'module'=>'ConferenceRegistration','name'=>'Status Change','description'=>'ConferenceRegistration Status Change','url'=>'backend/conference_registration/status'],
+            ['id'=>153,'module'=>'ConferenceRegistration','name'=>'Destroy','description'=>'ConferenceRegistration Destroy','url'=>'backend/conference_registration/destroy'],
+
+            //Program Call Registration
+            ['id'=>160,'module'=>'Program Call Registration','name'=>'Listing','description'=>'Program Call Registration Listing','url'=>'backend/program_call'],
+            ['id'=>161,'module'=>'Program Call Registration','name'=>'Detail','description'=>'Program Call Registration Detail','url'=>'backend/program_call/detail'],
+            ['id'=>162,'module'=>'Program Call Registration','name'=>'Status Change','description'=>'Program Call Registration Status Change','url'=>'backend/program_call/status'],
+            ['id'=>163,'module'=>'Program Call Registration','name'=>'Destroy','description'=>'Program Call Registration Destroy','url'=>'backend/program_call/destroy'],
+
+            //Program Poster Registration
+            ['id'=>170,'module'=>'Program Poster Registration','name'=>'Listing','description'=>'Program Poster Registration Listing','url'=>'backend/program_poster'],
+            ['id'=>171,'module'=>'Program Poster Registration','name'=>'Detail','description'=>'Program Poster Registration Detail','url'=>'backend/program_poster/detail'],
+            ['id'=>172,'module'=>'Program Poster Registration','name'=>'Status Change','description'=>'Program Poster Registration Status Change','url'=>'backend/program_poster/status'],
+            ['id'=>173,'module'=>'Program Poster Registration','name'=>'Destroy','description'=>'Program Poster Registration Destroy','url'=>'backend/program_poster/destroy'],
+
+            //Exhibitor Registration
+            ['id'=>180,'module'=>'Exhibitor Registration','name'=>'Listing','description'=>'Exhibitor Registration Listing','url'=>'backend/exhibitor'],
+            ['id'=>181,'module'=>'Exhibitor Registration','name'=>'Detail','description'=>'Exhibitor Registration Detail','url'=>'backend/exhibitor/detail'],
+            ['id'=>182,'module'=>'Exhibitor Registration','name'=>'Status Change','description'=>'Exhibitor Registration Status Change','url'=>'backend/exhibitor/status'],
+            ['id'=>183,'module'=>'Exhibitor Registration','name'=>'Destroy','description'=>'Exhibitor Registration Destroy','url'=>'backend/exhibitor/destroy'],
         );
 
         DB::table('core_permissions')->insert($permissions);

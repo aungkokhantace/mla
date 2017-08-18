@@ -10,6 +10,7 @@ use App\Frontend\Infrastructure\Forms\ExhibitorEntryFormRequest;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Redirect;
 use App\Backend\Page\PageRepository;
@@ -103,6 +104,38 @@ class ExhibitionController extends Controller
         return view('frontend.exhibition.exhibition_agrement')
             ->with('page',$page)
             ->with('posts',$posts);
+    }
+
+    public function all_exhibitor(Request $request)
+    {
+        try{
+            if (Auth::guard('User')->check()) {
+                $exhibitors     = $this->exhibitorRepository->getExhibitor();
+                return view('backend.exhibitor_registration.index')->with('exhibitors', $exhibitors);
+            }
+            return redirect('/');
+        }
+        catch(\Exception $e){
+            return redirect('/error/204/post');
+        }
+    }
+
+    public function exhibitor_status_change($status,$id){
+        if($status == 2){
+            ExhibitionExhibitor::where('id',$id)->update(['status'=>$status]);
+            return redirect()->action('Frontend\ExhibitionController@all_exhibitor')->with('status',$status);
+        }elseif($status == 3){
+            ExhibitionExhibitor::where('id',$id)->update(['status'=>$status]);
+            return redirect()->action('Frontend\ExhibitionController@all_exhibitor')->with('status',$status);
+        }
+    }
+
+    public function exhibitor_detail($id){
+        if (Auth::guard('User')->check()) {
+            $exhibitor = $this->exhibitorRepository->getObjByID($id);
+            return view('backend.exhibitor_registration.detail')->with('exhibitor',$exhibitor);
+        }
+        return redirect('/');
     }
 
     public function exhibition_exhibitor(){

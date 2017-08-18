@@ -11,7 +11,7 @@ namespace App\Frontend\Exhibition;
 
 interface ExhibitorRepositoryInterface
 {
-    public function getConferenceRegistration();
+    public function getExhibitor();
     public function create($paramObj);
     public function update($paramObj);
     public function getObjByID($id);

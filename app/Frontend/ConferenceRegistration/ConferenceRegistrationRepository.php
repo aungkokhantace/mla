@@ -18,8 +18,8 @@ class ConferenceRegistrationRepository implements ConferenceRegistrationReposito
 {
     public function getConferenceRegistration()
     {
-        $accommodations = ConferenceRegistration::whereNull('deleted_at')->get();
-        return $accommodations;
+        $conferenceRegistrations = ConferenceRegistration::whereNull('deleted_at')->get();
+        return $conferenceRegistrations;
     }
 
     public function create($paramObj)
@@ -60,13 +60,13 @@ class ConferenceRegistrationRepository implements ConferenceRegistrationReposito
     }
 
     public function getObjByID($id){
-        $latest_new = Accommodation::find($id);
-        return $latest_new;
+        $conference_registration = ConferenceRegistration::find($id);
+        return $conference_registration;
     }
 
    public function delete($id){
        try{
-           $tempObj = Accommodation::find($id);
+           $tempObj = ConferenceRegistration::find($id);
            $tempObj = Utility::addDeletedBy($tempObj);
            $tempObj->deleted_at = date('Y-m-d H:m:i');
            $tempObj->save();

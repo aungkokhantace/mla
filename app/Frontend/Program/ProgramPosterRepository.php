@@ -16,10 +16,10 @@ use App\Core\Utility;
 
 class ProgramPosterRepository implements ProgramPosterRepositoryInterface
 {
-    public function getConferenceRegistration()
+    public function getProgramPoster()
     {
-        $accommodations = ConferenceRegistration::whereNull('deleted_at')->get();
-        return $accommodations;
+        $program_posters = ProgramPoster::whereNull('deleted_at')->get();
+        return $program_posters;
     }
 
     public function create($paramObj)
@@ -60,13 +60,13 @@ class ProgramPosterRepository implements ProgramPosterRepositoryInterface
     }
 
     public function getObjByID($id){
-        $latest_new = Accommodation::find($id);
-        return $latest_new;
+        $program_poster = ProgramPoster::find($id);
+        return $program_poster;
     }
 
    public function delete($id){
        try{
-           $tempObj = Accommodation::find($id);
+           $tempObj = ProgramPoster::find($id);
            $tempObj = Utility::addDeletedBy($tempObj);
            $tempObj->deleted_at = date('Y-m-d H:m:i');
            $tempObj->save();

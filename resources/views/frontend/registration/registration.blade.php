@@ -11,7 +11,7 @@
             <div class="col-md-9 reg_fee_payment">
 
                 <h2>PROGRAM >> CONFERENCE REGISTRATION FORM</h2>
-             <form class="form-horizontal" method="post" action="{{url('registration/store')}}" id="reg_form">
+             <form class="form-horizontal" method="post" action="{{url('registration/store')}}" id="frm_registration">
                  {{csrf_field()}}
                 <fieldset>
                 <!-- Text input-->
@@ -19,7 +19,7 @@
                   <label class="col-md-4 control-label" for="title">First Name</label>  
                   <div class="col-md-4">
                   <input id="first_name" name="first_name" type="text" placeholder="Enter Your First Name" class="form-control input-md">
-                      <p class="text-danger">{{$errors->first('first_name')}}</p>
+                      <p class="text-danger" id="first_name_error">{{$errors->first('first_name')}}</p>
                   </div>
                 </div>
 
@@ -28,7 +28,7 @@
                   <label class="col-md-4 control-label" for="title">Middle Name</label>  
                   <div class="col-md-4">
                   <input id="middle_name" name="middle_name" type="text" placeholder="Enter Your Middle Name" class="form-control input-md">
-                      <p class="text-danger">{{$errors->first('middle_name')}}</p>
+                      <p class="text-danger" id="middle_name_error">{{$errors->first('middle_name')}}</p>
                   </div>
                 </div>
 
@@ -37,7 +37,7 @@
                   <label class="col-md-4 control-label" for="title">Last Name</label>  
                   <div class="col-md-4">
                   <input id="last_name" name="last_name" type="text" placeholder="Enter Your Last Name" class="form-control input-md">
-                      <p class="text-danger">{{$errors->first('last_name')}}</p>
+                      <p class="text-danger" id="last_name_error">{{$errors->first('last_name')}}</p>
                   </div>
                 </div>
 
@@ -46,7 +46,7 @@
                   <label class="col-md-4 control-label" for="title">Organization</label>  
                   <div class="col-md-4">
                   <input id="organization" name="organization" type="text" placeholder="Enter Your Organization" class="form-control input-md">
-                      <p class="text-danger">{{$errors->first('organization')}}</p>
+                      <p class="text-danger" id="organization_error">{{$errors->first('organization')}}</p>
                   </div>
                 </div>
 
@@ -55,7 +55,7 @@
                   <label class="col-md-4 control-label" for="title">Email</label>  
                   <div class="col-md-4">
                   <input id="email" name="email" type="email" placeholder="Enter Your Email" class="form-control input-md">
-                      <p class="text-danger">{{$errors->first('email')}}</p>
+                      <p class="text-danger" id="email_error">{{$errors->first('email')}}</p>
                   </div>
                 </div>
 
@@ -69,7 +69,7 @@
                             <option value="{{$country->id}}">{{$country->name}}</option>
                             @endforeach
                     </select>
-                      <p class="text-danger">{{$errors->first('country')}}</p>
+                      <p class="text-danger" id="country_error">{{$errors->first('country')}}</p>
                   </div>
                 </div>
 
@@ -78,7 +78,7 @@
                   <label class="col-md-4 control-label" for="title">Phone No</label>  
                   <div class="col-md-4">
                   <input id="ph_no" name="ph_no" type="text" placeholder="Enter Your Phone" class="form-control input-md">
-                      <p class="text-danger">{{$errors->first('ph_no')}}</p>
+                      <p class="text-danger" id="ph_no_error">{{$errors->first('ph_no')}}</p>
                   </div>
                 </div>
 
@@ -91,7 +91,7 @@
                       <option value="1">Option one</option>
                       <option value="2">Option two</option>
                     </select>
-                      <p class="text-danger">{{$errors->first('registration_category')}}</p>
+                      <p class="text-danger" id="registration_category_error">{{$errors->first('registration_category')}}</p>
                   </div>
                 </div>
 
@@ -104,7 +104,7 @@
                       <option value="Cash">Cash</option>
                       <option value="2">Bank Transfer</option>
                     </select>
-                      <p class="text-danger">{{$errors->first('payment_type')}}</p>
+                      <p class="text-danger" id="payment_type">{{$errors->first('payment_type')}}</p>
                   </div>
                 </div>
 
@@ -112,7 +112,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="submit"></label>
                   <div class="col-md-4">
-                    <input id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary">
+                    <button type="button" id="btn" class="btn btn-primary" onclick="pre_add_confirm_setup()">SUBMIT</button>
                   </div>
                 </div>
 
@@ -134,10 +134,74 @@
     </div>
 @stop
 @section('page_script')
+    <script src="/assets/js/utils.js"></script>
     <script type="text/javascript">
+        function pre_add_confirm_setup(){
+
+            var valid = true;
+            $("#first_name_error").text("");
+            var first_name = $("#first_name").val();
+            if(first_name == ""){
+                valid = false;
+            }
+
+            $("#middle_name_error").text("");
+            var middle_name = $("#middle_name").val();
+            if(middle_name == ""){
+                valid = false;
+            }
+
+            $("#last_name_error").text("");
+            var last_name = $("#last_name").val();
+            if(last_name == ""){
+                valid = false;
+            }
+
+            $("#organization_error").text("");
+            var organization = $("#organization").val();
+
+            if(organization == ""){
+                valid = false;
+            }
+
+            $("#email_error").text("");
+            var email = $("#email").val();
+            if(email == ""){
+                valid = false;
+            }
+
+
+            $("#country_error").text("");
+            var country = $("#country").val();
+            if(country == ""){
+                valid = false;
+            }
+
+            $("#ph_no_error").text("");
+            var ph_no = $("#ph_no").val();
+            if(ph_no == ""){
+                valid = false;
+            }
+
+            $("#registration_category_error").text("");
+            var registration_category = $("#registration_category").val();
+            if(registration_category == ""){
+                valid = false;
+            }
+
+            $("#payment_type_error").text("");
+            var payment_type = $("#payment_type").val();
+            if(payment_type == ""){
+                valid = false;
+            }
+
+            if (valid == true){
+                add_confirm_setup('registration');
+            }
+        }
         $(document).ready(function() {
 
-            $('#reg_form').validate({
+            $('#frm_registration').validate({
                 rules: {
                     first_name:'required',
                     middle_name:'required',
@@ -160,10 +224,13 @@
                     registration_category:'Registration category is required',
                     payment_type:'Payment type is required'
                 },
-                submitHandler: function (form) {
-                    $('input[type="submit"]').attr('disabled', 'disabled');
+               /* submitHandler: function (form) {
+                    $('button[type="button"]').attr('disabled', 'disabled');
                     form.submit();
-                }
+                }*/
+            });
+            $('#btn').on('click', function() {
+                $("#frm_registration").valid();
             });
         });
     </script>

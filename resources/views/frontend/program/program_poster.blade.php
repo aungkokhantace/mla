@@ -12,7 +12,7 @@
                 </div>
             @endif
             <div class="col-md-9 poster" id="poster">
-                <form class="form-horizontal" method="post" action="{{url('program_poster/store')}}" id="pro_poster_form">
+                <form class="form-horizontal" method="post" action="{{url('program_poster/store')}}" id="frm_program_poster">
                     {{csrf_field()}}
                     <fieldset>
 
@@ -65,7 +65,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="submit"></label>
                             <div class="col-md-4">
-                                <input id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary">
+                                <button type="button" id="btn" class="btn btn-primary" onclick="pre_add_confirm_setup()">SUBMIT</button>
                             </div>
                         </div>
 
@@ -81,9 +81,44 @@
 @stop
 @section('page_script')
     <script type="text/javascript">
+        function pre_add_confirm_setup() {
+
+            var valid = true;
+
+            var author = $("#author").val();
+            if (author == "") {
+                valid = false;
+            }
+
+            var address = $("#address").val();
+            if (address == "") {
+                valid = false;
+            }
+
+            var title = $("#title").val();
+            if (title == "") {
+                valid = false;
+            }
+
+            var description = $("#description").val();
+            if (description == "") {
+                valid = false;
+            }
+
+            var email = $("#email").val();
+            if (email == "") {
+                valid = false;
+            }
+
+
+            if (valid == true) {
+                add_confirm_setup('program_poster');
+            }
+        }
+
         $(document).ready(function() {
 
-            $('#pro_poster_form').validate({
+            $('#frm_program_poster').validate({
                 rules: {
                     address:'required',
                     email:{required:true,email:true},
@@ -98,10 +133,13 @@
                     title: 'Title is required',
                     author:'Author affiliation is required',
                 },
-                submitHandler: function (form) {
+                /*submitHandler: function (form) {
                     $('input[type="submit"]').attr('disabled', 'disabled');
                     form.submit();
-                }
+                }*/
+            });
+            $('#btn').on('click', function() {
+                $("#frm_program_poster").valid();
             });
         });
     </script>

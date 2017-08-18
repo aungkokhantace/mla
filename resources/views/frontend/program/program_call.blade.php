@@ -12,7 +12,7 @@
                 </div>
             @endif
             <div class="col-md-9 poster" id="paper">
-                <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="pro_call_form">
+                <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="frm_program_call">
                     {{csrf_field()}}
                     <fieldset>
                         <!-- Text input-->
@@ -73,7 +73,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="submit"></label>
                             <div class="col-md-4">
-                                <input id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary">
+                                <button type="button" id="btn" class="btn btn-primary" onclick="pre_add_confirm_setup()">SUBMIT</button>
                             </div>
                         </div>
 
@@ -157,9 +157,48 @@
 @stop
 @section('page_script')
     <script type="text/javascript">
+        function pre_add_confirm_setup() {
+
+            var valid = true;
+
+            var first_author = $("#first_author").val();
+            if (first_author == "") {
+                valid = false;
+            }
+
+            var address = $("#address").val();
+            if (address == "") {
+                valid = false;
+            }
+
+            var second_author = $("#second_author").val();
+            if (second_author == "") {
+                valid = false;
+            }
+
+            var third_author = $("#third_author").val();
+            if (third_author == "") {
+                valid = false;
+            }
+
+            var email = $("#email").val();
+            if (email == "") {
+                valid = false;
+            }
+
+            var abstract = $("#abstract").val();
+            if (abstract == "") {
+                valid = false;
+            }
+
+            if (valid == true) {
+                add_confirm_setup('program_call');
+            }
+        }
+
         $(document).ready(function() {
 
-            $('#pro_call_form').validate({
+            $('#frm_program_call').validate({
                 rules: {
                     first_author:'required',
                     email:{required:true,email:true},
@@ -176,10 +215,13 @@
                     third_author:'3rd Author is required',
                     abstract:'Abstract is required'
                 },
-                submitHandler: function (form) {
+               /* submitHandler: function (form) {
                     $('input[type="submit"]').attr('disabled', 'disabled');
                     form.submit();
-                }
+                }*/
+            });
+            $('#btn').on('click', function() {
+                $("#frm_program_call").valid();
             });
         });
     </script>

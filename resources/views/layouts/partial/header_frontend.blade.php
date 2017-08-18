@@ -20,8 +20,7 @@
 
     <!-- Custom Fonts -->
     <link href="/assets/frontend/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
-
+    <link media="all" type="text/css" rel="stylesheet" href="/assets/css/sweetalert.css">
 </head>
 
 <body>

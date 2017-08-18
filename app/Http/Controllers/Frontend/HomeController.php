@@ -17,6 +17,7 @@ use Redirect;
 use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
 use Illuminate\Support\Facades\Route;
+use App\Backend\LatestNew\LatestNewRepository;
 
 class HomeController extends Controller
 {
@@ -35,10 +36,14 @@ class HomeController extends Controller
 
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
+        
+        $latestNewRepo  = new LatestNewRepository();
+        $latestNews      = $latestNewRepo->getLatestNew();
 
         return view('frontend.home')
             ->with('page',$page)
-            ->with('posts',$posts);
+            ->with('posts',$posts)
+            ->with('latestNews',$latestNews);
     }
 
 }

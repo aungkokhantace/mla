@@ -379,18 +379,7 @@ Email:  hlaingyu2010@gmail.com</p>
             'status' =>'active', 'url' =>'', 'title' =>'PROGRAM POSTER', 'post_order' =>1, 'pages_id' =>11, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
 
-        ['name'=>'PROGRAM GUIDELINE','description'=>'','content'=>'<div class="col-md-3">
-                <div class="list-group">
-                    <a href="index.html" class="list-group-item">Program Topics</a>
-                    <a href="about.html" class="list-group-item">Pre-conference Convencing</a>
-                    <a href="conference_program_overview.html" class="list-group-item">Conference Program Overview</a>
-                    <a href="#" class="list-group-item">Call for Papers</a>
-                    <a href="#" class="list-group-item">Poster Sessions</a>
-                    <a href="guideline.html" class="list-group-item active-sub">Guideline for the Authors and Presenters</a>
-                    <a href="library_culture_visit.html" class="list-group-item">Library and Culture visit</a>
-                </div>
-            </div>
-            <!-- Content Column -->
+        ['name'=>'PROGRAM GUIDELINE','description'=>'','content'=>'
             <div class="col-md-9">
                 <h2>PROGRAM >> GUIDELINES FOR AUTHORS AND PRESENTERS</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

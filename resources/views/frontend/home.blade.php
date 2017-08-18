@@ -34,31 +34,19 @@
                 </h2>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="row panel-body">  
-                            <img src="/assets/frontend/images/left1.jpg">                              
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#" class="more">more>></a>
-                        </div>
-                        <div class="row panel-body">  
-                            <img src="/assets/frontend/images/left2.jpg">                              
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#" class="more">more>></a>
-                        </div>
-                        <div class="row panel-body">  
-                            <img src="/assets/frontend/images/left3.jpg">                              
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#" class="more">more>></a>
-                        </div>
-                        <div class="row panel-body">  
-                            <img src="/assets/frontend/images/left4.jpg">                              
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#" class="more">more>></a>
-                        </div>
-                        <div class="row panel-body">  
-                            <img src="/assets/frontend/images/left5.jpg">                              
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="#" class="more">more>></a>
-                        </div>
+
+                        @if(isset($latestNews) && count($latestNews)>0)
+                            @foreach($latestNews as $latestNew)
+                                
+                                <div class="row panel-body">  
+                                    <img class="img_latest_new" src="{!! $latestNew->image !!}">                              
+                                    <p>{!! $latestNew->description !!}</p>
+                                    <a href="#" class="more">more>></a>
+                                </div>
+
+                            @endforeach
+                        @endif
+                       
                     </div>
                     
                     <!-- /.col-lg-6 -->

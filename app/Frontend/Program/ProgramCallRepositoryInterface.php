@@ -11,7 +11,7 @@ namespace App\Frontend\Program;
 
 interface ProgramCallRepositoryInterface
 {
-    public function getConferenceRegistration();
+    public function getProgramCall();
     public function create($paramObj);
     public function update($paramObj);
     public function getObjByID($id);

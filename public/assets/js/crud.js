@@ -72,6 +72,7 @@ function cancel_setup(type) {
     window.location.href = '/backend/' + type;
 }
 
+
 $("#check_all").click(function(event){
     if(this.checked) {
         $('.check_source').each(function() { //loop through each checkbox
@@ -83,3 +84,55 @@ $("#check_all").click(function(event){
         });
     }
 });
+
+function status_confirm(type){
+    var id =  $("input[name='id']").val();
+    swal({
+            title: "Are you sure to confirm?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55 ",
+            confirmButtonText: "Yes",
+            cancelButtonText: "No",
+            closeOnConfirm: false,
+            closeOnCancel: true
+        },
+        function (isConfirm) {
+            if (isConfirm) {
+                /*window.location = "/" + type + "/destroy/" + data;*/
+                window.location = "/backend/" + type + "/2/"+id;
+                //route path to do deletion in controller
+
+                /* $("#selected_checkboxes").val(data);
+                 $("#frm_" + type).submit();*/
+            } else {
+                return;
+            }
+        });
+}
+
+function status_cancel(type){
+    var id =  $("input[name='id']").val();
+    swal({
+            title: "Are you sure to cancel?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55 ",
+            confirmButtonText: "Yes",
+            cancelButtonText: "No",
+            closeOnConfirm: false,
+            closeOnCancel: true
+        },
+        function (isConfirm) {
+            if (isConfirm) {
+                /*window.location = "/" + type + "/destroy/" + data;*/
+                window.location = "/backend/" + type + "/3/"+id;
+                //route path to do deletion in controller
+
+                /* $("#selected_checkboxes").val(data);
+                 $("#frm_" + type).submit();*/
+            } else {
+                return;
+            }
+        });
+}

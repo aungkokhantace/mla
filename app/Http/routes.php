@@ -182,12 +182,35 @@ Route::group(['middleware' => 'web'], function () {
                 Route::get('accommodation/edit/{id}', array('as' => 'backend/accommodation/edit', 'uses' => 'Backend\AccommodationController@edit'));
                 Route::post('accommodation/update', array('as' => 'backend/accommodation/update', 'uses' => 'Backend\AccommodationController@update'));
                 Route::post('accommodation/destroy', array('as' => 'backend/accommodation/destroy', 'uses' => 'Backend\AccommodationController@destroy'));
+
+                //Conference Registration
+                Route::get('conference_registration', array('as' => 'backend/conference_registration', 'uses' => 'Frontend\RegistrationController@all_conference_reg'));
+                Route::get('conference_registration/detail/{id}', array('as' => 'backend/conference_registration/detail', 'uses' => 'Frontend\RegistrationController@detail'));
+                Route::get('conference_registration/{status}/{id}', array('as' => 'backend/conference_registration/status', 'uses' => 'Frontend\RegistrationController@status_change'));
+                Route::post('conference_registration/destroy', array('as' => 'backend/conference_registration/destroy', 'uses' => 'Frontend\RegistrationController@destroy'));
+
+                //Program Call Registration
+                Route::get('program_call', array('as' => 'backend/program_call', 'uses' => 'Frontend\ProgramController@all_program_call'));
+                Route::get('program_call/detail/{id}', array('as' => 'backend/program_call/detail', 'uses' => 'Frontend\ProgramController@program_call_detail'));
+                Route::get('program_call/{status}/{id}', array('as' => 'backend/program_call/status', 'uses' => 'Frontend\ProgramController@program_call_status_change'));
+                Route::post('program_call/destroy', array('as' => 'backend/program_call/destroy', 'uses' => 'Frontend\ProgramController@destroy'));
+
+                //Program Poster Registration
+                Route::get('program_poster', array('as' => 'backend/program_poster', 'uses' => 'Frontend\ProgramController@all_program_poster'));
+                Route::get('program_poster/detail/{id}', array('as' => 'backend/program_poster/detail', 'uses' => 'Frontend\ProgramController@program_poster_detail'));
+                Route::get('program_poster/{status}/{id}', array('as' => 'backend/program_poster/status', 'uses' => 'Frontend\ProgramController@program_poster_status_change'));
+                Route::post('program_poster/destroy', array('as' => 'backend/program_poster/destroy', 'uses' => 'Frontend\ProgramController@program_poster_destroy'));
+
+                //Exhibitor Registration
+                Route::get('exhibitor', array('as' => 'backend/exhibitor', 'uses' => 'Frontend\ExhibitionController@all_exhibitor'));
+                Route::get('exhibitor/detail/{id}', array('as' => 'backend/exhibitor/detail', 'uses' => 'Frontend\ExhibitionController@exhibitor_detail'));
+                Route::get('exhibitor/{status}/{id}', array('as' => 'backend/exhibitor/status', 'uses' => 'Frontend\ExhibitionController@exhibitor_status_change'));
+                Route::post('exhibitor/destroy', array('as' => 'backend/exhibitor/destroy', 'uses' => 'Frontend\ExhibitionController@exhibitor_destroy'));
             });
         });
 
     });
 });
-
 
  Route::group(['prefix' => 'api'], function () {
         

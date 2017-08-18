@@ -16,10 +16,10 @@ use App\Core\Utility;
 
 class ExhibitorRepository implements ExhibitorRepositoryInterface
 {
-    public function getConferenceRegistration()
+    public function getExhibitor()
     {
-        $accommodations = ConferenceRegistration::whereNull('deleted_at')->get();
-        return $accommodations;
+        $exhibitors = ExhibitionExhibitor::whereNull('deleted_at')->get();
+        return $exhibitors;
     }
 
     public function create($paramObj)
@@ -60,8 +60,8 @@ class ExhibitorRepository implements ExhibitorRepositoryInterface
     }
 
     public function getObjByID($id){
-        $latest_new = Accommodation::find($id);
-        return $latest_new;
+        $exhibitor = ExhibitionExhibitor::find($id);
+        return $exhibitor;
     }
 
    public function delete($id){

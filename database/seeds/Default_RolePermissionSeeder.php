@@ -138,6 +138,30 @@ class Default_RolePermissionSeeder extends Seeder
             ['role_id'=>1, 'permission_id'=>143],
             ['role_id'=>1, 'permission_id'=>144],
             ['role_id'=>1, 'permission_id'=>145],
+
+            //Conference Registration
+            ['role_id'=>1, 'permission_id'=>150],
+            ['role_id'=>1, 'permission_id'=>151],
+            ['role_id'=>1, 'permission_id'=>152],
+            ['role_id'=>1, 'permission_id'=>153],
+
+            //Program Call Registration
+            ['role_id'=>1, 'permission_id'=>160],
+            ['role_id'=>1, 'permission_id'=>161],
+            ['role_id'=>1, 'permission_id'=>162],
+            ['role_id'=>1, 'permission_id'=>163],
+
+            //Program Poster Registration
+            ['role_id'=>1, 'permission_id'=>170],
+            ['role_id'=>1, 'permission_id'=>171],
+            ['role_id'=>1, 'permission_id'=>172],
+            ['role_id'=>1, 'permission_id'=>173],
+
+            //Exhibitor Registration
+            ['role_id'=>1, 'permission_id'=>180],
+            ['role_id'=>1, 'permission_id'=>181],
+            ['role_id'=>1, 'permission_id'=>182],
+            ['role_id'=>1, 'permission_id'=>183],
         );
 
         DB::table('core_permission_role')->insert($roles);

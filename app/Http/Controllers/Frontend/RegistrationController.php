@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
@@ -24,6 +25,22 @@ class RegistrationController extends Controller
     {
         $this->repo = $repo;
     }
+
+
+    public function all_conference_reg(Request $request)
+    {
+        try{
+            if (Auth::guard('User')->check()) {
+                $conference_registrations      = $this->repo->getConferenceRegistration();
+                return view('backend.conference_registration.index')->with('conference_registrations', $conference_registrations);
+            }
+            return redirect('/');
+        }
+        catch(\Exception $e){
+            return redirect('/error/204/post');
+        }
+    }
+
 
     public function index(){
             $countries = $this->repo->getCountry();
@@ -71,53 +88,22 @@ class RegistrationController extends Controller
             }
     }
 
-    public function edit($id){
+    public function detail($id){
         if (Auth::guard('User')->check()) {
-            $accommodation = $this->repo->getObjByID($id);
-            return view('backend.accommodation.create')->with('accommodation',$accommodation);
+            $conference_registration = $this->repo->getObjByID($id);
+            return view('backend.conference_registration.detail')->with('conference_registration',$conference_registration);
         }
         return redirect('/');
     }
 
-    public function update(AccommodationEntryFormRequest $request){
-        $request->validate();
-        $id = Input::get('id');
-
-        $name = Input::get('name');
-        $stars = Input::get('stars');
-        $description = Input::get('description');
-
-        if(Input::file()){
-            $image = Input::file('image');
-            $path = base_path() . '/public/accommodationImages';
-            if (!file_exists($path)) {
-                mkdir($path, 0777, true);
-            }
-            $image_name = Input::file('image')->getClientOriginalName();
-            $accommodation_image = '/accommodationImages/' . $image_name;
-            $image->move($path, $image_name);
-
-            $image = Image::make(sprintf($path .'/%s', $image_name))->resize(178,136)->save();
-
-            $accommodationObj = Accommodation::find($id);
-            $accommodationObj->name = $name;
-            $accommodationObj->stars = $stars;
-            $accommodationObj->description = $description;
-            $accommodationObj->image = $accommodation_image;
-
-            $result = $this->repo->update($accommodationObj);
-
-
-            if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
-                return redirect()->action('Backend\AccommodationController@index')
-                    ->withMessage(FormatGenerator::message('Success', 'Accommodation updated ...'));
-            }
-            else{
-                return redirect()->action('Backend\AccommodationController@index')
-                    ->withMessage(FormatGenerator::message('Fail', 'Accommodation did not update ...'));
-            }
+    public function status_change($status,$id){
+        if($status == 2){
+            ConferenceRegistration::where('id',$id)->update(['status'=>$status]);
+            return redirect()->action('Frontend\RegistrationController@all_conference_reg')->with('status',$status);
+        }elseif($status == 3){
+            ConferenceRegistration::where('id',$id)->update(['status'=>$status]);
+            return redirect()->action('Frontend\RegistrationController@all_conference_reg')->with('status',$status);
         }
-
     }
     public function destroy(){
         $id         = Input::get('selected_checkboxes');

@@ -16,10 +16,10 @@ use App\Core\Utility;
 
 class ProgramCallRepository implements ProgramCallRepositoryInterface
 {
-    public function getConferenceRegistration()
+    public function getProgramCall()
     {
-        $accommodations = ConferenceRegistration::whereNull('deleted_at')->get();
-        return $accommodations;
+        $program_calls = ProgramCall::whereNull('deleted_at')->get();
+        return $program_calls;
     }
 
     public function create($paramObj)
@@ -60,8 +60,8 @@ class ProgramCallRepository implements ProgramCallRepositoryInterface
     }
 
     public function getObjByID($id){
-        $latest_new = Accommodation::find($id);
-        return $latest_new;
+        $program_call = ProgramCall::find($id);
+        return $program_call;
     }
 
    public function delete($id){

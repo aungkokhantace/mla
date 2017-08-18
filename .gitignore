@@ -33,3 +33,10 @@ composer.lock
 .idea/*
 .idea/workspace.xml
 .env
+
+public/accommodationImages/
+public/galleryImages/
+public/images/
+public/latestnewImages/
+public/LibraryCultureImages/
+public/PostConferenceTravelImages/

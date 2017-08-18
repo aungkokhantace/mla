@@ -31,7 +31,8 @@ class ImageGalleryController extends Controller
         try{
             if (Auth::guard('User')->check()) {
                 $img_galleries      = $this->repo->getImageGallery();
-                return view('backend.image_gallery.index')->with('img_galleries', $img_galleries);
+                return view('backend.image_gallery.index')
+                ->with('img_galleries', $img_galleries);
             }
             return redirect('/');
         }

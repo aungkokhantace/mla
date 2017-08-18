@@ -17,6 +17,7 @@ use Redirect;
 use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
 use Illuminate\Support\Facades\Route;
+use App\Backend\GalleryImage\ImageGalleryRepository;
 
 class GalleryController extends Controller
 {
@@ -36,8 +37,12 @@ class GalleryController extends Controller
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
 
+        $imageRepo  = new ImageGalleryRepository();
+        $images     = $imageRepo->getImageGallery();
+
         return view('frontend.gallery.gallery')
             ->with('page',$page)
-            ->with('posts',$posts);
+            ->with('posts',$posts)
+            ->with('images',$images);
     }
 }

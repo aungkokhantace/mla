@@ -16,7 +16,7 @@
                     <label for="name">Accommodation Name<span class="require">*</span></label>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <input type="text" class="form-control" id="name" name="name" value="{{isset($accommodation)?$accommodation->name:Request::old('name')}}" placeholder="Enter Latest New Name"/>
+                    <input type="text" class="form-control" id="name" name="name" value="{{isset($accommodation)?$accommodation->name:Request::old('name')}}" placeholder="Enter Accommodation Name"/>
                     <p class="text-danger">{{$errors->first('name')}}</p>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <label for="name">Star Number<span class="require">*</span></label>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <input type="number" class="form-control" id="stars" name="stars" value="{{isset($accommodation)?$accommodation->stars:Request::old('stars')}}" placeholder="Enter Star Number"/>
+                    <input type="number" class="form-control" id="stars" name="stars" value="{{isset($accommodation)?$accommodation->stars:Request::old('stars')}}" placeholder="Enter Star Number" min="1" max="5"/>
                     <p class="text-danger">{{$errors->first('stars')}}</p>
                 </div>
             </div>
@@ -34,7 +34,8 @@
                     <label for="name">Description<span class="require">*</span></label>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <input type="text" class="form-control" id="description" name="description" value="{{isset($accommodation)?$accommodation->description:Request::old('description')}}" placeholder="Enter Description"/>
+                    <textarea name="description" id="description" cols="145" rows="15">{{isset($accommodation)?$accommodation->description:Request::old('description')}}</textarea>
+                    {{--<input type="text" class="form-control" id="description" name="description" value="{{isset($accommodation)?$accommodation->description:Request::old('description')}}" placeholder="Enter Description"/>--}}
                     <p class="text-danger">{{$errors->first('description')}}</p>
                 </div>
             </div>

@@ -2,5 +2,5 @@
 @yield('script')
 @yield('content')
 @include('layouts.partial.footer_frontend')
-@include('sweet::alert')
 @yield('page_script')
+@include('sweet::alert')

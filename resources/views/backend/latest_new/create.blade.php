@@ -25,7 +25,8 @@
                         <label for="name">Description<span class="require">*</span></label>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <input type="text" class="form-control" id="description" name="description" value="{{isset($latest_new)?$latest_new->description:Request::old('description')}}" placeholder="Enter Description"/>
+                        <textarea name="description" id="description" cols="145" rows="15">{{isset($latest_new)?$latest_new->description:Request::old('description')}}</textarea>
+                        {{--<input type="text" class="form-control" id="description" name="description" value="{{isset($latest_new)?$latest_new->description:Request::old('description')}}" placeholder="Enter Description"/>--}}
                         <p class="text-danger">{{$errors->first('description')}}</p>
                     </div>
                 </div>

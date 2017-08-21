@@ -136,3 +136,27 @@ function status_cancel(type){
             }
         });
 }
+function add_confirm_setup(type) {
+    swal({
+            title: "Are you sure?",
+            text: "You want to confirm to submit your registration",
+            type: "info",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55 ",
+            confirmButtonText: "Confirm",
+            cancelButtonText: "Cancel",
+            closeOnConfirm: true,
+            closeOnCancel: true
+        },
+        function (isConfirm) {
+            if (isConfirm) {
+                //window.location = "/" + type + "/destroy/" + data;
+                //route path to do deletion in controller
+
+                //$("#selected_checkboxes").val(data);
+                $("#frm_" + type).submit();
+            } else {
+                return;
+            }
+        });
+}

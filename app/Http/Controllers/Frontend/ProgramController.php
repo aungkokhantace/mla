@@ -27,6 +27,7 @@ use Redirect;
 use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
 use Illuminate\Support\Facades\Route;
+use App\Backend\LibraryCulture\LibraryCultureRepository;
 
 class ProgramController extends Controller
 {
@@ -175,9 +176,13 @@ class ProgramController extends Controller
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
 
+        $proramLibRepo      = new LibraryCultureRepository();
+        $programLibraries   = $proramLibRepo->getLibraryCulture();
+
         return view('frontend.program.program_library')
             ->with('page',$page)
-            ->with('posts',$posts);
+            ->with('posts',$posts)
+            ->with('programLibraries',$programLibraries);
     }
     public function all_program_poster(Request $request)
     {

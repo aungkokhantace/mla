@@ -206,6 +206,15 @@ Route::group(['middleware' => 'web'], function () {
                 Route::get('exhibitor/detail/{id}', array('as' => 'backend/exhibitor/detail', 'uses' => 'Frontend\ExhibitionController@exhibitor_detail'));
                 Route::get('exhibitor/{status}/{id}', array('as' => 'backend/exhibitor/status', 'uses' => 'Frontend\ExhibitionController@exhibitor_status_change'));
                 Route::post('exhibitor/destroy', array('as' => 'backend/exhibitor/destroy', 'uses' => 'Frontend\ExhibitionController@exhibitor_destroy'));
+
+                 //Sponsors
+                 Route::get('sponsor', array('as' => 'backend/sponsor', 'uses' => 'Backend\SponsorController@index'));
+                 Route::get('sponsor/create', array('as' => 'backend/sponsor/create', 'uses' => 'Backend\SponsorController@create'));
+                 Route::post('sponsor/store', array('as' => 'backend/sponsor/store', 'uses' => 'Backend\SponsorController@store'));
+                 Route::get('sponsor/edit/{id}', array('as' => 'backend/sponsor/edit', 'uses' => 'Backend\SponsorController@edit'));
+                 Route::post('sponsor/update', array('as' => 'backend/sponsor/update', 'uses' => 'Backend\SponsorController@update'));
+                 Route::post('sponsor/destroy', array('as' => 'backend/sponsor/destroy', 'uses' => 'Backend\SponsorController@destroy'));
+ 
             });
         });
 

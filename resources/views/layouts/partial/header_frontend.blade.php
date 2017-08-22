@@ -20,15 +20,12 @@
 
     <!-- Custom Fonts -->
     <link href="/assets/frontend/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<<<<<<< HEAD
     
     <link href="/assets/frontend_custom/style_custom.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/frontend/css/style.css" />    
     <link rel="stylesheet" type="text/css" href="/assets/frontend/css/demo.css" />
 
-=======
     <link media="all" type="text/css" rel="stylesheet" href="/assets/css/sweetalert.css">
->>>>>>> heinkhantlin
 </head>
 
 <body>

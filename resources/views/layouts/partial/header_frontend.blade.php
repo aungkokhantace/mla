@@ -26,6 +26,11 @@
     <link rel="stylesheet" type="text/css" href="/assets/frontend/css/demo.css" />
 
     <link media="all" type="text/css" rel="stylesheet" href="/assets/css/sweetalert.css">
+
+
+    <link media="all" type="text/css" rel="stylesheet" href="/assets/css/sweetalert.css">
+
+
 </head>
 
 <body>

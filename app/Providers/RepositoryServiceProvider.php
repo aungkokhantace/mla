@@ -50,6 +50,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind('App\Frontend\Program\ProgramCallRepositoryInterface','App\Frontend\Program\ProgramCallRepository');
         $this->app->bind('App\Frontend\Exhibition\ExhibitorRepositoryInterface','App\Frontend\Exhibition\ExhibitorRepository');
         $this->app->bind('App\Backend\Sponsor\SponsorRepositoryInterface','App\Backend\Sponsor\SponsorRepository');
+        $this->app->bind('App\Backend\EventEmail\EventEmailRepositoryInterface','App\Backend\EventEmail\EventEmailRepository');
 
     }
 }

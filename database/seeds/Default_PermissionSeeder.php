@@ -176,6 +176,14 @@ class Default_PermissionSeeder extends Seeder
             ['id'=>193,'module'=>'Sponsor','name'=>'Edit','description'=>'Sponsor Edit','url'=>'backend/sponsor/edit'],
             ['id'=>194,'module'=>'Sponsor','name'=>'Update','description'=>'Sponsor Update','url'=>'backend/sponsor/update'],
             ['id'=>195,'module'=>'Sponsor','name'=>'Destroy','description'=>'Sponsor Destroy','url'=>'backend/sponsor/destroy'],
+
+            //Event Email
+            ['id'=>200,'module'=>'Event Email','name'=>'Listing','description'=>'Event Email Listing','url'=>'backend/eventemail'],
+            ['id'=>201,'module'=>'Event Email','name'=>'Create','description'=>'Event Email Create','url'=>'backend/eventemail/create'],
+            ['id'=>202,'module'=>'Event Email','name'=>'Store','description'=>'Event Email Store','url'=>'backend/eventemail/store'],
+            ['id'=>203,'module'=>'Event Email','name'=>'Edit','description'=>'Event Email Edit','url'=>'backend/eventemail/edit'],
+            ['id'=>204,'module'=>'Event Email','name'=>'Update','description'=>'Event Email Update','url'=>'backend/eventemail/update'],
+            ['id'=>205,'module'=>'Event Email','name'=>'Destroy','description'=>'Event Email Destroy','url'=>'backend/eventemail/destroy'],
         );
 
         DB::table('core_permissions')->insert($permissions);

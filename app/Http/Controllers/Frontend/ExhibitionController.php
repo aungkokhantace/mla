@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Core\FormatGenerator;
 use App\Core\ReturnMessage;
+use App\Core\Utility;
 use App\Frontend\Exhibition\ExhibitionExhibitor;
 use App\Frontend\Exhibition\ExhibitorRepositoryInterface;
 use App\Frontend\Infrastructure\Forms\ExhibitorEntryFormRequest;
@@ -11,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Redirect;
 use App\Backend\Page\PageRepository;
@@ -164,6 +166,40 @@ class ExhibitionController extends Controller
 
 
         if ($result['aceplusStatusCode'] == ReturnMessage::OK) {
+
+            //start sending email to user
+            $userEmailArr = array();
+            $userEmailArr[0] = $email;
+
+            if(isset($userEmailArr) && count($userEmailArr)>0){
+                $template = "backend/exhibitionsubmituseremail/exhibitionsubmituseremail";
+                $email = $userEmailArr;
+                $subject = "Hello World";
+
+                Utility::sendEmail($template,$email,$subject);
+            }
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 2");
+            $adminEmailArr = array();
+            foreach($adminEmailRaw as $eRaw){
+                array_push($adminEmailArr,$eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach($superadminEmailRaw as $superRaw){
+                array_push($adminEmailArr,$superRaw->email);
+            }
+            if(isset($adminEmailArr) && count($adminEmailArr)>0){
+                $template = "backend/exhibitionsubmitadminemail/exhibitionsubmitadminemail";
+                $email = $adminEmailArr;
+                $subject = "Hello World";
+
+                Utility::sendEmail($template,$email,$subject);
+            }
+            //end sending email to admin
+            alert()->success('Registration successfully submitted. Please check your email for further information.')->persistent('OK');
             return redirect()->action('Frontend\ExhibitionController@exhibition_exhibitor')
                 ->withMessage(FormatGenerator::message('Success', 'Exhibitor or Sponsor successfully created ...'));
         } else {

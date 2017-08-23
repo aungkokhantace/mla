@@ -214,6 +214,14 @@ Route::group(['middleware' => 'web'], function () {
                  Route::get('sponsor/edit/{id}', array('as' => 'backend/sponsor/edit', 'uses' => 'Backend\SponsorController@edit'));
                  Route::post('sponsor/update', array('as' => 'backend/sponsor/update', 'uses' => 'Backend\SponsorController@update'));
                  Route::post('sponsor/destroy', array('as' => 'backend/sponsor/destroy', 'uses' => 'Backend\SponsorController@destroy'));
+
+                //Event Emails
+                Route::get('eventemail', array('as'=>'backend/eventemail','uses'=>'Backend\EventEmailController@index'));
+                Route::get('eventemail/create', array('as'=>'backend/eventemail/create','uses'=>'Backend\EventEmailController@create'));
+                Route::get('eventemail/edit/{id}', array('as'=>'backend/eventemail/edit','uses'=>'Backend\EventEmailController@edit'));
+                Route::post('eventemail/store', array('as'=>'backend/eventemail/store','uses'=>'Backend\EventEmailController@store'));
+                Route::post('eventemail/update', array('as'=>'backend/eventemail/update','uses'=>'Backend\EventEmailController@update'));
+                Route::post('eventemail/destroy', array('as'=>'backend/eventemail/destroy','uses'=>'Backend\EventEmailController@destroy'));
  
             });
         });

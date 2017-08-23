@@ -7,6 +7,7 @@
  */
 
 use App\Core\Config\ConfigRepository;
+use Illuminate\Support\Facades\Mail;
 use Validator;
 use Auth;
 use DB;
@@ -87,5 +88,13 @@ class Utility
     public static function getCurrentUserID(){
         $id = Auth::guard('User')->user()->id;
         return $id;
+    }
+
+    public static function sendEmail($template,$emails,$subject){
+        Mail::send($template, [], function($message) use($emails,$subject)
+        {
+            $message->to($emails)
+                ->subject($subject);
+        });
     }
 }

@@ -2,7 +2,7 @@
 @section('title','Library Culture')
 @section('content')
     <div id="content" class="content">
-        <h1 class="page-header">Library & Culture Listing</h1>
+        <h1 class="page-header">Sponsor Listing</h1>
         @if(count(Session::get('message')) != 0)
             <div>
             </div>
@@ -12,19 +12,19 @@
             <div class="col-md-10"></div>
             <div class="col-md-2">
                 <div class="buttons pull-right">
-                    <button type="button" onclick='create_setup("library_culture");' class="btn btn-default btn-md first_btn">
+                    <button type="button" onclick='create_setup("sponsor");' class="btn btn-default btn-md first_btn">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                     </button>
-                    <button type="button" onclick='edit_setup("library_culture");' class="btn btn-default btn-md second_btn">
+                    <button type="button" onclick='edit_setup("sponsor");' class="btn btn-default btn-md second_btn">
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                     </button>
-                    <button type="button" onclick="delete_setup('library_culture');" class="btn btn-default btn-md third_btn">
+                    <button type="button" onclick="delete_setup('sponsor');" class="btn btn-default btn-md third_btn">
                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                     </button>
                 </div>
             </div>
         </div>
-        {!! Form::open(array('id'=> 'frm_library_culture' ,'url' => 'backend/library_culture/destroy', 'class'=> 'form-horizontal user-form-border')) !!}
+        {!! Form::open(array('id'=> 'frm_sponsor' ,'url' => 'backend/sponsor/destroy', 'class'=> 'form-horizontal user-form-border')) !!}
         {{ csrf_field() }}
         <input type="hidden" id="selected_checkboxes" name="selected_checkboxes" value="">
         <div class="row">
@@ -38,6 +38,7 @@
                             <th><input type='checkbox' name='check' id='check_all'/></th>
                             <th>Name</th>
                             <th>Image</th>
+                            <th>Package Type</th>
                         </tr>
                         </thead>
                         <tfoot>
@@ -45,15 +46,17 @@
                             <th></th>
                             <th class="search-col" con-id="name">Name</th>
                             <th></th>
+                            <th class="search-col" con-id="name">Package Type</th>
                         </tr>
                         </tfoot>
                         <tbody>
-                        @foreach($library_cultures as $library_culture)
+                        @foreach($sponsors as $sponsor)
                             <tr>
-                                <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $library_culture->id }}" id="all"></td>
-                                <td><a href="/backend/library_culture/edit/{{$library_culture->id}}">{{$library_culture->name}}</a></td>
+                                <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $sponsor->id }}" id="all"></td>
+                                <td><a href="/backend/sponsor/edit/{{$sponsor->id}}">{{$sponsor->name}}</a></td>
                                 {{-- <td>{{$img_gallery->description}}</td>--}}
-                                <td><img src="{{$library_culture->image}}" class="img-responsive"></td>
+                                <td><img src="{{$sponsor->image}}" class="img-responsive"></td>
+                                <td>{{$sponsor->PackageType->description}}</td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -168,6 +168,14 @@ class Default_PermissionSeeder extends Seeder
             ['id'=>181,'module'=>'Exhibitor Registration','name'=>'Detail','description'=>'Exhibitor Registration Detail','url'=>'backend/exhibitor/detail'],
             ['id'=>182,'module'=>'Exhibitor Registration','name'=>'Status Change','description'=>'Exhibitor Registration Status Change','url'=>'backend/exhibitor/status'],
             ['id'=>183,'module'=>'Exhibitor Registration','name'=>'Destroy','description'=>'Exhibitor Registration Destroy','url'=>'backend/exhibitor/destroy'],
+
+            //Sponsor
+            ['id'=>190,'module'=>'Sponsor','name'=>'Listing','description'=>'Sponsor Listing','url'=>'backend/sponsor'],
+            ['id'=>191,'module'=>'Sponsor','name'=>'Create','description'=>'Sponsor Create','url'=>'backend/sponsor/create'],
+            ['id'=>192,'module'=>'Sponsor','name'=>'Store','description'=>'Sponsor Store','url'=>'backend/sponsor/store'],
+            ['id'=>193,'module'=>'Sponsor','name'=>'Edit','description'=>'Sponsor Edit','url'=>'backend/sponsor/edit'],
+            ['id'=>194,'module'=>'Sponsor','name'=>'Update','description'=>'Sponsor Update','url'=>'backend/sponsor/update'],
+            ['id'=>195,'module'=>'Sponsor','name'=>'Destroy','description'=>'Sponsor Destroy','url'=>'backend/sponsor/destroy'],
         );
 
         DB::table('core_permissions')->insert($permissions);

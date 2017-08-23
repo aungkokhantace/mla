@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use App\Core\Utility;
 
-class SponsorRepository implements LibraryCultureRepositoryInterface
+class SponsorRepository implements SponsorRepositoryInterface
 {
-    public function getLibraryCulture()
+    public function getSponsor()
     {
-        $pages = LibraryCulture::whereNull('deleted_at')->get();
-        return $pages;
+        $sponsors = Sponsor::whereNull('deleted_at')->get();
+        return $sponsors;
     }
 
     public function create($paramObj)
@@ -59,13 +59,13 @@ class SponsorRepository implements LibraryCultureRepositoryInterface
     }
 
     public function getObjByID($id){
-        $library_culture = LibraryCulture::find($id);
-        return $library_culture;
+        $sponsor = Sponsor::find($id);
+        return $sponsor;
     }
 
    public function delete($id){
        try{
-           $tempObj = LibraryCulture::find($id);
+           $tempObj = Sponsor::find($id);
            $tempObj = Utility::addDeletedBy($tempObj);
            $tempObj->deleted_at = date('Y-m-d H:m:i');
            $tempObj->save();
@@ -86,6 +86,11 @@ class SponsorRepository implements LibraryCultureRepositoryInterface
     public function getURLByPageID($page_id){
         $url = DB::table('pages')->where('id',$page_id)->whereNull('deleted_at')->first()->url;
         return $url;
+    }
+
+    public function getPackageType(){
+        $package_types = DB::table('core_settings')->orderBy('value','asc')->get();
+        return $package_types;
     }
     
 

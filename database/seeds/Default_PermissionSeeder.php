@@ -184,6 +184,11 @@ class Default_PermissionSeeder extends Seeder
             ['id'=>203,'module'=>'Event Email','name'=>'Edit','description'=>'Event Email Edit','url'=>'backend/eventemail/edit'],
             ['id'=>204,'module'=>'Event Email','name'=>'Update','description'=>'Event Email Update','url'=>'backend/eventemail/update'],
             ['id'=>205,'module'=>'Event Email','name'=>'Destroy','description'=>'Event Email Destroy','url'=>'backend/eventemail/destroy'],
+
+            //Report Conference Registration
+            ['id'=>210,'module'=>'Report Conference Registration','name'=>'Report Listing','description'=>'Report Conference Registration Listing','url'=>'backend/report/conference_registration'],
+            ['id'=>211,'module'=>'Report Conference Registration','name'=>'Report Search','description'=>'Report Conference Registration Search','url'=>'backend/report/conference_registration/search/{from_date?}/{to_date?}'],
+            ['id'=>212,'module'=>'Report Conference Registration','name'=>'Report Excel','description'=>'Report Conference Registration Excel','url'=>'backend/report/conference_registration/exportexcel/{from_date?}/{to_date?}'],
         );
 
         DB::table('core_permissions')->insert($permissions);

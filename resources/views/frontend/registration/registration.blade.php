@@ -102,7 +102,7 @@
                     <select id="payment_type" name="payment_type" class="form-control">
                         <option value="" selected disabled>Select Payment Type</option>
                       <option value="Cash">Cash</option>
-                      <option value="2">Bank Transfer</option>
+                      <option value="Bank Transfer">Bank Transfer</option>
                     </select>
                       <p class="text-danger" id="payment_type">{{$errors->first('payment_type')}}</p>
                   </div>

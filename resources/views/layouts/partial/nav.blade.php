@@ -7,7 +7,7 @@
             <!-- begin sidebar minify button -->
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
             <!-- end sidebar minify button -->
-            <li class="nav-header">AcePlus Reports</li>
+            <li class="nav-header">Registrations</li>
             <li nav-id='report'  class="has-sub" >
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
@@ -16,7 +16,8 @@
                 </a>
 
                 <ul class="sub-menu">
-                    <li nav-id="report-sale-summary"><a href="/backend/conference_registration/">Conference Registration</a></li>
+                    <li nav-id="report-sale-summary"><a href="/backend/report/conference_registration/">Report Conference Registration</a></li>
+                    {{--<li nav-id="report-sale-summary"><a href="/backend/conference_registration/">Conference Registration</a></li>
                     <li nav-id="report-sale-summary"><a href="/backend/exhibitor/">Exhibitor & Sponsor Registration</a></li>
                     <li nav-id="modifier-create" class="has-sub">
                         <a href="javascript:;">
@@ -28,10 +29,42 @@
                             <li nav-id="modifier-create-modifier"><a href="/backend/program_call">Program Call Registration</a></li>
                             <li nav-id="modifier-create-modifierpanel"><a href="/backend/program_poster">Program Poster Registration</a></li>
                         </ul>
-                    </li>
+                    </li>--}}
                 </ul>
             </li>
+            <li nav-id='report'  class="has-sub" >
+                <a href="javascript:;">
+                    <b class="caret pull-right"></b>
+                    <i class="fa fa-calendar"></i>
+                    <span>Conference Registration</span>
+                </a>
+                <ul class="sub-menu">
+                    <li nav-id="report-sale-summary"><a href="/backend/conference_registration/">List</a></li>
+                </ul>
+            </li>
+            <li nav-id='report'  class="has-sub" >
+                <a href="javascript:;">
+                    <b class="caret pull-right"></b>
+                    <i class="fa fa-calendar"></i>
+                    <span>Exhibitor & Sponsor</span>
+                </a>
 
+                <ul class="sub-menu">
+                    <li nav-id="report-sale-summary"><a href="/backend/exhibitor/">List</a></li>
+                </ul>
+            </li>
+            <li nav-id='report'  class="has-sub" >
+                <a href="javascript:;">
+                    <b class="caret pull-right"></b>
+                    <i class="fa fa-calendar"></i>
+                    <span>Program</span>
+                </a>
+                <ul class="sub-menu">
+                    <li nav-id="modifier-create-modifier"><a href="/backend/program_call">Program Call List</a></li>
+                    <li nav-id="modifier-create-modifierpanel"><a href="/backend/program_poster">Program Poster List</a></li>
+
+                </ul>
+            </li>
             <li class="nav-header">Backend</li>
             <li nav-id='report'  class="has-sub" >
                 <a href="javascript:;">

@@ -24,6 +24,51 @@
                 </div>
             </div>
         </div>--}}
+        <br>
+        <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <label for="from_date" class="text_bold_black">From Date</label>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div class="input-group date dateTimePicker" data-provide="datepicker" id="datepicker_from">
+                    <input type="text" class="form-control" id="from_date" name="from_date" value="{{isset($from_date)? $from_date : ''}}">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </div>
+                </div>
+                <p class="text-danger">{{$errors->first('from_date')}}</p>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <label for="to_date" class="text_bold_black">To Date</label>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div class="input-group date dateTimePicker" data-provide="datepicker"  id="datepicker_to">
+                    <input type="text" class="form-control" id="to_date" name="date" value="{{isset($to_date)? $to_date : ''}}">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </div>
+                </div>
+                <p class="text-danger">{{$errors->first('to_date')}}</p>
+            </div>
+
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <button type="button" onclick="report_search_by_date('backend/report/conference_registration');" class="form-control btn-primary">Preview</button>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <button type="button" onclick="report_export('backend/report/conference_registration');" class="form-control btn-primary">Export Excel</button>
+            </div>
+
+        </div>
         {!! Form::open(array('id'=> 'frm_conference_registration' ,'url' => 'backend/conference_registration/destroy', 'class'=> 'form-horizontal user-form-border')) !!}
         {{ csrf_field() }}
         <input type="hidden" id="selected_checkboxes" name="selected_checkboxes" value="">
@@ -128,6 +173,25 @@
                             .search( this.value )
                             .draw();
                 } );
+
+            });
+            $('#datepicker_from').datepicker({
+                format: 'dd-mm-yyyy',
+                autoclose: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 1,
+                allowInputToggle: true,
+            });
+
+            $('#datepicker_to').datepicker({
+                format: 'dd-mm-yyyy',
+                autoclose: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 1,
+                allowInputToggle: true,
+                minDate: "20-08-2016",
 
             });
         });

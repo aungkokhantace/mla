@@ -10,6 +10,7 @@ namespace App\Report\ConferenceRegistration;
 
 use App\Backend\Country\Country;
 use App\Core\ReturnMessage;
+use App\Frontend\ConferenceRegistration\ConferenceRegistration;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use App\Core\Utility;
@@ -18,8 +19,35 @@ class ReportConferenceRegistrationRepository implements ReportConferenceRegistra
 {
     public function getConferenceRegistration()
     {
-        $conferenceRegistrations = ConferenceRegistration::whereNull('deleted_at')->get();
+        $conferenceRegistrations = DB::select("SELECT * FROM conference_registrations");
         return $conferenceRegistrations;
+    }
+
+    public function getDataByDate($from_date=null, $to_date=null)
+    {
+        $query = ConferenceRegistration::query();
+        $query = $query->leftjoin('countries', 'countries.id', '=', 'conference_registrations.country');
+        $query = $query->select('conference_registrations.id',
+            'conference_registrations.first_name as first_name',
+            'conference_registrations.middle_name as middle_name',
+            'conference_registrations.last_name as last_name',
+            'conference_registrations.organization as organization',
+            'conference_registrations.email as email',
+            'conference_registrations.payment_type as payment_type',
+            'countries.name as country',
+            'conference_registrations.status as status');
+
+        if(isset($from_date) && $from_date != null){
+            $tempFromDate = date("Y-m-d", strtotime($from_date));
+            $query = $query->where('conference_registrations.created_at', '>=' , $tempFromDate);
+        }
+        if(isset($to_date) && $to_date != null){
+            $tempToDate = date("Y-m-d", strtotime($to_date));
+            $query = $query->where('conference_registrations.created_at', '<=', $tempToDate);
+        }
+        $query = $query->whereNull('conference_registrations.deleted_at');
+        $result = $query->get();
+        return $result;
     }
 
     public function create($paramObj)

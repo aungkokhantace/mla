@@ -12,6 +12,7 @@ namespace App\Report\ConferenceRegistration;
 interface ReportConferenceRegistrationRepositoryInterface
 {
     public function getConferenceRegistration();
+    public function getDataByDate($from_date,$to_date);
     public function create($paramObj);
     public function update($paramObj);
     public function getObjByID($id);

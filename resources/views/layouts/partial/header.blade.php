@@ -74,6 +74,7 @@ $companyLogo = \App\Core\Check::companyLogo();
     <script src="/assets/plugins/footable/footable.all.min.js"></script>
     <script src="/assets/plugins/switchery/switchery.min.js"></script>
     <script src="/assets/plugins/switchery/switchery_function.js"></script>
+    <script src="/assets/js/backend.js"></script>
 
     {{--For summernote editor--}}
     <script src="/assets/plugins/summernote/summernote.min.js"></script>

@@ -113,7 +113,7 @@ class ExhibitionController extends Controller
         try{
             if (Auth::guard('User')->check()) {
                 $exhibitors     = $this->exhibitorRepository->getExhibitor();
-                return view('backend.exhibitor_registration.index')->with('exhibitors', $exhibitors);
+                return view('backend.exhibitor_registration.index',compact('exhibitors'));
             }
             return redirect('/');
         }
@@ -122,15 +122,76 @@ class ExhibitionController extends Controller
         }
     }
 
-    public function exhibitor_status_change($status,$id){
-        if($status == 2){
-            ExhibitionExhibitor::where('id',$id)->update(['status'=>$status]);
-            return redirect()->action('Frontend\ExhibitionController@all_exhibitor')->with('status',$status);
-        }elseif($status == 3){
-            ExhibitionExhibitor::where('id',$id)->update(['status'=>$status]);
-            return redirect()->action('Frontend\ExhibitionController@all_exhibitor')->with('status',$status);
-        }
+    public function exhibitor_status_change($status,$id)
+    {
+        if ($status == 2) {
+            ExhibitionExhibitor::where('id', $id)->update(['status' => $status]);
+            $exhibitionExhibitors = ExhibitionExhibitor::find($id);
+            $email = $exhibitionExhibitors->email;
+
+            //start sending email to user
+            $template = "backend/exhibitionconfirmuseremail/exhibitionconfirmuseremail";
+            $subject = "Hello World";
+            Utility::sendEmail($template, $email, $subject);
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 2");
+            $adminEmailArr = array();
+            foreach ($adminEmailRaw as $eRaw) {
+                array_push($adminEmailArr, $eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach ($superadminEmailRaw as $superRaw) {
+                array_push($adminEmailArr, $superRaw->email);
+            }
+            if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+                $template = "backend/exhibitionconfirmadminemail/exhibitionconfirmadminemail";
+                $email = $adminEmailArr;
+                $subject = "Hello World";
+
+                Utility::sendEmail($template, $email, $subject);
+            }
+            //end sending email to admin
+            alert()->success('Confirmation email has been sent to user.')->persistent('OK');
+            return redirect()->action('Frontend\ExhibitionController@all_exhibitor')->with('status', $status);
+
+        } elseif ($status == 3) {
+            ExhibitionExhibitor::where('id', $id)->update(['status' => $status]);
+                $exhibitionExhibitor = ExhibitionExhibitor::find($id);
+                $email = $exhibitionExhibitor->email;
+                //start sending email to user
+                $template = "backend/exhibitioncanceluseremail/exhibitioncanceluseremail";
+                $subject = "Hello World";
+                Utility::sendEmail($template, $email, $subject);
+                //end sending email to user
+
+                //start sending email to admin
+                $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 2");
+                $adminEmailArr = array();
+                foreach ($adminEmailRaw as $eRaw) {
+                    array_push($adminEmailArr, $eRaw->email);
+                }
+
+                $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+                foreach ($superadminEmailRaw as $superRaw) {
+                    array_push($adminEmailArr, $superRaw->email);
+                }
+                if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+                    $template = "backend/exhibitioncanceladminemail/exhibitioncanceladminemail";
+                    $email = $adminEmailArr;
+                    $subject = "Hello World";
+
+                    Utility::sendEmail($template, $email, $subject);
+                }
+                //end sending email to admin
+                alert()->success('Cancellation email has been sent to user.')->persistent('OK');
+
+                return redirect()->action('Frontend\ExhibitionController@all_exhibitor')->with('status', $status);
+            }
     }
+
 
     public function exhibitor_detail($id){
         if (Auth::guard('User')->check()) {

@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Core\FormatGenerator;
 use App\Core\ReturnMessage;
+use App\Core\Utility;
 use App\Frontend\Infrastructure\Forms\ProgramCallEntryFormRequest;
 use App\Frontend\Infrastructure\Forms\ProgramPosterEntryFormRequest;
 use App\Frontend\Program\ProgramCall;
@@ -21,6 +22,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Redirect;
 
@@ -79,9 +81,67 @@ class ProgramController extends Controller
     public function program_call_status_change($status,$id){
         if($status == 2){
             ProgramCall::where('id',$id)->update(['status'=>$status]);
+            $program_call = ProgramCall::find($id);
+            $email = $program_call->email;
+
+            //start sending email to user
+            $template = "backend/programcallconfirmuseremail/programcallconfirmuseremail";
+            $subject = "Hello World";
+            Utility::sendEmail($template, $email, $subject);
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 3");
+            $adminEmailArr = array();
+            foreach ($adminEmailRaw as $eRaw) {
+                array_push($adminEmailArr, $eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach ($superadminEmailRaw as $superRaw) {
+                array_push($adminEmailArr, $superRaw->email);
+            }
+            if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+                $template = "backend/programcallconfirmadminemail/programcallconfirmadminemail";
+                $email = $adminEmailArr;
+                $subject = "Hello World";
+
+                Utility::sendEmail($template, $email, $subject);
+            }
+            //end sending email to admin
+            alert()->success('Confirmation email has been sent to user.')->persistent('OK');
             return redirect()->action('Frontend\ProgramController@all_program_call')->with('status',$status);
         }elseif($status == 3){
             ProgramCall::where('id',$id)->update(['status'=>$status]);
+
+            $program_call = ProgramCall::find($id);
+            $email = $program_call->email;
+            $template = "backend/programcallcanceluseremail/programcallcanceluseremail";
+            $subject = "Hello World";
+            Utility::sendEmail($template, $email, $subject);
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 3");
+            $adminEmailArr = array();
+            foreach ($adminEmailRaw as $eRaw) {
+                array_push($adminEmailArr, $eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach ($superadminEmailRaw as $superRaw) {
+                array_push($adminEmailArr, $superRaw->email);
+            }
+            if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+                $template = "backend/programcallcanceladminemail/programcallcanceladminemail";
+                $email = $adminEmailArr;
+                $subject = "Hello World";
+
+                Utility::sendEmail($template, $email, $subject);
+            }
+            //end sending email to admin
+            alert()->success('Cancellation email has been sent to user.')->persistent('OK');
+
             return redirect()->action('Frontend\ProgramController@all_program_call')->with('status',$status);
         }
     }
@@ -125,6 +185,41 @@ class ProgramController extends Controller
 
 
         if ($result['aceplusStatusCode'] == ReturnMessage::OK) {
+
+            //start sending email to user
+            $userEmailArr = array();
+            $userEmailArr[0] = $email;
+
+            if(isset($userEmailArr) && count($userEmailArr)>0){
+                $template = "backend/programcallsubmituseremail/programcallsubmituseremail";
+                $email = $userEmailArr;
+                $subject = "Hello World";
+
+                Utility::sendEmail($template,$email,$subject);
+            }
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 3");
+            $adminEmailArr = array();
+            foreach($adminEmailRaw as $eRaw){
+                array_push($adminEmailArr,$eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach($superadminEmailRaw as $superRaw){
+                array_push($adminEmailArr,$superRaw->email);
+            }
+            if(isset($adminEmailArr) && count($adminEmailArr)>0){
+                $template = "backend/programcallsubmitadminemail/programcallsubmitadminemail";
+                $email = $adminEmailArr;
+                $subject = "Hello World";
+
+                Utility::sendEmail($template,$email,$subject);
+            }
+            //end sending email to admin
+            alert()->success('Registration successfully submitted. Please check your email for further information.')->persistent('OK');
+
             return redirect()->action('Frontend\ProgramController@program_call')
                 ->withMessage(FormatGenerator::message('Success', 'Call for paper successfully created ...'));
         } else {
@@ -200,9 +295,67 @@ class ProgramController extends Controller
     public function program_poster_status_change($status,$id){
         if($status == 2){
             ProgramPoster::where('id',$id)->update(['status'=>$status]);
+            $program_poster = ProgramPoster::find($id);
+            $email = $program_poster->email;
+
+            //start sending email to user
+            $template = "backend/programposterconfirmuseremail/programposterconfirmuseremail";
+            $subject = "Program Poster Confirm";
+            Utility::sendEmail($template, $email, $subject);
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 4");
+            $adminEmailArr = array();
+            foreach ($adminEmailRaw as $eRaw) {
+                array_push($adminEmailArr, $eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach ($superadminEmailRaw as $superRaw) {
+                array_push($adminEmailArr, $superRaw->email);
+            }
+            if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+                $template = "backend/programposterconfirmadminemail/programposterconfirmadminemail";
+                $email = $adminEmailArr;
+                $subject = "Program Poster Confirm";
+
+                Utility::sendEmail($template, $email, $subject);
+            }
+            //end sending email to admin
+            alert()->success('Confirmation email has been sent to user.')->persistent('OK');
             return redirect()->action('Frontend\ProgramController@all_program_poster')->with('status',$status);
         }elseif($status == 3){
             ProgramPoster::where('id',$id)->update(['status'=>$status]);
+
+            $program_poster = ProgramPoster::find($id);
+            $email = $program_poster->email;
+            //start sending email to user
+            $template = "backend/programpostercanceluseremail/programpostercanceluseremail";
+            $subject = "Program Poster Cancel";
+            Utility::sendEmail($template, $email, $subject);
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 4");
+            $adminEmailArr = array();
+            foreach ($adminEmailRaw as $eRaw) {
+                array_push($adminEmailArr, $eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach ($superadminEmailRaw as $superRaw) {
+                array_push($adminEmailArr, $superRaw->email);
+            }
+            if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+                $template = "backend/programpostercanceladminemail/programpostercanceladminemail";
+                $email = $adminEmailArr;
+                $subject = "Program Poster Cancel";
+
+                Utility::sendEmail($template, $email, $subject);
+            }
+            //end sending email to admin
+            alert()->success('Cancellation email has been sent to user.')->persistent('OK');
             return redirect()->action('Frontend\ProgramController@all_program_poster')->with('status',$status);
         }
     }
@@ -252,6 +405,41 @@ class ProgramController extends Controller
 
 
         if ($result['aceplusStatusCode'] == ReturnMessage::OK) {
+
+            //start sending email to user
+            $userEmailArr = array();
+            $userEmailArr[0] = $email;
+
+            if(isset($userEmailArr) && count($userEmailArr)>0){
+                $template = "backend/programpostersubmituseremail/programpostersubmituseremail";
+                $email = $userEmailArr;
+                $subject = "Hello World";
+
+                Utility::sendEmail($template,$email,$subject);
+            }
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 4");
+            $adminEmailArr = array();
+            foreach($adminEmailRaw as $eRaw){
+                array_push($adminEmailArr,$eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach($superadminEmailRaw as $superRaw){
+                array_push($adminEmailArr,$superRaw->email);
+            }
+            if(isset($adminEmailArr) && count($adminEmailArr)>0){
+                $template = "backend/programpostersubmitadminemail/programpostersubmitadminemail";
+                $email = $adminEmailArr;
+                $subject = "Hello World";
+
+                Utility::sendEmail($template,$email,$subject);
+            }
+            //end sending email to admin
+            alert()->success('Registration successfully submitted. Please check your email for further information.')->persistent('OK');
+
             return redirect()->action('Frontend\ProgramController@program_poster')
                 ->withMessage(FormatGenerator::message('Success', 'Poster session successfully created ...'));
         } else {

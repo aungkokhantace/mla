@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Core\FormatGenerator;
 use App\Core\ReturnMessage;
+use App\Core\Utility;
 use App\Frontend\ConferenceRegistration\ConferenceRegistration;
 use App\Frontend\ConferenceRegistration\ConferenceRegistrationRepositoryInterface;
 use App\Frontend\Infrastructure\Forms\RegistrationEntryFormRequest;
@@ -12,6 +13,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
@@ -80,6 +82,42 @@ class RegistrationController extends Controller
 
 
             if ($result['aceplusStatusCode'] == ReturnMessage::OK) {
+
+                //start sending email to user
+                $userEmailArr = array();
+                $userEmailArr[0] = $email;
+
+                if(isset($userEmailArr) && count($userEmailArr)>0){
+                    $template = "backend/registrationsubmituseremail/registrationsubmituseremail";
+                    $email = $userEmailArr;
+                    $subject = "Hello World";
+
+                    Utility::sendEmail($template,$email,$subject);
+                }
+                //end sending email to user
+
+                //start sending email to admin
+                $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 1");
+                $adminEmailArr = array();
+                foreach($adminEmailRaw as $eRaw){
+                    array_push($adminEmailArr,$eRaw->email);
+                }
+
+                $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+                foreach($superadminEmailRaw as $superRaw){
+                    array_push($adminEmailArr,$superRaw->email);
+                }
+                if(isset($adminEmailArr) && count($adminEmailArr)>0){
+                    $template = "backend/registrationsubmitadminemail/registrationsubmitadminemail";
+                    $email = $adminEmailArr;
+                    $subject = "Hello World";
+
+                    Utility::sendEmail($template,$email,$subject);
+                }
+                //end sending email to admin
+
+                alert()->success('Registration successfully submitted. Please check your email for further information.')->persistent('OK');
+
                 return redirect()->action('Frontend\RegistrationController@index')
                     ->withMessage(FormatGenerator::message('Success', 'Registration successfully created ...'));
             } else {
@@ -99,9 +137,67 @@ class RegistrationController extends Controller
     public function status_change($status,$id){
         if($status == 2){
             ConferenceRegistration::where('id',$id)->update(['status'=>$status]);
+            $reg = ConferenceRegistration::find($id);
+            $email = $reg->email;
+
+            //start sending email to user
+            $template = "backend/registrationconfirmuseremail/registrationconfirmuseremail";
+            $subject = "Registration Confirm";
+            Utility::sendEmail($template, $email, $subject);
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 2");
+            $adminEmailArr = array();
+            foreach ($adminEmailRaw as $eRaw) {
+                array_push($adminEmailArr, $eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach ($superadminEmailRaw as $superRaw) {
+                array_push($adminEmailArr, $superRaw->email);
+            }
+            if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+                $template = "backend/registrationconfirmadminemail/registrationconfirmadminemail";
+                $email = $adminEmailArr;
+                $subject = "Registration Confirm";
+
+                Utility::sendEmail($template, $email, $subject);
+            }
+            //end sending email to admin
+            alert()->success('Confirmation email has been sent to user.')->persistent('OK');
             return redirect()->action('Frontend\RegistrationController@all_conference_reg')->with('status',$status);
         }elseif($status == 3){
             ConferenceRegistration::where('id',$id)->update(['status'=>$status]);
+            $reg = ConferenceRegistration::find($id);
+            $email = $reg->email;
+
+            //start sending email to user
+            $template = "backend/registrationcanceluseremail/registrationcanceluseremail";
+            $subject = "Registration Cancel";
+            Utility::sendEmail($template, $email, $subject);
+            //end sending email to user
+
+            //start sending email to admin
+            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 2");
+            $adminEmailArr = array();
+            foreach ($adminEmailRaw as $eRaw) {
+                array_push($adminEmailArr, $eRaw->email);
+            }
+
+            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            foreach ($superadminEmailRaw as $superRaw) {
+                array_push($adminEmailArr, $superRaw->email);
+            }
+            if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+                $template = "backend/registrationcanceladminemail/registrationcanceladminemail";
+                $email = $adminEmailArr;
+                $subject = "Registration Cancel";
+
+                Utility::sendEmail($template, $email, $subject);
+            }
+            //end sending email to admin
+            alert()->success('Cancellation email has been sent to user.')->persistent('OK');
             return redirect()->action('Frontend\RegistrationController@all_conference_reg')->with('status',$status);
         }
     }

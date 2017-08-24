@@ -31,7 +31,6 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="listing">
                     <input type="hidden" id="pageSearchedValue" name="pageSearchedValue" value="">
-                    @foreach($program_posters as $program_poster)
                     <table class="table table-striped list-table" id="list-table">
 
                         <thead>
@@ -42,9 +41,7 @@
                             <th>Address</th>
                             <th>Author Affiliation</th>
                             <th>Status</th>
-                            @if($program_poster->status != 3)
                             <th>Change Status</th>
-                                @endif
                         </tr>
                         </thead>
                         <tfoot>
@@ -55,14 +52,12 @@
                             <th class="search-col" con-id="organization">Address</th>
                             <th class="search-col" con-id="organization">Author Affiliation</th>
                             <th class="search-col" con-id="status">Status</th>
-                            @if($program_poster->status != 3)
                             <th></th>
-                                @endif
                         </tr>
                         </tfoot>
                         <tbody>
+                        @foreach($program_posters as $program_poster)
                             <tr>
-                                <input type="hidden" name="id" value="{{$program_poster->id}}">
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $program_poster->id }}" id="all"></td>
 
                                 <td><a href="/backend/program_poster/detail/{{$program_poster->id}}">{{$program_poster->title}}</a></td>
@@ -78,13 +73,13 @@
                                         Cancel
                                     @endif
                                 </td>
-                                @if($program_poster->status != 3)
+                                @if($program_poster->status != 3 or $program_poster->status != 2)
                                 <td>
                                     <div class="btn btn-group-sm">
                                         @if($program_poster->status == 1)
-                                            <a class="btn btn-success" onclick="status_confirm('program_poster')">Confirm</a><a onclick="status_cancel('conference_registration')" class="btn btn-danger">Cancel</a>
+                                            <a class="btn btn-success" onclick="status_confirm_program_poster({{$program_poster->id}})">Confirm</a><a onclick="status_cancel_program_poster({{$program_poster->id}})" class="btn btn-danger">Cancel</a>
                                         @elseif($program_poster->status == 2)
-                                            <a onclick="status_cancel('program_poster')" class="btn btn-danger">Cancel</a>
+
                                         @elseif($program_poster->status == 3)
 
                                         @endif
@@ -92,9 +87,9 @@
                                 </td>
                                     @endif
                             </tr>
+                        @endforeach
                         </tbody>
                     </table>
-                    @endforeach
                 </div>
             </div>
         </div>

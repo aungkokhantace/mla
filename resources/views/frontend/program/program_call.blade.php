@@ -5,13 +5,13 @@
 
         <!-- Content Column -->
         <div class="col-md-9">
-            <h2>PROGRAM >> CALL FOR PAPERS</h2>
+             <h2>PROGRAM >> CALL FOR PAPERS</h2>
             @if(Session::has('message'))
                 <div class="col-md-8 well">
                     {{Session::get('message')['body']}}
                 </div>
             @endif
-            <div class="col-md-9 poster" id="paper">
+            
                 <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="frm_program_call">
                     {{csrf_field()}}
                     <fieldset>
@@ -147,7 +147,7 @@
                 <p>
                     Dr. Hlaing Hlaing Gyi, Librarian, Yangon University Library<br/>
                     Email:  hlaingyu2010@gmail.com</p>
-            </div>
+            
 
         </div>
     </div>

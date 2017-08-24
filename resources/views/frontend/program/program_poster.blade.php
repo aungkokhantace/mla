@@ -11,7 +11,7 @@
                     {{Session::get('message')['body']}}
                 </div>
             @endif
-            <div class="col-md-9 poster" id="poster">
+            
                 <form class="form-horizontal" method="post" action="{{url('program_poster/store')}}" id="frm_program_poster">
                     {{csrf_field()}}
                     <fieldset>
@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="email">Email</label>
                             <div class="col-md-4">
-                                <input id="email" name="email" type="email" placeholder="" class="form-control input-md">
+                                <input id="email" name="email" type="email" placeholder="" class="form-control">
                                 <p class="text-danger">{{$errors->first('email')}}</p>
                             </div>
                         </div>
@@ -47,16 +47,16 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="title">Title</label>
                             <div class="col-md-4">
-                                <input id="title" name="title" type="text" placeholder="" class="form-control input-md">
+                                <input id="title" name="title" type="text" placeholder="" class="form-control">
                                 <p class="text-danger">{{$errors->first('title')}}</p>
                             </div>
                         </div>
 
                         <!-- Text input-->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="author_affilliation">Author Affiliation</label>
+                            <label class="col-md-4 control-label" for="author">Author Affiliation</label>
                             <div class="col-md-4">
-                                <input id="author" name="author" type="text" placeholder="" class="form-control input-md">
+                                <input class="form-control" id="author" name="author" type="text" placeholder="">
                                 <p class="text-danger">{{$errors->first('author')}}</p>
                             </div>
                         </div>
@@ -71,8 +71,7 @@
 
                     </fieldset>
                 </form>
-            </div>
-
+           
         </div>
     </div>
     <!-- /.row -->

@@ -1,7 +1,7 @@
 <!-- Page Content -->
     <div class="container">
 
-        <div class="row p-topic">
+        <div class="row">
             <!-- Sidebar Column -->
             <div class="col-md-3">
                 <div class="list-group">

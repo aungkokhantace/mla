@@ -487,7 +487,6 @@ Email:  hlaingyu2010@gmail.com</p>
 
 
         ['name'=>'PROGRAM GUIDELINE','description'=>'','content'=>'
-            <div class="col-md-9">
                 <h2>PROGRAM >> GUIDELINES FOR AUTHORS AND PRESENTERS</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -500,8 +499,7 @@ Email:  hlaingyu2010@gmail.com</p>
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>',
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
             'status' =>'active', 'url' =>'', 'title' =>'PROGRAM GUIDELINE', 'post_order' =>1, 'pages_id' =>12, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
 

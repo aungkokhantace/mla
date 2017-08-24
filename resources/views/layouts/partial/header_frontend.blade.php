@@ -11,23 +11,10 @@
 
     <title>17th Congress of Southeast Asian Libraries</title>
 
-    <!-- Bootstrap Core CSS -->
     <link href="/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-
     <link href="/assets/frontend/css/modern-business.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
     <link href="/assets/frontend/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
     <link href="/assets/frontend_custom/style_custom.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/frontend/css/style.css" />    
-    <link rel="stylesheet" type="text/css" href="/assets/frontend/css/demo.css" />
-
-    <link media="all" type="text/css" rel="stylesheet" href="/assets/css/sweetalert.css">
-
-
     <link media="all" type="text/css" rel="stylesheet" href="/assets/css/sweetalert.css">
 
 
@@ -40,7 +27,7 @@
             <div class="col-md-9">
             <img src="/assets/frontend/images/head1.jpg" class="img-responsive">
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-3 collapse">
+            <div class="col-md-3">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="SEARCH">
                     <span class="input-group-btn">
@@ -66,7 +53,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                 <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">
                     <li>
                         <a href="/home" class="active">HOME</a>
                     </li>
@@ -95,7 +82,4 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Header Carousel -->
-    <header class="my-carousel">
-                <img src="/assets/frontend/images/slide1.jpg" class="img-responsive">
-    </header>
+    

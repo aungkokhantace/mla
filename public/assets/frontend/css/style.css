@@ -2,6 +2,7 @@
 	/*width: 900px;*/
 	margin: 0 auto;
 	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+
 }
 .lb-album li{
 	float: left;
@@ -203,5 +204,15 @@ x:-o-prefocus, .lb-overlay img {
 .lb-overlay
 {
 	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgb(43, 43, 43) 100%);
+}
+
+h3.p-overview
+{
+	font-size:13pt;
+}
+
+ul.lb-album
+{
+list-style:none;
 }
 

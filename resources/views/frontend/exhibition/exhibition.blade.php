@@ -4,8 +4,8 @@
 @include('layouts.partial.nav_exhibition')
 
         <!-- Content Column -->
-        <div class="col-md-9">
-            
+        <div class="col-md-9 col-sm-12 col-xs-12 sponsor" id="sponsor_support">
+                       
             @if(isset($page->content) && $page->content !== "")
             {!! $page->content !!}
             <br>

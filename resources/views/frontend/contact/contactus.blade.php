@@ -2,19 +2,16 @@
 @section('title','Contact Us')
 @section('content')
  <!-- Page Content -->
- <div class="container">
- 
-         <div class="row contact">
-            @if(isset($page->content) && $page->content !== "")
-            {!! $page->content !!}
-            <br>
-            @endif
+ <div class="container"> 
+    <div class="row">
+        @if(isset($posts) && count($posts)>0 )
             @foreach($posts as $post)
                 {!! $post->content !!}<br>
             @endforeach
-         </div>
-         <!-- /.row -->
+        @endif
      </div>
+</div>
+
 @stop
 @section('page_script')
 @endsection

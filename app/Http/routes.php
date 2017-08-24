@@ -222,7 +222,27 @@ Route::group(['middleware' => 'web'], function () {
                 Route::post('eventemail/store', array('as'=>'backend/eventemail/store','uses'=>'Backend\EventEmailController@store'));
                 Route::post('eventemail/update', array('as'=>'backend/eventemail/update','uses'=>'Backend\EventEmailController@update'));
                 Route::post('eventemail/destroy', array('as'=>'backend/eventemail/destroy','uses'=>'Backend\EventEmailController@destroy'));
- 
+
+                //Conference Registration Report
+                Route::get('report/conference_registration', array('as'=>'backend/report/conference_registration','uses'=>'Report\ConferenceRegistrationReportController@index'));
+                Route::get('report/conference_registration/search/{from_date?}/{to_date?}', array('as'=>'backend/report/conference_registration/search/{from_date?}/{to_date?}','uses'=>'Report\ConferenceRegistrationReportController@search'));
+                Route::get('report/conference_registration/exportexcel/{from_date?}/{to_date?}', array('as'=>'backend/report/conference_registration/exportexcel/{from_date?}/{to_date?}','uses'=>'Report\ConferenceRegistrationReportController@excel'));
+
+                //Exhibitor Report
+                Route::get('report/exhibitor', array('as'=>'backend/report/exhibitor','uses'=>'Report\ExhibitorReportController@index'));
+                Route::get('report/exhibitor/search/{from_date?}/{to_date?}', array('as'=>'backend/report/exhibitor/search/{from_date?}/{to_date?}','uses'=>'Report\ExhibitorReportController@search'));
+                Route::get('report/exhibitor/exportexcel/{from_date?}/{to_date?}', array('as'=>'backend/report/exhibitor/exportexcel/{from_date?}/{to_date?}','uses'=>'Report\ExhibitorReportController@excel'));
+
+                //Program Call Report
+                Route::get('report/program_call', array('as'=>'backend/report/program_call','uses'=>'Report\ProgramCallReportController@index'));
+                Route::get('report/program_call/search/{from_date?}/{to_date?}', array('as'=>'backend/report/program_call/search/{from_date?}/{to_date?}','uses'=>'Report\ProgramCallReportController@search'));
+                Route::get('report/program_call/exportexcel/{from_date?}/{to_date?}', array('as'=>'backend/report/program_call/exportexcel/{from_date?}/{to_date?}','uses'=>'Report\ProgramCallReportController@excel'));
+
+                //Program Poster Report
+                Route::get('report/program_poster', array('as'=>'backend/report/program_poster','uses'=>'Report\ProgramCallReportController@index'));
+                Route::get('report/program_poster/search/{from_date?}/{to_date?}', array('as'=>'backend/report/program_poster/search/{from_date?}/{to_date?}','uses'=>'Report\ProgramCallReportController@search'));
+                Route::get('report/program_poster/exportexcel/{from_date?}/{to_date?}', array('as'=>'backend/report/program_poster/exportexcel/{from_date?}/{to_date?}','uses'=>'Report\ProgramCallReportController@excel'));
+
             });
         });
 

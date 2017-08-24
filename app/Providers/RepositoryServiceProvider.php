@@ -51,6 +51,9 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind('App\Frontend\Exhibition\ExhibitorRepositoryInterface','App\Frontend\Exhibition\ExhibitorRepository');
         $this->app->bind('App\Backend\Sponsor\SponsorRepositoryInterface','App\Backend\Sponsor\SponsorRepository');
         $this->app->bind('App\Backend\EventEmail\EventEmailRepositoryInterface','App\Backend\EventEmail\EventEmailRepository');
-
+        $this->app->bind('App\Report\ConferenceRegistration\ReportConferenceRegistrationRepositoryInterface','App\Report\ConferenceRegistration\ReportConferenceRegistrationRepository');
+        $this->app->bind('App\Report\Exhibitor\ReportExhibitorRepositoryInterface','App\Report\Exhibitor\ReportExhibitorRepository');
+        $this->app->bind('App\Report\Program\ReportProgramPosterRepositoryInterface','App\Report\Program\ReportProgramPosterRepository');
+        $this->app->bind('App\Report\Program\ReportProgramCallRepositoryInterface','App\Report\Program\ReportProgramCallRepository');
     }
 }

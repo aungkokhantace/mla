@@ -2,6 +2,10 @@
 @section('title','Dashboard')
 @section('content')
 
+<!-- Header Carousel -->
+<header class="my-carousel">
+    <img src="/assets/frontend/images/consal_slider.jpg" class="img-responsive">
+</header>
 
 <!-- Page Content -->
 <div class="container">

@@ -53,8 +53,7 @@ class Default_PostSeeder extends Seeder
         ['name'=>'REGISTRATION','description'=>'','content'=>'',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION', 'post_order' =>1, 'pages_id' =>3, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
-            ['name'=>'EXHIBITION & SUPPORTERS','description'=>'','content'=>'<div class="col-md-9 col-sm-12 col-xs-12 sponsor" id="sponsor_support">
-            <h2>EXHIBITION & SPONSORSHIP >> SPONSORS AND SUPPORTERS </h2>
+            ['name'=>'EXHIBITION & SUPPORTERS','description'=>'','content'=>'<h2>EXHIBITION & SPONSORSHIP >> SPONSORS AND SUPPORTERS </h2>
            <div class="col-md-12">
                <div class="row">
                    <h3>Platinum Package</h3>
@@ -86,7 +85,7 @@ class Default_PostSeeder extends Seeder
                    <img src="/assets/frontend/images/bottom4.jpg">
                </div>
            </div> 
-           </div>',
+           ',
             'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION & SUPPORTER', 'post_order' =>1, 'pages_id' =>4, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
             ['name'=>'TRAVEL & ACCOMMODATION','description'=>'','content'=>'',
@@ -94,29 +93,30 @@ class Default_PostSeeder extends Seeder
         ['name'=>'GALLERY','description'=>'','content'=>'',
             'status' =>'active', 'url' =>'', 'title' =>'GALLERY', 'post_order' =>1, 'pages_id' =>6, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         ['name'=>'CONTACT US','description'=>'','content'=>'
-                <div class="col-md-6">
-                <h3>Contact Us</h3>
-                    <p> 
-                        Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  Maha Thukha Road, Naypyidaw, Myanmar
-                    </p>
-                    <br/>
-                    <p>
-                        Email/Gmail&nbsp;: consal@sample.com</p>
-                    </br/>
-                    <p> 
-                    Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +959 111 111 111</p>
-                    <ul class="list-unstyled list-inline list-social-icons">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1qh12QBAgnozfHPAHd_1KAOoY80U" width="500" height="400"></iframe>
-                </div>',
+        <div class="col-md-6">
+        <h2>Contact Us</h2>
+            <p> 
+                Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Maha Thukha Road, Naypyidaw, Myanmar
+            </p>
+            <br/>
+            <p>
+                Email/Gmail&nbsp;: consal@sample.com</p>
+            </br/>
+            <p> 
+            Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +95 67 421 072</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li>
+                    <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+        <iframe class="map" src="https://www.google.com/maps/d/u/0/embed?mid=1qh12QBAgnozfHPAHd_1KAOoY80U" width="500" height="400"></iframe>
+        </div>
+        ',
             'status' =>'active', 'url' =>'', 'title' =>'CONTACT US', 'post_order' =>1, 'pages_id' =>7, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],       
         
             ['name'=>'PROGREAM PRE-CONFERENCE','description'=>'','content'=>'<h2>PROGRAM >> PRE-CONFERENCE CONVENING</h2>
@@ -135,48 +135,155 @@ class Default_PostSeeder extends Seeder
             'status' =>'active', 'url' =>'', 'title' =>'PROGREAM PRE-CONFERENCE', 'post_order' =>1, 'pages_id' =>8, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
         ['name'=>'PROGRAM CONFERENCE','description'=>'','content'=>' <h2>PROGRAM >> CONFERENCE PROGRAM OVERVIEW</h2>
-                <table class="table table-bordered p-table">
-                    <tr>
-                        <td>Wednesday,2 May 2018(Day1)</td>
-                        <td>
-                            <ul>
-                                <li>Executive Board Meeting</li>
-                                <li>Re-registration and New Registration for general conference participants</li>
-                                <li>Exhibition Opening </li>
-                                <li>Poster Section Overview</li>
-                            </ul>
-                        </td>
-                    </tr>
-                     <tr>
-                        <td>Thursday, 3 May 2018<br/>(Day2)</td>
-                        <td>
-                            <ul>
-                                <li>Opening Ceremony</li>
-                                <li>General Conference</li>
-                                <li>Welcome Dinner</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Friday, 4 May 2018<br/>(Day3)</td>
-                        <td>
-                            <ul>
-                                <li>General Conference</li>
-                                <li>Closing Ceremony</li>
-                                <li>Gala Dinner</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Saturday, 5 May 2018<br/>(Day4)</td>
-                        <td>
-                            <ul>
-                                <li>Library and Cultural Visits</li>
-                            
-                            </ul>
-                        </td>
-                    </tr>
-                </table>',
+        <table class="table table-bordered p-table">
+        <tr>
+            <td>Monday, 2 May 2018<br/>(Day 1)</td>
+            <td>
+                <ul>
+                    <li>Executive Board Meeting (exclusive to Executive Board Members)</li>
+                    <li>Re-registration and New Registration for general conference participants
+                </li>
+                </ul>
+            </td>
+        </tr>
+         <tr>
+            <td>Tuesday, 3 May 2018<br/>(Day 2)</td>
+            <td>
+                <ul>
+                    <li>Opening Ceremony</li>
+                    <li>General Conference</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Wednesday, 4 May 2018<br/>(Day 3)</td>
+            <td>
+                <ul>
+                    <li>General Conference</li>
+                    <li>Closing Ceremony</li>
+                    <li>Gala Dinner</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Thursday, 5 May 2018<br/>(Day 4)</td>
+            <td>
+                <ul>
+                    <li>Library and Cultural Visits</li>
+                
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <h3> Day 1 / Monday, 2 May 2018 : 3rd Executive Board Meeting</h3>
+    <span>This event is exclusive to Executive Board Members.</span>
+    <table class="table table-bordered p-table-two">
+        <tr>
+            <td class="left">06.00 – 07.00</td>
+            <td>
+                Breakfast
+            </td>
+        </tr>
+         <tr>
+            <td>08.00 – 12.00</td>
+            <td>
+                3rd Meeting of CONSAL XVII Executive Board at Grand Ballroom, Mingalar Thiri Hotel, Naypyitaw
+            </td>
+        </tr>
+        <tr>
+            <td>12.00 – 13.00</td>
+            <td>
+                Lunch
+            </td>
+        </tr>
+        <tr>
+            <td>13.00 – 18.00</td>
+            <td>
+                26th CDNL-AO Meeting, at Grand Ballroom, Mingalar Thiri Hotel, Naypyitaw
+            </td>
+        </tr>
+        <tr>
+            <td>18.30 – 19.00</td>
+            <td>
+                Opening of CONSAL Exhibition at Myanmar International Convention Center 2, Naypyitaw
+            </td>
+        </tr>
+        <tr>
+            <td>20.00 – 22.00</td>
+            <td>
+                Welcome dinner and cultural performance hosted by the Department of Historical Research and National Library (Grand Ballroom, Mingalar Thiri Hotel)
+            </td>
+        </tr>
+    </table>
+    <h3>For General Conference Participants</h3>
+    <table class="table table-bordered p-table-two">
+         <tr>
+            <td>08.00 – 22.00</td>
+            <td>
+                <ul>
+                    <li>Re-registration</li>
+                    <li>Onsite Registration for new participants
+                </li>
+                </ul>
+                Venue : Lobby, Myanmar International Convention Center 2, Naypyitaws
+            </td>
+        </tr>
+    </table>
+    <h3>Day 2 / Tuesday, 3 May 2018:  Opening Ceremony, General Conference (Plenary)</h3>
+    <table class="table table-bordered p-table-two">
+         <table class="tg">
+              <tr>
+                <th class="tg-031e" colspan="3">Tuesday, 3 May 2018<br/>Room: Plenary Hall, MICC2</th>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2">08.30 - 10.30</td>
+                <td class="tg-yw4l">Opening Ceremony</td>
+                <td class="tg-yw4l left" rowspan="4">Plenary Hall, MICC 2</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                <ul><li>Opening Remark by State Counselor, Republic of the Union of Myanmar</li>
+                <li>Welcome Remark by President of,IFLA</li>
+                <li>Welcome Performance,Photo Session</li>
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.30 – 11.00</td>
+                <td class="tg-yw4l">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11. 00 – 12.30</td>
+                <td class="tg-yw4l">Plenary Session</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.00 – 11. 10</td>
+                <td class="tg-yw4l">President, IFLA</td>
+                <td class="tg-yw4l" rowspan="3">Plenary Hall,,MICC 2</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.10 – 11.20</td>
+                <td class="tg-yw4l">Sithu Dr. Thaw Kaung</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.20 – 11.30</td>
+                <td class="tg-yw4l">CONSAL</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.30 – 12.30</td>
+                <td class="tg-yw4l">Invited Papers (10<br>countries)</td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.30 – 13.30</td>
+                <td class="tg-yw4l">Lunch</td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 18.10</td>
+                <td class="tg-yw4l">Parallel Sessions</td>
+                <td class="tg-yw4l">Session Rooms, MICC 2</td>
+              </tr>
+            </table>',
             'status' =>'active', 'url' =>'', 'title' =>'PROGRAM CONFERENCE', 'post_order' =>1, 'pages_id' =>9, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
 
@@ -403,46 +510,46 @@ Email:  hlaingyu2010@gmail.com</p>
        
             ['name'=>'REGISTRATION FEE','description'=>'','content'=>'<div class="col-md-9 reg_fee_payment" id="reg_fee_payment">
             <h2>PROGRAM >> REGISTRATION FEES AND PAYMENTS</h2>
-           <table class="table table-bordered p-table">
-                   <tr>
-                       <td></td>
-                       <td>
-                          Early Bird
-                       </td>
-                       <td>Onsite</td>
-                   </tr>
-                    <tr>
-                       <td>International Delegate </td>
-                       <td>
-                           $300
-                       </td>
-                       <td>$350</td>
-                   </tr>
-                   <tr>
-                       <td>Local Delegate(Member)</td>
-                       <td>
-                           20,000 MMK
-                       </td>
-                       <td>25,000 MMK</td>
-                   </tr>
-                   <tr>
-                       <td>Local Delegate (Non Member)</td>
-                       <td>
-                           30,000 MMK
-                       </td>
-                       <td>35,000 MMK</td>
-                   </tr>
-                   <tr>
-                       <td>Student</td>
-                       <td>10,000 MMK</td>
-                       <td>15,000 MMK</td>
-                   </tr>
-               </table>
+                <table class="table table-bordered p-table">
+                <tr>
+                    <td></td>
+                    <td>
+                    Early Bird
+                    </td>
+                    <td>Onsite</td>
+                </tr>
+                <tr>
+                    <td>International Delegate </td>
+                    <td>
+                        $300
+                    </td>
+                    <td>$350</td>
+                </tr>
+                <tr>
+                    <td>Local Delegate(Member)</td>
+                    <td>
+                        20,000 MMK
+                    </td>
+                    <td>25,000 MMK</td>
+                </tr>
+                <tr>
+                    <td>Local Delegate (Non Member)</td>
+                    <td>
+                        30,000 MMK
+                    </td>
+                    <td>35,000 MMK</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>10,000 MMK</td>
+                    <td>15,000 MMK</td>
+                </tr>
+            </table>
            </div>
        </div>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION FEE', 'post_order' =>1, 'pages_id' =>14, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
-            ['name'=>'REGISTRATION CANCELLATION','description'=>'','content'=>' <div class="col-md-9 reg_fee_payment" id="cancellations">
+            ['name'=>'REGISTRATION CANCELLATION','description'=>'','content'=>'
             <h2>PROGRAM >> CANCELLATIONS</h2>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -469,12 +576,10 @@ Email:  hlaingyu2010@gmail.com</p>
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-           </div>
-       </div>',
+            </p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION CANCELLATION', 'post_order' =>1, 'pages_id' =>15, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
-            ['name'=>'REGISTRATION LETTER','description'=>'','content'=>'<div class="col-md-9 letter_invitation" id="invitation">
+            ['name'=>'REGISTRATION LETTER','description'=>'','content'=>'
             <h2>PROGRAM >> LETTER OF INVITATIONS</h2>
             <p>
             Dear: 
@@ -506,12 +611,10 @@ Email:  hlaingyu2010@gmail.com</p>
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p>Sincerely,</br>
-            John Doe</p>
-           </div>
-       </div>',
+            John Doe</p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION LETTER', 'post_order' =>1, 'pages_id' =>16, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
-            ['name'=>'REGISTRATION VISA','description'=>'','content'=>'<div class="col-md-9 visa_requirement" id="visa_requirement">
+            ['name'=>'REGISTRATION VISA','description'=>'','content'=>'
             <h2>PROGRAM >> VISA REQUIREMENTS</h2>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -538,12 +641,10 @@ Email:  hlaingyu2010@gmail.com</p>
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-           </div>
-       </div>',
+            </p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION VISA', 'post_order' =>1, 'pages_id' =>17, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION SPONSORSHIP','description'=>'','content'=>'<div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="exhibit">
+        ['name'=>'EXHIBITION SPONSORSHIP','description'=>'','content'=>'
         <h2>EXHIBITION & SPONSORSHIP >> EXHIBIT & SPONSORSHIPS </h2>
        <div class="col-md-12">
            <div class="row">
@@ -659,8 +760,6 @@ Email:  hlaingyu2010@gmail.com</p>
                    email: mya.myanmar65@gmail.com  
                </div>
            </div>
-       </div> 
-       
        </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION SPONSORSHIP', 'post_order' =>1, 'pages_id' =>18, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
@@ -681,17 +780,15 @@ Email:  hlaingyu2010@gmail.com</p>
        </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION BOOTH', 'post_order' =>1, 'pages_id' =>20, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION FLOOR PLAN','description'=>'','content'=>'   <div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="floor_plan">
-        <h2>EXHIBITION & SPONSORSHIP >> FLOOR PLAN AND EXHIBITIONS</h2>
+        ['name'=>'EXHIBITION FLOOR PLAN','description'=>'','content'=>'<h2>EXHIBITION & SPONSORSHIP >> FLOOR PLAN AND EXHIBITIONS</h2>
            <div class="col-md-12" style="margin-bottom:170px;">
                <div class="row">
                    <img src="assets/frontend/images/floor_plan.jpg" class="img-responsive">
                </div>
-           </div>
-       </div> ',
+           </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION FLOOR PLAN', 'post_order' =>1, 'pages_id' =>21, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION AGREMEENT','description'=>'','content'=>' <div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="agreement">
+        ['name'=>'EXHIBITION AGREMEENT','description'=>'','content'=>'
         <h2>EXHIBITION & SPONSORSHIP >> EXHIBITORS AND SPONSOR AGREEMENT</h2>
            <div class="col-md-12" style="margin-bottom: 170px;">
                <div class="row">
@@ -701,8 +798,7 @@ Email:  hlaingyu2010@gmail.com</p>
                        cto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
                    </p>
                </div>
-           </div>
-       </div> ',
+           </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION AGREMEENT', 'post_order' =>1, 'pages_id' =>22, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
         ['name'=>'TRAVEL ACCOMMODATION','description'=>'','content'=>'',

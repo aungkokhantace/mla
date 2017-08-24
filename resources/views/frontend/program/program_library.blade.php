@@ -14,7 +14,7 @@
 
                             <div class="col-md-3">
                                 <img src="{!! $programLibrary->image !!}">
-                                <span>H{!! $programLibrary->name !!}lutaw</span>
+                                <span>{!! $programLibrary->name !!}</span>
                             </div>
 
                         @endforeach

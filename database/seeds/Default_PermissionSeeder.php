@@ -189,6 +189,21 @@ class Default_PermissionSeeder extends Seeder
             ['id'=>210,'module'=>'Report Conference Registration','name'=>'Report Listing','description'=>'Report Conference Registration Listing','url'=>'backend/report/conference_registration'],
             ['id'=>211,'module'=>'Report Conference Registration','name'=>'Report Search','description'=>'Report Conference Registration Search','url'=>'backend/report/conference_registration/search/{from_date?}/{to_date?}'],
             ['id'=>212,'module'=>'Report Conference Registration','name'=>'Report Excel','description'=>'Report Conference Registration Excel','url'=>'backend/report/conference_registration/exportexcel/{from_date?}/{to_date?}'],
+
+            //Report Exhibitor
+            ['id'=>220,'module'=>'Report Exhibitor','name'=>'Report Listing','description'=>'Report Exhibitor Listing','url'=>'backend/report/exhibitor'],
+            ['id'=>221,'module'=>'Report Exhibitor','name'=>'Report Search','description'=>'Report Exhibitor Search','url'=>'backend/report/exhibitor/search/{from_date?}/{to_date?}'],
+            ['id'=>222,'module'=>'Report Exhibitor','name'=>'Report Excel','description'=>'Report Exhibitor Excel','url'=>'backend/report/exhibitor/exportexcel/{from_date?}/{to_date?}'],
+
+            //Report Program_Call
+            ['id'=>230,'module'=>'Report Program_Call','name'=>'Report Listing','description'=>'Report Program_Call Listing','url'=>'backend/report/program_call'],
+            ['id'=>231,'module'=>'Report Program_Call','name'=>'Report Search','description'=>'Report Program_Call Search','url'=>'backend/report/program_call/search/{from_date?}/{to_date?}'],
+            ['id'=>232,'module'=>'Report Program_Call','name'=>'Report Excel','description'=>'Report Program_Call Excel','url'=>'backend/report/program_call/exportexcel/{from_date?}/{to_date?}'],
+
+            //Report Program_Poster
+            ['id'=>240,'module'=>'Report Program_Poster','name'=>'Report Listing','description'=>'Report Program_Poster Listing','url'=>'backend/report/program_poster'],
+            ['id'=>241,'module'=>'Report Program_Poster','name'=>'Report Search','description'=>'Report Program_Poster Search','url'=>'backend/report/program_poster/search/{from_date?}/{to_date?}'],
+            ['id'=>242,'module'=>'Report Program_Poster','name'=>'Report Excel','description'=>'Report Program_Poster Excel','url'=>'backend/report/program_poster/exportexcel/{from_date?}/{to_date?}'],
         );
 
         DB::table('core_permissions')->insert($permissions);

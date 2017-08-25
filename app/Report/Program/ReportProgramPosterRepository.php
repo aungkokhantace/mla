@@ -10,6 +10,7 @@ namespace App\Report\Program;
 
 use App\Backend\Country\Country;
 use App\Core\ReturnMessage;
+use App\Frontend\Program\ProgramPoster;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use App\Core\Utility;
@@ -20,6 +21,30 @@ class ReportProgramPosterRepository implements ReportProgramPosterRepositoryInte
     {
         $program_posters = ProgramPoster::whereNull('deleted_at')->get();
         return $program_posters;
+    }
+
+    public function getDataByDate($from_date=null, $to_date=null)
+    {
+        $query = ProgramPoster::query();
+        $query = $query->select('program_poster.id',
+            'program_poster.title as title',
+            'program_poster.author as author',
+            'program_poster.email as email',
+            'program_poster.address as address',
+            'program_poster.description as description',
+            'program_poster.status as status');
+
+        if(isset($from_date) && $from_date != null){
+            $tempFromDate = date("Y-m-d", strtotime($from_date));
+            $query = $query->where('program_poster.created_at', '>=' , $tempFromDate);
+        }
+        if(isset($to_date) && $to_date != null){
+            $tempToDate = date("Y-m-d", strtotime($to_date));
+            $query = $query->where('program_poster.created_at', '<=', $tempToDate);
+        }
+        $query = $query->whereNull('program_poster.deleted_at');
+        $result = $query->get();
+        return $result;
     }
 
     public function create($paramObj)

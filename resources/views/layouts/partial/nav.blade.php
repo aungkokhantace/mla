@@ -17,19 +17,9 @@
 
                 <ul class="sub-menu">
                     <li nav-id="report-sale-summary"><a href="/backend/report/conference_registration/">Report Conference Registration</a></li>
-                    {{--<li nav-id="report-sale-summary"><a href="/backend/conference_registration/">Conference Registration</a></li>
-                    <li nav-id="report-sale-summary"><a href="/backend/exhibitor/">Exhibitor & Sponsor Registration</a></li>
-                    <li nav-id="modifier-create" class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret pull-right"></b>
-                            <span>Program</span>
-                        </a>
-
-                        <ul class="sub-menu">
-                            <li nav-id="modifier-create-modifier"><a href="/backend/program_call">Program Call Registration</a></li>
-                            <li nav-id="modifier-create-modifierpanel"><a href="/backend/program_poster">Program Poster Registration</a></li>
-                        </ul>
-                    </li>--}}
+                    <li nav-id="report-sale-summary"><a href="/backend/report/exhibitor/">Report Exhibitor & Sponsor</a></li>
+                    <li nav-id="report-sale-summary"><a href="/backend/report/program_call/">Report Program Call</a></li>
+                    <li nav-id="report-sale-summary"><a href="/backend/report/program_poster/">Report Program Poster</a></li>
                 </ul>
             </li>
             <li nav-id='report'  class="has-sub" >

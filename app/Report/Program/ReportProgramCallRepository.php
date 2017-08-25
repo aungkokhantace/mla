@@ -10,6 +10,7 @@ namespace App\Report\Program;
 
 use App\Backend\Country\Country;
 use App\Core\ReturnMessage;
+use App\Frontend\Program\ProgramCall;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use App\Core\Utility;
@@ -20,6 +21,31 @@ class ReportProgramCallRepository implements ReportProgramCallRepositoryInterfac
     {
         $program_calls = ProgramCall::whereNull('deleted_at')->get();
         return $program_calls;
+    }
+
+    public function getDataByDate($from_date=null, $to_date=null)
+    {
+        $query = ProgramCall::query();
+        $query = $query->select('program_paper.id',
+            'program_paper.first_author as first_author',
+            'program_paper.email as email',
+            'program_paper.address as address',
+            'program_paper.second_author as second_author',
+            'program_paper.third_author as third_author',
+            'program_paper.abstract as abstract',
+            'program_paper.status as status');
+
+        if(isset($from_date) && $from_date != null){
+            $tempFromDate = date("Y-m-d", strtotime($from_date));
+            $query = $query->where('program_paper.created_at', '>=' , $tempFromDate);
+        }
+        if(isset($to_date) && $to_date != null){
+            $tempToDate = date("Y-m-d", strtotime($to_date));
+            $query = $query->where('program_paper.created_at', '<=', $tempToDate);
+        }
+        $query = $query->whereNull('program_paper.deleted_at');
+        $result = $query->get();
+        return $result;
     }
 
     public function create($paramObj)

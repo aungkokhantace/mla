@@ -64,7 +64,6 @@ class AccommodationController extends Controller
             $accommodation_image = '/accommodationImages/' . $image_name;
             $image->move($path, $image_name);
 
-            $image = Image::make(sprintf($path .'/%s', $image_name))->resize(178,136)->save();
 
             $accommodationObj = new Accommodation();
             $accommodationObj->name = $name;

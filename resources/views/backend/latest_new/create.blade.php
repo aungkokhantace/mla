@@ -60,7 +60,7 @@
                         <label></label>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <input type="button" class="form-control image_remove_btn" value="Remove Image" id="removeImage" name="removeImage">
+                        <input type="button" class="form-control image_remove_btn"  value="Remove Image" id="removeImage" name="removeImage">
                     </div>
                 </div>
                 <div class="row">

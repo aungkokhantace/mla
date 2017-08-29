@@ -26,7 +26,13 @@ class Default_PostSeeder extends Seeder
                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
                 <p class="date"><i class="fa fa-calendar"></i> May 2-5,2018&nbsp;&nbsp;&nbsp;&nbsp;Naypyitaw,Myanmar</p>
                 <br>
-                <img src="/assets/frontend/images/date.jpg" class="img-responsive">
+                <!--<img src="/assets/frontend/images/date.jpg" class="img-responsive">-->
+                <div class="row">
+                <div class="col-md-2 count_down" id="days">DAYS</div>
+                <div class="col-md-2 count_down" id="hours">HOURS</div>
+                <div class="col-md-2 count_down" id="minutes">MINUTES</div>
+                <div class="col-md-2 count_down" id="seconds">SECONDS</div>
+                </div>
                 <br>
                 <h2>
                     Greeting From National Organizing Committee

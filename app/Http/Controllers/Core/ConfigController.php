@@ -32,6 +32,7 @@ class ConfigController extends Controller
                 $configs = array();
                 $configs['SETTING_COMPANY_NAME'] = "";
                 $configs['SETTING_LOGO'] = "";
+                $configs['SETTING_COUNTDOWN_DATE'] = "";
 
                 return view('core.config.config')->with('configs', $configs);
             }
@@ -51,6 +52,10 @@ class ConfigController extends Controller
                 $tempConfigs["SETTING_COMPANY_NAME"] = "";
             }
 
+            if(!array_key_exists("SETTING_COUNTDOWN_DATE",$tempConfigs)){
+                $tempConfigs["SETTING_COUNTDOWN_DATE"] = "";
+            }
+
             return view('core.config.config')->with('configs', $tempConfigs);
 
         }
@@ -61,6 +66,9 @@ class ConfigController extends Controller
         if (Auth::guard('User')->check()) {
 
             $SETTING_COMPANY_NAME = Input::get('SETTING_COMPANY_NAME');
+            $SETTING_COUNTDOWN_DATE_RAW = Input::get('SETTING_COUNTDOWN_DATE');
+            $SETTING_COUNTDOWN_DATE     = date('Y-m-d',strtotime($SETTING_COUNTDOWN_DATE_RAW));
+            
             $removeImageFlag = Input::get('removeImageFlag');
 
             try{
@@ -76,6 +84,9 @@ class ConfigController extends Controller
 
                 DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_COMPANY_NAME'");
                 $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_COMPANY_NAME','SETTING','$SETTING_COMPANY_NAME','Company Name',$loginUserId,'$updated_at')");
+
+                DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_COUNTDOWN_DATE'");
+                $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_COUNTDOWN_DATE','SETTING','$SETTING_COUNTDOWN_DATE','Date for Countdown',$loginUserId,'$updated_at')");
 
                 // saving image
                 if(Input::hasFile('site_logo'))

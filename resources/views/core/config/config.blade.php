@@ -40,6 +40,22 @@
     <br /><br />
 
     <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <label for="dob" class="text_bold_black">Date For Countdown<span class="require">*</span></label>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div class="input-group date dateTimePicker" data-provide="datepicker">
+                <input required autocomplete="off" type="text" class="form-control" id="SETTING_COUNTDOWN_DATE" name="SETTING_COUNTDOWN_DATE" placeholder="Date for Countdown" value="{{ isset($configs)? $configs['SETTING_COUNTDOWN_DATE']:Request::old('SETTING_COUNTDOWN_DATE') }}">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </div>
+            </div>
+            <p class="text-danger">{{$errors->first('date')}}</p>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         </div>
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
@@ -204,6 +220,16 @@
             //}
 
         });
+
+        $('.dateTimePicker').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 1,
+                allowInputToggle: true,
+                startDate: '+1d'
+            });
     });
 
     function saveConfig(action) {

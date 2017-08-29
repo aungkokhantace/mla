@@ -18,6 +18,7 @@ use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
 use Illuminate\Support\Facades\Route;
 use App\Backend\LatestNew\LatestNewRepository;
+use App\Core\Utility;
 
 class HomeController extends Controller
 {
@@ -40,10 +41,14 @@ class HomeController extends Controller
         $latestNewRepo  = new LatestNewRepository();
         $latestNews      = $latestNewRepo->getLatestNew();
 
+        //date to be counted to in timer
+        $countDownDate = Utility::getCountDownDate();        
+
         return view('frontend.home')
             ->with('page',$page)
             ->with('posts',$posts)
-            ->with('latestNews',$latestNews);
+            ->with('latestNews',$latestNews)
+            ->with('countDownDate',$countDownDate);
     }
 
 }

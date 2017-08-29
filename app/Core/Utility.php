@@ -97,4 +97,17 @@ class Utility
                 ->subject($subject);
         });
     }
+
+    //returns count down date if it is set up in core_configs, and returns end of current year if not set up
+    public static function getCountDownDate(){
+        $countDownDateRaw   = DB::table('core_configs')->where('code','=','SETTING_COUNTDOWN_DATE')->first();
+        if(isset($countDownDateRaw) && count($countDownDateRaw) > 0){
+            $countDownDate      = $countDownDateRaw->value;
+        }
+        else{
+            // return end of current year
+            $countDownDate = date("Y").'-12-31';
+        }
+        return $countDownDate;        
+    }
 }

@@ -4,3 +4,43 @@
     max-height: 67px;
     min-height: 67px;
   }
+
+
+/* Start Count Down Timer CSS */
+.count_down{
+  width:10%;
+  min-height:70px;
+  background: #3f5ba5;
+  color:white;
+  text-align: center;
+  padding:0px;
+  padding-top:15px;
+ }
+
+ .counter_value{
+  font-size: 30px; 
+ }
+
+ .counter_unit{
+  font-size: 9px; 
+ }
+
+#days{
+  margin-left:5px;
+  margin-right:5px;
+}
+
+#hours{
+  margin-left:5px;
+  margin-right:5px;
+}
+
+#minutes{
+  margin-left:5px;
+  margin-right:5px;
+}
+
+#seconds{
+  margin-left:5px;
+} 
+/* End Count Down Timer CSS */

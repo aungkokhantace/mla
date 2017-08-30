@@ -218,7 +218,7 @@
                 var fileSize = (f.size||f.fileSize);
                 var imgkbytes = Math.round(parseInt(fileSize)/1024);
 
-                if(imgkbytes > 5000){
+                if(imgkbytes > 2000){
                     $('#image_error_fileSize').modal('show');
                     $('#site_logoPopUp').attr('src') = '';
                 }

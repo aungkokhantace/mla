@@ -17,7 +17,7 @@
                     <label for="name">Name<span class="require">*</span></label>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <input type="text" class="form-control" id="name" name="name" value="{{isset($library_culture)?$library_culture->name:Request::old('name')}}" placeholder="Enter Image Name"/>
+                    <input type="text" class="form-control" id="name" name="name" value="{{isset($library_culture)?$library_culture->name:Request::old('name')}}" placeholder="Enter Name"/>
                     <p class="text-danger">{{$errors->first('name')}}</p>
                 </div>
             </div>
@@ -218,7 +218,7 @@
                 var fileSize = (f.size||f.fileSize);
                 var imgkbytes = Math.round(parseInt(fileSize)/1024);
 
-                if(imgkbytes > 5000){
+                if(imgkbytes > 2000){
                     $('#image_error_fileSize').modal('show');
                     $('#site_logoPopUp').attr('src') = '';
                 }

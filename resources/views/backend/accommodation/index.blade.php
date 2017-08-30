@@ -69,7 +69,7 @@
                                     ?>
                                 </td>
                                 <td>{{$accommodation->description}}</td>
-                                <td><img src="{{$accommodation->image}}" class="img-responsive"></td>
+                                <td><img src="{{$accommodation->image}}" class="img-responsive list-view-img"></td>
                             </tr>
                         @endforeach
 

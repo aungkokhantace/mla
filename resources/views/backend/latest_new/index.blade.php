@@ -1,8 +1,8 @@
 @extends('layouts.master')
-@section('title','Latest New')
+@section('title','Latest News')
 @section('content')
     <div id="content" class="content">
-        <h1 class="page-header">Latest New Listing</h1>
+        <h1 class="page-header">Latest News Listing</h1>
         @if(count(Session::get('message')) != 0)
             <div>
             </div>
@@ -55,7 +55,7 @@
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $latest_new->id }}" id="all"></td>
                                 <td>{{$latest_new->name}}</td>
                                 <td><a href="/backend/latest_new/edit/{{$latest_new->id}}">{{$latest_new->description}}</a></td>
-                                <td><img src="{{$latest_new->image}}" class="img-responsive"></td>
+                                <td><img src="{{$latest_new->image}}" class="img-responsive list-view-img"></td>
                             </tr>
                         @endforeach
                         

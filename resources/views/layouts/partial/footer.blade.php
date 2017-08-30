@@ -36,6 +36,30 @@
 <script src="/assets/js/amcharts/themes/dark.js"></script>
 <script src="/assets/js/amcharts/plugins/export/export.js"></script>
 
+<script>
+$(document).ready(function() {
+    //make sidebar active current tab when a page is selected
+    var path = window.location.pathname;
+    // path = path.replace(/\/$/, “”);
+    // path = decodeURIComponent(path);
+    var submenu = '.sub-menu li';
+    var hassub = '.has-sub';
+
+    $(hassub).removeClass('active');
+    $(submenu).removeClass('active');
+
+    $(".sub-menu li a").each(function () {
+        var href = $(this).attr('href');
+
+        if (path === href) {
+        $(this).closest('li').addClass('active');
+        $(this).closest('.has-sub').addClass('active');
+        $(this).parents(".has-sub:eq(1)").toggleClass("active");
+        }
+    });
+});
+</script>
+
 
 </body>
 </html>

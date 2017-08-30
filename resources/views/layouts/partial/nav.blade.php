@@ -72,7 +72,7 @@
                         </a>
 
                         <ul class="sub-menu">
-                            <li nav-id="modifier-create-modifier"><a href="/backend/page/create">Entry</a></li>
+                            <!-- <li nav-id="modifier-create-modifier"><a href="/backend/page/create">Entry</a></li> -->
                             <li nav-id="modifier-create-modifierpanel"><a href="/backend/page">List</a></li>
                         </ul>
                     </li>
@@ -94,7 +94,7 @@
                              <li nav-id="modifier-create" class="has-sub">
                                  <a href="javascript:;">
                                      <b class="caret pull-right"></b>
-                                     <span>Latest New</span>
+                                     <span>Latest News</span>
                                  </a>
                                  <ul class="sub-menu">
                                      <li nav-id="modifier-create-modifier"><a href="/backend/latest_new/create">Entry</a></li>

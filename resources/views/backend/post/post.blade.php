@@ -208,8 +208,8 @@
                     ]
                 });
 
-                //For checkbox picker
-                $(':checkbox').checkboxpicker();
+                // //For checkbox picker
+                // $(':checkbox').checkboxpicker();
             });
         </script>
 @stop

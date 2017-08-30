@@ -53,7 +53,7 @@
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $library_culture->id }}" id="all"></td>
                                 <td><a href="/backend/library_culture/edit/{{$library_culture->id}}">{{$library_culture->name}}</a></td>
                                 {{-- <td>{{$img_gallery->description}}</td>--}}
-                                <td><img src="{{$library_culture->image}}" class="img-responsive"></td>
+                                <td><img src="{{$library_culture->image}}" class="img-responsive list-view-img"></td>
                             </tr>
                         @endforeach
                         </tbody>

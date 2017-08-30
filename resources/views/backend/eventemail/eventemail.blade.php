@@ -120,7 +120,7 @@
             //End Validation for Entry and Edit Form
 
             //For checkbox picker
-            $(':checkbox').checkboxpicker();
+            // $(':checkbox').checkboxpicker();
         });
     </script>
 @stop

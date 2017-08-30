@@ -231,7 +231,7 @@
             //End Validation for Menu Entry and Edit Form
 
             //For checkbox picker
-            $(':checkbox').checkboxpicker();
+            // $(':checkbox').checkboxpicker();
 
             //For Text Editor
 //            $('#page_content').summernote({

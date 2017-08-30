@@ -1,8 +1,8 @@
 @extends('layouts.master')
-@section('title','Latest New')
+@section('title','Latest News')
 @section('content')
     <div id="content" class="content">
-        <h1 class="page-header">{{isset($latest_new)? 'Edit Latest New' : 'Latest New Entry'}}</h1>
+        <h1 class="page-header">{{isset($latest_new)? 'Edit Latest News' : 'Latest News Entry'}}</h1>
         @if(isset($latest_new))
             {!! Form::open(array('url' => 'backend/latest_new/update', 'class'=> 'form-horizontal user-form-border','files' => true,'id'=>'latest_new_form')) !!}
             @else
@@ -13,10 +13,10 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <label for="name">Latest New Name<span class="require">*</span></label>
+                        <label for="name">Latest News Name<span class="require">*</span></label>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <input type="text" class="form-control" id="name" name="name" value="{{isset($latest_new)?$latest_new->name:Request::old('name')}}" placeholder="Enter Latest New Name"/>
+                        <input type="text" class="form-control" id="name" name="name" value="{{isset($latest_new)?$latest_new->name:Request::old('name')}}" placeholder="Enter Latest News Name"/>
                         <p class="text-danger">{{$errors->first('name')}}</p>
                     </div>
                 </div>
@@ -26,13 +26,13 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <textarea name="description" id="description" cols="145" rows="15">{{isset($latest_new)?$latest_new->description:Request::old('description')}}</textarea>
-                        {{--<input type="text" class="form-control" id="description" name="description" value="{{isset($latest_new)?$latest_new->description:Request::old('description')}}" placeholder="Enter Description"/>--}}
+                        {{--<input type="text" class="form-control" id="description" name="description" placeholder="Enter Latest News Description" value="{{isset($latest_new)?$latest_new->description:Request::old('description')}}" placeholder="Enter Description"/>--}}
                         <p class="text-danger">{{$errors->first('description')}}</p>
                     </div>
                 </div>
                {{-- <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <label for="name">Select Image<span class="require">*</span></label>
+                        <label for="name">Image<span class="require">*</span></label>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <input type="file" class="form-control" id="image" name="image"/>
@@ -41,7 +41,7 @@
                 </div>--}}
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <label for="code">Select Image</label>
+                        <label for="code">Image</label>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         @if(isset($latest_new))
@@ -225,7 +225,7 @@
                 var fileSize = (f.size || f.fileSize);
                 var imgkbytes = Math.round(parseInt(fileSize) / 1024);
 
-                if (imgkbytes > 5000) {
+                if (imgkbytes > 2000) {
                     $('#image_error_fileSize').modal('show');
                     $('#site_logoPopUp').attr('src') = '';
                 }

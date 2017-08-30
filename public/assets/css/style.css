@@ -5598,3 +5598,14 @@ box-shadow: rgba(0, 0, 0, 0.3) 0 2px 2px 0;
     text-align: left !important;
     font-weight: normal !important;
 }
+
+/* for images in list view */
+.list-view-img{
+    max-width:250px !important;
+    height:auto !important;
+}
+
+/* for horizontal scroll bar when listing table don't fit on page */
+.content{
+    overflow:auto;
+}

@@ -61,7 +61,7 @@ class PostConferenceTravelController extends Controller
             $post_conference_travel_image = '/PostConferenceTravelImages/'.$image_name;
             $image->move($path,$image_name);
 
-            $image = Image::make(sprintf($path .'/%s', $image_name))->resize(178,136)->save();
+            // $image = Image::make(sprintf($path .'/%s', $image_name))->resize(178,136)->save();
 
             $postconferencetravelObj = new PostConferenceTravel();
             $postconferencetravelObj->name = $name;
@@ -107,7 +107,7 @@ class PostConferenceTravelController extends Controller
             $post_conference_travel_image = '/PostConferenceTravelImages/'.$image_name;
             $image->move($path,$image_name);
 
-            $image = Image::make(sprintf($path .'/%s', $image_name))->resize(178,136)->save();
+            // $image = Image::make(sprintf($path .'/%s', $image_name))->resize(178,136)->save();
 
             $postconferencetravelObj = PostConferenceTravel::find($id);
             $postconferencetravelObj->name = $name;

@@ -65,7 +65,7 @@ class ImageGalleryController extends Controller
             $image->move($path,$image_name);
 
 
-            $image = Image::make(sprintf($path .'/%s', $image_name))->resize(150,150)->save();
+            // $image = Image::make(sprintf($path .'/%s', $image_name))->resize(150,150)->save();
 
             $galleryImageObj = new ImageGallery();
             $galleryImageObj->name = $name;
@@ -111,7 +111,7 @@ class ImageGalleryController extends Controller
             $gallery_image = '/galleryImages/' . $image_name;
             $image->move($path, $image_name);
 
-            $image = Image::make(sprintf($path .'/%s', $image_name))->resize(150,150)->save();
+            // $image = Image::make(sprintf($path .'/%s', $image_name))->resize(150,150)->save();
 
             $galleryImageObj = ImageGallery::find($id);
             $galleryImageObj->name = $name;

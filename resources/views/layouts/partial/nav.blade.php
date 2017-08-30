@@ -64,7 +64,7 @@
                 </a>
 
                 <ul class="sub-menu">
-                     @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
+                     @if(Auth::guard('User')->user()->role_id == '1')
                     <li nav-id="modifier-create" class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
@@ -78,7 +78,7 @@
                     </li>
                     @endif
 
-                    @if(Auth::guard('User')->user()->role_id == '1')
+                    @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
                     <li nav-id="modifier-create" class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
@@ -90,7 +90,7 @@
                         </ul>
                     </li>
                     @endif
-                         @if(Auth::guard('User')->user()->role_id == '1')
+                         @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
                              <li nav-id="modifier-create" class="has-sub">
                                  <a href="javascript:;">
                                      <b class="caret pull-right"></b>
@@ -102,7 +102,7 @@
                                  </ul>
                              </li>
                          @endif
-                         @if(Auth::guard('User')->user()->role_id == '1')
+                         @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
                              <li nav-id="modifier-create" class="has-sub">
                                  <a href="javascript:;">
                                      <b class="caret pull-right"></b>
@@ -114,7 +114,7 @@
                                  </ul>
                              </li>
                          @endif
-                         @if(Auth::guard('User')->user()->role_id == '1')
+                         @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
                              <li nav-id="modifier-create" class="has-sub">
                                  <a href="javascript:;">
                                      <b class="caret pull-right"></b>
@@ -126,7 +126,7 @@
                                  </ul>
                              </li>
                          @endif
-                         @if(Auth::guard('User')->user()->role_id == '1')
+                         @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
                              <li nav-id="modifier-create" class="has-sub">
                                  <a href="javascript:;">
                                      <b class="caret pull-right"></b>
@@ -138,7 +138,7 @@
                                  </ul>
                              </li>
                          @endif
-                         @if(Auth::guard('User')->user()->role_id == '1')
+                         @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
                              <li nav-id="modifier-create" class="has-sub">
                                  <a href="javascript:;">
                                      <b class="caret pull-right"></b>
@@ -150,7 +150,7 @@
                                  </ul>
                              </li>
                          @endif
-                         @if(Auth::guard('User')->user()->role_id == '1')
+                         @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
                              <li nav-id="modifier-create" class="has-sub">
                                  <a href="javascript:;">
                                      <b class="caret pull-right"></b>
@@ -175,6 +175,7 @@
                     <span>Site Setup</span>
                 </a>
                 <ul class="sub-menu">
+                @if(Auth::guard('User')->user()->role_id == '1')
                     <li nav-id="modifier-manage" class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
@@ -186,6 +187,9 @@
                             <li nav-id="modifier-manage-modifierpanel"><a href="/backend/role">List</a></li>
                         </ul>
                     </li>
+                @endif
+
+                @if(Auth::guard('User')->user()->role_id == '1')
                     <li nav-id="modifier-manage" class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
@@ -198,6 +202,7 @@
 
                         </ul>
                     </li>
+                @endif
                     <li nav-id="modifier-create" class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
@@ -218,7 +223,7 @@
                 </ul>
             </li>
 
-            <li  nav-id='modifier'  class="has-sub">
+            <!-- <li  nav-id='modifier'  class="has-sub">
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
                     {{--<i class="fa fa-users"></i>--}}
@@ -261,7 +266,7 @@
                         </ul>
                     </li>
                 </ul>
-            </li>
+            </li> -->
 
         </ul>
         <!-- end sidebar nav -->

@@ -49,7 +49,6 @@ class ImageGalleryController extends Controller
     }
 
     public function store(ImageGalleryEntryRequest $request){
-
         $request->validate();
 
         $name = Input::get('name');
@@ -77,11 +76,11 @@ class ImageGalleryController extends Controller
 
             if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
                 return redirect()->action('Backend\ImageGalleryController@index')
-                    ->withMessage(FormatGenerator::message('Success', 'Post created ...'));
+                    ->withMessage(FormatGenerator::message('Success', 'Image created ...'));
             }
             else{
                 return redirect()->action('Backend\ImageGalleryController@index')
-                    ->withMessage(FormatGenerator::message('Fail', 'Post did not create ...'));
+                    ->withMessage(FormatGenerator::message('Fail', 'Image did not create ...'));
             }
         }
 

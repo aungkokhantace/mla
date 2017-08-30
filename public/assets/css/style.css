@@ -5586,3 +5586,15 @@ box-shadow: rgba(0, 0, 0, 0.3) 0 2px 2px 0;
 .head-list li span {
     padding:5px 20px;
 }
+
+/* to display image as the size of div in image upload */
+.add_image_div{
+    background-position:center !important;
+    background-size:cover !important;
+}
+
+/* for placeholder not to center when validation error occurs */
+.error{
+    text-align: left !important;
+    font-weight: normal !important;
+}

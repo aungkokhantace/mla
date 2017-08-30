@@ -32,7 +32,7 @@
             </div>--}}
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    <label for="code">Site Logo</label>
+                    <label for="code">Image</label>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     @if(isset($image_gallery))
@@ -44,6 +44,7 @@
                     @endif
                     <input type="hidden" id="removeImageFlag" value="0" name="removeImageFlag">
                 </div>
+                <p class="text-danger">{{$errors->first('path')}}</p>
             </div>
 
             <div class="row">
@@ -219,11 +220,10 @@
                 var fileSize = (f.size||f.fileSize);
                 var imgkbytes = Math.round(parseInt(fileSize)/1024);
 
-                if(imgkbytes > 5000){
+                if(imgkbytes > 2000){
                     $('#image_error_fileSize').modal('show');
                     $('#site_logoPopUp').attr('src') = '';
                 }
-                // else{
                 switch (ext) {
                     case 'jpg':
                     case 'jpeg':
@@ -234,7 +234,6 @@
                         $('#image_error_fileFormat').modal('show');
                         $('#site_logoPopUp').attr('src') = '';
                 }
-                //}
 
             });
         });

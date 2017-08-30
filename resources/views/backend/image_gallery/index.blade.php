@@ -52,7 +52,6 @@
                             <tr>
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $img_gallery->id }}" id="all"></td>
                                 <td><a href="/backend/image_gallery/edit/{{$img_gallery->id}}">{{$img_gallery->name}}</a></td>
-                               {{-- <td>{{$img_gallery->description}}</td>--}}
                                 <td><img src="{{$img_gallery->path}}" class="img-responsive"></td>
                             </tr>
                         @endforeach

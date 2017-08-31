@@ -31,7 +31,8 @@ class UserController extends Controller
     {
         if (Auth::guard('User')->check()) {
             //if (Auth::guard('User')->user()->role_id == 1) {
-                $users      = $this->userRepository->getUsers();
+                // $users      = $this->userRepository->getUsers();
+                $users      = $this->userRepository->getUsersExceptSuperAdmin();
                 $roles      = $this->userRepository->getRoles();
                 $cur_time   = Carbon::now();
                 return view('core.user.index')->with('users', $users)->with('roles', $roles)->with('cur_time',

@@ -84,4 +84,10 @@ class UserRepository implements UserRepositoryInterface
         }
         return null;
     }
+
+    public function getUsersExceptSuperAdmin()
+    {
+        $users = User::whereNull('deleted_at')->where('role_id','<>',1)->get();
+        return $users;
+    }
 }

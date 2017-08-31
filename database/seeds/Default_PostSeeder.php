@@ -20,25 +20,32 @@ class Default_PostSeeder extends Seeder
 
     $objs = array(
         ['name'=>'HOME','description'=>'','content'=>'<!-- First Blog Post -->
-                <h2>
-                    CONSAL Information
-                </h2>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                <p class="date"><i class="fa fa-calendar"></i> May 2-5,2018&nbsp;&nbsp;&nbsp;&nbsp;Naypyitaw,Myanmar</p>
-                <br>
-                <!--<img src="/assets/frontend/images/date.jpg" class="img-responsive">-->
-                <div class="row">
-                <div class="col-md-2 count_down" id="days">DAYS</div>
-                <div class="col-md-2 count_down" id="hours">HOURS</div>
-                <div class="col-md-2 count_down" id="minutes">MINUTES</div>
-                <div class="col-md-2 count_down" id="seconds">SECONDS</div>
-                </div>
-                <br>
-                <h2>
-                    Greeting From National Organizing Committee
-                </h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                <a class="btn btn-success btn-custom" href="#">Read More</a>',
+        <h2>
+            CONSAL Information
+        </h2>
+         <p>Congress of Southeast Asia Librarians (CONSAL) is the sole regional organization of the libraries, library schools, Library Associations, and related institutions of the ASEAN countries. It was founded in Singapore in 1970 and has  ten members which include the library associations and librarians of Brunei, Cambodia, Indonesia, Lao, Malaysia, Myanmar, Philippines, Singapore, Thailand, and Vietnam. </p>
+        <p>CONSAL holds a general conference every three years in each member country by turn and promotes cooperation among librarians in Southeast Asia Region.   CONSAL provides the forum for the librarians and information specialists to strengthen networks, partnerships, and linkages with each other; promotes coordination, collaboration, and provides the platform for sharing and exchange of information and experiences on issues in the fields of librarianship, library and information sciences, documentation, information and related activities in the region. </p>
+        <p>CONSAL XVII is acting as a leading force in developing strategic relationships, undertaking the collaborative activities, and taking the good advantages for significant opportunities for the libraries in the  Region.</p>
+        <p>We need to join our strength together to provide access to information for all citizens, preserving and access to the culture and heritage, advancing digital inclusion through new technologies, promoting universal literacy, and serving as the heart of the lifelong learning opportunities for our society.</p>
+        <p class="date"><i class="fa fa-calendar"></i> May 2-5,2018&nbsp;&nbsp;&nbsp;&nbsp;Naypyitaw,Myanmar</p>
+        <br>
+        <!--<img src="/assets/frontend/images/date.jpg" class="img-responsive">-->
+        <div class="row">
+        <div class="col-md-2 count_down" id="days">DAYS</div>
+        <div class="col-md-2 count_down" id="hours">HOURS</div>
+        <div class="col-md-2 count_down" id="minutes">MINUTES</div>
+        <div class="col-md-2 count_down" id="seconds">SECONDS</div>
+        </div>
+        <br>
+        <h2>
+            Greeting From National Organizing Committee
+        </h2>
+        <p>Welcome to CONSAL XVII in Naypyitaw!</p>
+        <p>On behalf of the Organizing Committee of 17th CONSAL, we are pleased to invite you to the 17th Congress of Southeast Asian Librarians in Naypyitaw, Myanmar.</p>
+        <p>The Theme of the CONSAL XVII is "Next Generation Libraries: Collaborate and Connect."</p>
+        <img class="head-of-mla-photo" src="/assets/frontend/images/head_mla.jpg">
+        <br><br>
+        <a class="btn btn-success btn-custom" href="#">Read More</a>',
             'status' =>'active', 'url' =>'', 'title' =>'Home', 'post_order' =>1, 'pages_id' =>1, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
         ['name'=>'PROGRAM','description'=>'','content'=>'<h2>PROGRAM >> PROGRAM TOPICS</h2>
@@ -509,48 +516,109 @@ Email:  hlaingyu2010@gmail.com</p>
             'status' =>'active', 'url' =>'', 'title' =>'PROGRAM GUIDELINE', 'post_order' =>1, 'pages_id' =>12, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
 
-        ['name'=>'PROGRAM LIBRARY','description'=>'','content'=>'',
+        ['name'=>'PROGRAM LIBRARY','description'=>'','content'=>'<h4>Library and Cultural Visit</h4>
+        <p>Library and Cultural Visits require pre-registration at the Registration Booth by 3rd May 2018.</p>
+        <br>
+        <h4>Hluttaw (the Parliament)</h4>
+        <p>The Assembly of the Union is the national-level bicameral legislature of Myanmar (officially known as the Republic of the Union of Myanmar) established by the 2008 National Constitution. </p>
+        
+        <img class="head-of-mla-photo" src="/assets/frontend/images/hluttaw.jpg">
+        <br><br>
+        <p><b>The Pyidaungsu Hluttaw</b> is made up of two houses, the Amyotha Hluttaw (House of Nationalities), a 224-seat upper house as well as the Pyithu Hluttaw, a 440-seat lower house (House of Representatives). The Pyidaungsu Hluttaw is housed in a 31-building complex, which is believed to represent the 31 planes of existence in Buddhist cosmology, located in Zeya Theddhi Ward of Naypyidaw.</p>
+        <br>
+        <h4>The National Library (Naypyitaw)</h4>
+        
+        <img class="head-of-mla-photo" src="/assets/frontend/images/national_library.jpg">
+        <br><br>
+        
+        <p>The National Library (Naypyidaw) is located near the Kumudra circle, in Ottarathiri Township, Naypyidaw, Myanmar. The foundation was laid down in 2010 and the library was open to the public in 2013. The National Library of Myanmar is one of the national level institutions of the country under the auspices of the Ministry of Culture. The Library provides the following services: References Services, Reading Room Services, Periodical Services, Children’s Corner Services, Photocopying Services, Library and Internet Services. </p>
+        <br>
+        <h4>The National Museum (Naypyitaw)</h4>
+        <p>The National Museum (Naypyidaw) is located near the Kumudra circle, in Ottarathiri Township, Naypyidaw, Myanmar. Total plot area of the museum is 34.79 acres (14.08 ha). The construction of the museum was started on 3 June 2010. The Museum was opened on 15 July 2015. </p>
+        
+        <img class="head-of-mla-photo" src="/assets/frontend/images/national_museum.jpg">
+        <br><br>
+        <p>The museum has five wings: A,B,C,D and E. In the hall A, mini theatre, VIP holding rooms, president\'s gifts exhibition room and public areas are included. The exhibition rooms are Primates and Fossils Exhibition Room, Pre Historic Period Exhibition Room, Proto Historic Period Exhibition Room, Historic Period Exhibition Room, Myanmar Art Gallery and Myanmar Performing Arts Exhibition Room.</p>
+        <br>
+        <h4>Gem Museum</h4>
+        <img class="head-of-mla-photo" src="/assets/frontend/images/gem_museum.jpg">
+        <br><br>
+        
+        <p>The Gem Museum Located in Zabuthri Township. Naypyitaw. The large area of upstairs museum decorated with large wall glasses and beautiful and wonderful decorations in modern designs. In Gems Museum, precious jewels such as ruby and sapphire, quality jade lots and the largest pearl in Myanmar are put on display. Normally. it opens from 9:30 am to 4:00 pm except Monday and Government holidays.</p>
+        ',
             'status' =>'active', 'url' =>'', 'title' =>'PROGRAM LIBRARY', 'post_order' =>1, 'pages_id' =>13, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
             ['name'=>'REGISTRATION FEE','description'=>'','content'=>'<div class="col-md-9 reg_fee_payment" id="reg_fee_payment">
-            <h2>PROGRAM >> REGISTRATION FEES AND PAYMENTS</h2>
-                <table class="table table-bordered p-table">
-                <tr>
-                    <td></td>
-                    <td>
-                    Early Bird
-                    </td>
-                    <td>Onsite</td>
-                </tr>
-                <tr>
-                    <td>International Delegate </td>
-                    <td>
-                        $300
-                    </td>
-                    <td>$350</td>
-                </tr>
-                <tr>
-                    <td>Local Delegate(Member)</td>
-                    <td>
-                        20,000 MMK
-                    </td>
-                    <td>25,000 MMK</td>
-                </tr>
-                <tr>
-                    <td>Local Delegate (Non Member)</td>
-                    <td>
-                        30,000 MMK
-                    </td>
-                    <td>35,000 MMK</td>
-                </tr>
-                <tr>
-                    <td>Student</td>
-                    <td>10,000 MMK</td>
-                    <td>15,000 MMK</td>
-                </tr>
-            </table>
-           </div>
-       </div>',
+            <h2>PROGRAM &gt;&gt; REGISTRATION FEES AND PAYMENTS</h2>
+
+<h4>Registration Information</h4>
+<p>Any person, delegate, accompanying person, student, media representative, speaker, or exhibitor is considered an attendee.</p>
+<p>Early Registration deadline: 	31 January 2018</p>
+<p>Standard Registration deadline:	29 April 2018</p>
+<p>Onsite Registration: 		from 30 April 2018</p>
+
+<table class="table table-bordered p-table">
+<tbody>
+<tr>
+     <td></td>
+     <td>Early Bird</td>
+     <td>Standard</td>
+     <td>Onsite</td>
+</tr>
+<tr>
+     <td>International Delegate </td>
+     <td>$250</td>
+     <td>US$ 300</td>
+     <td>US$ 350</td>
+</tr>
+<tr>
+     <td>Local Delegate(MLA Member)**</td>
+     <td>20,000 MMK</td>
+     <td></td>
+     <td>30,000 MMK</td>
+</tr>
+<tr>
+      <td>Local Delegate (Non MLA Member)</td>
+      <td>30,000 MMK</td>
+      <td></td>
+      <td>40,000 MMK</td>
+</tr>
+<tr>
+      <td>Student(Local)***</td>
+      <td>15,000 MMK</td>
+      <td></td>
+      <td>20,000 MMK</td>
+</tr>
+</tbody>
+</table>
+
+<p>Only fully completed registrations will be accepted. The registration fee is based on the date of the receipt of the registration and the payment in full in accordance with the deadlines mentioned above. </p>
+
+<h4>Registration Fees</h4>
+<p>The registration fee for regular delegates includes:</p>
+<ul>
+<li>Admission to the congress, the sessions and the exhibition</li>
+<li>Congress Material</li>
+<li>Opening / Closing Session, Farewell Dinner</li>
+<li>One local library visit (based on availability)</li>
+</ul>
+
+<p>Please contact Myanmar Library Association for the correct membership number. This number should be entered on the registration form.</p>
+<p>To be able to register as a student, you must present a proof of fulltime enrolment at a recognised university or college for both the time of registration and during the Congress. </p>
+<p>Media people have to register and submit all records in various forms on Congress to the Organizing Committee. Media representative, you must submit a copy of your official press card.</p>
+
+<p>All prices, categories and dates are indicative and subject to change.<br>
+**  MLA membership number requested<br>
+*** Student ID or official letter of University must be provided
+</p>
+
+<h5><b><i>Congress Material</i></b></h5>
+<p>If the registration form and full payment are received, a Congress Bag is included in the registration fee for full delegates, students, speakers and media representatives. All Congress materials will be handed out onsite at the Congress Bag counter. </p>
+
+<h5><b><i>Methods of Payment</i></b></h5>
+<p>All registration fees should be paid by Bank Transfer. Please do not forget to indicate your first and last name on the payment. Please make sure all bank fees are covered by the submitting account and that the payment is free of charge for the receiver account. Please mention your first and last name and "CONSAL XVII" on the bank transfer. Payment by bank transfer is only possible until 29 April 2018.</p>
+
+</div>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION FEE', 'post_order' =>1, 'pages_id' =>14, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
             ['name'=>'REGISTRATION CANCELLATION','description'=>'','content'=>'
@@ -583,213 +651,161 @@ Email:  hlaingyu2010@gmail.com</p>
             </p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION CANCELLATION', 'post_order' =>1, 'pages_id' =>15, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
-            ['name'=>'REGISTRATION LETTER','description'=>'','content'=>'
-            <h2>PROGRAM >> LETTER OF INVITATIONS</h2>
-            <p>
-            Dear: 
-            </p>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>Sincerely,</br>
-            John Doe</p>',
+            ['name'=>'REGISTRATION LETTER','description'=>'','content'=>'<h2>PROGRAM &gt;&gt; LETTER OF INVITATION</h2>
+            <h5><b><i>Letter of Invitation</i></b></h5>
+            <p>Individuals requiring an official Letter of Invitation can request one through the Organizing Committee: <span class="red_span"><b>info@consalxvii.org</b></span></p>
+            <p>The Letter of Invitation does not financially obligate the Congress organizers in any way. All expenses incurred in relation to the Congress are the sole responsibility of the attendee.</p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION LETTER', 'post_order' =>1, 'pages_id' =>16, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
-            ['name'=>'REGISTRATION VISA','description'=>'','content'=>'
-            <h2>PROGRAM >> VISA REQUIREMENTS</h2>
+            ['name'=>'REGISTRATION VISA','description'=>'','content'=>'<h2>PROGRAM &gt;&gt; VISA REQUIREMENTS</h2>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            It is the sole responsibility of the attendee to take care of his / her visa requirements. Attendees who require an entry visa must allow sufficient time for the application procedure. Attendees should contact the nearest embassy or consulate to determine the appropriate timing of their visa applications. It is recommended to apply for a visa at least 3 months in advance of the Congress. 
             </p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION VISA', 'post_order' =>1, 'pages_id' =>17, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION SPONSORSHIP','description'=>'','content'=>'
-        <h2>EXHIBITION & SPONSORSHIP >> EXHIBIT & SPONSORSHIPS </h2>
-       <div class="col-md-12">
-           <div class="row">
-               <p>
-                   The Organizing Committee of the Congress of Southeast Asian Libraries (CONXAL XVII) offers the opportunity to become a sponsor/partner in order to support for the development of libraries in the region. This opportunity will bring you to gain the great experience and successful marketing image for your business.
-               </p>
-
-               <div class="table-responsive">
-                 <table class="table table-bordered">
-                   <tr>
-                       <td>No</td>
-                       <td>Type/Value</td>
-                       <td>Facilities</td>
-                   </tr>
-                   <tr>
-                       <td>1</td>
-                       <td>Platinum Package <br/><br/> 12,500 $</td>
-                       <td>
-                           <ul>
-                               <li>Logo featured on each banner, backdrop, promotional materials</li>
-                           <li>One allocated exhibition booth with the size of 3m 3m</li>
-                           <li>30 minutes promotional session in the Conference</li>
-                           <li>Conference Folder,2 Conference Participants</li>
-                           <li>Media advertising as a sponsor of CONSAL XVII</li>
-                           </ul>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>2</td>
-                       <td>Gold Package<br/><br/> 10,000 $</td>
-                       <td>
-                           <ul>
-                               <li>Logo featured on each banner, backdrop, promotional materials</li>
-                               <li>One allocated exhibition booth with the size of 3m 3m</li>
-                               <li>25 minutes promotional session in the Conference</li>
-                               <li>Conference Folder,1 Conference Participants</li>
-                           </ul>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>3</td>
-                       <td>Silver Package<br/><br/> 5000 $</td>
-                       <td>
-                           <ul>
-                               <li>One allocated exhibition booth with the size of 3m 3m</li>
-                               <li>20 minutes promotional session in the Conference</li>
-                               <li>Conference Folder</li>
-                           </ul>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>4</td>
-                       <td>Bronze Package<br/><br/> 3000 $</td>
-                       <td>
-                           <ul>
-                               <li>One allocated exhibition booth with the size of 3m 3m</li>
-                               <li>Conference Folder</li>
-                           </ul>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>5</td>
-                       <td>Local Business Package <br/><br/> 500 $</td>
-                       <td>
-                           <ul>
-                               <li>One allocated exhibition booth with the size of 3m 3m</li>
-                           </ul>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>6</td>
-                       <td>Other forms of Sponsorship</td>
-                       <td>
-                           <ul>
-                               <li>Evening Reception Host Sponsor</li>
-                               <li>Delegate lunch sponsor</li>
-                               <li>Coffee & Tea Sponsor</li>
-                               <li>Registration Sponsor</li>
-                           </ul>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td></td>
-                       <td></td>
-                       <td>
-                           <ul>
-                               <li>Exhibition Sponsor</li>
-                               <li>Conferece Folder Sponsor</li>
-                           </ul>
-                       </td>
-                   </tr>
-                 </table>
-                 <p>Contact information for further information on the packages or any of your business ideas regarding sponsorship.</p>
-                   <span style="font-weight:bold;">President</span><br/>
-                   U Than Aung<br/>
-                   Phone : 09795624209<br/>
-                   email: thanaungmla@gmail.com
-                   <br/>
-                   <br/>
-                    <span style="font-weight:bold;">Vice President 1</span><br/>
-                   Daw Ah Win<br/>
-                   Phone : 00959250354354<br/>
-                   email: ahwin2006@gmail.com
-                   <br/><br/>
-                    <span style="font-weight:bold;">Vice-President 2</span><br/>
-                   Daw Myat Sann Nyein<br/>
-                   Phone : 009595186398<br/>
-                   email: myatsann.nyein@gmail.com
-                   <br/><br/>
-                    <span style="font-weight:bold;">Secretary General</span><br/>
-                   Daw Mya Oo<br/>
-                   Phone : 00959420728446<br/>
-                   email: mya.myanmar65@gmail.com  
-               </div>
-           </div>
-       </div>',
+        ['name'=>'EXHIBITION SPONSORSHIP','description'=>'','content'=>'        <h2>EXHIBITION &amp; SPONSORSHIP &gt;&gt; EXHIBIT &amp; SPONSORSHIPS </h2>
+        <div class="col-md-12">
+            <div class="row">
+                <p>The Organizing Committee of the Congress of Southeast Asian Librarians (CONSAL XVII) offers the opportunity to become a sponsor/partner to support the development of libraries in the Region. This opportunity will bring you to gain the great experience and successful marketing image for your business.</p>
+ 
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <tbody><tr>
+                        <td>Sponsorship packages No.</td>
+                        <td>Type/Value</td>
+                        <td>Facilities</td>
+                    </tr>
+                    <tr>
+                        <td>Platinum Package</td>
+                        <td>US$ 12,500</td>
+                        <td>
+                            <ul>
+                            <li>Logo featured on each banner,  backdrop, promotional materials   
+ One allocated exhibition booth with size of 3m x 3m</li>
+                            <li>30 minutes promotional session in the Conference</li>
+                            <li>Conference Folder, 2 Conference Participants
+ Media advertising as a sponsor of CONSAL XVII</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gold Package</td>
+                        <td>US$ 10, 000</td>
+                        <td>
+                            <ul>
+                                <li>Logo featured on each banner, backdrop, promotional materials</li>
+                                <li>One allocated exhibition booth with the size of 3m x 3m</li>
+                                <li>25 minutes promotional session in the Conference</li>
+                                <li>Conference Folder, 1 Conference Participant</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Silver Package</td>
+                        <td>US$ 5, 000</td>
+                        <td>
+                            <ul>
+                                <li>One allocated exhibition booth with the size of  3m x 3m</li>
+                                <li>20 minutes promotional session in the Conference</li>
+                                <li>Conference Folder</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bronze Package</td>
+                        <td>US$ 3, 000</td>
+                        <td>
+                            <ul>
+                                <li>One allocated exhibition booth with the size of  3m x 3m</li>
+                                <li>Conference Folder</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Local Business Package</td>
+                        <td>US$ 500</td>
+                        <td>
+                            <ul>
+                                <li>One allocated exhibition booth with the size of 3m 3m</li>
+                            </ul>
+                        </td>
+                    </tr>
+                  </tbody></table>
+ 
+ <h5><b>Other forms of sponsorship</b></h5>
+ <ul>
+ <li>Evening Reception Host Sponsor</li>
+ <li>Delegate Lunch Sponsor</li>
+ <li>Coffee &amp; Tea Sponsor</li>
+ <li>Registration Sponsor</li>
+ <li>Exhibition Sponsor</li>
+ <li>Conference Folder Sponsor</li>
+ </ul>
+ 
+ <p><b>Contact information for further information on the packages or any of your businesses ideas regarding sponsorship</b></p>
+                   
+                    <span class="red_span">Name : Daw Ni Ni Aye<br>
+                    Phone No. : +9595192681<br>
+                    Office : +9567414510<br>
+                    email: : <a href="http://sponsors@consalxvii.org">sponsors@consalxvii.org</a>
+                    <br></span>
+                </div>
+            </div>
+        </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION SPONSORSHIP', 'post_order' =>1, 'pages_id' =>18, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
         ['name'=>'EXHIBITION EXHIBITOR','description'=>'','content'=>'',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION EXHIBITOR', 'post_order' =>1, 'pages_id' =>19, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
         ['name'=>'EXHIBITION BOOTH','description'=>'','content'=>'<div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="booth">
-        <h2>EXHIBITION & SPONSORSHIP >> BOOTH PRICE AND FACILITES</h2>
+        <h2>EXHIBITION &amp; SPONSORSHIP &gt;&gt; BOOTH PRICE AND FACILITES</h2>
            <div class="col-md-12">
                <div class="row">
-                   <p>
-                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-                       doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi archite
-                       cto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
-                   </p>
+                   <p>This exhibition will provide a unique opportunity to promote your products, undertake research and promote services to researchers from all over the world.</p>
+                   <p>The exhibition takes place at the Main Lobby Void of MICC II. It forms the hub of the Congress and provides an excellent opportunity for attendees to interact with exhibitors. In addition to the commercial exhibits, the poster session, and product demonstrations area will be provided to ensure maximum participant through the Exhibition.</p>
+                   <p>Registration will open on October 6, 2017.</p>
+
+                   <h5><b><i>Booth price and benefits</i></b></h5>
+                   <table class="table table-bordered">
+                   <tbody>
+                   <tr>
+                       <td>Early Registration<br>Before Feb. 2, 2018</td>
+                       <td>Regular Registration<br>After Feb. 2, 2018</td>
+                       <td>Benefits</td>
+                   </tr>
+                   <tr>
+                       <td>US$ 450<br>Before Feb. 2, 2018</td>
+                       <td>US$ 500<br>After Feb. 2, 2018</td>
+                       <td>
+                         <ul>
+                            <li>1 full conference registration</li>
+                            <li>3 m x 3 m exhibition space</li>
+                            <li>Power outlets</li>
+                            <li>1 table and 2 chairs</li>
+                            <li>Internet access</li>
+                         </ul>
+                       </td>
+                   </tr>
+                   </tbody></table>
+
+                   <h5><b><i>Booth price and benefits</i></b></h5>
+                   <p>Exhibition space will be assigned on a ‘first-come, first-served’ basis within the respective sponsorship levels, according to the date of the exhibition space booking and the date of the receipt of the payment.</p>
+                   <p>The square meter price includes raw exhibition space, shell scheme packages will be available to book through email: <a href="http://exhibitions@consalxvii.org">exhibitions@consalxvii.org </a> </p>
+                   <p>Take the great marketing opportunities to showcase your products!</p>
                </div>
            </div>
        </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION BOOTH', 'post_order' =>1, 'pages_id' =>20, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION FLOOR PLAN','description'=>'','content'=>'<h2>EXHIBITION & SPONSORSHIP >> FLOOR PLAN AND EXHIBITIONS</h2>
-           <div class="col-md-12" style="margin-bottom:170px;">
-               <div class="row">
-                   <img src="assets/frontend/images/floor_plan.jpg" class="img-responsive">
-               </div>
-           </div>',
+        ['name'=>'EXHIBITION FLOOR PLAN','description'=>'','content'=>'<h2>EXHIBITION &amp; SPONSORSHIP &gt;&gt; FLOOR PLAN AND EXHIBITIONS</h2>
+        <div class="col-md-12" style="margin-bottom:170px;">
+            <div class="row">
+                <img src="assets/frontend/images/floor_plan_1.jpg" class="img-responsive">
+            </div>
+            <div class="row">
+                <img src="assets/frontend/images/floor_plan_2.jpg" class="img-responsive">
+            </div>
+        </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION FLOOR PLAN', 'post_order' =>1, 'pages_id' =>21, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
         ['name'=>'EXHIBITION AGREMEENT','description'=>'','content'=>'
@@ -805,7 +821,125 @@ Email:  hlaingyu2010@gmail.com</p>
            </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION AGREMEENT', 'post_order' =>1, 'pages_id' =>22, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'TRAVEL ACCOMMODATION','description'=>'','content'=>'',
+        ['name'=>'TRAVEL ACCOMMODATION','description'=>'','content'=>'<h2>TRAVEL &amp; ACCOMMODATIONS &gt;&gt; ACCOMMODATIONS</h2>
+        <p>Recommended Hotel List in Naypyitaw</p>
+        <table class="table table-bordered p-table">
+        <tbody>
+        <tr>
+             <td>
+        <b>Mingalar Thiri Hotel</b><br>
+        Datkhina Thiri City, Hotel Zone-1, <br>
+        Naypyitaw, Union of Myanmar<br>
+        Phone: +95 (67) 422140, up to 422159 (20 Lines)<br>
+        Fax: +95(67) 422143, 422144, Hot Line : +95 (67) 422155<br>
+        Email: <a href="http://inquiry@mingalarthiri-hotel.com">inquiry@mingalarthiri-hotel.com</a><br>
+        Website: <a href="http://www.mingalarthirihotel.com">www.mingalarthirihotel.com</a><br>
+             </td>
+             <td>
+        <b>Yadanar Theingha Hotel</b><br>
+        H 6, Hotel Zone 1, Rarzathingaha Road, <br>
+        Naypyitaw, Myanmar<br>
+        Tel: +95 67 421911, 421922, 421933, <br>
+        421944, 421955<br>
+        Fax: + 95 67 421910<br>
+        Email: <a href="http://hotelyadanatheingha6@gmail.com ">hotelyadanatheingha6@gmail.com </a>
+             </td>
+        </tr>
+        <tr>
+             <td>
+        <b>Myat Taw Win Hotel</b><br>
+        No. 4, Rarzathingaha Road, Naypyitaw,<br>
+        Myanmar<br>
+        Tel - (95) 067- 420731, 32, 33, to 420736<br>
+        Hot Line - (95) 067-414141<br>
+        Fax - (95) 067-414151<br>
+        Email: <a href="http://info@hotelmyattawwin.com">Email: info@hotelmyattawwin.com </a><br>
+             </td>
+             <td>
+        <b>Sky Palace Hotel</b><br>
+        Datkhina Thiri City, Hotel Zone-1,<br>
+        Naypyitaw, Myanmar<br>
+             </td>
+        </tr>
+        <tr>
+             <td>
+        <b>Shwe Myanmar Hotel</b><br>
+        No. 9, Datkhina Thiri City, Hotel Zone-1, <br>
+        Naypyitaw, Myanmar<br>
+        Tel: +95 67 414178<br>
+        </td>
+             <td>
+        <b>Royal Naypyitaw Hotel</b><br>
+        No. 5, Datkhina Thiri City, Hotel Zone-1  <br>
+        Naypyitaw, Myanmar<br>
+        </td>
+        </tr>
+        <tr>
+             <td>
+        <b>Zabuthiri Hotel</b><br>
+        No.8, Datkhina Thiri City, Hotel Zone-1,<br>
+        Naypyitaw, Myanmar<br>
+        Tel: +95 67 422047<br>
+             </td>
+             <td>
+        <b>Man Myanmar Hotel</b><br>
+        No. 7, Datkhina Thiri City, Hotel Zone-1,  <br>
+        Naypyitaw, Myanmar<br>
+        Tel: +95 67 422130<br>
+             </td>
+        </tr>
+        <tr>
+             <td>
+        <b>Golden Guest Hotel</b><br>
+        No. 5, Datkhina Thiri City, Hotel Zone-1, <br>
+        Naypyitaw, Myanmar<br>
+        Tel: +95 67 414161<br>
+             </td>
+             <td>
+        <b>Myat Nan Yon Hotel</b><br>
+        
+             </td>
+        </tr>
+        <tr>
+             <td>
+        <b>Hotel Max Naypyitaw</b><br>
+        
+             </td>
+             <td>
+        <b>Thingaha Hotel</b><br>
+        Datkhina Thiri City, Hotel Zone-1,  <br>
+        Naypyitaw, Myanmar<br>
+        Tel: +95 67 414121
+             </td>
+        </tr>
+        </tbody>
+        </table>
+        
+        <h3>Contact Us</h3>
+        <h5><b>Organizing Committee</b></h5>
+        <h5><b>Ministry of Religious Affairs and Culture</b></h5>
+        <p>
+        No. 35, Naypyitaw, Myanmar<br>
+        Tel:	95 67 408036<br>
+        Fax:	95 67 408136<br>
+        </p>
+        
+        <h5><b>Myanmar Library Association</b></h5>
+        <p>
+        #003, University Diamond Jubilee Hall,<br>
+        Kamaryut TSP., Yangon, Myanmar<br>
+        Email: <a href="http://libraryassociation@mlamyanmar.org">libraryassociation@mlamyanmar.org</a><br>
+        </p>
+        
+        <h5><b>Congress Secretariat</b></h5>
+        <h5><b>National Library of Myanmar (Naypyitaw)</b></h5>
+        <p>
+        # Razathingaha Road, Nearby Razathingaha Circle,<br>
+        Uottra Thiri TSP., Naypyitaw, Myanmar<br>
+        Tel: 	95 67 418427; 418426<br>
+        Fax:	95 67 418426<br>
+        Email:	info@consalxvii.org<br>
+        </p>',
         'status' =>'active', 'url' =>'', 'title' =>'TRAVEL ACCOMMODATION', 'post_order' =>1, 'pages_id' =>23, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
        

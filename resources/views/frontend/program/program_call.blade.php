@@ -100,21 +100,22 @@
                     Members of CONSAL are welcome to propose papers demonstrating how work in their professional field could be applied across the Asia-Oceania region, provided that there is a clear link with the theme of our parallel sessions.</p>
 
                 <h4>Submissions:</h4>
-                <p>The deadline for submitting a detailed abstract (500 words) and full author details is 30 November 2017.</p>
-                <p>Selection of papers is based on the abstract, and presenters will be notified whether they have been
-                    successful by 31 December 2017. The committee will evaluate the submitted abstracts against criteria which include: innovative content, topical relevance, regional interest, clarity of exposition, originality, and overall quality.</p>
-                <p>Papers must be original submissions not presented or published elsewhere.
-                    Full texts of papers are due on 1 April 2018. Both abstracts and full papers should be submitted as a MS Word file by e-mail.</p>
-                <p>Papers should be no more than 4,000 words, single spaced in Times New Roman 12 point.
-                    Papers and abstracts should be in English.
-                    The author(s) should include their full contact details and brief biographical notes.</p>
+                <ol>
+                <li>The deadline for submitting a detailed abstract (500 words) and full author details is <b>30 November 2017.</b></li>
+                <li>Selection of papers is based on the abstract, and presenters will be notified whether they have been successful by <b>31 December 2017</b>. The committee will evaluate the submitted abstracts against criteria which include: innovative content, topical relevance, regional interest, clarity of exposition, originality, and overall quality</li>
+                <li>Papers must be original submissions not presented or published elsewhere.</li>
+                <li>Full texts of papers are due on <b>31 January 2018</b>. Both abstracts and full papers should be submitted as a MS Word file by e-mail.</li>
+                <li>Papers should be no more than 4,000 words, single spaced in Times New Roman 12 point.</li>
+                <li>Papers and abstracts should be in English.</li>
+                <li>The author(s) should include their full contact details and brief biographical notes.</li>
+                </ol>
 
                 <h4>Content of abstracts:</h4>
                 <p>Informative abstracts (500 words) should be prepared following the template provided below. Each
-                    abstract will be reviewed by members of the peer review committee. Abbreviated abstracts or late
-                    submissions will not be considered.</p>
+                    abstract will be reviewed by members of the peer review committee. <b>Abbreviated abstracts or late
+                    submissions will not be considered.</b></p>
 
-                <h4>Purpose of this paper</h4>
+                <!-- <h4>Purpose of this paper</h4>
                 <p>What are the reason(s) for writing the paper (or the aims of the research)?</p>
                 <h4>Theme</h4>
                 How does it relate to the theme of the session?
@@ -128,27 +129,48 @@
                 What outcomes and implications for practice, applications and consequences are identified? All papers should have practical applications. What changes to practice might be made as a result of this research/paper?
 
                 <h4>Originality</h4>
-                <p>What is new in the paper? State the value of the paper and to whom.</p>
+                <p>What is new in the paper? State the value of the paper and to whom.</p> -->
+                <table class="table">
+                <tr>
+                    <td><i>Purpose of this paper<i></td>
+                    <td>What are the reason(s) for writing the paper (or the aims of the research)?</td>
+                </tr>
+                <tr>
+                    <td><i>Theme<i></td>
+                    <td>How does it relate to the theme of the session?</td>
+                </tr>
+                <tr>
+                    <td><i>Design, methodology, approach<i></td>
+                    <td>How are the objectives achieved? Include the main method(s) used for the study. What is the approach to the topic, and what is the theoretical or subject scope of the paper?</td>
+                </tr>
+                <tr>
+                    <td><i>Findings<i></td>
+                    <td>What was found in the course of the work? This will refer to analysis, discussion, or results.</td>
+                </tr>
+                <tr>
+                    <td><i>Research limitations and implications (if applicable)<i></td>
+                    <td>If the paper reports on research, this section must be completed. It should include suggestions for future research and any identified limitations in the research process.</td>
+                </tr>
+                <tr>
+                    <td><i>Practical implications (if applicable)<i></td>
+                    <td>What outcomes and implications for practice, applications and consequences are identified? All papers should have practical applications. What changes to practice might be made as a result of this research/paper?</td>
+                </tr>
+                <tr>
+                    <td><i>Originality<i></td>
+                    <td>What is new in the paper? State the value of the paper and to whom.</td>
+                </tr>
+                </table>
+                <hr>
 
                 <h4>Presentation of accepted papers:</h4>
-                <p>The presenter (who need not be the author) must be fluent in English: there will be no interpretation service at this open session.</p>
-                <p>15 minutes will be allowed in the session for a summary presentation based on the paper, with time for questions. Presenters should not read their full written paper.
-                    Note: in general, CONSAL has no funds available to cover the cost of speakers’ attendance at the Congress. Any person submitting a paper proposal to CONSAL XVII is responsible for arranging his/her own travel funding. </p>
-
+                <ol>
+                <li>The presenter (who need not be the author) must be fluent in English: there will be no interpretation service at this open session.</li>
+                <li>15 minutes will be allowed in the session for a summary presentation based on the paper, with time for questions. Presenters should not read their full written paper.</li>
+                </ol>
+                <p><b>Note:</b> in general, CONSAL has no funds available to cover the cost of speakers’ attendance at the Congress. Any person submitting a paper proposal to CONSAL XVII is responsible for arranging his/her own travel funding. </p>
+                
                 <h4>Deadline:</h4>
-                Please send your abstract by Saturday 30 November 2017 to:
-                <p>
-                    Ms. Ah Win, Vice-President 1, Myanmar Library Association</br>
-                    Email: ahwin2006@gmail.com</p>
-                <p>
-                    Ms. Mya OO, Director, National Library of Myanmar<br/>
-                    Email:  mya.myanmar65@gmail.com
-                    and</p>
-                <p>
-                    Dr. Hlaing Hlaing Gyi, Librarian, Yangon University Library<br/>
-                    Email:  hlaingyu2010@gmail.com</p>
-            
-
+                <p>Please send your abstract <b>by Saturday 30 November 2017</b> to: <a href="http://paper@consalxvii.org">paper@consalxvii.org</a></p>
         </div>
     </div>
     <!-- /.row -->

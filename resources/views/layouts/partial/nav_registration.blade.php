@@ -8,6 +8,6 @@
                     <a href="/registration_fee" class="list-group-item">Registration Fees and Payment</a>
                     <a href="/registration_cancellation" class="list-group-item">Cancellations</a>
                     <a href="/registration_letter" class="list-group-item">Letter of Invitation</a>
-                    <a href="/registration_visa" class="list-group-item">visa Requirement</a>
+                    <a href="/registration_visa" class="list-group-item">VISA Requirement</a>
                 </div>
             </div>

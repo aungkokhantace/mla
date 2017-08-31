@@ -6,9 +6,15 @@
               <!-- Content Column -->
               <div class="col-md-9">
                 <h2>PROGRAM >> LIBRARY AND CULTURAL VISITS</h2>
-                <br/>
+                
+                @if(isset($page->content) && $page->content !== "")
+                {!! $page->content !!}
+                <br>
+                @endif
+                @foreach($posts as $post)
+                    {!! $post->content !!}<br>
+                @endforeach
                 <div class="row">
-
                     @if(isset($programLibraries) && count($programLibraries)>0 )
                         @foreach($programLibraries as $programLibrary)                            
 

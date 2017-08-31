@@ -25,7 +25,7 @@
        <div class="container">
         <div class="row">
             <div class="col-md-9">
-            <img src="/assets/frontend/images/head1.jpg" class="img-responsive">
+            <img class="head-of-mla-photo" src="/assets/frontend/images/header_logo.png" class="img-responsive">
             </div>
             <div class="col-md-3">
                 <div class="input-group">

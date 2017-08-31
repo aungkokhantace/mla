@@ -4,8 +4,15 @@
 @include('layouts.partial.nav_travel')
 
             <div class="col-md-9 poster" id="accommodation">
-            <h2>TRAVEL & ACCOMMODATIONS >> POST-CONFERENCE TRAVEL</h2>
+            <!-- <h2>TRAVEL & ACCOMMODATIONS >> ACCOMMODATIONS</h2> -->
             
+            @if(isset($page->content) && $page->content !== "")
+            {!! $page->content !!}
+            <br>
+            @endif
+            @foreach($posts as $post)
+                {!! $post->content !!}<br>
+            @endforeach
 
              @if(isset($accommos) && count($accommos)>0 )
                 @foreach($accommos as $accommo)

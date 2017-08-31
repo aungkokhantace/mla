@@ -17,10 +17,12 @@
 
             <!-- First Blog Post -->
             <!-- <div class="row">
-                <div class="col-md-2 count_down" id="days">DAYS</div>
-                <div class="col-md-2 count_down" id="hours">HOURS</div>
-                <div class="col-md-2 count_down" id="minutes">MINUTES</div>
-                <div class="col-md-2 count_down" id="seconds">SECONDS</div>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="col-md-2 count_down" id="days">DAYS</div>
+                    <div class="col-md-2 count_down" id="hours">HOURS</div>
+                    <div class="col-md-2 count_down" id="minutes">MINUTES</div>
+                    <div class="col-md-2 count_down" id="seconds">SECONDS</div>
+                </div>
             </div> -->
 
             @if(isset($page->content) && $page->content !== "")
@@ -40,7 +42,7 @@
             <!-- Blog Categories Well -->
             <div class="home-right">
                 <h2>
-                Latest News and Events
+                LATEST NEWS AND EVENTS
                 </h2>
                 <div class="row">
                     <div class="col-lg-12">

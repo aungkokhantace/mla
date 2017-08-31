@@ -5,7 +5,7 @@
                     <p>copyright&copy;consalxvii</p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align:right;padding-top:20px;">
-                    <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square"></i>
+                    <a target="_blank" href="https://www.facebook.com/consalxvii/"><i class="fa fa-facebook-square"></a></i>&nbsp;&nbsp;<i class="fa fa-twitter-square"></i>
                 </div>
             </div>
         </div>

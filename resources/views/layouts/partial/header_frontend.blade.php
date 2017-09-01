@@ -55,25 +55,53 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
+                        @if(strpos(url()->current(),'/home') !== false)
                         <a href="/home" class="active">HOME</a>
+                        @else
+                        <a href="/home">HOME</a>
+                        @endif
                     </li>
                     <li>
+                        @if(strpos(url()->current(),'/program') !== false)
+                        <a href="/program" class="active">PROGRAM</a>
+                        @else
                         <a href="/program">PROGRAM</a>
+                        @endif                        
                     </li>
-                    <li>
+                    <li>                        
+                        @if(strpos(url()->current(),'/registration') !== false)
+                        <a href="/registration" class="active">REGISTRATION</a>
+                        @else
                         <a href="/registration">REGISTRATION</a>
+                        @endif
                     </li>
                     <li>
+                        @if(strpos(url()->current(),'/exhibition') !== false)
+                        <a href="/exhibition" class="active">EXHIBITION & SPONSORSHIP</a>
+                        @else
                         <a href="/exhibition">EXHIBITION & SPONSORSHIP</a>
+                        @endif 
                     </li>
                     <li>
+                        @if(strpos(url()->current(),'/travel') !== false)
+                        <a href="/travel" class="active">TRAVEL & ACCOMMODATION</a>
+                        @else
                         <a href="/travel">TRAVEL & ACCOMMODATION</a>
+                        @endif 
                     </li>
                     <li>
+                        @if(strpos(url()->current(),'/gallery') !== false)
+                        <a href="/gallery" class="active">GALLERY</a>
+                        @else
                         <a href="/gallery">GALLERY</a>
+                        @endif 
                     </li>
                     <li>
+                        @if(strpos(url()->current(),'/contact') !== false)
+                        <a href="/contact" class="active">CONTACT US</a>
+                        @else
                         <a href="/contact">CONTACT US</a>
+                        @endif                         
                     </li>
                 </ul>
             </div>

@@ -11,7 +11,8 @@
 <div class="container">
     <div class="row middle">
         <div class="col-md-5 col-md-offset-3 login-left">
-            <p id="logo"><strong>AcePlus</strong> Management System</p>
+            <!-- <p id="logo"><strong>AcePlus</strong> Management System</p> -->
+            <p id="logo" class="login-title">17th Congress of Southeast Asian Librarians</p>
         </div>
     </div>
     <div class="row">
@@ -71,7 +72,7 @@
     <br />
     <div class="row">
         <div class="col-md-5 col-md-offset-3 login-center">
-            <img src="/images/aceplus_logo.png" class="pull-left height-full m-r-5">
+            <!-- <img src="/images/aceplus_logo.png" class="pull-left height-full m-r-5"> -->
         </div>
     </div>
 </div>

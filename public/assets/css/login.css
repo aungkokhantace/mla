@@ -145,3 +145,8 @@ body {
     padding-left: 30px;
 }
 /*end password reset page*/
+
+.login-title{
+    text-align:center !important;
+    font-weight: bold;
+}

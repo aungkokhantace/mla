@@ -1,20 +1,17 @@
-@extends('layouts.master_frontend_nocss')
+@extends('layouts.master_frontend')
 @section('title','Gallery')    
 @section('content')
-
+@include('layouts.partial.nav_gallery')
     <!-- Page Content -->
-    <div class="container">
+    <!-- <div class="container"> -->
 
-        <div class="row gallery">
-           <div class="col-md-12">
+        <!-- <div class="row gallery"> -->
+        <div class="col-md-9 col-sm-12 col-xs-12 gallery" id="gallery">
+           <!-- <div class="col-md-12"> -->
             <div class="row">
-                <h2 class="gallery">Gallery</h2>
+                <h2 class="gallery">GALLERY</h2>
                 <section>
                     <ul class="lb-album">
-
-
-                       
-
                         @if(isset($images) && count($images)>0)
                         @foreach($images as $image)
 
@@ -32,8 +29,6 @@
 
                         @endforeach
                     @endif
-
-
                     </ul>
                 </section>
             </div>

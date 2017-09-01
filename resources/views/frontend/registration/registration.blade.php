@@ -11,7 +11,7 @@
             <div class="col-md-9 reg_fee_payment">
 
                 <h2>PROGRAM >> CONFERENCE REGISTRATION FORM</h2>
-             <form class="form-horizontal" method="post" action="{{url('registration/store')}}" id="frm_registration">
+             <form class="form-horizontal call_for_paper" method="post" action="{{url('registration/store')}}" id="frm_registration">
                  {{csrf_field()}}
                 <fieldset>
                 <!-- Text input-->

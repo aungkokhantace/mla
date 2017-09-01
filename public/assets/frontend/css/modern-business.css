@@ -282,6 +282,11 @@ textarea.form-control
     height:80px;
 }
 
+.call_for_paper select.form-control
+{
+    width:128%;
+}
+
 /*Program Overview*/
 .p-table-two
 {margin-top:15px;}

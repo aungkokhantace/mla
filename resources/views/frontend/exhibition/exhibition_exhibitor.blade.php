@@ -11,7 +11,7 @@
                 <h2>EXHIBITION & SPONSORSHIP >> EXHIBITOR AND SPONSOR FORM</h2>
                 <div class="col-md-12">
                     <div class="row">
-                        <form class="form-horizontal" method="post" action="{{url('exhibition_exhibitor/store')}}" id="frm_exhibition_exhibitor">
+                        <form class="form-horizontal call_for_paper" method="post" action="{{url('exhibition_exhibitor/store')}}" id="frm_exhibition_exhibitor">
                             {{csrf_field()}}
                             <fieldset>
 

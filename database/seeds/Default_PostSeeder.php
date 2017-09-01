@@ -105,26 +105,32 @@ class Default_PostSeeder extends Seeder
             'status' =>'active', 'url' =>'', 'title' =>'TRAVEL & ACCOMMODATIONs', 'post_order' =>1, 'pages_id' =>5, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         ['name'=>'GALLERY','description'=>'','content'=>'',
             'status' =>'active', 'url' =>'', 'title' =>'GALLERY', 'post_order' =>1, 'pages_id' =>6, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
-        ['name'=>'CONTACT US','description'=>'','content'=>'
-        <div class="col-md-6">
-        <h2>Contact Us</h2>
-            <p> 
-                Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Maha Thukha Road, Naypyidaw, Myanmar
-            </p>
-            <br/>
-            <p>
-                Email/Gmail&nbsp;: consal@sample.com</p>
-            </br/>
-            <p> 
-            Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +95 67 421 072</p>
-            <ul class="list-unstyled list-inline list-social-icons">
-                <li>
-                    <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-                </li>
-            </ul>
+        ['name'=>'CONTACT US','description'=>'','content'=>'        <div class="col-md-6">
+        <h3>CONTACT US</h3>
+        <h5><b>Organizing Committee</b></h5>
+        <h5><b>Ministry of Religious Affairs and Culture</b></h5>
+        <p>
+        No. 35, Naypyitaw, Myanmar<br>
+        Tel:	95 67 408036<br>
+        Fax:	95 67 408136<br>
+        </p>
+        
+        <h5><b>Myanmar Library Association</b></h5>
+        <p>
+        #003, University Diamond Jubilee Hall,<br>
+        Kamaryut TSP., Yangon, Myanmar<br>
+        Email: <a href="http://libraryassociation@mlamyanmar.org">libraryassociation@mlamyanmar.org</a><br>
+        </p>
+        
+        <h5><b>Congress Secretariat</b></h5>
+        <h5><b>National Library of Myanmar (Naypyitaw)</b></h5>
+        <p>
+        # Razathingaha Road, Nearby Razathingaha Circle,<br>
+        Uottra Thiri TSP., Naypyitaw, Myanmar<br>
+        Tel: 	95 67 418427; 418426<br>
+        Fax:	95 67 418426<br>
+        Email:	info@consalxvii.org<br>
+        </p>
         </div>
         <div class="col-md-6">
         <iframe class="map" src="https://www.google.com/maps/d/u/0/embed?mid=1qh12QBAgnozfHPAHd_1KAOoY80U" width="500" height="400"></iframe>
@@ -522,13 +528,13 @@ Email:  hlaingyu2010@gmail.com</p>
         <h4>Hluttaw (the Parliament)</h4>
         <p>The Assembly of the Union is the national-level bicameral legislature of Myanmar (officially known as the Republic of the Union of Myanmar) established by the 2008 National Constitution. </p>
         
-        <img class="head-of-mla-photo" src="/assets/frontend/images/hluttaw.jpg">
+        <img class="head-of-mla-photo" src="/assets/frontend/images/hluttaw_resized.jpg">
         <br><br>
         <p><b>The Pyidaungsu Hluttaw</b> is made up of two houses, the Amyotha Hluttaw (House of Nationalities), a 224-seat upper house as well as the Pyithu Hluttaw, a 440-seat lower house (House of Representatives). The Pyidaungsu Hluttaw is housed in a 31-building complex, which is believed to represent the 31 planes of existence in Buddhist cosmology, located in Zeya Theddhi Ward of Naypyidaw.</p>
         <br>
         <h4>The National Library (Naypyitaw)</h4>
         
-        <img class="head-of-mla-photo" src="/assets/frontend/images/national_library.jpg">
+        <img class="head-of-mla-photo" src="/assets/frontend/images/national_library_resized.jpg">
         <br><br>
         
         <p>The National Library (Naypyidaw) is located near the Kumudra circle, in Ottarathiri Township, Naypyidaw, Myanmar. The foundation was laid down in 2010 and the library was open to the public in 2013. The National Library of Myanmar is one of the national level institutions of the country under the auspices of the Ministry of Culture. The Library provides the following services: References Services, Reading Room Services, Periodical Services, Children’s Corner Services, Photocopying Services, Library and Internet Services. </p>
@@ -536,12 +542,12 @@ Email:  hlaingyu2010@gmail.com</p>
         <h4>The National Museum (Naypyitaw)</h4>
         <p>The National Museum (Naypyidaw) is located near the Kumudra circle, in Ottarathiri Township, Naypyidaw, Myanmar. Total plot area of the museum is 34.79 acres (14.08 ha). The construction of the museum was started on 3 June 2010. The Museum was opened on 15 July 2015. </p>
         
-        <img class="head-of-mla-photo" src="/assets/frontend/images/national_museum.jpg">
+        <img class="head-of-mla-photo" src="/assets/frontend/images/national_museum_resized.jpg">
         <br><br>
         <p>The museum has five wings: A,B,C,D and E. In the hall A, mini theatre, VIP holding rooms, president\'s gifts exhibition room and public areas are included. The exhibition rooms are Primates and Fossils Exhibition Room, Pre Historic Period Exhibition Room, Proto Historic Period Exhibition Room, Historic Period Exhibition Room, Myanmar Art Gallery and Myanmar Performing Arts Exhibition Room.</p>
         <br>
         <h4>Gem Museum</h4>
-        <img class="head-of-mla-photo" src="/assets/frontend/images/gem_museum.jpg">
+        <img class="head-of-mla-photo" src="/assets/frontend/images/gem_museum_resized.jpg">
         <br><br>
         
         <p>The Gem Museum Located in Zabuthri Township. Naypyitaw. The large area of upstairs museum decorated with large wall glasses and beautiful and wonderful decorations in modern designs. In Gems Museum, precious jewels such as ruby and sapphire, quality jade lots and the largest pearl in Myanmar are put on display. Normally. it opens from 9:30 am to 4:00 pm except Monday and Government holidays.</p>
@@ -913,33 +919,7 @@ Email:  hlaingyu2010@gmail.com</p>
              </td>
         </tr>
         </tbody>
-        </table>
-        
-        <h3>Contact Us</h3>
-        <h5><b>Organizing Committee</b></h5>
-        <h5><b>Ministry of Religious Affairs and Culture</b></h5>
-        <p>
-        No. 35, Naypyitaw, Myanmar<br>
-        Tel:	95 67 408036<br>
-        Fax:	95 67 408136<br>
-        </p>
-        
-        <h5><b>Myanmar Library Association</b></h5>
-        <p>
-        #003, University Diamond Jubilee Hall,<br>
-        Kamaryut TSP., Yangon, Myanmar<br>
-        Email: <a href="http://libraryassociation@mlamyanmar.org">libraryassociation@mlamyanmar.org</a><br>
-        </p>
-        
-        <h5><b>Congress Secretariat</b></h5>
-        <h5><b>National Library of Myanmar (Naypyitaw)</b></h5>
-        <p>
-        # Razathingaha Road, Nearby Razathingaha Circle,<br>
-        Uottra Thiri TSP., Naypyitaw, Myanmar<br>
-        Tel: 	95 67 418427; 418426<br>
-        Fax:	95 67 418426<br>
-        Email:	info@consalxvii.org<br>
-        </p>',
+        </table>',
         'status' =>'active', 'url' =>'', 'title' =>'TRAVEL ACCOMMODATION', 'post_order' =>1, 'pages_id' =>23, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
        

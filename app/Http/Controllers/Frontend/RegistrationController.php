@@ -45,8 +45,8 @@ class RegistrationController extends Controller
 
 
     public function index(){
-            $countries = $this->repo->getCountry();
-            return view('frontend.registration.registration',compact('countries'));
+        $countries = $this->repo->getCountry();
+        return view('frontend.registration.registration',compact('countries'));
     }
 
     public function store(RegistrationEntryFormRequest $request)

@@ -12,7 +12,7 @@
                 </div>
             @endif
             
-                <form class="form-horizontal" method="post" action="{{url('program_poster/store')}}" id="frm_program_poster">
+                <form class="form-horizontal call_for_paper" method="post" action="{{url('program_poster/store')}}" id="frm_program_poster">
                     {{csrf_field()}}
                     <fieldset>
 
@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="email">Email</label>
                             <div class="col-md-4">
-                                <input id="email" name="email" type="email" placeholder="" class="form-control">
+                                <input id="email" name="email" type="email" placeholder="" class="form-control input-md">
                                 <p class="text-danger">{{$errors->first('email')}}</p>
                             </div>
                         </div>

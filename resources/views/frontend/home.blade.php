@@ -53,7 +53,7 @@
                                 <div class="row panel-body">  
                                     <img class="img_latest_new" src="{!! $latestNew->image !!}">                              
                                     <p>{!! $latestNew->description !!}</p>
-                                    <a href="#" class="more">more>></a>
+                                    <!-- <a href="#" class="more">more>></a> -->
                                 </div>
 
                             @endforeach

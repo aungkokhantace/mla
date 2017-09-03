@@ -2,16 +2,16 @@
 @section('title','Program Poster')
 @section('content')
 @include('layouts.partial.nav_program')
-
+        @if(Session::has('message'))
+            <div class="col-md-8 well bg-success">
+                {{Session::get('message')['body']}}
+            </div>
+        @endif
+            
         <!-- Content Column -->
         <div class="col-md-9">
             <h2>PROGRAM >> POSTER SESSIONS</h2>
-            @if(Session::has('message'))
-                <div class="col-md-8 well bg-success">
-                    {{Session::get('message')['body']}}
-                </div>
-            @endif
-            
+           
                 <form class="form-horizontal call_for_paper" method="post" action="{{url('program_poster/store')}}" id="frm_program_poster">
                     {{csrf_field()}}
                     <fieldset>

@@ -2,15 +2,15 @@
 @section('title','Program Call')
 @section('content')
 @include('layouts.partial.nav_program')
-
+        @if(Session::has('message'))
+            <div class="col-md-8 well">
+                {{Session::get('message')['body']}}
+            </div>
+        @endif
+        
         <!-- Content Column -->
         <div class="col-md-9">
-             <h2>PROGRAM >> CALL FOR PAPERS</h2>
-            @if(Session::has('message'))
-                <div class="col-md-8 well">
-                    {{Session::get('message')['body']}}
-                </div>
-            @endif
+             <h2>PROGRAM >> CALL FOR PAPERS</h2>           
             
                 <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="frm_program_call">
                     {{csrf_field()}}

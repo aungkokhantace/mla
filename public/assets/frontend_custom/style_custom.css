@@ -62,4 +62,12 @@ textarea.form-control{
   width:auto !important;
 } */
 
+p{
+  text-align: justify;
+}
+
+.lb-album{
+  list-style-type: none;
+}
+
 

@@ -14,7 +14,14 @@
   color:white;
   text-align: center;
   padding:0px;
-  padding-top:15px;
+  padding-top:15px;  
+ }
+
+ .timer-align{
+  /* align-content:center !important; */
+  /* justify-content: center !important; */
+  margin-left: 20%;
+  margin-right: 20%;
  }
 
  .counter_value{
@@ -26,7 +33,8 @@
  }
 
 #days{
-  margin-left:15px;
+  /* margin-left:15px; */
+  margin-left:5px;
   margin-right:5px;
 }
 

@@ -17,7 +17,7 @@
 
             <!-- First Blog Post -->
             <!-- <div class="row">
-                <div class="col-md-4 col-md-offset-4">
+                <div class="col-md-12 timer-align">
                     <div class="col-md-2 count_down" id="days">DAYS</div>
                     <div class="col-md-2 count_down" id="hours">HOURS</div>
                     <div class="col-md-2 count_down" id="minutes">MINUTES</div>

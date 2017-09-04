@@ -46,19 +46,17 @@
                 </h2>
                 <div class="row">
                     <div class="col-lg-12">
-
                         @if(isset($latestNews) && count($latestNews)>0)
-                            @foreach($latestNews as $latestNew)
-                                
-                                <div class="row panel-body">  
-                                    <img class="img_latest_new" src="{!! $latestNew->image !!}">                              
-                                    <p>{!! $latestNew->description !!}</p>
-                                    <!-- <a href="#" class="more">more>></a> -->
-                                </div>
-
+                            @foreach($latestNews as $latestNew)                                
+                            <div class="row panel-body">  
+                                <img class="img_latest_new" src="{!! $latestNew->image !!}">                              
+                                <h5><b>{!! $latestNew->name !!}</b></h5>
+                                <p>{!! $latestNew->short_description !!}  <a href="/latest_news_detail/{{$latestNew->id}}" class="more">more>></a></p>
+                            </div>
                             @endforeach
-                        @endif
-                       
+                            <br>
+                            <a href="/latest_news_all" class="more">ALL LATEST NEWS>></a>
+                        @endif              
                     </div>
                     
                     <!-- /.col-lg-6 -->

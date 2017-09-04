@@ -17,14 +17,17 @@ use Redirect;
 use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
 use Illuminate\Support\Facades\Route;
+use App\Backend\LatestNew\LatestNew;
 use App\Backend\LatestNew\LatestNewRepository;
+use App\Backend\LatestNew\LatestNewRepositoryInterface;
 use App\Core\Utility;
 
-class HomeController extends Controller
+class LatestNewsController extends Controller
 {
 
-    public function __construct()
+    public function __construct(LatestNewRepositoryInterface $repo)
     {
+        $this->repo = $repo;
     }
 
     public function index(Request $request)
@@ -39,15 +42,11 @@ class HomeController extends Controller
         $posts    = $postRepo->getObjByPage($page_id);
         
         $latestNewRepo  = new LatestNewRepository();
-        // $latestNews      = $latestNewRepo->getLatestNew();
-
-        $latestNewsCount = Utility::getLatestNewsCount();
-        
-        $latestNews      = $latestNewRepo->getLatestNewByLimit($latestNewsCount);  //get latest news by count in config or 5 as default
-        
+        $latestNews      = $latestNewRepo->getLatestNew();
+       
         //date to be counted to in timer
         $countDownDate = Utility::getCountDownDate();        
-        
+
         foreach($latestNews as $news){
             $description = $news->description;
             $short_description = substr($description,0,50);
@@ -61,4 +60,21 @@ class HomeController extends Controller
             ->with('countDownDate',$countDownDate);
     }
 
+    public function detail($id){
+        $latestNews = LatestNew::find($id);        
+        return view('frontend.latest_news.latest_news_detail')
+                    ->with('latestNews',$latestNews);
+    }
+
+    public function allLatestNews(){
+        $latestNews = $this->repo->getLatestNew();
+        foreach($latestNews as $news){
+            $description = $news->description;
+            $short_description = substr($description,0,50);
+            $news->short_description = $short_description;
+        }
+        
+        return view('frontend.latest_news.latest_news_all')
+                    ->with('latestNews',$latestNews);
+    }
 }

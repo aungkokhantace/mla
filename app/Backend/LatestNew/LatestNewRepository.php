@@ -17,7 +17,7 @@ class LatestNewRepository implements LatestNewRepositoryInterface
 {
     public function getLatestNew()
     {
-        $pages = LatestNew::whereNull('deleted_at')->get();
+        $pages = LatestNew::whereNull('deleted_at')->orderBy('created_at','desc')->get();
         return $pages;
     }
 
@@ -88,6 +88,9 @@ class LatestNewRepository implements LatestNewRepositoryInterface
         return $url;
     }
     
-
+    public function getLatestNewByLimit($limit) {
+        $result = LatestNew::whereNull('deleted_at')->orderBy('created_at','desc')->limit($limit)->get();
+        return $result;
+    }
 
 }

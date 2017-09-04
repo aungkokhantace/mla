@@ -110,4 +110,18 @@ class Utility
         }
         return $countDownDate;        
     }
+
+    //returns latest news count if it is set up in core_configs, and returns 5 as default if not set up
+    public static function getLatestNewsCount(){
+        $latestNewsCountRaw   = DB::table('core_configs')->where('code','=','SETTING_LATEST_NEWS_COUNT')->first();
+       
+        if(isset($latestNewsCountRaw) && count($latestNewsCountRaw) > 0 && $latestNewsCountRaw->value > 0){
+            $latestNewsCount      = $latestNewsCountRaw->value;
+        }
+        else{
+            // return 5 as the default count
+            $latestNewsCount = 5;
+        }
+        return $latestNewsCount;        
+    }
 }

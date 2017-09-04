@@ -33,6 +33,7 @@ class ConfigController extends Controller
                 $configs['SETTING_COMPANY_NAME'] = "";
                 $configs['SETTING_LOGO'] = "";
                 $configs['SETTING_COUNTDOWN_DATE'] = "";
+                $configs['SETTING_LATEST_NEWS_COUNT'] = "";
 
                 return view('core.config.config')->with('configs', $configs);
             }
@@ -56,6 +57,10 @@ class ConfigController extends Controller
                 $tempConfigs["SETTING_COUNTDOWN_DATE"] = "";
             }
 
+            if(!array_key_exists("SETTING_LATEST_NEWS_COUNT",$tempConfigs)){
+                $tempConfigs["SETTING_LATEST_NEWS_COUNT"] = "";
+            }
+
             return view('core.config.config')->with('configs', $tempConfigs);
 
         }
@@ -68,6 +73,7 @@ class ConfigController extends Controller
             $SETTING_COMPANY_NAME = Input::get('SETTING_COMPANY_NAME');
             $SETTING_COUNTDOWN_DATE_RAW = Input::get('SETTING_COUNTDOWN_DATE');
             $SETTING_COUNTDOWN_DATE     = date('Y-m-d',strtotime($SETTING_COUNTDOWN_DATE_RAW));
+            $SETTING_LATEST_NEWS_COUNT = Input::get('SETTING_LATEST_NEWS_COUNT');
             
             $removeImageFlag = Input::get('removeImageFlag');
 
@@ -87,6 +93,9 @@ class ConfigController extends Controller
 
                 DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_COUNTDOWN_DATE'");
                 $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_COUNTDOWN_DATE','SETTING','$SETTING_COUNTDOWN_DATE','Date for Countdown',$loginUserId,'$updated_at')");
+
+                DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_LATEST_NEWS_COUNT'");
+                $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_LATEST_NEWS_COUNT','SETTING','$SETTING_LATEST_NEWS_COUNT','Latest News Count',$loginUserId,'$updated_at')");
 
                 // saving image
                 if(Input::hasFile('site_logo'))

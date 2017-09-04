@@ -106,7 +106,6 @@ class LatestNewController extends Controller
     public function update(LatestNewEntryRequest $request){
         $request->validate();
         $id = Input::get('id');
-
         $name = Input::get('name');
         $description = Input::get('description');
 
@@ -134,6 +133,24 @@ class LatestNewController extends Controller
                     ->withMessage(FormatGenerator::message('Success', 'Latest New updated ...'));
             }
             else{
+                return redirect()->action('Backend\LatestNewController@index')
+                    ->withMessage(FormatGenerator::message('Fail', 'Latest New did not update ...'));
+            }
+        }
+        else{
+            $latestnewObj = LatestNew::find($id);
+            $latestnewObj->name = $name;
+            $latestnewObj->description = $description;
+            $latestnewObj->image = null;
+
+            $result = $this->repo->create($latestnewObj);
+
+
+            if ($result['aceplusStatusCode'] == ReturnMessage::OK) {
+                return redirect()->action('Backend\LatestNewController@index')
+                    ->withMessage(FormatGenerator::message('Success', 'Latest New updated ...'));
+            } 
+            else {
                 return redirect()->action('Backend\LatestNewController@index')
                     ->withMessage(FormatGenerator::message('Fail', 'Latest New did not update ...'));
             }

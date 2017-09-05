@@ -101,7 +101,6 @@
                 <select class="form-control" name="post_order" id="post_order">
                     @if(isset($post))
                         @for ($i = 1; $i <= 100; $i++)
-                            <option value="{{ $i }}">{{ $i }}</option>
                             @if($i == $post->post_order)
                                 <option value="{{ $i }}" selected>{{ $i }}</option>
                             @else

@@ -78,4 +78,14 @@ p{
   list-style-type: none;
 }
 
+/* for readmore toggle link */
+.morecontent {
+  display: none;
+}
+
+.morelink {
+  display: block;
+}
+/* for readmore toggle link */
+
 

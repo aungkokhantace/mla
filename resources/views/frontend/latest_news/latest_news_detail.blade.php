@@ -18,6 +18,7 @@
                     @endif
                     <p>{{$latestNews->description}}</p>
                 @endif
+                <a href="/latest_news_all" class="more">ALL LATEST NEWS>></a>
             </section>
         </div>
     </div>  

@@ -9,7 +9,9 @@
 
 <!-- Page Content -->
 <div class="container">
-
+    <div class="row">
+        <marquee><b>"Next Generation Libraries: Collaborate and Connect"</b></marquee>
+    </div>
     <div class="row">
         <input type="hidden" name="countDownDate" id="countDownDate" value="{{$countDownDate}}">
         <!-- Blog Entries Column -->

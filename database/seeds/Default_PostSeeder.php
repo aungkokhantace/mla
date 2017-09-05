@@ -21,31 +21,26 @@ class Default_PostSeeder extends Seeder
     $objs = array(
         ['name'=>'HOME','description'=>'','content'=>'<!-- First Blog Post -->
         <h2>
-            CONSAL Information
-        </h2>
+            CONSAL INFORMATION</h2>
+         <span class="more">
          <p>Congress of Southeast Asia Librarians (CONSAL) is the sole regional organization of the libraries, library schools, Library Associations, and related institutions of the ASEAN countries. It was founded in Singapore in 1970 and has  ten members which include the library associations and librarians of Brunei, Cambodia, Indonesia, Lao, Malaysia, Myanmar, Philippines, Singapore, Thailand, and Vietnam. </p>
         <p>CONSAL holds a general conference every three years in each member country by turn and promotes cooperation among librarians in Southeast Asia Region.   CONSAL provides the forum for the librarians and information specialists to strengthen networks, partnerships, and linkages with each other; promotes coordination, collaboration, and provides the platform for sharing and exchange of information and experiences on issues in the fields of librarianship, library and information sciences, documentation, information and related activities in the region. </p>
         <p>CONSAL XVII is acting as a leading force in developing strategic relationships, undertaking the collaborative activities, and taking the good advantages for significant opportunities for the libraries in the  Region.</p>
         <p>We need to join our strength together to provide access to information for all citizens, preserving and access to the culture and heritage, advancing digital inclusion through new technologies, promoting universal literacy, and serving as the heart of the lifelong learning opportunities for our society.</p>
+        </span>
+        <br>
         <p class="date"><i class="fa fa-calendar"></i> May 2-5,2018&nbsp;&nbsp;&nbsp;&nbsp;Naypyitaw,Myanmar</p>
-        <br>
+
         <!--<img src="/assets/frontend/images/date.jpg" class="img-responsive">-->
-        <div class="row">
-        <div class="col-md-2 count_down" id="days">DAYS</div>
-        <div class="col-md-2 count_down" id="hours">HOURS</div>
-        <div class="col-md-2 count_down" id="minutes">MINUTES</div>
-        <div class="col-md-2 count_down" id="seconds">SECONDS</div>
-        </div>
-        <br>
         <h2>
-            Greeting From National Organizing Committee
+            GREETING FROM NATIONAL ORGANIZING COMMITTEE
         </h2>
         <p>Welcome to CONSAL XVII in Naypyitaw!</p>
         <p>On behalf of the Organizing Committee of 17th CONSAL, we are pleased to invite you to the 17th Congress of Southeast Asian Librarians in Naypyitaw, Myanmar.</p>
         <p>The Theme of the CONSAL XVII is "Next Generation Libraries: Collaborate and Connect."</p>
         <img class="head-of-mla-photo" src="/assets/frontend/images/head_mla.jpg">
         <br><br>
-        <a class="btn btn-success btn-custom" href="#">Read More</a>',
+        <!--<a class="btn btn-success btn-custom" href="#">Read More</a>-->',
             'status' =>'active', 'url' =>'', 'title' =>'Home', 'post_order' =>1, 'pages_id' =>1, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
         ['name'=>'PROGRAM','description'=>'','content'=>'<h2>PROGRAM >> PROGRAM TOPICS</h2>

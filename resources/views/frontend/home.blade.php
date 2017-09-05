@@ -42,7 +42,23 @@
 
 
             <!-- Blog Categories Well -->
-            <div class="home-right">
+            <!-- <div class="row home-right"> -->
+                <!-- <div class="col-md-12 timer-align">
+                    <div class="col-md-3 count_down" id="days">DAYS</div>
+                    <div class="col-md-3 count_down" id="hours">HOURS</div>
+                    <div class="col-md-3 count_down" id="minutes">MINUTES</div>
+                    <div class="col-md-3 count_down" id="seconds">SECONDS</div>
+                </div>	 -->
+            <!-- </div> -->
+
+            <div class="home-right">                
+                <div class="col-md-12 timer-align">
+                    <div class="col-md-3 count_down" id="days">DAYS</div>
+                    <div class="col-md-3 count_down" id="hours">HOURS</div>
+                    <div class="col-md-3 count_down" id="minutes">MINUTES</div>
+                    <div class="col-md-3 count_down" id="seconds">SECONDS</div>
+                </div>
+                <br><br><br>
                 <h2>
                 LATEST NEWS AND EVENTS
                 </h2>

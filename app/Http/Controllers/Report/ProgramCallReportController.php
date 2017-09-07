@@ -16,28 +16,29 @@ class ProgramCallReportController extends Controller
         if (Auth::guard('User')->check()) {
             $programCallRepo = new ReportProgramCallRepository();
             $program_calls = $programCallRepo->getProgramCall();
+            $type = 'all';
             $from_date = null;
             $to_date = null;
 
-            return view('report.program_call_view',compact('program_calls','from_date','to_date'));
+            return view('report.program_call_view',compact('program_calls','from_date','to_date','type'));
         }
         return redirect('backend/login');
     }
-    public function search($from_date =null,$to_date=null){
+    public function search($type=null,$from_date =null,$to_date=null){
         if(Auth::guard('User')->check()){
             $programCallRepo = new ReportProgramCallRepository();
-            $program_calls = $programCallRepo->getDataByDate($from_date,$to_date);
-            return view('report.program_call_view',compact('program_calls','from_date','to_date'));
+            $program_calls = $programCallRepo->getDataByDate($type,$from_date,$to_date);
+            return view('report.program_call_view',compact('program_calls','from_date','to_date','type'));
         }
         return redirect('backend/login');
     }
-    public function excel($from_date=null,$to_date=null){
+    public function excel($type=null,$from_date=null,$to_date=null){
         if(Auth::guard('User')->check()) {
             ob_end_clean();     //discards the contents of the output buffer.
             ob_start();         //buffer start
 
             $programCallRepo = new ReportProgramCallRepository();
-            $program_calls = $programCallRepo->getDataByDate($from_date,$to_date);
+            $program_calls = $programCallRepo->getDataByDate($type,$from_date,$to_date);
 
             $display_ary = array();
             foreach($program_calls as $program_call){

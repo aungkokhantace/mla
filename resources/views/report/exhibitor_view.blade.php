@@ -58,6 +58,21 @@
 
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <label for="type" class="text_bold_black">Status</label>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <select class="form-control" name="type" id="type">
+                        <option value="all" {{($type == "all")? 'selected' : ''}}>All</option>
+                        <option value="1" {{($type == "1")? 'selected' : ''}}>Pending</option>
+                        <option value="2" {{($type == "2")? 'selected' : ''}}>Confirm</option>
+                        <option value="3" {{($type == "3")? 'selected' : ''}}>Cancel</option>
+                    </select>
+                </div>
+
+            </div>
         </div>
         <br>
         <div class="row">

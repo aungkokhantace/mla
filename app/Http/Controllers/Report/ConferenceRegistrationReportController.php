@@ -25,11 +25,11 @@ class ConferenceRegistrationReportController extends Controller
         }
         return redirect('backend/login');
     }
-    public function search($from_date =null,$to_date=null){
+    public function search($type=null,$from_date =null,$to_date=null){
         if(Auth::guard('User')->check()){
             $conference_regRepo = new ReportConferenceRegistrationRepository();
-            $conference_registrations = $conference_regRepo->getDataByDate($from_date,$to_date);
-            return view('report.conference_reg_view',compact('conference_registrations','from_date','to_date'));
+            $conference_registrations = $conference_regRepo->getDataByDate($type,$from_date,$to_date);
+            return view('report.conference_reg_view',compact('conference_registrations','from_date','to_date','type'));
         }
         return redirect('backend/login');
     }

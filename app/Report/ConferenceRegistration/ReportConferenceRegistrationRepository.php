@@ -23,7 +23,7 @@ class ReportConferenceRegistrationRepository implements ReportConferenceRegistra
         return $conferenceRegistrations;
     }
 
-    public function getDataByDate($from_date=null, $to_date=null)
+    public function getDataByDate($type=null,$from_date=null, $to_date=null)
     {
         $query = ConferenceRegistration::query();
         $query = $query->leftjoin('countries', 'countries.id', '=', 'conference_registrations.country');
@@ -36,6 +36,9 @@ class ReportConferenceRegistrationRepository implements ReportConferenceRegistra
             'conference_registrations.payment_type as payment_type',
             'countries.name as country',
             'conference_registrations.status as status');
+        if(isset($type) && $type!=null  && $type <> 'all'){
+            $query =$query->where('conference_registrations.status',$type);
+        }
 
         if(isset($from_date) && $from_date != null){
             $tempFromDate = date("Y-m-d", strtotime($from_date));

@@ -228,23 +228,23 @@ Route::group(['middleware' => 'web'], function () {
 
                 //Conference Registration Report
                 Route::get('report/conference_registration', array('as'=>'backend/report/conference_registration','uses'=>'Report\ConferenceRegistrationReportController@index'));
-                Route::get('report/conference_registration/search/{from_date?}/{to_date?}', array('as'=>'backend/report/conference_registration/search/{from_date?}/{to_date?}','uses'=>'Report\ConferenceRegistrationReportController@search'));
-                Route::get('report/conference_registration/exportexcel/{from_date?}/{to_date?}', array('as'=>'backend/report/conference_registration/exportexcel/{from_date?}/{to_date?}','uses'=>'Report\ConferenceRegistrationReportController@excel'));
+                Route::get('report/conference_registration/search/{type?}/{from_date?}/{to_date?}', array('as'=>'backend/report/conference_registration/search/{type?}/{from_date?}/{to_date?}','uses'=>'Report\ConferenceRegistrationReportController@search'));
+                Route::get('report/conference_registration/exportexcel/{type?}/{from_date?}/{to_date?}', array('as'=>'backend/report/conference_registration/exportexcel/{type?}/{from_date?}/{to_date?}','uses'=>'Report\ConferenceRegistrationReportController@excel'));
 
                 //Exhibitor Report
                 Route::get('report/exhibitor', array('as'=>'backend/report/exhibitor','uses'=>'Report\ExhibitorReportController@index'));
-                Route::get('report/exhibitor/search/{from_date?}/{to_date?}', array('as'=>'backend/report/exhibitor/search/{from_date?}/{to_date?}','uses'=>'Report\ExhibitorReportController@search'));
-                Route::get('report/exhibitor/exportexcel/{from_date?}/{to_date?}', array('as'=>'backend/report/exhibitor/exportexcel/{from_date?}/{to_date?}','uses'=>'Report\ExhibitorReportController@excel'));
+                Route::get('report/exhibitor/search/{type?}/{from_date?}/{to_date?}', array('as'=>'backend/report/exhibitor/search/{type?}/{from_date?}/{to_date?}','uses'=>'Report\ExhibitorReportController@search'));
+                Route::get('report/exhibitor/exportexcel/{type?}/{from_date?}/{to_date?}', array('as'=>'backend/report/exhibitor/exportexcel/{type?}/{from_date?}/{to_date?}','uses'=>'Report\ExhibitorReportController@excel'));
 
                 //Program Call Report
                 Route::get('report/program_call', array('as'=>'backend/report/program_call','uses'=>'Report\ProgramCallReportController@index'));
-                Route::get('report/program_call/search/{from_date?}/{to_date?}', array('as'=>'backend/report/program_call/search/{from_date?}/{to_date?}','uses'=>'Report\ProgramCallReportController@search'));
-                Route::get('report/program_call/exportexcel/{from_date?}/{to_date?}', array('as'=>'backend/report/program_call/exportexcel/{from_date?}/{to_date?}','uses'=>'Report\ProgramCallReportController@excel'));
+                Route::get('report/program_call/search/{type?}/{from_date?}/{to_date?}', array('as'=>'backend/report/program_call/search/{type?}/{from_date?}/{to_date?}','uses'=>'Report\ProgramCallReportController@search'));
+                Route::get('report/program_call/exportexcel/{type?}/{from_date?}/{to_date?}', array('as'=>'backend/report/program_call/exportexcel/{type?}/{from_date?}/{to_date?}','uses'=>'Report\ProgramCallReportController@excel'));
 
                 //Program Poster Report
                 Route::get('report/program_poster', array('as'=>'backend/report/program_poster','uses'=>'Report\ProgramPosterReportController@index'));
-                Route::get('report/program_poster/search/{from_date?}/{to_date?}', array('as'=>'backend/report/program_poster/search/{from_date?}/{to_date?}','uses'=>'Report\ProgramPosterReportController@search'));
-                Route::get('report/program_poster/exportexcel/{from_date?}/{to_date?}', array('as'=>'backend/report/program_poster/exportexcel/{from_date?}/{to_date?}','uses'=>'Report\ProgramPosterReportController@excel'));
+                Route::get('report/program_poster/search/{type?}/{from_date?}/{to_date?}', array('as'=>'backend/report/program_poster/search/{type?}/{from_date?}/{to_date?}','uses'=>'Report\ProgramPosterReportController@search'));
+                Route::get('report/program_poster/exportexcel/{type?}/{from_date?}/{to_date?}', array('as'=>'backend/report/program_poster/exportexcel/{type?}/{from_date?}/{to_date?}','uses'=>'Report\ProgramPosterReportController@excel'));
 
                 //for system reference
                 Route::get('system_reference', array('as'=>'backend/system_reference','uses'=>'Backend\SystemReferenceController@index'));

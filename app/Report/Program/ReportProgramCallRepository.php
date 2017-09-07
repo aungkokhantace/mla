@@ -23,7 +23,7 @@ class ReportProgramCallRepository implements ReportProgramCallRepositoryInterfac
         return $program_calls;
     }
 
-    public function getDataByDate($from_date=null, $to_date=null)
+    public function getDataByDate($type=null,$from_date=null, $to_date=null)
     {
         $query = ProgramCall::query();
         $query = $query->select('program_paper.id',
@@ -34,6 +34,9 @@ class ReportProgramCallRepository implements ReportProgramCallRepositoryInterfac
             'program_paper.third_author as third_author',
             'program_paper.abstract as abstract',
             'program_paper.status as status');
+        if(isset($type) && $type!=null  && $type <> 'all'){
+            $query =$query->where('program_paper.status',$type);
+        }
 
         if(isset($from_date) && $from_date != null){
             $tempFromDate = date("Y-m-d", strtotime($from_date));

@@ -16,28 +16,29 @@ class ExhibitorReportController extends Controller
         if (Auth::guard('User')->check()) {
             $exhibitorRepo = new ReportExhibitorRepository();
             $exhibitors = $exhibitorRepo->getExhibitor();
+            $type = 'all';
             $from_date = null;
             $to_date = null;
 
-            return view('report.exhibitor_view',compact('exhibitors','from_date','to_date'));
+            return view('report.exhibitor_view',compact('exhibitors','from_date','to_date','type'));
         }
         return redirect('backend/login');
     }
-    public function search($from_date =null,$to_date=null){
+    public function search($type= null,$from_date =null,$to_date=null){
         if(Auth::guard('User')->check()){
             $exhibitorRepo = new ReportExhibitorRepository();
-            $exhibitors = $exhibitorRepo->getDataByDate($from_date,$to_date);
-            return view('report.exhibitor_view',compact('exhibitors','from_date','to_date'));
+            $exhibitors = $exhibitorRepo->getDataByDate($type,$from_date,$to_date);
+            return view('report.exhibitor_view',compact('exhibitors','from_date','to_date','type'));
         }
         return redirect('backend/login');
     }
-    public function excel($from_date=null,$to_date=null){
+    public function excel($type= null,$from_date=null,$to_date=null){
         if(Auth::guard('User')->check()) {
             ob_end_clean();     //discards the contents of the output buffer.
             ob_start();         //buffer start
 
             $exhibitorRepo = new ReportExhibitorRepository();
-            $exhibitors = $exhibitorRepo->getDataByDate($from_date,$to_date);
+            $exhibitors = $exhibitorRepo->getDataByDate($type,$from_date,$to_date);
 
             $display_ary = array();
             foreach($exhibitors as $exhibitor){

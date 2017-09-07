@@ -23,7 +23,7 @@ class ReportProgramPosterRepository implements ReportProgramPosterRepositoryInte
         return $program_posters;
     }
 
-    public function getDataByDate($from_date=null, $to_date=null)
+    public function getDataByDate($type=null,$from_date=null, $to_date=null)
     {
         $query = ProgramPoster::query();
         $query = $query->select('program_poster.id',
@@ -33,7 +33,9 @@ class ReportProgramPosterRepository implements ReportProgramPosterRepositoryInte
             'program_poster.address as address',
             'program_poster.description as description',
             'program_poster.status as status');
-
+        if(isset($type) && $type!=null  && $type <> 'all'){
+            $query =$query->where('program_poster.status',$type);
+        }
         if(isset($from_date) && $from_date != null){
             $tempFromDate = date("Y-m-d", strtotime($from_date));
             $query = $query->where('program_poster.created_at', '>=' , $tempFromDate);

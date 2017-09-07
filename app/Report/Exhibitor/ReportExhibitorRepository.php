@@ -23,7 +23,7 @@ class ReportExhibitorRepository implements ReportExhibitorRepositoryInterface
         return $exhibitors;
     }
 
-    public function getDataByDate($from_date=null, $to_date=null)
+    public function getDataByDate($type=null,$from_date=null, $to_date=null)
     {
         $query = ExhibitionExhibitor::query();
         $query = $query->select('exhibition_exhibitors.id',
@@ -33,6 +33,9 @@ class ReportExhibitorRepository implements ReportExhibitorRepositoryInterface
             'exhibition_exhibitors.email as email',
             'exhibition_exhibitors.business_type as business_type',
             'exhibition_exhibitors.status as status');
+        if(isset($type) && $type!=null  && $type <> 'all'){
+            $query =$query->where('exhibition_exhibitors.status',$type);
+        }
 
         if(isset($from_date) && $from_date != null){
             $tempFromDate = date("Y-m-d", strtotime($from_date));

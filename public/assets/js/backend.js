@@ -5,12 +5,12 @@
 
 
 function report_search_by_date(module) {
+    var type = $("#type").val();
     var from_date = $("#from_date").val();
     var to_date = $("#to_date").val();
 
     if(from_date == "" && to_date == ""){
-        sweetAlert("Oops...", "Please Choose the date !");
-        return;
+        var form_action = "/"+module+"/search/"+ type;
     }
     else if(from_date == "" && to_date != "") {
         sweetAlert("Oops...", "Please Choose the date !");
@@ -24,7 +24,7 @@ function report_search_by_date(module) {
         var dateComparison = check_date(from_date, to_date);
 
         if(dateComparison){
-            var form_action = "/"+module+"/search/"+ from_date + "/" + to_date;
+            var form_action = "/"+module+"/search/"+type+"/"+ from_date + "/" + to_date;
         }
         else{
             sweetAlert("Oops...", "Please Choose the valid date !");
@@ -35,11 +35,12 @@ function report_search_by_date(module) {
 }
 
 function report_export(module) {
+    var type = $("#type").val();
     var from_date = $("#from_date").val();
     var to_date = $("#to_date").val();
 
     if(from_date == "" && to_date == ""){
-        var form_action = "/"+module+"/exportexcel";
+        var form_action = "/"+module+"/exportexcel/"+ type;
     }
     else if(from_date == "" && to_date != "") {
         sweetAlert("Oops...", "Please Choose the date !");
@@ -53,7 +54,7 @@ function report_export(module) {
         var dateComparison = check_date(from_date, to_date);
 
         if(dateComparison){
-            var form_action = "/"+module+"/exportexcel/"+ from_date + "/" + to_date;
+            var form_action = "/"+module+"/exportexcel/"+type+"/"+ from_date + "/" + to_date;
         }
         else{
             sweetAlert("Oops...", "Please Choose the valid date !");

@@ -12,7 +12,7 @@ namespace App\Report\Program;
 interface ReportProgramPosterRepositoryInterface
 {
     public function getProgramPoster();
-    public function getDataByDate($from_date,$to_date);
+    public function getDataByDate($type,$from_date,$to_date);
     public function create($paramObj);
     public function update($paramObj);
     public function getObjByID($id);

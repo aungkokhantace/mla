@@ -268,6 +268,12 @@
                 </ul>
             </li> -->
 
+            <li nav-id="">
+                <a href="/backend/system_reference">
+                    <!-- <b class="caret pull-right"></b> -->
+                    <span>System Reference</span>
+                </a>
+            </li>
         </ul>
         <!-- end sidebar nav -->
     </div>

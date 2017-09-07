@@ -14,12 +14,14 @@ class ConferenceRegistrationReportController extends Controller
 {
     public function index(Request $request){
         if (Auth::guard('User')->check()) {
+            $type = 'all';
+
             $conference_regRepo = new ReportConferenceRegistrationRepository();
             $conference_registrations = $conference_regRepo->getConferenceRegistration();
             $from_date = null;
             $to_date = null;
 
-            return view('report.conference_reg_view',compact('conference_registrations','from_date','to_date'));
+            return view('report.conference_reg_view',compact('conference_registrations','from_date','to_date','type'));
         }
         return redirect('backend/login');
     }

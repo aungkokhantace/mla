@@ -246,6 +246,8 @@ Route::group(['middleware' => 'web'], function () {
                 Route::get('report/program_poster/search/{from_date?}/{to_date?}', array('as'=>'backend/report/program_poster/search/{from_date?}/{to_date?}','uses'=>'Report\ProgramPosterReportController@search'));
                 Route::get('report/program_poster/exportexcel/{from_date?}/{to_date?}', array('as'=>'backend/report/program_poster/exportexcel/{from_date?}/{to_date?}','uses'=>'Report\ProgramPosterReportController@excel'));
 
+                //for system reference
+                Route::get('system_reference', array('as'=>'backend/system_reference','uses'=>'Backend\SystemReferenceController@index'));
             });
         });
 

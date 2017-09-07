@@ -204,6 +204,9 @@ class Default_PermissionSeeder extends Seeder
             ['id'=>240,'module'=>'Report Program_Poster','name'=>'Report Listing','description'=>'Report Program_Poster Listing','url'=>'backend/report/program_poster'],
             ['id'=>241,'module'=>'Report Program_Poster','name'=>'Report Search','description'=>'Report Program_Poster Search','url'=>'backend/report/program_poster/search/{from_date?}/{to_date?}'],
             ['id'=>242,'module'=>'Report Program_Poster','name'=>'Report Excel','description'=>'Report Program_Poster Excel','url'=>'backend/report/program_poster/exportexcel/{from_date?}/{to_date?}'],
+
+            //System Reference
+            ['id'=>250,'module'=>'System Reference','name'=>'System Reference','description'=>'System Reference','url'=>'backend/system_reference'],
         );
 
         DB::table('core_permissions')->insert($permissions);

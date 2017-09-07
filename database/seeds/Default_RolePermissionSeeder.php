@@ -200,6 +200,9 @@ class Default_RolePermissionSeeder extends Seeder
             ['role_id'=>1, 'permission_id'=>241],
             ['role_id'=>1, 'permission_id'=>242],
 
+            //system reference
+            ['role_id'=>1, 'permission_id'=>250],
+
 
             //administrator permissions
             //roles

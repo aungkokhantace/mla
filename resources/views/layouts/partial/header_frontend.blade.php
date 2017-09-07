@@ -11,6 +11,9 @@
 
     <title>17th Congress of Southeast Asian Libraries</title>
 
+    <!-- <link rel="stylesheet" type="text/css" href="/assets/frontend/css/demo.css" /> -->
+    <link rel="stylesheet" type="text/css" href="/assets/frontend/css/style.css" />
+
     <link href="/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/frontend/css/modern-business.css" rel="stylesheet">
     <link href="/assets/frontend/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -21,7 +24,7 @@
 </head>
 
 <body>
-    <section class="head-top">
+    <!-- <section class="head-top">
        <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -37,7 +40,7 @@
             </div>
         </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse" role="navigation">
@@ -101,13 +104,24 @@
                         <a href="/contact" class="active">CONTACT US</a>
                         @else
                         <a href="/contact">CONTACT US</a>
-                        @endif                         
+                        @endif
                     </li>
+                    <!-- <li>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="SEARCH">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
+       
     </nav>
 
     

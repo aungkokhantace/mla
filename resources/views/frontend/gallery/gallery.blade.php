@@ -15,14 +15,14 @@
                         @if(isset($images) && count($images)>0)
                         @foreach($images as $image)
                             <li>
-                                <!-- <a href="#{!! $image->path !!}"> -->
-                                    <img width="210px;" height="180px;" src="{!! $image->path !!}" alt="{!! $image->path !!}"><br><br>
-                                <!-- </a> -->
-                                <!-- <div class="lb-overlay" id="{!! $image->path !!}">
+                                <a href="#{!! $image->path !!}">
+                                    <img width="210px;" height="180px;" src="{!! $image->path !!}" alt="{!! $image->path !!}">
+                                </a>
+                                <div class="lb-overlay" id="{!! $image->path !!}">
                                     <img src="{!! $image->path !!}" alt="{!! $image->path !!}" />
                                     
                                     <a href="#page" class="lb-close">x Close</a>
-                                </div> -->
+                                </div>
                             </li>
                         @endforeach
                     @endif
@@ -36,4 +36,10 @@
 
 @stop
 @section('page_script')
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+</script>
 @endsection

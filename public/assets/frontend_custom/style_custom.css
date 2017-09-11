@@ -89,4 +89,16 @@ p{
 }
 /* for readmore toggle link */
 
+/* for venue image in home page */
+.max_height_image{
+  width: 100%;
+  max-height: 320px;
+}
+/* for venue image in home page */
 
+/* for map of naypyitaw */
+.npt_map{
+  width: 60%;
+  max-height: 550px;
+}
+/* for map of naypyitaw */

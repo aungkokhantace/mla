@@ -8,13 +8,13 @@
 ?>
 
 @extends('layouts.master')
-@section('title','Posts')
+@section('title','Test')
 @section('content')
 
         <!-- begin #content -->
 <div id="content" class="content">
 
-    <h1 class="page-header">Post List</h1>
+    <h1 class="page-header">Test List</h1>
     @if(count(Session::get('message')) != 0)
         <div>
         </div>
@@ -24,13 +24,13 @@
         <div class="col-md-10"></div>
         <div class="col-md-2">
             <div class="buttons pull-right">
-                <button type="button" onclick='create_setup("post");' class="btn btn-default btn-md first_btn">
+                <button type="button" onclick='create_setup("test");' class="btn btn-default btn-md first_btn">
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 </button>
-                <button type="button" onclick='edit_setup("post");' class="btn btn-default btn-md second_btn">
+                <button type="button" onclick='edit_setup("test");' class="btn btn-default btn-md second_btn">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
-                <button type="button" onclick="delete_setup('post');" class="btn btn-default btn-md third_btn">
+                <button type="button" onclick="delete_setup('test');" class="btn btn-default btn-md third_btn">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </button>
             </div>
@@ -38,7 +38,7 @@
 
     </div>
 
-    {!! Form::open(array('id'=> 'frm_post' ,'url' => '/backend/post/destroy', 'class'=> 'form-horizontal user-form-border')) !!}
+    {!! Form::open(array('id'=> 'frm_test' ,'url' => '/backend/test/destroy', 'class'=> 'form-horizontal user-form-border')) !!}
     {{ csrf_field() }}
     <input type="hidden" id="selected_checkboxes" name="selected_checkboxes" value="">
     <div class="row">
@@ -49,42 +49,21 @@
 
                     <thead>
                     <tr>
-                        <th><input type='checkbox' name='check' id='check_all'/></th>
-                        <th>Name</th>
-                        <!-- <th>Description</th> -->
-                        <th>Title</th>
-                        <!-- <th>Content</th> -->
-                        <th>Status</th>
-                        <!-- <th>URL</th> -->
-                        <th>Post Order</th>
-                        <th>Page</th>
+                        <th><input type='checkbox' name='check' id='check_all'/></th>                        
+                        <th>Content</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th></th>
-                        <th class="search-col" con-id="name">Name</th>
-                        <!-- <th class="search-col" con-id="description">Description</th> -->
-                        <th class="search-col" con-id="title">Title</th>
-                        <!-- <th class="search-col" con-id="content">Content</th> -->
-                        <th class="search-col" con-id="status">Status</th>
-                        <!-- <th class="search-col" con-id="url">URL</th> -->
-                        <th class="search-col" con-id="post_order">Post Order</th>
-                        <th class="search-col" con-id="pages_id">Page</th>
+                        <th class="search-col" con-id="content">Content</th>
                     </tr>
                     </tfoot>
                     <tbody>
-                    @foreach($posts as $post)
+                    @foreach($tests as $test)
                         <tr>
-                            <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $post->id }}" id="all"></td>
-                            <td><a href="/backend/post/edit/{{$post->id}}">{{$post->name}}</a></td>
-                            <!-- <td>{{$post->description}}</td> -->
-                            <td>{{$post->title}}</td>
-                            <!-- <td>{{$post->content}}</td> -->
-                            <td>{{$post->status}}</td>
-                            <!-- <td>{{$post->url}}</td> -->
-                            <td>{{$post->post_order}}</td>
-                            <td>{{$post->page->name}}</td>
+                            <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $test->id }}" id="all"></td>
+                            <td><a href="/backend/test/edit/{{$test->id}}">{{$test->content}}</a></td>
                         </tr>
                     @endforeach
                     </tbody>

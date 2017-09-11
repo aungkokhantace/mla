@@ -73,7 +73,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                 <label for="url">Url<span class="require">*</span></label>
             </div>
@@ -81,7 +81,7 @@
                 <input type="text" class="form-control" id="url" name="url" placeholder="Enter Post Url" value="{{ isset($post)? $post->url:Request::old('url') }}"/>
                 <p class="text-danger">{{$errors->first('url')}}</p>
             </div>
-        </div>
+        </div> -->
 
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -163,14 +163,14 @@
                 $('#postForm').validate({
                     rules: {
                         name: 'required',
-                        url : 'required',
+                        // url : 'required',
                         title: 'required',
                         post_order: 'required',
                         pages_id: 'required'
                     },
                     messages: {
                         name: 'Post Name is required',
-                        url : 'URL is required',
+                        // url : 'URL is required',
                         title: 'Post Title is required',
                         post_order: 'Post Order is required',
                         pages_id: 'Page is required'

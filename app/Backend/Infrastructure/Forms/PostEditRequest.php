@@ -25,7 +25,7 @@ class PostEditRequest extends Request
     {
         return [
             "name"              =>"required",
-            "url"               =>"required|unique:posts,url,".$this->get('id'),
+            // "url"               =>"required|unique:posts,url,".$this->get('id'),
             "title"             =>"required",
             "post_order"        =>"required",
             "pages_id"          =>"required"
@@ -35,8 +35,8 @@ class PostEditRequest extends Request
     public function messages(){
         return [
             "name.required"             => "Post Name is required",
-            "url.required"              => "Post URL is required",
-            "url.unique"                => "Post URL is already occupied",
+            // "url.required"              => "Post URL is required",
+            // "url.unique"                => "Post URL is already occupied",
             "title.required"            => "Post Title is required",
             "post_order.required"       => "Post Order is required",
             "pages_id.required"         => "Page is required",

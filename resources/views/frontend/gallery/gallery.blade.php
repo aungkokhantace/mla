@@ -19,8 +19,7 @@
                                     <img width="210px;" height="180px;" src="{!! $image->path !!}" alt="{!! $image->path !!}">
                                 </a>
                                 <div class="lb-overlay" id="{!! $image->path !!}">
-                                    <img src="{!! $image->path !!}" alt="{!! $image->path !!}" />
-                                    
+                                    <img src="{!! $image->path !!}" alt="{!! $image->path !!}" />                                    
                                     <a href="#page" class="lb-close">x Close</a>
                                 </div>
                             </li>

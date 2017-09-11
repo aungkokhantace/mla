@@ -220,6 +220,19 @@
                             <span>Site Config</span>
                         </a>
                     </li>
+
+                    <li nav-id="modifier-manage" class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret pull-right"></b>
+                            <span>Test</span>
+                        </a>
+
+                        <ul class="sub-menu">
+                            <li nav-id="modifier-manage-modifier"><a href="/backend/test/create">Entry</a></li>
+                            <li nav-id="modifier-manage-modifierpanel"><a href="/backend/test">List</a></li>
+
+                        </ul>
+                    </li>
                 </ul>
             </li>
 

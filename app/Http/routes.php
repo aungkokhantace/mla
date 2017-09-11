@@ -248,6 +248,14 @@ Route::group(['middleware' => 'web'], function () {
 
                 //for system reference
                 Route::get('system_reference', array('as'=>'backend/system_reference','uses'=>'Backend\SystemReferenceController@index'));
+
+                //Test Routes
+                Route::get('test', array('as'=>'backend/eventemail','uses'=>'Backend\TestController@index'));
+                Route::get('test/create', array('as'=>'backend/eventemail/create','uses'=>'Backend\TestController@create'));
+                Route::get('test/edit/{id}', array('as'=>'backend/eventemail/edit','uses'=>'Backend\TestController@edit'));
+                Route::post('test/store', array('as'=>'backend/eventemail/store','uses'=>'Backend\TestController@store'));
+                Route::post('test/update', array('as'=>'backend/eventemail/update','uses'=>'Backend\TestController@update'));
+                Route::post('test/destroy', array('as'=>'backend/eventemail/destroy','uses'=>'Backend\TestController@destroy'));
             });
         });
 

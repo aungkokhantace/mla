@@ -100,22 +100,22 @@
             <hr>
             <img style="margin-bottom:30px;" src="/assets/frontend/images/bottom1.jpg">
         </div>  
-            <div class="col-md-6 col-lg-6">
+        <!-- <div class="col-md-6 col-lg-6">
             <h3>Gold Package</h3>
             <hr>
             <img style="margin-bottom:30px;" src="/assets/frontend/images/bottom2.jpg">
         </div> 
 
-            <div class="col-md-6 col-lg-6">
+        <div class="col-md-6 col-lg-6">
             <h3>Silver Package</h3>
             <hr>
             <img src="/assets/frontend/images/bottom3.jpg">
         </div> 
-            <div class="col-md-6">
+        <div class="col-md-6">
             <h3>Bronze Package</h3>
             <hr>
             <img src="/assets/frontend/images/bottom4.jpg">
-        </div> 
+        </div>  -->
     </div>
     <!-- Footer -->
     </div>

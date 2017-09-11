@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Backend\Infrastructure\Forms\PostEditRequest;
-use App\Backend\Infrastructure\Forms\PostEntryRequest;
+
 use App\Backend\Page\PageRepository;
-use App\Backend\Post\Post;
-use App\Backend\Post\PostRepositoryInterface;
+use App\Backend\Test\Test;
+use App\Backend\Test\TestRepositoryInterface;
 use App\Core\FormatGenerator;
 use App\Core\ReturnMessage;
 use DOMDocument;
@@ -19,11 +18,11 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\Facades\Image;
 
-class PostController extends Controller
+class TestController extends Controller
 {
     private $repo;
 
-    public function __construct(PostRepositoryInterface $repo)
+    public function __construct(TestRepositoryInterface $repo)
     {
         $this->repo = $repo;
     }
@@ -32,29 +31,19 @@ class PostController extends Controller
     {
         try{
             if (Auth::guard('User')->check()) {
-                $posts      = $this->repo->getObjs();
-                foreach($posts as $post){
-                    if($post->status == "active"){
-                        $post->status = "Active";
-                    }
-                    else{
-                        $post->status = "Inactive";
-                    }
-                }
-                return view('backend.post.index')->with('posts', $posts);
+                $tests      = $this->repo->getObjs();
+                return view('backend.test.index')->with('tests', $tests);
             }
             return redirect('/');
         }
         catch(\Exception $e){
-            return redirect('/error/204/post');
+            return redirect('/error/204/test');
         }
     }
 
     public function create(){
         if (Auth::guard('User')->check()) {
-            $pageRepo = new PageRepository();
-            $pages    = $pageRepo->getPages();
-            return view('backend.post.post')->with('pages',$pages);
+            return view('backend.test.test');
         }
         return redirect('/');
     }
@@ -63,34 +52,16 @@ class PostController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function store(PostEntryRequest $request)
+    public function store(Request $request)
     {
-        $table = (new Post())->getTable();
+        $table = (new Test())->getTable();
 
-        $request->validate();
-        $name               = Input::get('name');
-        $description        = Input::get('description');
-        $content            = Input::get('post_content');
-        $status             = Input::get('status');
-        // $url                = Input::get('url');
-        $title              = Input::get('title');
-        $post_order         = Input::get('post_order');
-        $pages_id           = Input::get('pages_id');
-
-        $paramObj                   = new Post();
-        $paramObj->name             = $name;
-        $paramObj->description      = $description;
-        $paramObj->content          = $content;
-        if ($status == "on") {
-            $status = "active";
-        }else{
-            $status = "inactive";
-        }
-        $paramObj->status           = $status;
-        // $paramObj->url              = $url;
-        $paramObj->title            = $title;
-        $paramObj->post_order       = $post_order;
-        $paramObj->pages_id         = $pages_id;
+        // $request->validate();
+        $test_content               = Input::get('test_content');
+    
+        $paramObj                   = new Test();
+        $paramObj->test_content          = $test_content;
+        
 
        /* //start saving image
         $dom = new DomDocument();
@@ -136,54 +107,31 @@ class PostController extends Controller
         $result = $this->repo->create($paramObj);
 
         if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
-            return redirect()->action('Backend\PostController@index')
-                ->withMessage(FormatGenerator::message('Success', 'Post created ...'));
+            return redirect()->action('Backend\TestController@index')
+                ->withMessage(FormatGenerator::message('Success', 'Test created ...'));
         }
         else{
-            return redirect()->action('Backend\PostController@index')
-                ->withMessage(FormatGenerator::message('Fail', 'Post did not create ...'));
+            return redirect()->action('Backend\TestController@index')
+                ->withMessage(FormatGenerator::message('Fail', 'Test did not create ...'));
         }
     }
 
     public function edit($id){
         if (Auth::guard('User')->check()) {
-            $pageRepo = new PageRepository();
-            $pages    = $pageRepo->getPages();
-
-            $post = $this->repo->getObjByID($id);
-            return view('backend.post.post')->with('post', $post)->with('pages', $pages);
+            $test = $this->repo->getObjByID($id);
+            return view('backend.test.test')->with('test', $test);
         }
         return redirect('/');
     }
 
-    public function update(PostEditRequest $request){
-        $request->validate();
+    public function update(Request $request){
+        // $request->validate();
 
         $id = Input::get('id');
-        $name               = Input::get('name');
-        $description        = Input::get('description');
-        $content            = Input::get('post_content');
-        $status             = Input::get('status');
-        // $url                = Input::get('url');
-        $title              = Input::get('title');
-        $post_order         = Input::get('post_order');
-        $pages_id           = Input::get('pages_id');
+        $test_content  = Input::get('test_content');
 
-        $paramObj = Post::find($id);
-
-        $paramObj->name             = $name;
-        $paramObj->description      = $description;
-        $paramObj->content          = $content;
-        if ($status == "on") {
-            $status = "active";
-        }else{
-            $status = "inactive";
-        }
-        $paramObj->status           = $status;
-        // $paramObj->url              = $url;
-        $paramObj->title            = $title;
-        $paramObj->post_order       = $post_order;
-        $paramObj->pages_id         = $pages_id;
+        $paramObj = Test::find($id);
+        $paramObj->test_content          = $test_content;
 
 //         //start saving image
 //        $dom = new DomDocument();
@@ -228,12 +176,12 @@ class PostController extends Controller
         $result = $this->repo->update($paramObj);
 
         if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
-            return redirect()->action('Backend\PostController@index')
-                ->withMessage(FormatGenerator::message('Success', 'Post updated ...'));
+            return redirect()->action('Backend\TestController@index')
+                ->withMessage(FormatGenerator::message('Success', 'Test updated ...'));
         }
         else{
-            return redirect()->action('Backend\PostController@index')
-                ->withMessage(FormatGenerator::message('Fail', 'Post did not update ...'));
+            return redirect()->action('Backend\TestController@index')
+                ->withMessage(FormatGenerator::message('Fail', 'Test did not update ...'));
         }
 
     }
@@ -245,20 +193,8 @@ class PostController extends Controller
             $this->repo->delete($id);
         }
 
-        return redirect()->action('Backend\PostController@index')
-            ->withMessage(FormatGenerator::message('Success', 'Post deleted ...'));
+        return redirect()->action('Backend\TestController@index')
+            ->withMessage(FormatGenerator::message('Success', 'Test deleted ...'));
 
-    }
-
-    public function page()
-    {
-        $posts= DB::select('SELECT * FROM posts WHERE page_id = 1 ORDER BY created_at DESC');
-
-        /*foreach($posts as $post){
-            $html = htmlentities($post->detail);
-            $html_decode = html_entity_decode($html);
-            dd('html_decode',$post->detail);
-        }*/
-        return view('backend.page.page')->with('posts',$posts);
     }
 }

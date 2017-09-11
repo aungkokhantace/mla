@@ -80,8 +80,9 @@
                     </fieldset>
                 </form>
                 <h4>Theme:</h4>
-                <p>“Next Generation Libraries: Collaborate and Connect”
-                    In keeping with the theme of the CONSAL XVII, “Next Generation Libraries: Collaborate and Connect”, the Organizing Committee of CONSAL XVII invites papers for the General Conference. Open Session will focus on how libraries across our region are dealing with challenges to their traditional ways of working, and experimenting with new ways to continue serving the people of their diverse communities, whether in densely populated cities, remote rural communities, or in scattered island communities. We are seeking high-quality, thoughtful and inspiring papers, and we encourage professionals across the Asia-Pacific region to submit proposals for papers on topics relating to the session theme.
+                <p><b><i>“Next Generation Libraries: Collaborate and Connect”</i></b></p>
+                <p>
+                    In keeping with the theme of the CONSAL XVII, <b><i>“Next Generation Libraries: Collaborate and Connect”</i></b>, the Organizing Committee of CONSAL XVII invites papers for the General Conference.</p><p> Open Session will focus on how libraries across our region are dealing with challenges to their traditional ways of working, and experimenting with new ways to continue serving the people of their diverse communities, whether in densely populated cities, remote rural communities, or in scattered island communities.</p><p> We are seeking high-quality, thoughtful and inspiring papers, and we encourage professionals across the Asia-Pacific region to submit proposals for papers on topics relating to the session theme.
                 </p>
                 <h4>Topics:</h4>
                 <ul>

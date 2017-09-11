@@ -26,7 +26,7 @@ class PostEntryRequest extends Request
     {
         return [
             "name"              =>"required",
-            "url"               =>"required|unique:posts",
+            // "url"               =>"required|unique:posts",
             "title"             =>"required",
             "post_order"        =>"required",
             "pages_id"          =>"required"
@@ -36,8 +36,8 @@ class PostEntryRequest extends Request
     public function messages(){
         return [
             "name.required"             => "Post Name is required",
-            "url.required"              => "Post URL is required",
-            "url.unique"                => "Post URL is already occupied",
+            // "url.required"              => "Post URL is required",
+            // "url.unique"                => "Post URL is already occupied",
             "title.required"            => "Post Title is required",
             "post_order.required"       => "Post Order is required",
             "pages_id.required"         => "Page is required",

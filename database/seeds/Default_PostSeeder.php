@@ -37,10 +37,20 @@ class Default_PostSeeder extends Seeder
         </h2>
         <p>Welcome to CONSAL XVII in Naypyitaw!</p>
         <p>On behalf of the Organizing Committee of 17th CONSAL, we are pleased to invite you to the 17th Congress of Southeast Asian Librarians in Naypyitaw, Myanmar.</p>
-        <p>The Theme of the CONSAL XVII is "Next Generation Libraries: Collaborate and Connect."</p>
+        <p>Myanmar is a developing country where librarians and information specialists can play a very important role. Under the umbrella of Myanmar Library Association, librarians are working together and making united efforts not only for the development of libraries and librarianship but also ultimately for the development of our country. With the cooperation and support of the Ministry of Religious Affairs and Culture, the National Library and the Myanmar Library Association joint organize the 17th Congress of Southeast Asian Librarians (CONSAL XVII) as the first time in Myanmar.</p>
+        <p>The Theme of the CONSAL XVII is “Next Generation Libraries: Collaborate and Connect.” In the digital age, libraries and librarians have to collaborate and beyond to create new connections for the distribution of mass knowledge and learning for the community. Through the collaborative efforts, librarians demonstrate that they and their libraries are integral parts of their communities.</p>
         <img class="head-of-mla-photo" src="/assets/frontend/images/head_mla.jpg">
-        <br><br>
-        <!--<a class="btn btn-success btn-custom" href="#">Read More</a>-->',
+        <br><br><br>
+        <!--<a class="btn btn-success btn-custom" href="#">Read More</a>-->
+
+<h5><b>Congress Venue</b></h5>
+<img class="max_height_image" src="/assets/frontend/images/micc.jpg">
+<p><b>Myanmar International Convention Centre (MICC II)</b></p>
+<p>It is located on 16 acres of land with 312, 000 square feet in Zabuthiri Township, Naypyitaw. It was built by the People’s Republic of China and completed on 15 March 2010. The MICC has a plenary hall that can accommodate 1900 persons. The MICC building is formed with listening rooms, holding rooms, meeting rooms, VIP summit room, news briefing room, singing room and the 720 person capacity Banquet Hall.</p>
+
+<h5><b>Connection to Naypyitaw</b></h5>
+<p>Naypyitaw is the administrative capital of the Union of Myanmar. Centrally located, it is 391 km from Yangon and 302 km from Mandalay, being easily accessible from all parts of the Union.</p>
+<p>The Bangkok Airways is directly flying from Suvarnabhumi Airport to Naypyitaw Airport daily except Saturday.</p>',
             'status' =>'active', 'url' =>'', 'title' =>'Home', 'post_order' =>1, 'pages_id' =>1, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
         ['name'=>'PROGRAM','description'=>'','content'=>'<h2>PROGRAM >> PROGRAM TOPICS</h2>
@@ -148,10 +158,10 @@ class Default_PostSeeder extends Seeder
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
             'status' =>'active', 'url' =>'', 'title' =>'PROGREAM PRE-CONFERENCE', 'post_order' =>1, 'pages_id' =>8, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'PROGRAM CONFERENCE','description'=>'','content'=>' <h2>PROGRAM >> CONFERENCE PROGRAM OVERVIEW</h2>
+        ['name'=>'PROGRAM CONFERENCE','description'=>'','content'=>' <h2>PROGRAM &gt;&gt; CONFERENCE PROGRAM OVERVIEW</h2>
         <table class="table table-bordered p-table">
-        <tr>
-            <td>Monday, 2 May 2018<br/>(Day 1)</td>
+        <tbody><tr>
+            <td>Monday, 2 May 2018<br>(Day 1)</td>
             <td>
                 <ul>
                     <li>Executive Board Meeting (exclusive to Executive Board Members)</li>
@@ -161,7 +171,7 @@ class Default_PostSeeder extends Seeder
             </td>
         </tr>
          <tr>
-            <td>Tuesday, 3 May 2018<br/>(Day 2)</td>
+            <td>Tuesday, 3 May 2018<br>(Day 2)</td>
             <td>
                 <ul>
                     <li>Opening Ceremony</li>
@@ -170,7 +180,7 @@ class Default_PostSeeder extends Seeder
             </td>
         </tr>
         <tr>
-            <td>Wednesday, 4 May 2018<br/>(Day 3)</td>
+            <td>Wednesday, 4 May 2018<br>(Day 3)</td>
             <td>
                 <ul>
                     <li>General Conference</li>
@@ -180,7 +190,7 @@ class Default_PostSeeder extends Seeder
             </td>
         </tr>
         <tr>
-            <td>Thursday, 5 May 2018<br/>(Day 4)</td>
+            <td>Thursday, 5 May 2018<br>(Day 4)</td>
             <td>
                 <ul>
                     <li>Library and Cultural Visits</li>
@@ -188,11 +198,11 @@ class Default_PostSeeder extends Seeder
                 </ul>
             </td>
         </tr>
-    </table>
+    </tbody></table>
     <h3> Day 1 / Monday, 2 May 2018 : 3rd Executive Board Meeting</h3>
     <span>This event is exclusive to Executive Board Members.</span>
     <table class="table table-bordered p-table-two">
-        <tr>
+        <tbody><tr>
             <td class="left">06.00 – 07.00</td>
             <td>
                 Breakfast
@@ -225,13 +235,13 @@ class Default_PostSeeder extends Seeder
         <tr>
             <td>20.00 – 22.00</td>
             <td>
-                Welcome dinner and cultural performance hosted by the Department of Historical Research and National Library (Grand Ballroom, Mingalar Thiri Hotel)
+                Welcome dinner and cultural performance hosted by the Department of Historical Research and National Library (Grand Ballroom, Mingalar Thiri Hotel)(3rd EB Members &amp; CDNLAO Members)
             </td>
         </tr>
-    </table>
+    </tbody></table>
     <h3>For General Conference Participants</h3>
     <table class="table table-bordered p-table-two">
-         <tr>
+         <tbody><tr>
             <td>08.00 – 22.00</td>
             <td>
                 <ul>
@@ -239,26 +249,32 @@ class Default_PostSeeder extends Seeder
                     <li>Onsite Registration for new participants
                 </li>
                 </ul>
-                Venue : Lobby, Myanmar International Convention Center 2, Naypyitaws
-            </td>
+                Venue : Lobby, Myanmar International Convention Center 2, Naypyitaw</td>
         </tr>
-    </table>
+    </tbody></table>
     <h3>Day 2 / Tuesday, 3 May 2018:  Opening Ceremony, General Conference (Plenary)</h3>
     <table class="table table-bordered p-table-two">
-         <table class="tg">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">Tuesday, 3 May 2018<br>Room: Plenary Hall, MICC2</th>
+              </tr>
               <tr>
-                <th class="tg-031e" colspan="3">Tuesday, 3 May 2018<br/>Room: Plenary Hall, MICC2</th>
+                 <td>Time</td>
+                 <td>Program</td>
               </tr>
               <tr>
                 <td class="tg-yw4l right" rowspan="2">08.30 - 10.30</td>
                 <td class="tg-yw4l">Opening Ceremony</td>
-                <td class="tg-yw4l left" rowspan="4">Plenary Hall, MICC 2</td>
               </tr>
               <tr>
                 <td class="tg-yw4l">
-                <ul><li>Opening Remark by State Counselor, Republic of the Union of Myanmar</li>
-                <li>Welcome Remark by President of,IFLA</li>
-                <li>Welcome Performance,Photo Session</li>
+                <ul>
+                <li>Opening Remark by State Counselor, Republic of the Union of Myanmar</li>
+                <li>Welcome Remark by Union Minister for Ministry of Religious Affairs  and Culture, Myanmar</li>
+                <li>Remarks by President of,IFLA</li>
+                <li>Welcome Performance</li>
+                <li>Photo Session</li>
+                </ul>
                 </td>
               </tr>
               <tr>
@@ -272,7 +288,6 @@ class Default_PostSeeder extends Seeder
               <tr>
                 <td class="tg-yw4l right">11.00 – 11. 10</td>
                 <td class="tg-yw4l">President, IFLA</td>
-                <td class="tg-yw4l" rowspan="3">Plenary Hall,,MICC 2</td>
               </tr>
               <tr>
                 <td class="tg-yw4l right">11.10 – 11.20</td>
@@ -285,19 +300,1297 @@ class Default_PostSeeder extends Seeder
               <tr>
                 <td class="tg-yw4l right">11.30 – 12.30</td>
                 <td class="tg-yw4l">Invited Papers (10<br>countries)</td>
-                <td class="tg-yw4l"></td>
               </tr>
               <tr>
                 <td class="tg-yw4l right">12.30 – 13.30</td>
                 <td class="tg-yw4l">Lunch</td>
-                <td class="tg-yw4l"></td>
               </tr>
               <tr>
                 <td class="tg-yw4l right">13.30 – 18.10</td>
                 <td class="tg-yw4l">Parallel Sessions</td>
-                <td class="tg-yw4l">Session Rooms, MICC 2</td>
               </tr>
-            </table>',
+            </tbody></table>
+            <h3>Day 2 / 3 May 2018: Parallel Sessions</h3>
+    <table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3"> Tuesday,  3 May 2018<br>Room: A, MICC 2</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.20</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.20 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 16.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.30 – 17.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.00 – 17.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.30 – 17.50</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.50 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+            </tbody></table>
+            
+    <table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Tuesday,  3 May 2018<br>Room: B, MICC 2</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.20</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.20 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 16.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.30 – 17.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.00 – 17.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.30 – 17.50</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.50 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+            </tbody></table>
+
+    <table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Tuesday,  3 May 2018<br>Room: C, MICC 2</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.20</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.20 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 16.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.30 – 17.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.00 – 17.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.30 – 17.50</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.50 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+            </tbody></table>
+
+    <table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Tuesday,  3 May 2018<br>Room: D, MICC 2</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.20</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.20 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 16.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.30 – 17.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.00 – 17.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.30 – 17.50</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.50 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+            </tbody></table>
+
+    <table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Tuesday,  3 May 2018<br>Room: E, MICC 2</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.20</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.20 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 16.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.30 – 17.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.00 – 17.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.30 – 17.50</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.50 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+            </tbody></table>
+
+    <table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Tuesday,  3 May 2018<br>Room: F, MICC 2</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.20</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.20 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 16.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.30 – 17.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.00 – 17.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.30 – 17.50</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">17.50 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+            </tbody></table>
+
+<table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Wednesday,  4 May 2018<br>Room: A</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">08.30 - 9.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.00 – 9.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.30 – 10.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.00 – 10.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.30 – 11.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.00 – 11.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.30 – 12.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.00 – 12.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.30 – 13.00</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.00 – 13.30</td>
+                <td class="tg-yw4l" colspan="2">Lunch</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session III</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Closing Ceremony</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">19.00 – 21.00</td>
+                <td class="tg-yw4l" colspan="2">Gala Dinner</td>
+              </tr>
+            </tbody></table>
+
+<table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Wednesday,  4 May 2018<br>Room: B</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">08.30 - 9.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.00 – 9.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.30 – 10.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.00 – 10.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.30 – 11.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.00 – 11.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.30 – 12.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.00 – 12.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.30 – 13.00</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.00 – 13.30</td>
+                <td class="tg-yw4l" colspan="2">Lunch</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session III</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Closing Ceremony</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">19.00 – 21.00</td>
+                <td class="tg-yw4l" colspan="2">Gala Dinner</td>
+              </tr>
+            </tbody></table>
+
+<table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Wednesday,  4 May 2018<br>Room: C</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">08.30 - 9.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.00 – 9.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.30 – 10.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.00 – 10.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.30 – 11.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.00 – 11.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.30 – 12.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.00 – 12.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.30 – 13.00</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.00 – 13.30</td>
+                <td class="tg-yw4l" colspan="2">Lunch</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session III</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Closing Ceremony</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">19.00 – 21.00</td>
+                <td class="tg-yw4l" colspan="2">Gala Dinner</td>
+              </tr>
+            </tbody></table>
+
+<table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Wednesday,  4 May 2018<br>Room: D</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">08.30 - 9.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.00 – 9.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.30 – 10.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.00 – 10.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.30 – 11.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.00 – 11.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.30 – 12.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.00 – 12.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.30 – 13.00</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.00 – 13.30</td>
+                <td class="tg-yw4l" colspan="2">Lunch</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session III</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Closing Ceremony</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">19.00 – 21.00</td>
+                <td class="tg-yw4l" colspan="2">Gala Dinner</td>
+              </tr>
+            </tbody></table>
+
+<table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Wednesday,  4 May 2018<br>Room: E</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">08.30 - 9.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.00 – 9.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.30 – 10.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.00 – 10.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.30 – 11.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.00 – 11.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.30 – 12.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.00 – 12.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.30 – 13.00</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.00 – 13.30</td>
+                <td class="tg-yw4l" colspan="2">Lunch</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session III</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Closing Ceremony</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">19.00 – 21.00</td>
+                <td class="tg-yw4l" colspan="2">Gala Dinner</td>
+              </tr>
+            </tbody></table>
+
+<table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Wednesday,  4 May 2018<br>Room: F</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session I</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  Speaker
+                </td>
+                <td class="tg-yw4l">
+                  Paper
+                </td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">08.30 - 9.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.00 – 9.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.30 – 10.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.00 – 10.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">10.30 – 11.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session II</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.00 – 11.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">11.30 – 12.00</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.00 – 12.30</td>
+                <td class="tg-yw4l"></td>
+                <td class="tg-yw4l"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">12.30 – 13.00</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.00 – 13.30</td>
+                <td class="tg-yw4l" colspan="2">Lunch</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Parallel Session III</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">13.30 – 14.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.00 – 14.30</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">14.30 – 15.00</td>
+                <td class="tg-yw4l" colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.00 – 15.30</td>
+                <td class="tg-yw4l" colspan="2">Q &amp; A</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right"></td>
+                <td class="tg-yw4l" colspan="2">Awarding Certificate &amp; Souvenir</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">15.30 – 16.00</td>
+                <td class="tg-yw4l" colspan="2">Coffee Break</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">16.00 – 18.00</td>
+                <td class="tg-yw4l" colspan="2">Closing Ceremony</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">19.00 – 21.00</td>
+                <td class="tg-yw4l" colspan="2">Gala Dinner</td>
+              </tr>
+            </tbody></table>
+<h3>Day 3 / 4 May 2018: Closing Ceremony</h3>
+<table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Wednesday,  4 May 2018<br>Room: Plenary Hall,  MICC2</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td>Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2">16.00 – 18.00</td>
+                <td class="tg-yw4l">Closing Ceremony</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  <ul>
+                      <li>Honouring CONSAL XVII Outstanding Librarian Award</li>
+                      <li>Myanmar Traditional Performance</li>
+                      <li>Conveying CONSAL Flag to Next Host Cambodia</li>
+                      <li>Cambodian Traditional Performance </li>
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody></table>
+
+<table class="table table-bordered p-table-two">
+         
+              <tbody><tr>
+                <th class="tg-031e" colspan="3">  Wednesday,  4 May 2018<br>Room: Banquet Hall,  MICC2</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td>Program</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right" rowspan="2">19.00 – 21.00</td>
+                <td class="tg-yw4l">Farewell Dinner</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l">
+                  <ul>
+                      <li>Address by Union Minister for Ministry of Religious Affairs and Culture</li>
+                      <li>Myanmar Traditional Performance</li>
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody></table>
+<h3>Day 4  / 5 May 2018 : Library / Cultural Visit</h3>
+<table class="table table-bordered p-table-two">         
+              <tbody>
+              <tr>
+                <th class="tg-031e" colspan="3"> Thursday,  5 May 2018</th>
+              </tr>
+              <tr>
+                 <td>Time</td>
+                 <td colspan="2">Visit</td>
+              </tr>
+              <tr>
+                <td class="tg-yw4l right">9.00 – 15.00 </td>
+                <td class="tg-yw4l">Visit A</td>
+                <td class="tg-yw4l">
+                  <ul>
+                    <li>
+                      Parliament</li>
+                    <li>
+                      National Library</li>
+                    <li>
+                      National Museum</li>
+                  </ul>
+                </td>
+              </tr>
+               <tr>
+                <td class="tg-yw4l right">9.00 – 15.00 </td>
+                <td class="tg-yw4l">Visit B</td>
+                <td class="tg-yw4l">
+                  <ul>
+                    <li>
+                      Parliament</li>
+                    <li>
+                      National Library</li>
+                    <li>
+                      Gem Museum</li>
+                  </ul>
+                </td>
+              </tr>
+               <tr>
+                <td class="tg-yw4l right">9.00 – 15.00 </td>
+                <td class="tg-yw4l">Visit C</td>
+                <td class="tg-yw4l">
+                  <ul>
+                    <li>
+                      Parliament</li>
+                    <li>
+                      National Museum</li>
+                    <li>
+                      Gem Museum</li>
+                  </ul>
+                </td>
+              </tr>
+               <tr>
+                <td class="tg-yw4l right">9.00 – 15.00 </td>
+                <td class="tg-yw4l">Visit D</td>
+                <td class="tg-yw4l">
+                  <ul>
+                    <li>
+                      Parliament</li>
+                    <li>
+                      National Museum</li>
+                    <li>
+                      National Archives</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody></table>',
             'status' =>'active', 'url' =>'', 'title' =>'PROGRAM CONFERENCE', 'post_order' =>1, 'pages_id' =>9, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
 
@@ -762,6 +2055,7 @@ Email:  hlaingyu2010@gmail.com</p>
         <h2>EXHIBITION &amp; SPONSORSHIP &gt;&gt; BOOTH PRICE AND FACILITES</h2>
            <div class="col-md-12">
                <div class="row">
+                  <h5><b><i>Exhibition Space</i></b></h5>
                    <p>This exhibition will provide a unique opportunity to promote your products, undertake research and promote services to researchers from all over the world.</p>
                    <p>The exhibition takes place at the Main Lobby Void of MICC II. It forms the hub of the Congress and provides an excellent opportunity for attendees to interact with exhibitors. In addition to the commercial exhibits, the poster session, and product demonstrations area will be provided to ensure maximum participant through the Exhibition.</p>
                    <p>Registration will open on October 6, 2017.</p>
@@ -789,9 +2083,9 @@ Email:  hlaingyu2010@gmail.com</p>
                    </tr>
                    </tbody></table>
 
-                   <h5><b><i>Booth price and benefits</i></b></h5>
+                   <h5><b><i>Booth Assignment</i></b></h5>
                    <p>Exhibition space will be assigned on a ‘first-come, first-served’ basis within the respective sponsorship levels, according to the date of the exhibition space booking and the date of the receipt of the payment.</p>
-                   <p>The square meter price includes raw exhibition space, shell scheme packages will be available to book through email: <a href="http://exhibitions@consalxvii.org">exhibitions@consalxvii.org </a> </p>
+                   <p>The square meter price includes raw exhibition space, shell scheme packages will be available to book in <a href="http://Exhibition@consalxvii.org">Exhibition@consalxvii.org</a> .</p>
                    <p>Take the great marketing opportunities to showcase your products!</p>
                </div>
            </div>
@@ -823,98 +2117,125 @@ Email:  hlaingyu2010@gmail.com</p>
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION AGREMEENT', 'post_order' =>1, 'pages_id' =>22, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
         ['name'=>'TRAVEL ACCOMMODATION','description'=>'','content'=>'<h2>TRAVEL &amp; ACCOMMODATIONS &gt;&gt; ACCOMMODATIONS</h2>
-        <p>Recommended Hotel List in Naypyitaw</p>
-        <table class="table table-bordered p-table">
-        <tbody>
-        <tr>
-             <td>
-        <b>Mingalar Thiri Hotel</b><br>
-        Datkhina Thiri City, Hotel Zone-1, <br>
-        Naypyitaw, Union of Myanmar<br>
-        Phone: +95 (67) 422140, up to 422159 (20 Lines)<br>
-        Fax: +95(67) 422143, 422144, Hot Line : +95 (67) 422155<br>
-        Email: <a href="http://inquiry@mingalarthiri-hotel.com">inquiry@mingalarthiri-hotel.com</a><br>
-        Website: <a href="http://www.mingalarthirihotel.com">www.mingalarthirihotel.com</a><br>
-             </td>
-             <td>
-        <b>Yadanar Theingha Hotel</b><br>
-        H 6, Hotel Zone 1, Rarzathingaha Road, <br>
-        Naypyitaw, Myanmar<br>
-        Tel: +95 67 421911, 421922, 421933, <br>
-        421944, 421955<br>
-        Fax: + 95 67 421910<br>
-        Email: <a href="http://hotelyadanatheingha6@gmail.com ">hotelyadanatheingha6@gmail.com </a>
-             </td>
-        </tr>
-        <tr>
-             <td>
-        <b>Myat Taw Win Hotel</b><br>
-        No. 4, Rarzathingaha Road, Naypyitaw,<br>
-        Myanmar<br>
-        Tel - (95) 067- 420731, 32, 33, to 420736<br>
-        Hot Line - (95) 067-414141<br>
-        Fax - (95) 067-414151<br>
-        Email: <a href="http://info@hotelmyattawwin.com">Email: info@hotelmyattawwin.com </a><br>
-             </td>
-             <td>
-        <b>Sky Palace Hotel</b><br>
-        Datkhina Thiri City, Hotel Zone-1,<br>
-        Naypyitaw, Myanmar<br>
-             </td>
-        </tr>
-        <tr>
-             <td>
-        <b>Shwe Myanmar Hotel</b><br>
-        No. 9, Datkhina Thiri City, Hotel Zone-1, <br>
-        Naypyitaw, Myanmar<br>
-        Tel: +95 67 414178<br>
-        </td>
-             <td>
-        <b>Royal Naypyitaw Hotel</b><br>
-        No. 5, Datkhina Thiri City, Hotel Zone-1  <br>
-        Naypyitaw, Myanmar<br>
-        </td>
-        </tr>
-        <tr>
-             <td>
-        <b>Zabuthiri Hotel</b><br>
-        No.8, Datkhina Thiri City, Hotel Zone-1,<br>
-        Naypyitaw, Myanmar<br>
-        Tel: +95 67 422047<br>
-             </td>
-             <td>
-        <b>Man Myanmar Hotel</b><br>
-        No. 7, Datkhina Thiri City, Hotel Zone-1,  <br>
-        Naypyitaw, Myanmar<br>
-        Tel: +95 67 422130<br>
-             </td>
-        </tr>
-        <tr>
-             <td>
-        <b>Golden Guest Hotel</b><br>
-        No. 5, Datkhina Thiri City, Hotel Zone-1, <br>
-        Naypyitaw, Myanmar<br>
-        Tel: +95 67 414161<br>
-             </td>
-             <td>
-        <b>Myat Nan Yon Hotel</b><br>
         
-             </td>
-        </tr>
-        <tr>
-             <td>
-        <b>Hotel Max Naypyitaw</b><br>
+                <h5><b>Hotel Reservations</b></h5>
+                <p>All room reservations have to be made directly with the hotel. Please take note that your hotel reservation is not complete if you do not return the completed and signed form to the hotel of your choice. Please find the hotel overview and more information on the Congress website. If you have any changes, please contact the hotel directly. If you do not have the contract details with you, we will be happy to help you at the registration counters.</p>
         
-             </td>
-             <td>
-        <b>Thingaha Hotel</b><br>
-        Datkhina Thiri City, Hotel Zone-1,  <br>
-        Naypyitaw, Myanmar<br>
-        Tel: +95 67 414121
-             </td>
-        </tr>
-        </tbody>
-        </table>',
+                <p>Recommended Hotel List in Naypyitaw</p>
+                <table class="table table-bordered p-table">
+                <tbody>
+                <tr>
+                     <td>
+                <b>Mingalar Thiri Hotel</b><br>
+                Datkhina Thiri City, Hotel Zone-1,<br>
+                Naypyitaw, Myanmar<br>
+                Tel: +95 (67) 422140-58<br>
+                Fax: +95(67) 422143, 422144 <br>
+                Hot Line : +95 (67) 422155<br>
+                Email: <a href="http://inquiry@mingalarthirihotel.com">inquiry@mingalarthirihotel.com</a><br>
+                Website: <a href="http://www.mingalarthirihotel.com">www.mingalarthirihotel.com</a><br>
+                     </td>
+                     <td>
+                <b>Myat Taw Win Hotel</b><br>
+               No. 4, Rarzathingaha Road, Naypyitaw, Myanmar <br>
+                Naypyitaw, Myanmar<br>
+                Tel: (95) 067- 420731, 32, 33, to 420736<br>
+                Hot Line - (95) 067-414141-51<br>
+                Fax - (95) 067-414151<br>
+                Email: <a href="http://info@hotelmyattawwin.com">info@hotelmyattawwin.com</a>,
+        <a href="http://reservation@hotelmyattawwin.com">reservation@hotelmyattawwin.com</a>,<br>
+        Website : <a href="http://www.hotelmyattawwin.com">www.hotelmyattawwin.com</a>,
+                     </td>
+                </tr>
+                <tr>
+                     <td>
+                <b>Shwe Myanmar Hotel</b><br>
+                No. 9, Datkhina Thiri City, Hotel Zone-1, Naypyitaw, Myanmar<br>
+                Tel: +95 67 414175-76, 420738-40<br>
+                Email: <a href="http://goldenmmone@mptmail.net.mm">goldenmmone@mptmail.net.mm</a><br>
+                Website : <a href="http://www.goldenmyanmarhotel.com">www.goldenmyanmarhotel.com</a>
+                     </td>
+                     <td>
+                <b>Zabuthiri Hotel</b><br>
+                No.8, Datkhina Thiri City, Hotel Zone-1, Naypyitaw, Myanmar<br>
+                Tel: +95 67 422041-50<br>
+                Email: <a href="http://zabuthirihotel@gmail.com">zabuthirihotel@gmail.com</a><br>
+                Website : <a href="http://www.zabuthirihotel.com">www.zabuthirihotel.com</a>
+                     </td>
+                </tr>
+                <tr>
+                     <td>
+                <b>Golden Guest Hotel</b><br>
+                No. 5, Datkhina Thiri City, Hotel Zone-1, Naypyitaw, Myanmar<br>
+                Tel: +95 67 414161-63; 420769<br>
+                Email: <a href="http://ggh.npthotelzone@gmail.com">ggh.npthotelzone@gmail.com</a><br>
+                Website : <a href="http://www.travelnaypyitaw.org/index.php/ar/hotels/hotel-directory/14-golden-guest-hotel">www.travelnaypyitaw.org/index.php/ar/hotels/hotel-directory/14-golden-guest-hotel</a>
+                </td>
+                     <td>
+                <b>Hotel Max Naypyitaw</b><br>
+                No.10, Datkhina Thiri City, Hotel Zone-1, Naypyitaw, Myanmar<br>
+                Tel: +95 67 414177-88<br>
+                Website : <a href="www.maxhotelsgroup.com/sites/default/files/naypyitaw/index.html">www.maxhotelsgroup.com/sites/default/files/naypyitaw/index.html</a>
+                </td>
+                </tr>
+                <tr>
+                     <td>
+                <b>Yadanar Theingha Hotel</b><br>
+                H 6, Hotel Zone 1, Rarzathingaha Road, Naypyitaw, Myanmar<br>
+                Tel: +95 67 421911-22<br>
+                Fax: + 95 67 421910<br>
+                Email: <a href="http://hotelyadanatheingha6@gmail.com">hotelyadanatheingha6@gmail.com, </a><a href="ytg.npt@gmail.com">ytg.npt@gmail.com</a><br>
+                Website : <a href="http://www.hotelyadanartheingha.com">www.hotelyadanartheingha.com</a>
+                     </td>
+                     <td>
+                <b>Sky Palace Hotel</b><br>
+                Datkhina Thiri City, Hotel Zone-1, 
+        Naypyitaw, Myanmar
+        <br>
+                Tel: +95 67 422120-22<br>
+                Email: <a href="http://info@skypalace.asia">info@skypalace.asia</a>, <a href="http://reserve@skypalace.asia">reserve@skypalace.asia</a>,
+        <a href="http://fbm@skypalace.asia">fbm@skypalace.asia</a> <br>
+                Website : <a href="www.skypalace.asia/naypyitaw/room-type-facilities ">www.skypalace.asia/naypyitaw/room-type-facilities</a>
+                     </td>
+                </tr>
+                <tr>
+                     <td>
+                <b>Royal Naypyitaw Hotel</b><br>
+                No. 5, Datkhina Thiri City, Hotel Zone-1, Naypyitaw, Myanmar<br>
+        Tel: +95 67 414960-67<br>
+                Email: <a href="http://sales@kmahotels.com">sales@kmahotels.com</a>, <a href="fo.rnpt@kmahotels.com">fo.rnpt@kmahotels.com</a><br>
+                Website : <a href="http://www.kmahotels.com/royal-naypyitaw">www.kmahotels.com/royal-naypyitaw</a><br>
+                     </td>
+                     <td>
+                <b>Man Myanmar Hotel</b><br>
+                No. 7, Datkhina Thiri City, Hotel Zone-1, Naypyitaw, Myanmar<br>
+                Tel: +95 67 422131-4, 422592-98<br>
+                Email: <a href="http://manmyanmarhotel.npt@gmail.com">manmyanmarhotel.npt@gmail.com</a><br>
+                Website : <a href="http://www.manmyanmarhotel-npt.com">www.manmyanmarhotel-npt.com</a>
+                     </td>
+                </tr>
+                <tr>
+                     <td>
+                <b>Myat Nan Yon Hotel</b><br>
+                Datkhina Thiri City, Hotel Zone-1, Naypyitaw, Myanmar<br>
+                Tel: +95 67 422016-17<br>
+                Email: <a href="myatnanyone.naypyitaw@gmail.com">myatnanyone.naypyitaw@gmail.com</a><br>
+                Website : <a href="www.myatnanyone-npt.com">www.myatnanyone-npt.com</a>
+                     </td>
+                     <td>
+                <b>Thingaha Hotel</b><br>
+                Datkhina Thiri City, Hotel Zone-1, Naypyitaw, Myanmar<br>
+                Tel: +95 67 414123, 420728<br>
+                Email: <a href="info@thingahanapyitaw.com">info@thingahanapyitaw.com</a><br>
+                Website : <a href="http://www.edenhotelsandresorts.com">www.edenhotelsandresorts.com</a>, <br>
+                <a href="http://www.edenhotelsandresorts.com/index.php/hotels-resorts/thingaha-nay-pyi-taw">www.edenhotelsandresorts.com/index.php/hotels-resorts/thingaha-nay-pyi-taw</a>
+                     </td>
+                </tr>
+                </tbody>
+                </table>
+                <br>
+                <h5><b>Map of Naypyitaw</b></h5>
+                <img class="npt_map" src="/assets/frontend/images/naypyitaw_map.jpg">',
         'status' =>'active', 'url' =>'', 'title' =>'TRAVEL ACCOMMODATION', 'post_order' =>1, 'pages_id' =>23, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
        

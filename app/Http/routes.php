@@ -42,6 +42,8 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/travel', 'Frontend\TravelController@index');
         Route::get('/travel_accommodation', 'Frontend\TravelController@travel_accommodation');
 
+        Route::get('/test_frontend', 'Frontend\TestController@index');
+
 
         //Backend
         Route::group(['prefix' => 'backend'], function () {
@@ -256,6 +258,14 @@ Route::group(['middleware' => 'web'], function () {
                 Route::post('test/store', array('as'=>'backend/eventemail/store','uses'=>'Backend\TestController@store'));
                 Route::post('test/update', array('as'=>'backend/eventemail/update','uses'=>'Backend\TestController@update'));
                 Route::post('test/destroy', array('as'=>'backend/eventemail/destroy','uses'=>'Backend\TestController@destroy'));
+
+                //Registration Categories
+                Route::get('registrationcategory', array('as'=>'backend/registrationcategory','uses'=>'Backend\RegistrationCategoryController@index'));
+                Route::get('registrationcategory/create', array('as'=>'backend/registrationcategory/create','uses'=>'Backend\RegistrationCategoryController@create'));
+                Route::post('registrationcategory/store', array('as'=>'backend/registrationcategory/store','uses'=>'Backend\RegistrationCategoryController@store'));
+                Route::get('registrationcategory/edit/{id}', array('as'=>'backend/registrationcategory/edit','uses'=>'Backend\RegistrationCategoryController@edit'));
+                Route::post('registrationcategory/update', array('as'=>'backend/registrationcategory/update','uses'=>'Backend\RegistrationCategoryController@update'));
+                Route::post('registrationcategory/destroy', array('as'=>'backend/registrationcategory/destroy','uses'=>'Backend\RegistrationCategoryController@destroy'));
             });
         });
 

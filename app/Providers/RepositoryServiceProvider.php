@@ -55,7 +55,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind('App\Report\Exhibitor\ReportExhibitorRepositoryInterface','App\Report\Exhibitor\ReportExhibitorRepository');
         $this->app->bind('App\Report\Program\ReportProgramPosterRepositoryInterface','App\Report\Program\ReportProgramPosterRepository');
         $this->app->bind('App\Report\Program\ReportProgramCallRepositoryInterface','App\Report\Program\ReportProgramCallRepository');
-
-        $this->app->bind('App\Backend\Test\TestRepositoryInterface','App\Backend\Test\TestRepository');
+        $this->app->bind('App\Backend\Test\TestRepositoryInterface','App\Backend\Test\TestRepository');        
+        $this->app->bind('App\Backend\RegistrationCategory\RegistrationCategoryRepositoryInterface','App\Backend\RegistrationCategory\RegistrationCategoryRepository');
     }
 }

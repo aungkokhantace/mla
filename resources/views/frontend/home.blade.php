@@ -1,4 +1,4 @@
-@extends('layouts.master_frontend')
+@extends('layouts.master_frontend_home')
 @section('title','Dashboard')
 @section('content')
 

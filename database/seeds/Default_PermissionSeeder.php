@@ -207,6 +207,14 @@ class Default_PermissionSeeder extends Seeder
 
             //System Reference
             ['id'=>250,'module'=>'System Reference','name'=>'System Reference','description'=>'System Reference','url'=>'backend/system_reference'],
+
+            //Registration Categories
+            ['id'=>260,'module'=>'Registration Category','name'=>'Listing','description'=>'Registration Category Listing','url'=>'backend/registrationcategory'],
+            ['id'=>261,'module'=>'Registration Category','name'=>'Create','description'=>'Registration Category Create','url'=>'backend/registrationcategory/create'],
+            ['id'=>262,'module'=>'Registration Category','name'=>'Store','description'=>'Registration Category Store','url'=>'backend/registrationcategory/store'],
+            ['id'=>263,'module'=>'Registration Category','name'=>'Edit','description'=>'Registration Category Edit','url'=>'backend/registrationcategory/edit'],
+            ['id'=>264,'module'=>'Registration Category','name'=>'Update','description'=>'Registration Category Update','url'=>'backend/registrationcategory/update'],
+            ['id'=>265,'module'=>'Registration Category','name'=>'Destroy','description'=>'Registration Category Destroy','url'=>'backend/registrationcategory/destroy'],
         );
 
         DB::table('core_permissions')->insert($permissions);

@@ -21,6 +21,8 @@ class Default_ConfigSeeder extends Seeder
         $roles = array(
             ['code'=>'SETTING_COMPANY_NAME', 'type'=>'SETTING', 'value'=>'AcePlus Backend','description'=>'Company Name'],
             ['code'=>'SETTING_LOGO', 'type'=>'SETTING', 'value'=>'/images/logo.jpg','description'=>'Company Logo'],
+            ['code'=>'SETTING_EARLY_BIRD_REG', 'type'=>'SETTING', 'value'=>'2018-01-31','description'=>'Earlybird Registration Deadline'],
+            ['code'=>'SETTING_STANDARD_REG', 'type'=>'SETTING', 'value'=>'2018-04-29','description'=>'Standard Registration Deadline'],
         );
 
         DB::table('core_configs')->insert($roles);

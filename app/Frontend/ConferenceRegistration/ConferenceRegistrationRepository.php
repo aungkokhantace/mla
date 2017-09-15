@@ -32,6 +32,7 @@ class ConferenceRegistrationRepository implements ConferenceRegistrationReposito
             $paramObj->save();
 
             $returnedObj['aceplusStatusCode'] = ReturnMessage::OK;
+            $returnedObj['resultObj'] = $paramObj; //return saved obj to controller
             return $returnedObj;
         }
         catch(\Exception $e){

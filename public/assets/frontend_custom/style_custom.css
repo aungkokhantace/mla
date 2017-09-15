@@ -102,3 +102,15 @@ p{
   max-height: 550px;
 }
 /* for map of naypyitaw */
+
+/* for search box */
+.searchbox{
+  margin-bottom:15px;
+}
+/* for search box */
+
+.inner-header-text{
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}

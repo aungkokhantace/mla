@@ -162,6 +162,19 @@
                                  </ul>
                              </li>
                          @endif
+
+                         @if(Auth::guard('User')->user()->role_id == '1' || Auth::guard('User')->user()->role_id == '2')
+                             <li nav-id="modifier-create" class="has-sub">
+                                 <a href="javascript:;">
+                                     <b class="caret pull-right"></b>
+                                     <span>Registration Category</span>
+                                 </a>
+                                 <ul class="sub-menu">
+                                     <li nav-id="modifier-create-modifier"><a href="/backend/registrationcategory/create">Entry</a></li>
+                                     <li nav-id="modifier-create-modifierpanel"><a href="/backend/registrationcategory">List</a></li>
+                                 </ul>
+                             </li>
+                         @endif
                 </ul>
             </li>
 
@@ -221,6 +234,7 @@
                         </a>
                     </li>
 
+                    @if(Auth::guard('User')->user()->role_id == '1')
                     <li nav-id="modifier-manage" class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
@@ -233,6 +247,7 @@
 
                         </ul>
                     </li>
+                    @endif
                 </ul>
             </li>
 
@@ -281,12 +296,14 @@
                 </ul>
             </li> -->
 
+            @if(Auth::guard('User')->user()->role_id == '1')
             <li nav-id="">
                 <a href="/backend/system_reference">
                     <!-- <b class="caret pull-right"></b> -->
                     <span>System Reference</span>
                 </a>
             </li>
+            @endif
         </ul>
         <!-- end sidebar nav -->
     </div>

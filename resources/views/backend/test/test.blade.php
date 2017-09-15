@@ -33,7 +33,8 @@
                 <label for="description">Content</label>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                <input type="text" class="form-control" id="test_content" name="test_content" placeholder="Enter Test Content" value="{{ isset($test)? $test->content:Request::old('content') }}"/>
+                <!-- <input type="text" class="form-control" id="test_content" name="test_content" placeholder="Enter Test Content" value="{{ isset($test)? $test->content:Request::old('content') }}"/> -->
+                <textarea class="form-control" id="test_content" name="test_content" placeholder="Enter Test Content">{{ isset($test)? $test->content:Request::old('content') }}</textarea>
                 <p class="text-danger">{{$errors->first('test_content')}}</p>
             </div>
         </div>        
@@ -42,10 +43,10 @@
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
             </div>
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                <input type="submit" name="submit" value="{{isset($post)? 'UPDATE' : 'PUBLISH'}}" class="form-control btn-primary">
+                <input type="submit" name="submit" value="{{isset($test)? 'UPDATE' : 'PUBLISH'}}" class="form-control btn-primary">
             </div>
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                <input type="button" value="CANCEL" class="form-control cancel_btn" onclick="cancel_setup('post')">
+                <input type="button" value="CANCEL" class="form-control cancel_btn" onclick="cancel_setup('test')">
             </div>
         </div>
         {!! Form::close() !!}

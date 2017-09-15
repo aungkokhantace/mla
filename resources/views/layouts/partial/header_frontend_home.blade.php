@@ -24,17 +24,14 @@
 </head>
 
 <body>
-    <section class="head-top">
+    <!-- <section class="head-top">
        <div class="container">
         <div class="row">
-            <div class="col-md-9 inner-header-text">
-            <!-- <img src="/assets/frontend/images/header_logo.png" class="img-responsive head-of-mla-photo"> -->
-            <span class="inner-header-text"> 17th Congress of Southeast Asian Librarians <br>
-            2-5 May 2018 <br>
-            Naypyitaw, Myanmar </span>
+            <div class="col-md-9">
+            <img class="head-of-mla-photo" src="/assets/frontend/images/header_logo.png" class="img-responsive">
             </div>
             <div class="col-md-3">
-                <div class="input-group searchbox">
+                <div class="input-group">
                     <input type="text" class="form-control" placeholder="SEARCH">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
@@ -43,7 +40,7 @@
             </div>
         </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse" role="navigation">

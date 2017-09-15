@@ -57,11 +57,11 @@ class TestController extends Controller
         $table = (new Test())->getTable();
 
         // $request->validate();
-        $test_content               = Input::get('test_content');
-    
-        $paramObj                   = new Test();
-        $paramObj->test_content          = $test_content;
+        $test_content = Input::get('test_content');
         
+        $paramObj                   = new Test();
+        $paramObj->content          = $test_content;
+       
 
        /* //start saving image
         $dom = new DomDocument();
@@ -105,7 +105,7 @@ class TestController extends Controller
         //End saving image */
 
         $result = $this->repo->create($paramObj);
-
+        
         if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
             return redirect()->action('Backend\TestController@index')
                 ->withMessage(FormatGenerator::message('Success', 'Test created ...'));
@@ -131,7 +131,7 @@ class TestController extends Controller
         $test_content  = Input::get('test_content');
 
         $paramObj = Test::find($id);
-        $paramObj->test_content          = $test_content;
+        $paramObj->content          = $test_content;
 
 //         //start saving image
 //        $dom = new DomDocument();

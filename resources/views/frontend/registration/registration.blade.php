@@ -88,8 +88,9 @@
                   <div class="col-md-4">
                     <select id="registration_category" name="registration_category" class="form-control">
                         <option value="" selected disabled>Select Registration Category</option>
-                      <option value="1">Option one</option>
-                      <option value="2">Option two</option>
+                        @foreach($registrationCategories as $registrationCategory)
+                            <option value="{{$registrationCategory->id}}">{{$registrationCategory->name}}</option>
+                        @endforeach
                     </select>
                       <p class="text-danger" id="registration_category_error">{{$errors->first('registration_category')}}</p>
                   </div>

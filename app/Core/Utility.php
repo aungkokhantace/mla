@@ -124,4 +124,36 @@ class Utility
         }
         return $latestNewsCount;        
     }
+
+    //returns prefix of registration number if it is set up in core_configs, and returns "REG_000" if not set up
+    public static function getRegistrationNumberPrefix(){
+        $regPrefixRaw   = DB::table('core_configs')->where('code','=','SETTING_REGISTRATION_NUMBER')->first();
+        if(isset($regPrefixRaw) && count($regPrefixRaw) > 0){
+            $registrationPrefix      = $regPrefixRaw->value;
+        }
+        else{
+            // return 'REG_000' as default value
+            $registrationPrefix = 'REG_000';
+        }
+        return $registrationPrefix;        
+    }
+
+    public static function sendEmailWithParameters($template,$params,$emails,$subject){
+        Mail::send($template, $params, function($message) use($emails,$subject)
+        {
+            $message->to($emails)
+                ->subject($subject);
+        });
+    }
+
+    public static function getEarlyBirdDate(){
+        $temp = DB::select("SELECT value FROM core_configs WHERE code = 'SETTING_EARLY_BIRD_REG' AND type = 'SETTING' LIMIT 1");
+        if(isset($temp) && count($temp)>0){
+            $early_bird_date = $temp[0]->value;    
+        }
+        else{
+            $early_bird_date = '2018-01-31'; //default date
+        }        
+        return $early_bird_date;
+    }
 }

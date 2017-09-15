@@ -19,6 +19,10 @@ use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
 use Illuminate\Support\Facades\Route;
 
+use App\Backend\RegistrationCategory\RegistrationCategory;
+use App\Backend\RegistrationCategory\RegistrationCategoryRepository;
+use App\Backend\RegistrationCategory\RegistrationCategoryRepositoryInterface;
+
 class RegistrationController extends Controller
 {
     private $repo;
@@ -46,7 +50,11 @@ class RegistrationController extends Controller
 
     public function index(){
         $countries = $this->repo->getCountry();
-        return view('frontend.registration.registration',compact('countries'));
+
+        $registrationCategoryRepo    = new RegistrationCategoryRepository();
+        $registrationCategories      = $registrationCategoryRepo->getObjs();
+        
+        return view('frontend.registration.registration',compact('countries','registrationCategories'));
     }
 
     public function store(RegistrationEntryFormRequest $request)
@@ -80,17 +88,19 @@ class RegistrationController extends Controller
 
             $result = $this->repo->create($registrationObj);
 
-
             if ($result['aceplusStatusCode'] == ReturnMessage::OK) {
 
                 //start sending email to user
-                $userEmailArr = array();
-                $userEmailArr[0] = $email;
+                $userEmailArr   = array();
+                $userEmailArr[0]= $email;
+
+                $regPrefix      = Utility::getRegistrationNumberPrefix();
+                $resultObjId    = $result['resultObj']->id;
 
                 if(isset($userEmailArr) && count($userEmailArr)>0){
                     $template = "backend/registrationsubmituseremail/registrationsubmituseremail";
                     $email = $userEmailArr;
-                    $subject = "Hello World";
+                    $subject = "CONSAL XVII Registration Confirmation:  ".$regPrefix.$resultObjId." (registration number)";
 
                     Utility::sendEmail($template,$email,$subject);
                 }
@@ -140,10 +150,51 @@ class RegistrationController extends Controller
             $reg = ConferenceRegistration::find($id);
             $email = $reg->email;
 
+            //get params for email template
+            $first_name     = $reg->first_name;
+            $middle_name    = $reg->middle_name;
+            $last_name      = $reg->last_name;
+            $organization   = $reg->organization;
+            $user_email     = $reg->email;
+
+            //start calculation for amount
+            $early_bird_date = Utility::getEarlyBirdDate();
+           
+            $registrationCategoryRepo = new RegistrationCategoryRepository();
+            $regCategoryObj = $registrationCategoryRepo->getObjByID($reg->registration_category);
+            
+            $registered_date = $reg->created_at;
+            
+            if($registered_date <= $early_bird_date){
+                $fee_amount = $regCategoryObj->early_bird_fee;
+            }
+            else{
+                $fee_amount = $regCategoryObj->normal_fee;
+            }
+
+            //add currency units
+            if($regCategoryObj->currency_type == "usd"){
+                $currency_unit = "$";
+            }
+            else{
+                $currency_unit = "MMK ";
+            }
+            //end calculation for amount
+
+            //continue params for email template
+            $amount     = $currency_unit.$fee_amount;
+            $category   = $regCategoryObj->name;
+            //end params for email template
+
             //start sending email to user
             $template = "backend/registrationconfirmuseremail/registrationconfirmuseremail";
-            $subject = "Registration Confirm";
-            Utility::sendEmail($template, $email, $subject);
+            $subject = "CONSAL XVII Registration Payment Confirmation";
+
+            //build param array for email
+            $email_param_array = ['first_name'=>$first_name, 'middle_name'=>$middle_name, 'last_name'=>$last_name, 'organization'=>$organization, 'category'=>$category, 'user_email'=>$user_email, 'amount'=>$amount];
+            
+            // Utility::sendEmail($template, $email, $subject);
+            Utility::sendEmailWithParameters($template, $email_param_array, $email, $subject);
             //end sending email to user
 
             //start sending email to admin

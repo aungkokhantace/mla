@@ -203,6 +203,15 @@ class Default_RolePermissionSeeder extends Seeder
             //system reference
             ['role_id'=>1, 'permission_id'=>250],
 
+            
+            //Registration Category
+            ['role_id'=>1, 'permission_id'=>260],
+            ['role_id'=>1, 'permission_id'=>261],
+            ['role_id'=>1, 'permission_id'=>262],
+            ['role_id'=>1, 'permission_id'=>263],
+            ['role_id'=>1, 'permission_id'=>264],
+            ['role_id'=>1, 'permission_id'=>265],
+
 
             //administrator permissions
             //roles
@@ -385,6 +394,14 @@ class Default_RolePermissionSeeder extends Seeder
             ['role_id'=>2, 'permission_id'=>240],
             ['role_id'=>2, 'permission_id'=>241],
             ['role_id'=>2, 'permission_id'=>242],
+
+            //Registration Category
+            ['role_id'=>2, 'permission_id'=>260],
+            ['role_id'=>2, 'permission_id'=>261],
+            ['role_id'=>2, 'permission_id'=>262],
+            ['role_id'=>2, 'permission_id'=>263],
+            ['role_id'=>2, 'permission_id'=>264],
+            ['role_id'=>2, 'permission_id'=>265],
         );
 
         DB::table('core_permission_role')->insert($roles);

@@ -34,6 +34,7 @@ class ConfigController extends Controller
                 $configs['SETTING_LOGO'] = "";
                 $configs['SETTING_COUNTDOWN_DATE'] = "";
                 $configs['SETTING_LATEST_NEWS_COUNT'] = "";
+                $configs['SETTING_REGISTRATION_NUMBER'] = "";
 
                 return view('core.config.config')->with('configs', $configs);
             }
@@ -60,6 +61,18 @@ class ConfigController extends Controller
             if(!array_key_exists("SETTING_LATEST_NEWS_COUNT",$tempConfigs)){
                 $tempConfigs["SETTING_LATEST_NEWS_COUNT"] = "";
             }
+            
+            if(!array_key_exists("SETTING_REGISTRATION_NUMBER",$tempConfigs)){
+                $tempConfigs["SETTING_REGISTRATION_NUMBER"] = "";
+            }
+            
+            if(!array_key_exists("SETTING_EARLY_BIRD_REG",$tempConfigs)){
+                $tempConfigs["SETTING_EARLY_BIRD_REG"] = "";
+            }
+            
+            if(!array_key_exists("SETTING_STANDARD_REG",$tempConfigs)){
+                $tempConfigs["SETTING_STANDARD_REG"] = "";
+            }
 
             return view('core.config.config')->with('configs', $tempConfigs);
 
@@ -70,10 +83,17 @@ class ConfigController extends Controller
     public function update(){
         if (Auth::guard('User')->check()) {
 
-            $SETTING_COMPANY_NAME = Input::get('SETTING_COMPANY_NAME');
-            $SETTING_COUNTDOWN_DATE_RAW = Input::get('SETTING_COUNTDOWN_DATE');
-            $SETTING_COUNTDOWN_DATE     = date('Y-m-d',strtotime($SETTING_COUNTDOWN_DATE_RAW));
-            $SETTING_LATEST_NEWS_COUNT = Input::get('SETTING_LATEST_NEWS_COUNT');
+            $SETTING_COMPANY_NAME           = Input::get('SETTING_COMPANY_NAME');
+            $SETTING_COUNTDOWN_DATE_RAW     = Input::get('SETTING_COUNTDOWN_DATE');
+            $SETTING_COUNTDOWN_DATE         = date('Y-m-d',strtotime($SETTING_COUNTDOWN_DATE_RAW));
+            $SETTING_LATEST_NEWS_COUNT      = Input::get('SETTING_LATEST_NEWS_COUNT');
+            $SETTING_REGISTRATION_NUMBER    = Input::get('SETTING_REGISTRATION_NUMBER');
+
+            $SETTING_EARLY_BIRD_REG_RAW     = Input::get('SETTING_EARLY_BIRD_REG');
+            $SETTING_EARLY_BIRD_REG         = date('Y-m-d',strtotime($SETTING_EARLY_BIRD_REG_RAW));
+
+            $SETTING_STANDARD_REG_RAW       = Input::get('SETTING_STANDARD_REG');
+            $SETTING_STANDARD_REG           = date('Y-m-d',strtotime($SETTING_STANDARD_REG_RAW));
             
             $removeImageFlag = Input::get('removeImageFlag');
 
@@ -96,6 +116,15 @@ class ConfigController extends Controller
 
                 DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_LATEST_NEWS_COUNT'");
                 $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_LATEST_NEWS_COUNT','SETTING','$SETTING_LATEST_NEWS_COUNT','Latest News Count',$loginUserId,'$updated_at')");
+                
+                DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_REGISTRATION_NUMBER'");
+                $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_REGISTRATION_NUMBER','SETTING','$SETTING_REGISTRATION_NUMBER','Registration No. Prefix Format',$loginUserId,'$updated_at')");
+
+                DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_EARLY_BIRD_REG'");
+                $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_EARLY_BIRD_REG','SETTING','$SETTING_EARLY_BIRD_REG','Earlybird Registration Deadline',$loginUserId,'$updated_at')");
+
+                DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_STANDARD_REG'");
+                $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_STANDARD_REG','SETTING','$SETTING_STANDARD_REG','Standard Registration Deadline',$loginUserId,'$updated_at')");
 
                 // saving image
                 if(Input::hasFile('site_logo'))

@@ -66,6 +66,46 @@
     </div>
 
     <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <label for="SETTING_REGISTRATION_NUMBER">Registration No. Prefix Format</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <input type="text" required class="form-control" id="SETTING_REGISTRATION_NUMBER" name="SETTING_REGISTRATION_NUMBER" placeholder="Enter Registration No. Prefix Format" value="{{ isset($configs)? $configs['SETTING_REGISTRATION_NUMBER']:Request::old('SETTING_REGISTRATION_NUMBER') }}"/>
+            <p class="text-danger">{{$errors->first('SETTING_REGISTRATION_NUMBER')}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <label for="SETTING_EARLY_BIRD_REG">Earlybird Registration Deadline</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="input-group date dateTimePicker" data-provide="datepicker">
+            <input required autocomplete="off" type="text" class="form-control" id="SETTING_EARLY_BIRD_REG" name="SETTING_EARLY_BIRD_REG" placeholder="Earlybird Registration Deadline" value="{{ isset($configs)? $configs['SETTING_EARLY_BIRD_REG']:Request::old('SETTING_EARLY_BIRD_REG') }}">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </div>
+        </div>
+        <p class="text-danger">{{$errors->first('SETTING_EARLY_BIRD_REG')}}</p>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <label for="SETTING_STANDARD_REG">Standard Registration Deadline</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="input-group date dateTimePicker" data-provide="datepicker">
+            <input required autocomplete="off" type="text" class="form-control" id="SETTING_STANDARD_REG" name="SETTING_STANDARD_REG" placeholder="Standard Registration Deadline" value="{{ isset($configs)? $configs['SETTING_STANDARD_REG']:Request::old('SETTING_STANDARD_REG') }}">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </div>
+        </div>
+        <p class="text-danger">{{$errors->first('SETTING_STANDARD_REG')}}</p>
+    </div>
+    </div>
+
+    <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         </div>
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">

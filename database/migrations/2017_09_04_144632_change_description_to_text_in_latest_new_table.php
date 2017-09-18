@@ -13,7 +13,7 @@ class ChangeDescriptionToTextInLatestNewTable extends Migration
     public function up()
     {
         Schema::table('latest_new', function (Blueprint $table) {
-            $table->text('description')->change();
+            $table->longtext('description')->change();
         });
     }
 

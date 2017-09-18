@@ -2,7 +2,7 @@
 @section('title','Post Conference Travel')
 @section('content')
     <div id="content" class="content">
-        <h1 class="page-header">{{isset($post_conference_travel)? 'Edit' : 'Post Conference Travel Entry'}}</h1>
+        <h1 class="page-header">{{isset($post_conference_travel)? 'Post Conference Travel Edit' : 'Post Conference Travel Entry'}}</h1>
         @if(isset($post_conference_travel))
             {!! Form::open(array('url' => 'backend/post_conference_travel/update', 'class'=> 'form-horizontal user-form-border','files' => true,'id'=>'post_conference_travel_form')) !!}
         @else
@@ -54,11 +54,23 @@
                     <input type="button" class="form-control image_remove_btn" value="Remove Image" id="removeImage" name="removeImage">
                 </div>
             </div>
+            <br>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <label for="description" class="text_bold_black">Description</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <textarea class="form-control" id="description" name="description" placeholder="Enter Description" rows="10" cols="50">{{ isset($post_conference_travel)? $post_conference_travel->description:Request::old('description') }}</textarea>
+                    <p class="text-danger">{{$errors->first('description')}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"> -->
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                    <input type="submit" name="submit" value="{{isset($post_conference_travel)? 'UPDATE' : 'UPLOAD'}}" class="form-control btn-primary">
+                    <input type="submit" name="submit" value="{{isset($post_conference_travel)? 'UPDATE' : 'ADD'}}" class="form-control btn-primary">
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
                     <input type="button" value="CANCEL" class="form-control cancel_btn" onclick="cancel_setup('post_conference_travel')">
@@ -92,7 +104,7 @@
                             <span class="fileinput-exists">Change</span>
 
                             <input id="site_logo" type="file" name="image" accept="image.*" />
-                            {{--{{ Form::file('nric_front_img') }}--}}
+                            <!-- {{--{{ Form::file('nric_front_img') }}--}} -->
                         </span>
                                     {{--<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>--}}
                                 </div>

@@ -19,6 +19,7 @@ use App\Backend\Post\PostRepository;
 use Illuminate\Support\Facades\Route;
 use App\Backend\LatestNew\LatestNewRepository;
 use App\Core\Utility;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -59,6 +60,24 @@ class HomeController extends Controller
             ->with('posts',$posts)
             ->with('latestNews',$latestNews)
             ->with('countDownDate',$countDownDate);
+    }
+
+    public function autocomplete(){
+        $postRepo = new PostRepository();
+        $results = $postRepo->getPostsForAutocomplete();
+        return \Response::json($results);
+    }
+
+    public function search(){
+        $search_term = Input::get('search_term');
+        $postRepo = new PostRepository();
+        $results = $postRepo->getPostsByTerm($search_term);
+        // dd('results',$results);
+        // foreach($results as $result){
+            // dd($result->page->url);
+        // }
+        return view('frontend.search.search_result')
+                ->with('results',$results);
     }
 
 }

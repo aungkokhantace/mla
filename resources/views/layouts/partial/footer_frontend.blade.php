@@ -14,6 +14,7 @@
 
     <!-- jQuery -->
     <script src="/assets/frontend/js/jquery.js"></script>
+    <script src="/assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/assets/frontend/js/bootstrap.min.js"></script>
@@ -27,6 +28,15 @@
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#search_term").autocomplete({
+                source: "/autocomplete"
+            });
+        });
     </script>
 
 </body>

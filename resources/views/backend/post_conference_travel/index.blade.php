@@ -53,7 +53,7 @@
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $post_conference_travel->id }}" id="all"></td>
                                 <td><a href="/backend/post_conference_travel/edit/{{$post_conference_travel->id}}">{{$post_conference_travel->name}}</a></td>
                                 {{-- <td>{{$img_gallery->description}}</td>--}}
-                                <td><img src="{{$post_conference_travel->image}}" class="img-responsive"></td>
+                                <td><img src="{{$post_conference_travel->image}}" class="img-responsive list-view-img"></td>
                             </tr>
                         @endforeach
                         </tbody>

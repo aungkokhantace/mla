@@ -14,18 +14,25 @@
                 @foreach($posts as $post)
                     {!! $post->content !!}<br>
                 @endforeach
-                <div class="row">
+
+                <!-- <div class="row"> -->
                     @if(isset($programLibraries) && count($programLibraries)>0 )
                         @foreach($programLibraries as $programLibrary)                            
-
+<!-- 
                             <div class="col-md-3">
                                 <img src="{!! $programLibrary->image !!}">
                                 <span>{!! $programLibrary->name !!}</span>
-                            </div>
-
+                            </div> -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <b>{!! $programLibrary->name !!}</b><br>
+                                    <img src="{!! $programLibrary->image !!}" class="img-responsive">
+                                    {{$programLibrary->description}}
+                                </div>
+                            </div><br>
                         @endforeach
                     @endif
-                </div>
+                <!-- </div> -->
             </div>
         </div>
         <!-- /.row -->

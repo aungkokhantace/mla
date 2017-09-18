@@ -44,6 +44,10 @@ Route::group(['middleware' => 'web'], function () {
 
         Route::get('/test_frontend', 'Frontend\TestController@index');
 
+        //for autocomplete in search form
+        Route::get('/autocomplete', 'Frontend\HomeController@autocomplete');
+        Route::post('/search', 'Frontend\HomeController@search');
+
 
         //Backend
         Route::group(['prefix' => 'backend'], function () {

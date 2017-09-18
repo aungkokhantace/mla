@@ -114,3 +114,12 @@ p{
   margin-bottom: 15px;
   font-weight: bold;
 }
+
+.home-searchbox{
+  margin-top:15px !important;
+  margin-bottom:15px !important;
+}
+
+#search_term{
+  text-transform: uppercase;
+}

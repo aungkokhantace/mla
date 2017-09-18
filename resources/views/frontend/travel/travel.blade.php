@@ -9,12 +9,13 @@
                 
                 @if(isset($postConferenceTravels) && count($postConferenceTravels)>0 )            
                     @foreach($postConferenceTravels as $postConferenceTravel)                        
-
-                        <div class="col-md-4">
-                        {!! $postConferenceTravel->name !!}<br/>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <b>{!! $postConferenceTravel->name !!}</b><br>
                             <img src="{!! $postConferenceTravel->image !!}" class="img-responsive">
+                            {{$postConferenceTravel->description}}
                         </div>
-
+                    </div><br>
                     @endforeach
                 @endif
 

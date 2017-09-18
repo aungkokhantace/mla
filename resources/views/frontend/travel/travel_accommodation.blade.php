@@ -13,17 +13,19 @@
             @foreach($posts as $post)
                 {!! $post->content !!}<br>
             @endforeach
-
-             @if(isset($accommos) && count($accommos)>0 )
+            <br><br>
+             @if(isset($accommos) && count($accommos)>0)
                 @foreach($accommos as $accommo)
                     <div class="row">
                         <div class="col-md-3">
                             <img src="{!! $accommo->image !!}" class="img-responsive">
                         </div>
+                        
                         <div class="col-md-9">
                             <h4 style="margin-top:-3px;">{!! $accommo->name !!}</h4>
-                            <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star" style="margin-bottom:10px;"></span>
-                            <br/>
+                            @for($i=0; $i<$accommo->stars; $i++)
+                                <span class="glyphicon glyphicon-star"></span>
+                            @endfor
                             <p>
                                 {!! $accommo->description !!}
                             </p>

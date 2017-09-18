@@ -158,18 +158,40 @@ class RegistrationController extends Controller
             $user_email     = $reg->email;
 
             //start calculation for amount
-            $early_bird_date = Utility::getEarlyBirdDate();
+
+            //get earlybird deadline
+            $early_bird_deadline = Utility::getEarlyBirdRegistrationDeadline();
+
+            //get standard registration deadline
+            $standard_deadline = Utility::getStandardRegistrationDeadline();
            
             $registrationCategoryRepo = new RegistrationCategoryRepository();
             $regCategoryObj = $registrationCategoryRepo->getObjByID($reg->registration_category);
-            
+
             $registered_date = $reg->created_at;
             
-            if($registered_date <= $early_bird_date){
+            //if registered date is earlier than earlybird deadline, fee_amount is earlybird fee
+            if($registered_date <= $early_bird_deadline){
                 $fee_amount = $regCategoryObj->early_bird_fee;
             }
+            //else, not earlybird, so, we need to check whether this registration_category has normal fee or not(whether international delegate or others)
             else{
-                $fee_amount = $regCategoryObj->normal_fee;
+                //if this registration_category has normal_fee, and so, we need to check whether registered_date is within standard registration deadline
+                if(isset($regCategoryObj->normal_fee) || $regCategoryObj->normal_fee != 0.0 || $regCategoryObj->normal_fee != null){
+                    //if registered_date is within standard registration deadline, fee_amount is normal fee
+                    if($registered_date <= $standard_deadline){
+                        $fee_amount = $regCategoryObj->normal_fee;
+                    }
+                    //else, fee_amount will be on_site_fee
+                    else{
+                        $fee_amount = $regCategoryObj->on_site_fee;
+                    }                    
+                }
+                //this registration category has no normal_fee, so, fee_amount will be on_site_fee
+                else{
+                    $fee_amount = $regCategoryObj->on_site_fee;
+                }
+                
             }
 
             //add currency units

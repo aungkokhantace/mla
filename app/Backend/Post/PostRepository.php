@@ -10,6 +10,8 @@ namespace App\Backend\Post;
 
 use App\Core\ReturnMessage;
 use App\Core\Utility;
+use DB;
+use Illuminate\Support\Facades\Input;
 
 class PostRepository implements PostRepositoryInterface
 {
@@ -21,7 +23,7 @@ class PostRepository implements PostRepositoryInterface
 
     public function getArrays()
     {
-        $tbName = (new Allergy())->getTable();
+        $tbName = (new Post())->getTable();
         $arr = DB::select("SELECT * FROM $tbName WHERE deleted_at IS NULL");
         return $arr;
     }
@@ -82,5 +84,30 @@ class PostRepository implements PostRepositoryInterface
             ->where('pages_id','=',$page_id)
             ->get();
         return $posts;
+    }
+
+    public function getPostsForAutocomplete()
+    {
+        $term = Input::get('term');
+        $results = array();
+
+        $posts = DB::select("SELECT * FROM posts WHERE name like '%$term%' OR description like '%$term%' OR content like '%$term%' OR title like '%$term%'");
+
+        foreach($posts as $post){
+            array_push($results,$post->name);
+        }
+        return $results;
+    }
+
+    public function getPostsByTerm($term)
+    {
+        // $results = DB::select("SELECT * FROM posts WHERE name like '%$term%' OR description like '%$term%' OR content like '%$term%' OR title like '%$term%'");
+        $results = Post::where('name', 'like', '%'.$term.'%')
+                            ->orWhere('description', 'like', '%'.$term.'%')
+                            ->orWhere('content', 'like', '%'.$term.'%')
+                            ->orWhere('title', 'like', '%'.$term.'%')
+                            ->get();
+        
+        return $results;
     }
 }

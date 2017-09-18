@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Backend\Infrastructure\Forms\LibraryCultureEntryFormRequest;
+use App\Backend\Infrastructure\Forms\LibraryCultureEditFormRequest;
 use App\Backend\LibraryCulture\LibraryCulture;
 use App\Backend\LibraryCulture\LibraryCultureRepositoryInterface;
 use App\Core\FormatGenerator;
@@ -50,6 +51,7 @@ class LibraryCultureController extends Controller
         $request->validate();
 
         $name = Input::get('name');
+        $description = Input::get('description');
 
         if(Input::file()){
             $image = Input::file('image');
@@ -66,6 +68,7 @@ class LibraryCultureController extends Controller
 
             $librarycultureObj = new LibraryCulture();
             $librarycultureObj->name = $name;
+            $librarycultureObj->description = $description;
             $librarycultureObj->image = $library_culture_image;
 
             $result = $this->repo->create($librarycultureObj);
@@ -73,11 +76,11 @@ class LibraryCultureController extends Controller
 
             if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
                 return redirect()->action('Backend\LibraryCultureController@index')
-                    ->withMessage(FormatGenerator::message('Success', 'Post created ...'));
+                    ->withMessage(FormatGenerator::message('Success', 'Library Culture created ...'));
             }
             else{
                 return redirect()->action('Backend\LibraryCultureController@index')
-                    ->withMessage(FormatGenerator::message('Fail', 'Post did not create ...'));
+                    ->withMessage(FormatGenerator::message('Fail', 'Library Culture did not create ...'));
             }
         }
 
@@ -91,11 +94,12 @@ class LibraryCultureController extends Controller
         return redirect('/');
     }
 
-    public function update(LibraryCultureEntryFormRequest $request){
+    public function update(LibraryCultureEditFormRequest $request){
         $request->validate();
         $id = Input::get('id');
 
         $name = Input::get('name');
+        $description = Input::get('description');
 
         if(Input::file()) {
             $image = Input::file('image');
@@ -112,16 +116,32 @@ class LibraryCultureController extends Controller
 
             $librarycultureObj = LibraryCulture::find($id);
             $librarycultureObj->name = $name;
+            $librarycultureObj->description = $description;
             $librarycultureObj->image = $library_culture_image;
-
+           
             $result = $this->repo->update($librarycultureObj);
             if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
                 return redirect()->action('Backend\LibraryCultureController@index')
-                    ->withMessage(FormatGenerator::message('Success', 'Post updated ...'));
+                    ->withMessage(FormatGenerator::message('Success', 'Library Culture updated ...'));
             }
             else{
                 return redirect()->action('Backend\LibraryCultureController@index')
-                    ->withMessage(FormatGenerator::message('Fail', 'Post did not update ...'));
+                    ->withMessage(FormatGenerator::message('Fail', 'Library Culture did not update ...'));
+            }
+        }
+        else{
+            $librarycultureObj = LibraryCulture::find($id);
+            $librarycultureObj->name = $name;
+            $librarycultureObj->description = $description;
+           
+            $result = $this->repo->update($librarycultureObj);
+            if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
+                return redirect()->action('Backend\LibraryCultureController@index')
+                    ->withMessage(FormatGenerator::message('Success', 'Library Culture updated ...'));
+            }
+            else{
+                return redirect()->action('Backend\LibraryCultureController@index')
+                    ->withMessage(FormatGenerator::message('Fail', 'Library Culture did not update ...'));
             }
         }
 
@@ -134,7 +154,7 @@ class LibraryCultureController extends Controller
         }
 
         return redirect()->action('Backend\LibraryCultureController@index')
-            ->withMessage(FormatGenerator::message('Success', 'Post deleted ...'));
+            ->withMessage(FormatGenerator::message('Success', 'Library Culture deleted ...'));
 
     }
 }

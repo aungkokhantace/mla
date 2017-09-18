@@ -138,6 +138,7 @@ class Utility
         return $registrationPrefix;        
     }
 
+    //sends email with parameters in mail blade
     public static function sendEmailWithParameters($template,$params,$emails,$subject){
         Mail::send($template, $params, function($message) use($emails,$subject)
         {
@@ -146,14 +147,28 @@ class Utility
         });
     }
 
-    public static function getEarlyBirdDate(){
+    //returns earlybird registration deadline if it is set up in core_configs, and returns "2018-01-31" as default if not set up
+    public static function getEarlyBirdRegistrationDeadline(){
         $temp = DB::select("SELECT value FROM core_configs WHERE code = 'SETTING_EARLY_BIRD_REG' AND type = 'SETTING' LIMIT 1");
         if(isset($temp) && count($temp)>0){
-            $early_bird_date = $temp[0]->value;    
+            $early_bird_deadline = $temp[0]->value;    
         }
         else{
-            $early_bird_date = '2018-01-31'; //default date
+            $early_bird_deadline = '2018-01-31'; //default date
         }        
-        return $early_bird_date;
+        return $early_bird_deadline;
     }
+
+    //returns standard registration deadline if it is set up in core_configs, and returns "2018-04-29" as default if not set up
+    public static function getStandardRegistrationDeadline(){
+        $temp = DB::select("SELECT value FROM core_configs WHERE code = 'SETTING_STANDARD_REG' AND type = 'SETTING' LIMIT 1");
+        if(isset($temp) && count($temp)>0){
+            $standard_deadline = $temp[0]->value;    
+        }
+        else{
+            $standard_deadline = '2018-04-29'; //default date
+        }        
+        return $standard_deadline;
+    }
+
 }

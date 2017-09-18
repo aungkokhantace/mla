@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Backend\Infrastructure\Forms\PostConferenceEntryFormRequest;
+use App\Backend\Infrastructure\Forms\PostConferenceEditFormRequest;
 use App\Backend\PostConferenceTravel\PostConferenceTravel;
 use App\Backend\PostConferenceTravel\PostConferenceTravelRepositoryInterface;
 use App\Core\FormatGenerator;
@@ -45,10 +46,11 @@ class PostConferenceTravelController extends Controller
     }
 
     public function store(PostConferenceEntryFormRequest $request){
-
+        
         $request->validate();
 
         $name = Input::get('name');
+        $description = Input::get('description');
 
         if(Input::file()){
             $image = Input::file('image');
@@ -65,6 +67,7 @@ class PostConferenceTravelController extends Controller
 
             $postconferencetravelObj = new PostConferenceTravel();
             $postconferencetravelObj->name = $name;
+            $postconferencetravelObj->description = $description;
             $postconferencetravelObj->image = $post_conference_travel_image;
 
             $result = $this->repo->create($postconferencetravelObj);
@@ -72,11 +75,11 @@ class PostConferenceTravelController extends Controller
 
             if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
                 return redirect()->action('Backend\PostConferenceTravelController@index')
-                    ->withMessage(FormatGenerator::message('Success', 'Post created ...'));
+                    ->withMessage(FormatGenerator::message('Success', 'Post Conferece Travel created ...'));
             }
             else{
                 return redirect()->action('Backend\PostConferenceTravelController@index')
-                    ->withMessage(FormatGenerator::message('Fail', 'Post did not create ...'));
+                    ->withMessage(FormatGenerator::message('Fail', 'Post Conferece Travel did not create ...'));
             }
         }
 
@@ -90,11 +93,12 @@ class PostConferenceTravelController extends Controller
         return redirect('/');
     }
 
-    public function update(PostConferenceEntryFormRequest $request){
+    public function update(PostConferenceEditFormRequest $request){
         $request->validate();
         $id = Input::get('id');
 
         $name = Input::get('name');
+        $description = Input::get('description');
 
         if(Input::file()) {
             $image = Input::file('image');
@@ -111,16 +115,32 @@ class PostConferenceTravelController extends Controller
 
             $postconferencetravelObj = PostConferenceTravel::find($id);
             $postconferencetravelObj->name = $name;
+            $postconferencetravelObj->description = $description;
             $postconferencetravelObj->image = $post_conference_travel_image;
 
             $result = $this->repo->update($postconferencetravelObj);
             if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
                 return redirect()->action('Backend\PostConferenceTravelController@index')
-                    ->withMessage(FormatGenerator::message('Success', 'Post updated ...'));
+                    ->withMessage(FormatGenerator::message('Success', 'Post Conferece Travel updated ...'));
             }
             else{
                 return redirect()->action('Backend\PostConferenceTravelController@index')
-                    ->withMessage(FormatGenerator::message('Fail', 'Post did not update ...'));
+                    ->withMessage(FormatGenerator::message('Fail', 'Post Conferece Travel did not update ...'));
+            }
+        }
+        else{
+            $postconferencetravelObj = PostConferenceTravel::find($id);
+            $postconferencetravelObj->name = $name;
+            $postconferencetravelObj->description = $description;
+
+            $result = $this->repo->update($postconferencetravelObj);
+            if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
+                return redirect()->action('Backend\PostConferenceTravelController@index')
+                    ->withMessage(FormatGenerator::message('Success', 'Post Conferece Travel updated ...'));
+            }
+            else{
+                return redirect()->action('Backend\PostConferenceTravelController@index')
+                    ->withMessage(FormatGenerator::message('Fail', 'Post Conferece Travel did not update ...'));
             }
         }
 
@@ -133,7 +153,7 @@ class PostConferenceTravelController extends Controller
         }
 
         return redirect()->action('Backend\PostConferenceTravelController@index')
-            ->withMessage(FormatGenerator::message('Success', 'Post deleted ...'));
+            ->withMessage(FormatGenerator::message('Success', 'Post Conferece Travel deleted ...'));
 
     }
 }

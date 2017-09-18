@@ -12,6 +12,21 @@
     <div class="row">
         <marquee><b>"Next Generation Libraries: Collaborate and Connect"</b></marquee>
     </div>
+
+    {!! Form::open(array('url' => '/search','files'=>true, 'id'=>'search', 'class'=> 'form-horizontal user-form-border')) !!}
+    <div class="row">
+        <div class="col-md-8 home-left"></div>
+        <div class="col-md-4 home-right">
+            <div class="input-group home-searchbox">
+                <input type="text" class="form-control" name="search_term" id="search_term" placeholder="SEARCH" autocomplete="off">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+    </div>
+    {!! Form::close() !!}
+
     <div class="row">
         <input type="hidden" name="countDownDate" id="countDownDate" value="{{$countDownDate}}">
         <!-- Blog Entries Column -->
@@ -165,7 +180,7 @@ $(document).ready(function() {
     var showChar = 414;  // How many characters are shown by default
     // var ellipsestext = "...";
     var ellipsestext = "";
-    var moretext = "Show more>>";
+    var moretext = "Read more>>";
     var lesstext = "Show less<<";
     
 
@@ -202,6 +217,10 @@ $(document).ready(function() {
 
         return false;
     });
+
+    // $("#search_term").autocomplete({
+    //     source: "/autocomplete"
+    // });
 });
 </script>
 

@@ -19,8 +19,7 @@
     <link href="/assets/frontend/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/frontend_custom/style_custom.css" rel="stylesheet">
     <link media="all" type="text/css" rel="stylesheet" href="/assets/css/sweetalert.css">
-
-
+    <link media="all" type="text/css" rel="stylesheet" href="/assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css">
 </head>
 
 <body>
@@ -33,14 +32,17 @@
             2-5 May 2018 <br>
             Naypyitaw, Myanmar </span>
             </div>
+
+            {!! Form::open(array('url' => '/search','files'=>true, 'id'=>'search', 'class'=> 'form-horizontal user-form-border')) !!}
             <div class="col-md-3">
                 <div class="input-group searchbox">
-                    <input type="text" class="form-control" placeholder="SEARCH">
+                <input type="text" class="form-control" name="search_term" id="search_term" placeholder="SEARCH" autocomplete="off">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                     </span>
                 </div>
             </div>
+            {!! Form::close() !!}
         </div>
         </div>
     </section>

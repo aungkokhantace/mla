@@ -9,11 +9,11 @@
 
 <!-- Page Content -->
 <div class="container">
-    <div class="row">
+    <div class="row marquee-text">
         <marquee><b>"Next Generation Libraries: Collaborate and Connect"</b></marquee>
     </div>
 
-    {!! Form::open(array('url' => '/search','files'=>true, 'id'=>'search', 'class'=> 'form-horizontal user-form-border')) !!}
+    <!-- {!! Form::open(array('url' => '/search','files'=>true, 'id'=>'search', 'class'=> 'form-horizontal user-form-border')) !!}
     <div class="row">
         <div class="col-md-8 home-left"></div>
         <div class="col-md-4 home-right">
@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    {!! Form::close() !!}
+    {!! Form::close() !!} -->
 
     <div class="row">
         <input type="hidden" name="countDownDate" id="countDownDate" value="{{$countDownDate}}">
@@ -83,12 +83,14 @@
                             @foreach($latestNews as $latestNew)                                
                             <div class="row panel-body">  
                                 <img class="img_latest_new" src="{!! $latestNew->image !!}">                              
-                                <h5><b>{!! $latestNew->name !!}</b></h5>
-                                <p>{!! $latestNew->short_description !!}  <a href="/latest_news_detail/{{$latestNew->id}}" class="more">more>></a></p>
+                                <!-- <h5 class="latest-news-heading"><b>{!! $latestNew->name !!}</b></h5> -->
+                                <p class="latest-news-heading"><b>{!! $latestNew->name !!}</b></p>
+                                <p class="latest-news-short-description">{!! $latestNew->short_description !!}</p>
+                                <a href="/latest_news_detail/{{$latestNew->id}}" class="more">MORE>></a>
                             </div>
                             @endforeach
                             <br>
-                            <a href="/latest_news_all" class="more">ALL LATEST NEWS>></a>
+                            <a href="/latest_news_all" class="more">ALL NEWS>></a>
                         @endif              
                     </div>
                     
@@ -180,8 +182,8 @@ $(document).ready(function() {
     var showChar = 414;  // How many characters are shown by default
     // var ellipsestext = "...";
     var ellipsestext = "";
-    var moretext = "Read more>>";
-    var lesstext = "Show less<<";
+    var moretext = "MORE>>";
+    var lesstext = "LESS<<";
     
 
     $('.more').each(function() {

@@ -322,6 +322,12 @@ iframe.map
     margin-top:35px;
 }
 
+div.input-group{    
+    width: 13% !important;
+    float: right !important;    
+    margin-top: -40px !important;    
+    margin-right: 17px !important;
+}
 
 /* Responsive Styles */
 

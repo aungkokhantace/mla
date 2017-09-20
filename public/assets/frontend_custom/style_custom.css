@@ -23,6 +23,8 @@
   /* justify-content: center !important; */
   /* margin-left: 20%; */
   /* margin-right: 20%; */
+  margin-top:39px;
+  margin-bottom:37px;
  }
 
  .counter_value{
@@ -120,6 +122,31 @@ p{
   margin-bottom:15px !important;
 }
 
+/* for capital letter in search box */
 #search_term{
   text-transform: uppercase;
+}
+
+.marquee-text{
+  /* margin-top:15px; */
+  margin-bottom:-15px;
+  font-size:18px;
+}
+
+/* for May 2-5,2018    Naypyitaw,Myanmar */
+.date-place{
+  margin-bottom:-10px;
+}
+
+.latest-news-heading{
+  margin-top: -5px;
+}
+
+.latest-news-short-description{
+  text-align: justify;
+}
+
+/* for fb button in footer */
+.fb-btn{
+  color:white;
 }

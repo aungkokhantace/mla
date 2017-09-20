@@ -45,13 +45,13 @@ class HomeController extends Controller
         $latestNewsCount = Utility::getLatestNewsCount();
         
         $latestNews      = $latestNewRepo->getLatestNewByLimit($latestNewsCount);  //get latest news by count in config or 5 as default
-        
+
         //date to be counted to in timer
         $countDownDate = Utility::getCountDownDate();        
         
         foreach($latestNews as $news){
             $description = $news->description;
-            $short_description = substr($description,0,50);
+            $short_description = substr($description,0,60);
             $news->short_description = $short_description;
         }
 
@@ -72,10 +72,7 @@ class HomeController extends Controller
         $search_term = Input::get('search_term');
         $postRepo = new PostRepository();
         $results = $postRepo->getPostsByTerm($search_term);
-        // dd('results',$results);
-        // foreach($results as $result){
-            // dd($result->page->url);
-        // }
+       
         return view('frontend.search.search_result')
                 ->with('results',$results);
     }

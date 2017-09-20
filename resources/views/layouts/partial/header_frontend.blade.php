@@ -32,7 +32,7 @@
             2-5 May 2018 <br>
             Naypyitaw, Myanmar </span>
             </div>
-
+<!-- 
             {!! Form::open(array('url' => '/search','files'=>true, 'id'=>'search', 'class'=> 'form-horizontal user-form-border')) !!}
             <div class="col-md-3">
                 <div class="input-group searchbox">
@@ -42,7 +42,7 @@
                     </span>
                 </div>
             </div>
-            {!! Form::close() !!}
+            {!! Form::close() !!} -->
         </div>
         </div>
     </section>
@@ -111,22 +111,19 @@
                         <a href="/contact">CONTACT US</a>
                         @endif
                     </li>
-                    <!-- <li>
-                        <div class="col-md-3">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="SEARCH">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                                </span>
-                            </div>
-                        </div>
-                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
-       
+        {!! Form::open(array('url' => '/search','files'=>true, 'id'=>'search', 'class'=> 'form-horizontal user-form-border')) !!}
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="SEARCH" name="search_term" id="search_term" autocomplete="off">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+        {!! Form::close() !!}
     </nav>
 
     

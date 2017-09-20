@@ -51,14 +51,14 @@
                     <div class="col-md-3 count_down" id="seconds">SECONDS</div>
                 </div>
                 <br><br><br>
-                <h2>
+                <h2 class="home-header">
                 LATEST NEWS AND EVENTS
                 </h2>
                 <div class="row">
                     <div class="col-lg-12">
                         @if(isset($latestNews) && count($latestNews)>0)
                             @foreach($latestNews as $latestNew)                                
-                            <div class="row panel-body">  
+                            <div class="row panel-body latest-news-body">  
                                 <img class="img_latest_new" src="{!! $latestNew->image !!}">                              
                                 <!-- <h5 class="latest-news-heading"><b>{!! $latestNew->name !!}</b></h5> -->
                                 <p class="latest-news-heading"><b>{!! $latestNew->name !!}</b></p>

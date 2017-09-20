@@ -26,11 +26,16 @@
     <section class="head-top">
        <div class="container">
         <div class="row">
-            <div class="col-md-9 inner-header-text">
+            <div class="col-md-2 inner-header-logo">
+                <img src="/assets/frontend/images/consal_logo.png" class="img-responsive head-of-mla-photo">
+            </div>
+            <div class="col-md-10 inner-header-text">
             <!-- <img src="/assets/frontend/images/header_logo.png" class="img-responsive head-of-mla-photo"> -->
-            <span class="inner-header-text"> 17th Congress of Southeast Asian Librarians <br>
-            2-5 May 2018 <br>
-            Naypyitaw, Myanmar </span>
+                <span class="inner-header-text"> 
+                    17th Congress of Southeast Asian Librarians <br>
+                    2-5 May 2018 <br>
+                    Naypyitaw, Myanmar 
+                </span>
             </div>
 <!-- 
             {!! Form::open(array('url' => '/search','files'=>true, 'id'=>'search', 'class'=> 'form-horizontal user-form-border')) !!}

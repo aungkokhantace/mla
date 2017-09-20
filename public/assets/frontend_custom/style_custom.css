@@ -112,9 +112,14 @@ p{
 /* for search box */
 
 .inner-header-text{
-  margin-top: 50px;
+  margin-top: 35px;
   margin-bottom: 15px;
+  padding-left: 0px;
   font-weight: bold;
+}
+
+.inner-header-logo{
+  padding-right: 0px;
 }
 
 .home-searchbox{

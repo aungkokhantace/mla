@@ -1,24 +1,19 @@
 @extends('layouts.master_frontend')
-@section('title','Latest News Detail')    
+@section('title','All Latest News')    
 @section('content')
+@include('layouts.partial.nav_news')
 
     <!-- Page Content -->
     <div class="container">
-
-        <!-- <div class="row gallery"> -->
-        <!-- <div class="col-md-9 col-sm-12 col-xs-12 gallery" id="gallery"> -->
-           <!-- <div class="col-md-12"> -->
-        <div class="row">
-            <h2 class="gallery">LATEST NEWS DETAIL</h2>
+        <div class="col-md-9">
+        <!-- <h2>NEWS</h2>     -->
             <section>
                 @if(isset($latestNews) && count($latestNews)>0)
-                    <h3><u>{{$latestNews->name}}</u></h3>    <br>
-                    @if(isset($latestNews->image) && count($latestNews->image)>0)
-                        <img src="{{$latestNews->image}}" class="list-view-img"> <br><br> 
-                    @endif
-                    <p>{{$latestNews->description}}</p>
+                    <h4 class="news-detail-title">{{$latestNews->name}}</h4>
+                    <p class="news-detail-description">{{$latestNews->description}}</a></p>
+                    <img src="{{$latestNews->image}}" class="img-responsive">
+                    <br>
                 @endif
-                <a href="/latest_news_all" class="more">ALL LATEST NEWS>></a>
             </section>
         </div>
     </div>  

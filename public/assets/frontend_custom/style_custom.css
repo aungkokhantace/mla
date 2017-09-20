@@ -150,3 +150,24 @@ p{
 .fb-btn{
   color:white;
 }
+
+/* for head of mla photo to float left in paragraph */
+img[src*="data:image/"] {
+  float:left;
+  margin: 0 10px 10px 0px;
+}
+
+/* for news_detail page */
+.news-detail-title{
+  margin-top: 35px;
+}
+
+.news-detail-description{
+  margin-top: 10px;
+  text-align: justify;
+}
+
+/* for news_all page */
+.news-all-title{
+  margin-top: 0px;
+}

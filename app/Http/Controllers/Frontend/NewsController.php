@@ -21,8 +21,10 @@ use App\Backend\LatestNew\LatestNew;
 use App\Backend\LatestNew\LatestNewRepository;
 use App\Backend\LatestNew\LatestNewRepositoryInterface;
 use App\Core\Utility;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Collection;
 
-class LatestNewsController extends Controller
+class NewsController extends Controller
 {
 
     public function __construct(LatestNewRepositoryInterface $repo)
@@ -62,19 +64,35 @@ class LatestNewsController extends Controller
 
     public function detail($id){
         $latestNews = LatestNew::find($id);        
+        // dd($latestNews->image);
         return view('frontend.latest_news.latest_news_detail')
                     ->with('latestNews',$latestNews);
     }
 
-    public function allLatestNews(){
+    public function allNews(Request $request){
         $latestNews = $this->repo->getLatestNew();
+        $news_array = array();
         foreach($latestNews as $news){
+            //for short description
             $description = $news->description;
-            $short_description = substr($description,0,50);
-            $news->short_description = $short_description;
+            $short_description = substr($description,0,200).'...';
+            $news->short_description = $short_description;            
+            
+            array_push($news_array,$news);
         }
+
+        //start paginating array
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $col = new Collection($news_array);
+        $perPage = 5; //items per page
+        $currentPageSearchResults = $col->slice(($currentPage - 1) * $perPage, $perPage)->all();
+        $NewsEntries = new LengthAwarePaginator($currentPageSearchResults, count($col), $perPage);
         
+        $NewsEntries->setPath($request->url());
+        $NewsEntries->appends($request->except(['page']));
+        //end paginating array
+
         return view('frontend.latest_news.latest_news_all')
-                    ->with('latestNews',$latestNews);
+                    ->with('latestNews',$NewsEntries);
     }
 }

@@ -51,7 +51,7 @@ class HomeController extends Controller
         
         foreach($latestNews as $news){
             $description = $news->description;
-            $short_description = substr($description,0,60);
+            $short_description = substr($description,0,60).'...';
             $news->short_description = $short_description;
         }
 

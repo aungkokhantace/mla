@@ -4,7 +4,8 @@
 
 <!-- Header Carousel -->
 <header class="my-carousel">
-    <img src="/assets/frontend/images/consal_slider.jpg" class="img-responsive">
+    <!-- <img src="/assets/frontend/images/consal_slider.jpg" class="img-responsive"> -->
+    <img src="/assets/frontend/images/new_consal_slider.jpg" class="img-responsive">
 </header>
 
 <!-- Page Content -->
@@ -13,34 +14,10 @@
         <marquee><b>"Next Generation Libraries: Collaborate and Connect"</b></marquee>
     </div>
 
-    <!-- {!! Form::open(array('url' => '/search','files'=>true, 'id'=>'search', 'class'=> 'form-horizontal user-form-border')) !!}
-    <div class="row">
-        <div class="col-md-8 home-left"></div>
-        <div class="col-md-4 home-right">
-            <div class="input-group home-searchbox">
-                <input type="text" class="form-control" name="search_term" id="search_term" placeholder="SEARCH" autocomplete="off">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                </span>
-            </div>
-        </div>
-    </div>
-    {!! Form::close() !!} -->
-
     <div class="row">
         <input type="hidden" name="countDownDate" id="countDownDate" value="{{$countDownDate}}">
         <!-- Blog Entries Column -->
         <div class="col-md-8 home-left">
-
-            <!-- First Blog Post -->
-            <!-- <div class="row">
-                <div class="col-md-12 timer-align">
-                    <div class="col-md-2 count_down" id="days">DAYS</div>
-                    <div class="col-md-2 count_down" id="hours">HOURS</div>
-                    <div class="col-md-2 count_down" id="minutes">MINUTES</div>
-                    <div class="col-md-2 count_down" id="seconds">SECONDS</div>
-                </div>
-            </div> -->
 
             @if(isset($page->content) && $page->content !== "")
             {!! $page->content !!}
@@ -86,11 +63,11 @@
                                 <!-- <h5 class="latest-news-heading"><b>{!! $latestNew->name !!}</b></h5> -->
                                 <p class="latest-news-heading"><b>{!! $latestNew->name !!}</b></p>
                                 <p class="latest-news-short-description">{!! $latestNew->short_description !!}</p>
-                                <a href="/latest_news_detail/{{$latestNew->id}}" class="more">MORE>></a>
+                                <a href="/news_detail/{{$latestNew->id}}" class="more">MORE>></a>
                             </div>
                             @endforeach
                             <br>
-                            <a href="/latest_news_all" class="more">ALL NEWS>></a>
+                            <a href="/news_all" class="more">ALL NEWS>></a>
                         @endif              
                     </div>
                     

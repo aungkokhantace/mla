@@ -7,8 +7,8 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/', 'Frontend\HomeController@index');
         Route::get('/home', 'Frontend\HomeController@index');
 
-        Route::get('/latest_news_detail/{id}', 'Frontend\LatestNewsController@detail');
-        Route::get('/latest_news_all', 'Frontend\LatestNewsController@allLatestNews');
+        Route::get('/news_detail/{id}', 'Frontend\NewsController@detail');
+        Route::get('/news_all', 'Frontend\NewsController@allNews');
 
         Route::get('/contact', 'Frontend\ContactController@index');
 

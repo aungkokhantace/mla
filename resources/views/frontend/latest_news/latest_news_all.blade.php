@@ -1,36 +1,28 @@
 @extends('layouts.master_frontend')
 @section('title','All Latest News')    
 @section('content')
+@include('layouts.partial.nav_news')
 
     <!-- Page Content -->
     <div class="container">
-
-        <!-- <div class="row gallery"> -->
-        <!-- <div class="col-md-9 col-sm-12 col-xs-12 gallery" id="gallery"> -->
-           <!-- <div class="col-md-12"> -->
-        <div class="row">
-            <h2 class="gallery">ALL LATEST NEWS</h2>
+        <div class="col-md-9">
+        <h2>NEWS</h2>    
             <section>
                 @if(isset($latestNews) && count($latestNews)>0)
-                <table class="table table-striped list-table" id="list-table">
-                    <thead>
-                    <tr>
-                        <th width="20%">Name</th>
-                        <th width="50%">Description</th>
-                        <th width="30%">Image</th>
-                    </tr>
-                    </thead>
-                    <tbody>
                     @foreach($latestNews as $latest_new)
-                        <tr>
-                            <td><a href="/latest_news_detail/{{$latest_new->id}}">{{$latest_new->name}}</a></td>
-                            <td>{{$latest_new->short_description}}<a href="/latest_news_detail/{{$latest_new->id}}" class="more">  more>></a></td>
-                            <td><img src="{{$latest_new->image}}" class="img-responsive list-view-img"></td>
-                        </tr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{$latest_new->image}}" class="img-responsive list-view-img">
+                        </div>
+                        <div class="col-md-9">
+                            <h4 class="news-all-title"><a href="/news_detail/{{$latest_new->id}}">{{$latest_new->name}}</a></h4>
+                            <p>{{$latest_new->short_description}}</a></p>
+                            <a href="/news_detail/{{$latest_new->id}}" class="more">MORE>></a>
+                        </div>
+                    </div>
+                    <br>
                     @endforeach
-                    
-                    </tbody>
-                </table>
+                    {!! $latestNews->render() !!}                    
                 @endif
             </section>
         </div>

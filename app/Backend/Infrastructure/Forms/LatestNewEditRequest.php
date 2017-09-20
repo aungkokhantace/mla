@@ -4,7 +4,7 @@ namespace App\Backend\Infrastructure\Forms;
 
 use App\Http\Requests\Request;
 
-class LatestNewEntryRequest extends Request
+class LatestNewEditRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,6 @@ class LatestNewEntryRequest extends Request
         return [
             "name"  =>"required",
             "description"  =>"required",
-            "image"  =>"required",
         ];
     }
     public function messages()
@@ -34,7 +33,6 @@ class LatestNewEntryRequest extends Request
         return [
             "name.required" => "Name is required",
             "description.required" => "Description is required",
-            "image.required" => "Image is required",
         ];
     }
 }

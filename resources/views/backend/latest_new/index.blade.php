@@ -53,8 +53,8 @@
                         @foreach($latest_news as $latest_new)
                             <tr>
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $latest_new->id }}" id="all"></td>
-                                <td>{{$latest_new->name}}</td>
-                                <td><a href="/backend/latest_new/edit/{{$latest_new->id}}">{{$latest_new->description}}</a></td>
+                                <td><a href="/backend/latest_new/edit/{{$latest_new->id}}">{{$latest_new->name}}</a></td>
+                                <td>{{$latest_new->short_description}}</td>
                                 <td><img src="{{$latest_new->image}}" class="img-responsive list-view-img"></td>
                             </tr>
                         @endforeach

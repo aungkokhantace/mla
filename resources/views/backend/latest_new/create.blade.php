@@ -41,7 +41,7 @@
                 </div>--}}
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <label for="code">Image</label>
+                        <label for="code">Image*</label>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         @if(isset($latest_new))
@@ -61,8 +61,18 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <input type="button" class="form-control image_remove_btn"  value="Remove Image" id="removeImage" name="removeImage">
-                    </div>
+                    </div><br>
                 </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <label></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <p class="text-danger">{{$errors->first('image')}}</p>
+               </div>
+                    
+                </div>
+                
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     </div>
@@ -101,6 +111,7 @@
                             <span class="fileinput-exists">Change</span>
 
                             <input id="site_logo" type="file" name="image" accept="image.*" />
+                            
                             {{--{{ Form::file('nric_front_img') }}--}}
                         </span>
                                     {{--<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>--}}
@@ -195,10 +206,14 @@
 
             $('#latest_new_form').validate({
                 rules: {
-                    description: 'required'
+                    name: 'required',
+                    description: 'required',
+                    image: 'required'
                 },
                 messages: {
+                    name: 'Name is required',
                     description: 'Description is required',
+                    image: 'Image is required'
                 },
                 submitHandler: function (form) {
                     $('input[type="submit"]').attr('disabled', 'disabled');

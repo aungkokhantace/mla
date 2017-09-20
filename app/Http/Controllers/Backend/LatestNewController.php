@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Backend\Infrastructure\Forms\LatestNewEntryRequest;
+use App\Backend\Infrastructure\Forms\LatestNewEditRequest;
 use App\Backend\LatestNew\LatestNew;
 use App\Backend\LatestNew\LatestNewRepositoryInterface;
 use App\Core\FormatGenerator;
@@ -27,6 +28,11 @@ class LatestNewController extends Controller
         try{
             if (Auth::guard('User')->check()) {
                 $latest_news      = $this->repo->getLatestNew();
+                foreach($latest_news as $news){
+                    $description = $news->description;
+                    $short_description = substr($description,0,400).'...';
+                    $news->short_description = $short_description;
+                }
                 return view('backend.latest_new.index')->with('latest_news', $latest_news);
             }
             return redirect('/');
@@ -103,11 +109,13 @@ class LatestNewController extends Controller
         return redirect('/');
     }
 
-    public function update(LatestNewEntryRequest $request){
+    public function update(LatestNewEditRequest $request){
         $request->validate();
         $id = Input::get('id');
         $name = Input::get('name');
         $description = Input::get('description');
+
+        $removeImageFlag          = (Input::has('removeImageFlag')) ? Input::get('removeImageFlag') : 0;
 
         if(Input::file()){
             $image = Input::file('image');
@@ -141,7 +149,10 @@ class LatestNewController extends Controller
             $latestnewObj = LatestNew::find($id);
             $latestnewObj->name = $name;
             $latestnewObj->description = $description;
-            $latestnewObj->image = null;
+
+            if($removeImageFlag == 1){
+                $latestnewObj->image             = "";
+            }
 
             $result = $this->repo->create($latestnewObj);
 

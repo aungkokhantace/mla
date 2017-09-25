@@ -21,9 +21,13 @@
     <script src="/assets/frontend/js/bootstrap.min.js"></script>
     <script src="/assets/frontend/js/validation/jquery.validate.js"></script>
     <script src="/assets/frontend/js/validation/validation.js"></script>
+
     <script src="/assets/js/crud.js"></script>
     <script src="/assets/js/sweetalert.min.js"></script>
     <script src="/assets/js/sweetalert-dev.js"></script>
+
+    <!-- <script src="/assets/js/jquery.js"></script>    -->
+    <script src="/assets/plugins/jasny/js/jasny-bootstrap.js"></script>
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({

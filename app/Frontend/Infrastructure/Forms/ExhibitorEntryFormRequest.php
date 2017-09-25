@@ -29,6 +29,7 @@ class ExhibitorEntryFormRequest extends Request
             "address" => "required",
             "ph_no" => "required",
             "business_type" => "required",
+            "image" => "required",
         ];
     }
     public function messages(){
@@ -38,6 +39,7 @@ class ExhibitorEntryFormRequest extends Request
             "address.required" => "Address is required",
             "ph_no.required" => "Phone is required",
             "business_type.required" => "Business Type is required",
+            "image.required" => "Image is required",
 
         ];
     }

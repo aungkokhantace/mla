@@ -18,6 +18,8 @@ use Redirect;
 use App\Backend\Page\PageRepository;
 use App\Backend\Post\PostRepository;
 use Illuminate\Support\Facades\Route;
+use App\Frontend\Exhibition\ExhibitorRepository;
+use App\Backend\SponsorPackageType\SponsorPackageTypeRepository;
 
 class ExhibitionController extends Controller
 {
@@ -38,10 +40,36 @@ class ExhibitionController extends Controller
 
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
+        
+        //start sponsor logos
+        $exhibitorRepo  = new ExhibitorRepository();
+        $exhibitors     = $exhibitorRepo->getConfirmedExhibitors();
+
+        $sponsorPackageTypeRepo  = new SponsorPackageTypeRepository();
+        $sponsorPackages         = $sponsorPackageTypeRepo->getArrays();
+
+        $exhibitorArray = array();
+
+        //make sub-array with each of sponsor package name in array $exhibitorArray
+        foreach($sponsorPackages as $sponsorPackage){
+            $exhibitorArray[$sponsorPackage->name] = array();
+        }
+
+        //loop through each exhibitor and group under each sponsor type name
+        foreach($exhibitors as $exhibitor){
+            foreach($sponsorPackages as $sponsorPackage){
+                if($exhibitor->business_type == $sponsorPackage->id){                    
+                    // $exhibitorArray[$sponsorPackage->name] = $exhibitor;
+                    array_push($exhibitorArray[$sponsorPackage->name], $exhibitor);
+                }
+            }
+        }
+        //end sponsor logos
 
         return view('frontend.exhibition.exhibition')
             ->with('page',$page)
-            ->with('posts',$posts);
+            ->with('posts',$posts)
+            ->with('exhibitorArray',$exhibitorArray);
     }
 
     public function exhibition_sponsorship(Request $request)
@@ -206,22 +234,39 @@ class ExhibitionController extends Controller
     }
 
     public function exhibition_exhibitor_store(ExhibitorEntryFormRequest $request){
+        
         $request->validate();
-
+        
         $name = Input::get('name');
         $address = Input::get('address');
         $ph_no = Input::get('ph_no');
         $email = Input::get('email');
         $business_type = Input::get('business_type');
 
+        // Start saving image
+        $image = Input::file('image');
+        $path = base_path().'/public/ExhibitorImages';
+
+        if(Input::file()) {
+            if (!file_exists($path)) {
+                mkdir($path, 0777, true);
+            }
+            $image_name = Input::file('image')->getClientOriginalName();
+            $exhibitor_image = '/ExhibitorImages/' . $image_name;
+            $image->move($path, $image_name);
+        }
+        else{
+            $exhibitor_image = null;
+        }
+        // End saving image
 
         $exhibitorObj = new ExhibitionExhibitor();
-        $exhibitorObj->name = $name;
-        $exhibitorObj->address = $address;
-        $exhibitorObj->ph_no = $ph_no;
-        $exhibitorObj->email = $email;
-        $exhibitorObj->business_type = $business_type;
-
+        $exhibitorObj->name             = $name;
+        $exhibitorObj->address      = $address;
+        $exhibitorObj->ph_no        = $ph_no;
+        $exhibitorObj->email        = $email;
+        $exhibitorObj->business_type= $business_type;
+        $exhibitorObj->image        = $exhibitor_image;
 
         $result = $this->exhibitorRepository->create($exhibitorObj);
 

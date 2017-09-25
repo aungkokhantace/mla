@@ -11,7 +11,8 @@
                 <h2>EXHIBITION & SPONSORSHIP >> EXHIBITOR AND SPONSOR FORM</h2>
                 <div class="col-md-12">
                     <div class="row">
-                        <form class="form-horizontal call_for_paper" method="post" action="{{url('exhibition_exhibitor/store')}}" id="frm_exhibition_exhibitor">
+                        <!-- <form class="form-horizontal call_for_paper" method="post" action="{{url('exhibition_exhibitor/store')}}" id="frm_exhibition_exhibitor" files="true"> -->
+                        {!! Form::open(array('url' => 'exhibition_exhibitor/store', 'method'=> 'post', 'class'=> 'form-horizontal call_for_paper','files' => true,'id'=>'frm_exhibition_exhibitor')) !!}
                             {{csrf_field()}}
                             <fieldset>
 
@@ -64,6 +65,36 @@
                                     </div>
                                 </div>
 
+                                <!-- Start Logo -->
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <label for="code">Logo*</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                            <div class="add_image_div add_image_div_red add_image_div_frontend">
+                                            </div>
+                                        <input type="hidden" id="removeImageFlag" value="0" name="removeImageFlag">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <label></label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <input type="button" class="form-control image_remove_btn"  value="Remove Image" id="removeImage" name="removeImage">
+                                    </div><br>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <label></label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                    <p class="text-danger" id="image_error">{{$errors->first('image')}}</p>
+                                    </div>                    
+                                </div>
+                                <!-- End Logo -->
+
 
                                 <!-- Button -->
                                 <div class="form-group">
@@ -73,8 +104,127 @@
                                     </div>
                                 </div>
 
+                                <!-- Start Modal -->
+                                <div class="modal fade" id="modal-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel">Upload item image,</h4>
+                                                <p>Please ensure file is in .jpg, .png, .gif format.</p>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="col-md-12 text-center">
+                                                    <div class="form-group">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12 text-center">
+                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 380px; height: 220px;">
+
+                                                            <img id='site_logoPopUp' src="" alt="Load Image"/>
+                                                        </div>
+                                                        <div data-provides="fileinput">
+                                                <span class="btn btn-default btn-file">
+                                                    <span class="fileinput-new" data-trigger="fileinput">Select image</span>
+                                                    <span class="fileinput-exists">Change</span>
+
+                                                    <input id="image" type="file" name="image" accept="image.*" />
+                                                    
+                                                    {{--{{ Form::file('nric_front_img') }}--}}
+                                                </span>
+                                                            {{--<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>--}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="clearfix"></div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                <button type="button" onclick="changeItemImage()" class="btn btn-default" data-dismiss="modal">Save</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="modal-image-remove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel">Remove Image !</h4>
+                                                <p>Please ensure you want to remove this image .</p>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="col-md-12 text-center">
+                                                    <div class="form-group">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12 text-center">
+                                                    Are you sure want to remove this image ?
+                                                </div>
+
+                                                <div class="clearfix"></div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                <button type="button" onclick="removeIMG()" class="btn btn-default" data-dismiss="modal">Yes</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="image_error_fileFormat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <div class="col-md-12 text-center">
+                                                    <div class="form-group">
+                                                        <label class="font-big-red">You can only upload a .jpg / jpeg / png / gif file format.</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="image_error_fileSize" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <div class="col-md-12 text-center">
+                                                    <div class="form-group">
+                                                        <label class="font-big-red">This is not an allowed file size !</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {!! Form::close() !!}
+                            </div>
+                            <!-- End Modal -->
+
                             </fieldset>
-                        </form>
+                        <!-- </form> -->
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
@@ -122,6 +272,13 @@
                 valid = false;
             }
 
+            $("#image_error").text("");
+            var image = $("#image").val();
+            if (image == "") {
+                valid = false;
+                $("#image_error").text("Image is required");
+            }
+
             if (valid == true) {
                 add_confirm_setup('exhibition_exhibitor');
             }
@@ -135,14 +292,16 @@
                     address:'required',
                     ph_no:{required:true,number:true},
                     email:{required:true,email:true},
-                    business_type:'required'
+                    business_type:'required',
+                    image:'required'
                 },
                 messages: {
                     name:'Name is required',
                     address:'Address is required',
                     ph_no:{required:'Phone is required',number:'Only number accepted'},
                     email:{required:'Email is required',email:'Please input email format.'},
-                    business_type:'Business type is required'
+                    business_type:'Business type is required',
+                    image:'Image is required'
                 }
                 /*submitHandler: function (form) {
                     $('input[type="submit"]').attr('disabled', 'disabled');
@@ -152,6 +311,60 @@
                 $('#btn').on('click', function() {
                     $("#frm_exhibition_exhibitor").valid();
                 });
+
+
+            // Start Image Upload
+            $(".add_image_div").click(function () {
+                showPopup();
+            });
+
+            $("#removeImage").click(function () {
+                $('#modal-image-remove').modal();
+            });
+
+            $('INPUT[type="file"]').change(function () {
+
+                var ext = this.value.match(/\.(.+)$/)[1];
+                var f = this.files[0];
+                var fileSize = (f.size || f.fileSize);
+                var imgkbytes = Math.round(parseInt(fileSize) / 1024);
+                if (imgkbytes > 2000) {
+                    $('#image_error_fileSize').modal('show');
+                    $('#site_logoPopUp').attr('src') = '';
+                }
+                // else{
+                switch (ext) {
+                    case 'jpg':
+                    case 'jpeg':
+                    case 'png':
+                    case 'gif':
+                        break;
+                    default:
+                        $('#image_error_fileFormat').modal('show');
+                        $('#site_logoPopUp').attr('src') = '';
+                }
+                //}
+
+            });
+            // End Image Upload
         });
+
+        // Start Image Upload Functions
+        function showPopup() {
+            $('#modal-image').modal();
+        }
+
+        function changeItemImage() {
+            var images = $('#modal-image img').attr('src');
+            $('.add_image_div').css('background-image', 'url(' + images + ')');
+            $('#removeImageFlag').val(0);
+        }
+
+        function removeIMG() {
+            $('#modal-image img').attr('src', 'second.jpg');
+            $('.add_image_div').css('background-image', 'url()');
+            $('#removeImageFlag').val(1);
+        }
+        // End Image Upload Functions
     </script>
 @endsection

@@ -94,7 +94,7 @@
                              <li nav-id="modifier-create" class="has-sub">
                                  <a href="javascript:;">
                                      <b class="caret pull-right"></b>
-                                     <span>Latest News</span>
+                                     <span>News</span>
                                  </a>
                                  <ul class="sub-menu">
                                      <li nav-id="modifier-create-modifier"><a href="/backend/latest_new/create">Entry</a></li>

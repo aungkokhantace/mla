@@ -20,6 +20,16 @@
     <link href="/assets/frontend_custom/style_custom.css" rel="stylesheet">
     <link media="all" type="text/css" rel="stylesheet" href="/assets/css/sweetalert.css">
     <link media="all" type="text/css" rel="stylesheet" href="/assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css">
+
+    <!-- For image upload css -->
+    <link media="all" type="text/css" rel="stylesheet" href="/assets/css/custom.css">
+    <!-- <link media="all" type="text/css" rel="stylesheet" href="/assets/css/style.min.css"> -->
+    <link media="all" type="text/css" rel="stylesheet" href="/assets/plugins/jasny/css/jasny-bootstrap.css">
+
+ 
+
+
+
 </head>
 
 <body>

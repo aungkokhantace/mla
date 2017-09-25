@@ -50,3 +50,11 @@
     color:red;
     font-weight: bold;
 }
+
+.add_image_div_frontend {
+    width: 278px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+}

@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(Default_CoreSettingSeeder::class);
         $this->call(TestTableSeeder::class);
         $this->call(Default_RegistrationCategorySeeder::class);
+        $this->call(Default_SponsorPackageTypeSeeder::class);
 
         $this->call(Default_PageSeeder::class);
         $this->call(Default_PostSeeder::class);

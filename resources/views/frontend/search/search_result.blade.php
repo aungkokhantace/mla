@@ -1,40 +1,32 @@
 @extends('layouts.master_frontend')
 @section('title','Search Result')    
 @section('content')
+@include('layouts.partial.nav_search_result')
 
     <!-- Page Content -->
     <div class="container">
-
-        <!-- <div class="row gallery"> -->
-        <!-- <div class="col-md-9 col-sm-12 col-xs-12 gallery" id="gallery"> -->
-           <!-- <div class="col-md-12"> -->
-        <div class="row">
-            <h2 class="gallery">SEARCH RESULTS</h2>
+        <div class="col-md-9">
+        <h2>SEARCH RESULTS</h2>    
             <section>
-                @if(isset($results) && count($results)>0)
-                <table class="table table-striped list-table" id="list-table">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                @if(isset($results) && count($results) > 0)
                     @foreach($results as $result)
-                        <tr>
-                            <td>{{$result->name}}</td>
-                            <td><a href="/{{$result->page->url}}" class="more">  Read More>></a></td>
-                        </tr>
-                    @endforeach                    
-                    </tbody>
-                </table>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="news-all-title"><a href="/{{$result->page->url}}">{{$result->name}}</a></h4>
+                            @if(isset($result->content) && count($result->content) > 0)
+                                {!!$result->content!!}
+                            @endif
+                            <br><a href="/{{$result->page->url}}" class="more">MORE>></a>
+                        </div>
+                    </div>
+                    <br>
+                    @endforeach
                 @endif
             </section>
         </div>
     </div>  
 </div>
 </div>
-
 @stop
 @section('page_script')
 @endsection

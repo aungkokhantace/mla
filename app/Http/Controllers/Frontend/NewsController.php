@@ -63,8 +63,7 @@ class NewsController extends Controller
     }
 
     public function detail($id){
-        $latestNews = LatestNew::find($id);        
-        // dd($latestNews->image);
+        $latestNews = LatestNew::find($id);
         return view('frontend.latest_news.latest_news_detail')
                     ->with('latestNews',$latestNews);
     }

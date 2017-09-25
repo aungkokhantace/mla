@@ -2,7 +2,7 @@
 @section('title','Latest News')
 @section('content')
     <div id="content" class="content">
-        <h1 class="page-header">{{isset($latest_new)? 'Edit Latest News' : 'Latest News Entry'}}</h1>
+        <h1 class="page-header">{{isset($latest_new)? 'Edit News' : 'News Entry'}}</h1>
         @if(isset($latest_new))
             {!! Form::open(array('url' => 'backend/latest_new/update', 'class'=> 'form-horizontal user-form-border','files' => true,'id'=>'latest_new_form')) !!}
             @else
@@ -69,8 +69,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <p class="text-danger">{{$errors->first('image')}}</p>
-               </div>
-                    
+                    </div>                    
                 </div>
                 
                 <div class="row">

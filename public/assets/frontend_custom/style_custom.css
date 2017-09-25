@@ -25,6 +25,8 @@
   /* margin-right: 20%; */
   margin-top:20px;
   margin-bottom:20px;
+  padding-left:0px;
+  width:111%;
  }
 
  .counter_value{
@@ -37,7 +39,8 @@
 
 #days{
   /* margin-left:15px; */
-  margin-left:5px;
+  /* margin-left:5px; */
+  margin-left:0px;
   margin-right:5px;
 }
 
@@ -183,4 +186,11 @@ img[src*="data:image/"] {
 
 .latest-news-body{
   padding-top:0px;
+}
+
+/* for displaying sponsor logos in frontend */
+.sponsor-logo-frontend{
+  max-width:100px;
+  max-height:100px;
+  margin:5px;
 }

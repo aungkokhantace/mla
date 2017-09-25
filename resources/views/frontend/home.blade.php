@@ -34,15 +34,6 @@
 
 
             <!-- Blog Categories Well -->
-            <!-- <div class="row home-right"> -->
-                <!-- <div class="col-md-12 timer-align">
-                    <div class="col-md-3 count_down" id="days">DAYS</div>
-                    <div class="col-md-3 count_down" id="hours">HOURS</div>
-                    <div class="col-md-3 count_down" id="minutes">MINUTES</div>
-                    <div class="col-md-3 count_down" id="seconds">SECONDS</div>
-                </div>	 -->
-            <!-- </div> -->
-
             <div class="home-right">                
                 <div class="col-md-12 timer-align">
                     <div class="col-md-3 count_down" id="days">DAYS</div>
@@ -89,27 +80,18 @@
             <div class="col-lg-12">
             <h2>They've Exhibited</h2> 
         </div>
-        <div class="col-md-6 col-lg-6">
-            <h3>Platinum Package</h3>
-            <hr>
-            <img style="margin-bottom:30px;" src="/assets/frontend/images/bottom1.jpg">
-        </div>  
-        <!-- <div class="col-md-6 col-lg-6">
-            <h3>Gold Package</h3>
-            <hr>
-            <img style="margin-bottom:30px;" src="/assets/frontend/images/bottom2.jpg">
-        </div> 
 
+    @foreach($exhibitorArray as $key=>$exhibitorGroup)
+        @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
         <div class="col-md-6 col-lg-6">
-            <h3>Silver Package</h3>
+            <h3>{{$key}}</h3>
             <hr>
-            <img src="/assets/frontend/images/bottom3.jpg">
-        </div> 
-        <div class="col-md-6">
-            <h3>Bronze Package</h3>
-            <hr>
-            <img src="/assets/frontend/images/bottom4.jpg">
-        </div>  -->
+            @foreach($exhibitorGroup as $exhibitor)
+                <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
+            @endforeach
+        </div>
+        @endif 
+    @endforeach
     </div>
     <!-- Footer -->
     </div>
@@ -155,6 +137,7 @@ var x = setInterval(function() {
 
 <script>
 $(document).ready(function() {
+    // //start show more/less in current page
     // Configure/customize these variables.
     var showChar = 414;  // How many characters are shown by default
     // var ellipsestext = "...";
@@ -180,7 +163,7 @@ $(document).ready(function() {
         }
  
     });
- 
+    
     $(".morelink").click(function(){
         // var x = document.getElementsByClassName("morecontent");
         if($(this).hasClass("less")) {
@@ -196,10 +179,7 @@ $(document).ready(function() {
 
         return false;
     });
-
-    // $("#search_term").autocomplete({
-    //     source: "/autocomplete"
-    // });
+    // //end shore more/less in current page
 });
 </script>
 

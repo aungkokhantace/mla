@@ -94,4 +94,12 @@ class ExhibitorRepository implements ExhibitorRepositoryInterface
         return $countries;
     }
 
+    public function getConfirmedExhibitors()
+    {
+        $exhibitors = ExhibitionExhibitor::whereNull('deleted_at')
+                                            ->where('status',2) //status 2 is confirm
+                                            ->get();
+        return $exhibitors;
+    }
+
 }

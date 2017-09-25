@@ -35,6 +35,10 @@
                             @endif
                         </td>
                     </tr>
+                    <tr>
+                        <td><label>Logo</label></td>
+                        <td><img class="detail-sponsor-logo" src="{{$exhibitor->image}}"></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>

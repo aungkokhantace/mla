@@ -58,3 +58,10 @@
     background-size: cover;
     height: 150px;
 }
+
+/* for displaying sponsor logos in frontend */
+.detail-sponsor-logo{
+    max-width:100px;
+    max-height:100px;
+    margin:5px;
+  }

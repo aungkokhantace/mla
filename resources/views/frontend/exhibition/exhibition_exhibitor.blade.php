@@ -58,8 +58,9 @@
                                     <div class="col-md-4">
                                         <select id="business_type" name="business_type" class="form-control">
                                             <option value="" selected disabled>Select Business Type</option>
-                                            <option value="1">Option one</option>
-                                            <option value="2">Option two</option>
+                                            @foreach($sponsorPackages as $sponsorPackage)
+                                            <option value="{{$sponsorPackage->id}}">{{$sponsorPackage->name}}</option>
+                                            @endforeach
                                         </select>
                                         <p class="text-danger" id="business_type_error">{{$errors->first('business_type')}}</p>
                                     </div>

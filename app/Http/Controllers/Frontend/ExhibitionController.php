@@ -230,7 +230,10 @@ class ExhibitionController extends Controller
     }
 
     public function exhibition_exhibitor(){
-        return view('frontend.exhibition.exhibition_exhibitor');
+        $sponsorPackageTypeRepo  = new SponsorPackageTypeRepository();
+        $sponsorPackages         = $sponsorPackageTypeRepo->getArrays();
+        return view('frontend.exhibition.exhibition_exhibitor')
+                    ->with('sponsorPackages',$sponsorPackages);
     }
 
     public function exhibition_exhibitor_store(ExhibitorEntryFormRequest $request){

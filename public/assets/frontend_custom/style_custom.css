@@ -190,7 +190,12 @@ img[src*="data:image/"] {
 
 /* for displaying sponsor logos in frontend */
 .sponsor-logo-frontend{
-  max-width:100px;
-  max-height:100px;
-  margin:5px;
+  max-width:75px;
+  max-height:75px;
+  margin:5px 15px 5px 15px;
+}
+
+.default-sponsor-image{
+  margin-bottom:5px;
+  margin-left:15px;
 }

@@ -21,6 +21,9 @@
                     <div class="col-md-12 col-lg-12">
                     <h3>{{$key}}</h3>
                     <hr>
+                    @if($key == "Platinum Package")
+                        <img class="default-sponsor-image" src="assets/frontend/images/bottom1.jpg">
+                    @endif
                     @foreach($exhibitorGroup as $exhibitor)
                         <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
                     @endforeach

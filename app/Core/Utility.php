@@ -138,6 +138,19 @@ class Utility
         return $registrationPrefix;        
     }
 
+     //returns prefix of exhibitor registration number if it is set up in core_configs, and returns "EXH_REG_000" if not set up
+     public static function getExhibitorRegistrationNumberPrefix(){
+        $exhRegPrefixRaw   = DB::table('core_configs')->where('code','=','SETTING_EXHIBITOR_REGISTRATION_NUMBER')->first();
+        if(isset($exhRegPrefixRaw) && count($exhRegPrefixRaw) > 0){
+            $exhRegistrationPrefix      = $exhRegPrefixRaw->value;
+        }
+        else{
+            // return 'EXH_REG_000' as default value
+            $exhRegistrationPrefix = 'EXH_REG_000';
+        }
+        return $exhRegistrationPrefix;        
+    }
+
     //sends email with parameters in mail blade
     public static function sendEmailWithParameters($template,$params,$emails,$subject){
         Mail::send($template, $params, function($message) use($emails,$subject)

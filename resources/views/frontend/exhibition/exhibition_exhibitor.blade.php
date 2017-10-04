@@ -18,10 +18,37 @@
 
                                 <!-- Text input-->
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="name">Name</label>
+                                    <label class="col-md-4 control-label" for="first_name">First Name</label>
                                     <div class="col-md-4">
-                                        <input id="name" name="name" type="text" placeholder="" class="form-control input-md">
-                                        <p class="text-danger" id="name_error">{{$errors->first('name')}}</p>
+                                        <input id="first_name" name="first_name" type="text" placeholder="Enter Your First Name" class="form-control input-md">
+                                        <p class="text-danger" id="first_name_error">{{$errors->first('first_name')}}</p>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="middle_name">Middle Name</label>
+                                    <div class="col-md-4">
+                                        <input id="middle_name" name="middle_name" type="text" placeholder="Enter Your Middle Name" class="form-control input-md">
+                                        <p class="text-danger" id="middle_name_error">{{$errors->first('middle_name')}}</p>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="last_name">Last Name</label>
+                                    <div class="col-md-4">
+                                        <input id="last_name" name="last_name" type="text" placeholder="Enter Your Last Name" class="form-control input-md">
+                                        <p class="text-danger" id="last_name_error">{{$errors->first('first_name')}}</p>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="organization">Organization</label>
+                                    <div class="col-md-4">
+                                        <input id="organization" name="organization" type="text" placeholder="Enter Your Organization" class="form-control input-md">
+                                        <p class="text-danger" id="organization_error">{{$errors->first('organization')}}</p>
                                     </div>
                                 </div>
 
@@ -29,7 +56,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="address">Address</label>
                                     <div class="col-md-4">
-                                        <textarea class="form-control" id="address" name="address"></textarea>
+                                        <textarea class="form-control" id="address" name="address" placeholder="Enter Your Address"></textarea>
                                         <p class="text-danger" id="address_error">{{$errors->first('address')}}</p>
                                     </div>
                                 </div>
@@ -38,7 +65,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="telephone">Telephone</label>
                                     <div class="col-md-4">
-                                        <input id="ph_no" name="ph_no" type="text" placeholder="" class="form-control input-md">
+                                        <input id="ph_no" name="ph_no" type="text" placeholder="Enter Your Telephone" class="form-control input-md">
                                         <p class="text-danger" id="ph_no_error">{{$errors->first('ph_no')}}</p>
                                     </div>
                                 </div>
@@ -47,7 +74,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="email">Email</label>
                                     <div class="col-md-4">
-                                        <input id="email" name="email" type="email" placeholder="" class="form-control input-md">
+                                        <input id="email" name="email" type="email" placeholder="Enter Your Email" class="form-control input-md">
                                         <p class="text-danger" id="email_error">{{$errors->first('email')}}</p>
                                     </div>
                                 </div>
@@ -241,9 +268,27 @@
 
             var valid = true;
 
-            $("#name_error").text("");
-            var name = $("#name").val();
-            if (name == "") {
+            $("#first_name_error").text("");
+            var first_name = $("#first_name").val();
+            if (first_name == "") {
+                valid = false;
+            }
+
+            // $("#middle_name_error").text("");
+            // var middle_name = $("#middle_name").val();
+            // if (middle_name == "") {
+            //     valid = false;
+            // }
+
+            // $("#last_name_error").text("");
+            // var last_name = $("#last_name").val();
+            // if (last_name == "") {
+            //     valid = false;
+            // }
+
+            $("#organization").text("");
+            var organization = $("#organization").val();
+            if (organization == "") {
                 valid = false;
             }
 
@@ -289,7 +334,10 @@
 
             $('#frm_exhibition_exhibitor').validate({
                 rules: {
-                    name:'required',
+                    first_name:'required',
+                    // middle_name:'required',
+                    // last_name:'required',
+                    organization:'required',
                     address:'required',
                     ph_no:{required:true,number:true},
                     email:{required:true,email:true},
@@ -297,7 +345,10 @@
                     image:'required'
                 },
                 messages: {
-                    name:'Name is required',
+                    first_name:'First Name is required',
+                    // middle_name:'Middle Name is required',
+                    // last_name:'Last Name is required',
+                    organization:'Organization is required',
                     address:'Address is required',
                     ph_no:{required:'Phone is required',number:'Only number accepted'},
                     email:{required:'Email is required',email:'Please input email format.'},

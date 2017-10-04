@@ -35,6 +35,7 @@ class ConfigController extends Controller
                 $configs['SETTING_COUNTDOWN_DATE'] = "";
                 $configs['SETTING_LATEST_NEWS_COUNT'] = "";
                 $configs['SETTING_REGISTRATION_NUMBER'] = "";
+                $configs['SETTING_EXHIBITOR_REGISTRATION_NUMBER'] = "";
 
                 return view('core.config.config')->with('configs', $configs);
             }
@@ -66,6 +67,10 @@ class ConfigController extends Controller
                 $tempConfigs["SETTING_REGISTRATION_NUMBER"] = "";
             }
             
+            if(!array_key_exists("SETTING_EXHIBITOR_REGISTRATION_NUMBER",$tempConfigs)){
+                $tempConfigs["SETTING_EXHIBITOR_REGISTRATION_NUMBER"] = "";
+            }
+            
             if(!array_key_exists("SETTING_EARLY_BIRD_REG",$tempConfigs)){
                 $tempConfigs["SETTING_EARLY_BIRD_REG"] = "";
             }
@@ -88,6 +93,7 @@ class ConfigController extends Controller
             $SETTING_COUNTDOWN_DATE         = date('Y-m-d',strtotime($SETTING_COUNTDOWN_DATE_RAW));
             $SETTING_LATEST_NEWS_COUNT      = Input::get('SETTING_LATEST_NEWS_COUNT');
             $SETTING_REGISTRATION_NUMBER    = Input::get('SETTING_REGISTRATION_NUMBER');
+            $SETTING_EXHIBITOR_REGISTRATION_NUMBER    = Input::get('SETTING_EXHIBITOR_REGISTRATION_NUMBER');
 
             $SETTING_EARLY_BIRD_REG_RAW     = Input::get('SETTING_EARLY_BIRD_REG');
             $SETTING_EARLY_BIRD_REG         = date('Y-m-d',strtotime($SETTING_EARLY_BIRD_REG_RAW));
@@ -119,6 +125,9 @@ class ConfigController extends Controller
                 
                 DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_REGISTRATION_NUMBER'");
                 $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_REGISTRATION_NUMBER','SETTING','$SETTING_REGISTRATION_NUMBER','Registration No. Prefix Format',$loginUserId,'$updated_at')");
+                
+                DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_EXHIBITOR_REGISTRATION_NUMBER'");
+                $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_EXHIBITOR_REGISTRATION_NUMBER','SETTING','$SETTING_EXHIBITOR_REGISTRATION_NUMBER','Exhibitor Registration No. Prefix Format',$loginUserId,'$updated_at')");
 
                 DB::statement("DELETE FROM `$this->tbConfig` WHERE `code` = 'SETTING_EARLY_BIRD_REG'");
                 $result = DB::statement("INSERT INTO `$this->tbConfig` (code,type,value,description,updated_by,updated_at) VALUES ('SETTING_EARLY_BIRD_REG','SETTING','$SETTING_EARLY_BIRD_REG','Earlybird Registration Deadline',$loginUserId,'$updated_at')");

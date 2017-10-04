@@ -157,10 +157,47 @@ class ExhibitionController extends Controller
             $exhibitionExhibitors = ExhibitionExhibitor::find($id);
             $email = $exhibitionExhibitors->email;
 
+            //get params for email template
+            $first_name     = $exhibitionExhibitors->first_name;
+            $middle_name    = $exhibitionExhibitors->middle_name;
+            $last_name      = $exhibitionExhibitors->last_name;
+            $organization   = $exhibitionExhibitors->organization;
+            $user_email     = $exhibitionExhibitors->email;
+
+            $type           = $exhibitionExhibitors->business_type;
+
+            //start calculation for amount            
+            //get all package types
+            $sponsorPackageTypes = DB::select('SELECT * FROM sponsor_package_type');
+
+            //get package type of current exhibitor by id
+            $exhibitorPackageType = DB::select("SELECT * FROM sponsor_package_type WHERE `id` = $type LIMIT 1");
+            $exhibitorPackageTypeObj = $exhibitorPackageType[0]; //only one record
+            
+            $fee_amount = $exhibitorPackageTypeObj->amount;
+
+            //add currency units
+            if($exhibitorPackageTypeObj->currency == "usd"){
+                $currency_unit = "$ ";
+            }
+            else{
+                $currency_unit = "MMK ";
+            }
+            //end calculation for amount
+
+            //continue params for email template
+            $amount     = $currency_unit.$fee_amount;
+            $category   = $exhibitorPackageTypeObj->name;
+            //end params for email template->email;
+
             //start sending email to user
             $template = "backend/exhibitionconfirmuseremail/exhibitionconfirmuseremail";
-            $subject = "Hello World";
-            Utility::sendEmail($template, $email, $subject);
+            $subject = "CONSAL XVII Registration Payment Confirmation";
+
+            //build param array for email
+            $email_param_array = ['first_name'=>$first_name, 'middle_name'=>$middle_name, 'last_name'=>$last_name, 'organization'=>$organization, 'category'=>$category, 'user_email'=>$user_email, 'amount'=>$amount];
+            
+            Utility::sendEmailWithParameters($template, $email_param_array, $email, $subject);
             //end sending email to user
 
             //start sending email to admin
@@ -240,7 +277,10 @@ class ExhibitionController extends Controller
         
         $request->validate();
         
-        $name = Input::get('name');
+        $first_name = Input::get('first_name');
+        $middle_name = Input::get('middle_name');
+        $last_name = Input::get('last_name');
+        $organization = Input::get('organization');
         $address = Input::get('address');
         $ph_no = Input::get('ph_no');
         $email = Input::get('email');
@@ -264,7 +304,10 @@ class ExhibitionController extends Controller
         // End saving image
 
         $exhibitorObj = new ExhibitionExhibitor();
-        $exhibitorObj->name             = $name;
+        $exhibitorObj->first_name   = $first_name;
+        $exhibitorObj->middle_name  = $middle_name;
+        $exhibitorObj->last_name    = $last_name;
+        $exhibitorObj->organization = $organization;
         $exhibitorObj->address      = $address;
         $exhibitorObj->ph_no        = $ph_no;
         $exhibitorObj->email        = $email;
@@ -280,10 +323,14 @@ class ExhibitionController extends Controller
             $userEmailArr = array();
             $userEmailArr[0] = $email;
 
+            $regPrefix      = Utility::getExhibitorRegistrationNumberPrefix();
+            $resultObjId    = $result['resultObj']->id;
+
             if(isset($userEmailArr) && count($userEmailArr)>0){
                 $template = "backend/exhibitionsubmituseremail/exhibitionsubmituseremail";
                 $email = $userEmailArr;
-                $subject = "Hello World";
+                // $subject = "CONSAL XVII Exhibit Registration Confirmation:  xxxx (registration number)";
+                $subject = "CONSAL XVII Exhibit Registration Confirmation:  ".$regPrefix.$resultObjId." (registration number)";
 
                 Utility::sendEmail($template,$email,$subject);
             }

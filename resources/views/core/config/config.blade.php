@@ -77,6 +77,16 @@
 
     <div class="row">
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <label for="SETTING_EXHIBITOR_REGISTRATION_NUMBER">Exhibitor Registration No. Prefix Format</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <input type="text" required class="form-control" id="SETTING_EXHIBITOR_REGISTRATION_NUMBER" name="SETTING_EXHIBITOR_REGISTRATION_NUMBER" placeholder="Enter Exhibitor Registration No. Prefix Format" value="{{ isset($configs)? $configs['SETTING_EXHIBITOR_REGISTRATION_NUMBER']:Request::old('SETTING_EXHIBITOR_REGISTRATION_NUMBER') }}"/>
+            <p class="text-danger">{{$errors->first('SETTING_EXHIBITOR_REGISTRATION_NUMBER')}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
             <label for="SETTING_EARLY_BIRD_REG">Earlybird Registration Deadline</label>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">

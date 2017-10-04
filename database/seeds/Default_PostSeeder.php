@@ -1843,7 +1843,7 @@ Email:  hlaingyu2010@gmail.com</p>
             'status' =>'active', 'url' =>'', 'title' =>'PROGRAM LIBRARY', 'post_order' =>1, 'pages_id' =>13, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
             ['name'=>'REGISTRATION FEE','description'=>'','content'=>'<div class="col-md-9 reg_fee_payment" id="reg_fee_payment">
-            <h2>PROGRAM &gt;&gt; REGISTRATION FEES AND PAYMENTS</h2>
+            <h2>REGISTRATION &gt;&gt; REGISTRATION FEES AND PAYMENTS</h2>
 
 <h4>Registration Information</h4>
 <p>Any person, delegate, accompanying person, student, media representative, speaker, or exhibitor is considered an attendee.</p>
@@ -1916,7 +1916,7 @@ Email:  hlaingyu2010@gmail.com</p>
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION FEE', 'post_order' =>1, 'pages_id' =>14, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
             ['name'=>'REGISTRATION CANCELLATION','description'=>'','content'=>'
-            <h2>PROGRAM >> CANCELLATIONS</h2>
+            <h2>REGISTRATION >> CANCELLATIONS</h2>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -1945,13 +1945,13 @@ Email:  hlaingyu2010@gmail.com</p>
             </p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION CANCELLATION', 'post_order' =>1, 'pages_id' =>15, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
-            ['name'=>'REGISTRATION LETTER','description'=>'','content'=>'<h2>PROGRAM &gt;&gt; LETTER OF INVITATION</h2>
+            ['name'=>'REGISTRATION LETTER','description'=>'','content'=>'<h2>REGISTRATION &gt;&gt; LETTER OF INVITATION</h2>
             <h5><b><i>Letter of Invitation</i></b></h5>
             <p>Individuals requiring an official Letter of Invitation can request one through the Organizing Committee: <span class="red_span"><b>info@consalxvii.org</b></span></p>
             <p>The Letter of Invitation does not financially obligate the Congress organizers in any way. All expenses incurred in relation to the Congress are the sole responsibility of the attendee.</p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION LETTER', 'post_order' =>1, 'pages_id' =>16, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
         
-            ['name'=>'REGISTRATION VISA','description'=>'','content'=>'<h2>PROGRAM &gt;&gt; VISA REQUIREMENTS</h2>
+            ['name'=>'REGISTRATION VISA','description'=>'','content'=>'<h2>REGISTRATION &gt;&gt; VISA REQUIREMENTS</h2>
             <p>
             It is the sole responsibility of the attendee to take care of his / her visa requirements. Attendees who require an entry visa must allow sufficient time for the application procedure. Attendees should contact the nearest embassy or consulate to determine the appropriate timing of their visa applications. It is recommended to apply for a visa at least 3 months in advance of the Congress. 
             </p>',

@@ -24,7 +24,9 @@ class ExhibitorEntryFormRequest extends Request
     public function rules()
     {
         return [
-            "name" => "required",
+            "first_name" => "required",
+            // "last_name" => "required",
+            "organization" => "required",
             "email" => "required",
             "address" => "required",
             "ph_no" => "required",
@@ -34,7 +36,9 @@ class ExhibitorEntryFormRequest extends Request
     }
     public function messages(){
         return [
-            "name.required" => "Name is required",
+            "first_name.required" => "First Name is required",
+            // "last_name.required" => "Last Name is required",
+            "organization.required" => "Organization is required",
             "email.required" => "Email is required",
             "address.required" => "Address is required",
             "ph_no.required" => "Phone is required",

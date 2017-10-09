@@ -164,6 +164,7 @@ class ProgramController extends Controller
     {
         $req->validate();
 
+        $title = Input::get('title');
         $first_author = Input::get('first_author');
         $email = Input::get('email');
         $address = Input::get('address');
@@ -172,14 +173,13 @@ class ProgramController extends Controller
         $abstract = Input::get('abstract');
 
         $programCallObj = new ProgramCall();
+        $programCallObj->title = $title;
         $programCallObj->first_author = $first_author;
         $programCallObj->email = $email;
         $programCallObj->address = $address;
         $programCallObj->second_author = $second_author;
         $programCallObj->third_author = $third_author;
         $programCallObj->abstract = $abstract;
-
-
 
         $result = $this->programCallRepository->create($programCallObj);
 
@@ -193,9 +193,14 @@ class ProgramController extends Controller
             if(isset($userEmailArr) && count($userEmailArr)>0){
                 $template = "backend/programcallsubmituseremail/programcallsubmituseremail";
                 $email = $userEmailArr;
-                $subject = "Hello World";
+                $subject = "CONSAL XVII Programme paper submission confirmation auto-reply";
 
-                Utility::sendEmail($template,$email,$subject);
+                // Utility::sendEmail($template,$email,$subject);
+
+                 //build param array for email
+                 $email_param_array = ['title'=>$title, 'first_author'=>$first_author, 'second_author'=>$second_author, 'third_author'=>$third_author];
+                 
+                 Utility::sendEmailWithParameters($template, $email_param_array, $email, $subject);
             }
             //end sending email to user
 
@@ -377,7 +382,7 @@ class ProgramController extends Controller
 
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
-
+        
         return view('frontend.program.program_poster')
             ->with('page',$page)
             ->with('posts',$posts);
@@ -399,23 +404,25 @@ class ProgramController extends Controller
         $programPosterObj->title = $title;
         $programPosterObj->author = $author;
 
-
-
         $result = $this->programPosterRepository->create($programPosterObj);
-
 
         if ($result['aceplusStatusCode'] == ReturnMessage::OK) {
 
             //start sending email to user
             $userEmailArr = array();
             $userEmailArr[0] = $email;
-
+            
             if(isset($userEmailArr) && count($userEmailArr)>0){
                 $template = "backend/programpostersubmituseremail/programpostersubmituseremail";
                 $email = $userEmailArr;
-                $subject = "Hello World";
+                $subject = "CONSAL XVII Poster submission confirmation auto-reply";
 
-                Utility::sendEmail($template,$email,$subject);
+                // Utility::sendEmail($template,$email,$subject);
+
+                //build param array for email
+                $email_param_array = ['title'=>$title, 'author'=>$author];
+                
+                Utility::sendEmailWithParameters($template, $email_param_array, $email, $subject);
             }
             //end sending email to user
 

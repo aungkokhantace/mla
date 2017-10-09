@@ -16,12 +16,21 @@
                     {{csrf_field()}}
                     <fieldset>
 
-                        <!-- Textarea -->
+                        <!-- Text input-->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="address">Address</label>
+                                <label class="col-md-4 control-label" for="title">Title</label>
+                                <div class="col-md-4">
+                                    <input id="title" name="title" type="text" placeholder="Enter Title" class="form-control">
+                                    <p class="text-danger">{{$errors->first('title')}}</p>
+                                </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="author">Author Affiliation</label>
                             <div class="col-md-4">
-                                <textarea class="form-control" id="address" name="address"></textarea>
-                                <p class="text-danger">{{$errors->first('address')}}</p>
+                                <input class="form-control" id="author" name="author" type="text" placeholder="Enter Author Affiliation">
+                                <p class="text-danger">{{$errors->first('author')}}</p>
                             </div>
                         </div>
 
@@ -29,8 +38,18 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="email">Email</label>
                             <div class="col-md-4">
-                                <input id="email" name="email" type="email" placeholder="" class="form-control input-md">
+                                <input id="email" name="email" type="email" placeholder="Enter Email" class="form-control input-md">
                                 <p class="text-danger">{{$errors->first('email')}}</p>
+                            </div>
+                        </div>
+
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="address">Address</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" id="address" name="address" placeholder="Enter Address"></textarea>
+                                <p class="text-danger">{{$errors->first('address')}}</p>
                             </div>
                         </div>
 
@@ -38,29 +57,11 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="description">Description</label>
                             <div class="col-md-4">
-                                <textarea class="form-control" id="description" name="description"></textarea>
+                                <textarea class="form-control" id="description" name="description" placeholder="Enter Description"></textarea>
                                 <p class="text-danger">{{$errors->first('description')}}</p>
                             </div>
                         </div>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="title">Title</label>
-                            <div class="col-md-4">
-                                <input id="title" name="title" type="text" placeholder="" class="form-control">
-                                <p class="text-danger">{{$errors->first('title')}}</p>
-                            </div>
-                        </div>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="author">Author Affiliation</label>
-                            <div class="col-md-4">
-                                <input class="form-control" id="author" name="author" type="text" placeholder="">
-                                <p class="text-danger">{{$errors->first('author')}}</p>
-                            </div>
-                        </div>
-
+                        
                         <!-- Button -->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="submit"></label>

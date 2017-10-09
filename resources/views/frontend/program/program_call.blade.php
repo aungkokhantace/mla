@@ -17,9 +17,18 @@
                     <fieldset>
                         <!-- Text input-->
                         <div class="form-group">
+                            <label class="col-md-4 control-label" for="title">Title</label>
+                            <div class="col-md-4">
+                                <input id="title" name="title" type="text" placeholder="Enter Title" class="form-control input-md">
+                                <p class="text-danger">{{$errors->first('title')}}</p>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
                             <label class="col-md-4 control-label" for="first_author">1st Author Affiliation</label>
                             <div class="col-md-4">
-                                <input id="first_author" name="first_author" type="text" placeholder="" class="form-control input-md">
+                                <input id="first_author" name="first_author" type="text" placeholder="Enter 1st Author Affiliation" class="form-control input-md">
                                 <p class="text-danger">{{$errors->first('first_author')}}</p>
                             </div>
                         </div>
@@ -28,7 +37,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="email">Email</label>
                             <div class="col-md-4">
-                                <input id="email" name="email" type="email" placeholder="" class="form-control input-md">
+                                <input id="email" name="email" type="email" placeholder="Enter Email" class="form-control input-md">
                                 <p class="text-danger">{{$errors->first('email')}}</p>
                             </div>
                         </div>
@@ -37,7 +46,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="title">Address</label>
                             <div class="col-md-4">
-                                <textarea class="form-control" id="address" name="address"></textarea>
+                                <textarea class="form-control" id="address" name="address" placeholder="Enter Address"></textarea>
                                 <p class="text-danger">{{$errors->first('address')}}</p>
                             </div>
                         </div>
@@ -46,7 +55,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="second_author">2nd Author</label>
                             <div class="col-md-4">
-                                <input id="second_author" name="second_author" type="text" placeholder="" class="form-control input-md">
+                                <input id="second_author" name="second_author" type="text" placeholder="Enter 2nd Author" class="form-control input-md">
                                 <p class="text-danger">{{$errors->first('second_author')}}</p>
                             </div>
                         </div>
@@ -55,7 +64,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="third_author">3rd Author</label>
                             <div class="col-md-4">
-                                <input id="third_author" name="third_author" type="text" placeholder="" class="form-control input-md">
+                                <input id="third_author" name="third_author" type="text" placeholder="Enter 3rd Author" class="form-control input-md">
                                 <p class="text-danger">{{$errors->first('third_author')}}</p>
                             </div>
                         </div>
@@ -64,7 +73,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="abstract">Abstract</label>
                             <div class="col-md-4">
-                                <textarea class="form-control" id="abstract" name="abstract"></textarea>
+                                <textarea class="form-control" id="abstract" name="abstract" placeholder="Enter Abstract"></textarea>
                                 <p class="text-danger">{{$errors->first('abstract')}}</p>
                             </div>
                         </div>
@@ -184,6 +193,11 @@
 
             var valid = true;
 
+            var title = $("#title").val();
+            if (title == "") {
+                valid = false;
+            }
+
             var first_author = $("#first_author").val();
             if (first_author == "") {
                 valid = false;
@@ -223,6 +237,7 @@
 
             $('#frm_program_call').validate({
                 rules: {
+                    title:'required',
                     first_author:'required',
                     email:{required:true,email:true},
                     address:'required',
@@ -231,6 +246,7 @@
                     abstract:'required'
                 },
                 messages: {
+                    title:'Title is required',
                     first_author:'1st Author Affiliation is required',
                     email:{required:'Email is required',email:'Please input email format.'},
                     address:'Address is required',

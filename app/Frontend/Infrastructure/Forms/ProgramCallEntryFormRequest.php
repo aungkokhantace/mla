@@ -24,6 +24,7 @@ class ProgramCallEntryFormRequest extends Request
     public function rules()
     {
         return [
+            "title" => "required",
             "first_author" => "required",
             "email" => "required",
             "address" => "required",
@@ -34,6 +35,7 @@ class ProgramCallEntryFormRequest extends Request
     }
     public function messages(){
         return [
+            "title.required" => "1st Author Affiliation is required",
             "first_author.required" => "1st Author Affiliation is required",
             "email.required" => "Email is required",
             "address.required" => "Address is required",

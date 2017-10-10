@@ -216,9 +216,10 @@ class ProgramController extends Controller
                 array_push($adminEmailArr,$superRaw->email);
             }
             if(isset($adminEmailArr) && count($adminEmailArr)>0){
-                $template = "backend/programcallsubmitadminemail/programcallsubmitadminemail";
+                // $template = "backend/programcallsubmitadminemail/programcallsubmitadminemail";
+                $template = "backend/adminemail/adminemail";
                 $email = $adminEmailArr;
-                $subject = "Hello World";
+                $subject = "Notification Email";
 
                 Utility::sendEmail($template,$email,$subject);
             }
@@ -438,9 +439,10 @@ class ProgramController extends Controller
                 array_push($adminEmailArr,$superRaw->email);
             }
             if(isset($adminEmailArr) && count($adminEmailArr)>0){
-                $template = "backend/programpostersubmitadminemail/programpostersubmitadminemail";
+                // $template = "backend/programpostersubmitadminemail/programpostersubmitadminemail";
+                $template = "backend/adminemail/adminemail";
                 $email = $adminEmailArr;
-                $subject = "Hello World";
+                $subject = "Notification Email";
 
                 Utility::sendEmail($template,$email,$subject);
             }

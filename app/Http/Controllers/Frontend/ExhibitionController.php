@@ -348,9 +348,10 @@ class ExhibitionController extends Controller
                 array_push($adminEmailArr,$superRaw->email);
             }
             if(isset($adminEmailArr) && count($adminEmailArr)>0){
-                $template = "backend/exhibitionsubmitadminemail/exhibitionsubmitadminemail";
+                // $template = "backend/exhibitionsubmitadminemail/exhibitionsubmitadminemail";
+                $template = "backend/adminemail/adminemail";
                 $email = $adminEmailArr;
-                $subject = "Hello World";
+                $subject = "Notification Email";
 
                 Utility::sendEmail($template,$email,$subject);
             }

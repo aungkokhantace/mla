@@ -15,22 +15,67 @@
             @endforeach -->
 
             <h2>EXHIBITION &amp; SPONSORSHIP &gt;&gt; SPONSORS AND SUPPORTERS </h2>
-               @foreach($exhibitorArray as $key=>$exhibitorGroup)
-                @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
-                <div class="row">
-                    <div class="col-md-12 col-lg-12">
-                    <h3>{{$key}}</h3>
-                    <hr>
+                @foreach($exhibitorArray as $key=>$exhibitorGroup)
+                    @if($key == "Platinum Package")
+                        <!-- Display four logos as default -->
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <h3>{{$key}}</h3>
+                                <hr>
+                                <img class="default-sponsor-image" src="assets/frontend/images/bottom1.jpg">
+
+                                <!-- append logos from database -->
+                                @foreach($exhibitorGroup as $exhibitor)
+                                    <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
+                                @endforeach
+                            </div>
+                        </div>
+
+                    <!-- Display other packages as normal -->
+                    @else
+                        @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <h3>{{$key}}</h3>
+                                <hr>
+                                
+                                @foreach($exhibitorGroup as $exhibitor)
+                                    <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
+                    @endif
+
+                    <!-- @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
+                    <div class="col-md-6 col-lg-6">
+                        <h3>{{$key}}</h3>
+                        <hr>
+                        
+                        @foreach($exhibitorGroup as $exhibitor)
+                            <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
+                        @endforeach
+                    </div>
+                    @endif  -->
+                @endforeach
+
+               <!-- @foreach($exhibitorArray as $key=>$exhibitorGroup)
                     @if($key == "Platinum Package")
                         <img class="default-sponsor-image" src="assets/frontend/images/bottom1.jpg">
                     @endif
-                    @foreach($exhibitorGroup as $exhibitor)
-                        <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
-                    @endforeach
+                    @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                        <h3>{{$key}}</h3>
+                        <hr>
+                        
+                        @foreach($exhibitorGroup as $exhibitor)
+                            <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
+                        @endforeach
+                        </div>
                     </div>
-                </div>
-                @endif 
-            @endforeach
+                    @endif 
+                @endforeach -->
            <br> 
 
         </div>

@@ -122,13 +122,253 @@
                 <br/> 
                 <h2>Bank Account Information</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
+                    Payment can be made by:
                 </p>
+                <div class="solid-border">
+                    <p class="big-red-text">Bank Transfer</p>
+                    <p><b>For International (US Dollar currency)</b><p>
+                    <p>Bank Name: Cooperative Bank Limited (PLC)</p>
+                    <p>Bank Account Holder: Myanmar Library Association</p>
+                    <p><b>Account Number</b> :  0010101200726548</p>
+                    <p><b>SWIFT-CODE</b> :  CPOBMMMY</p>
+                    <p><b>Bank Address</b> :  No. 334/336, corner of 23 st, & Strand Rd, Latha Township, Yangon, Myanmar</p>
+                    <p>See <a href="#">Eligible Transferring Banks</a></p>
+                    <p><b>For local (Myanmar Currency)</b><p>
+                    <p>Bank Name:  Kanbawza Bank</p>
+                    <p>Bank Account Holder: Myanmar Library Association</p>
+                    <p><b>Account Number</b> :  133-302-06002875101</p>
+                    <p><b>Bank Address</b> :  New University Avenue Road, Yankin TSP, Yangon, Myanmar</p>                    
+                </div>
+                <br>
+                <p>
+                Please make sure that your first and last names and CONSAL XVII are mentioned on the bank transfer.
+Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
+                </p>
+                <br>
+                <p>Email: <a href="http://registration@consalxvii.org">registration@consalxvii.org</a></p>
+                <p>Tel: 95 67 418427; 418426</p>
+                <p>Fax: 95 67 418426</p>
+                <br>
+                <p>Payment by bank transfer is only possible until 29 April 2017. </p>
+                <p>Note: all bank transfer fees are covered by the applicant’s account and not to charge for the receiver account.</p>
+
+                <h2>Eligible Transferring Banks</h2>
+                <!-- Start eligible banks -->
+                <div class="tg-wrap">                    
+                    <table class="tg">
+                        <colgroup>
+                        <col style="width: 30px">
+                        <col style="width: 421px">
+                        <col style="width: 277px">
+                        <col style="width: 204px">
+                        </colgroup>
+                        <tr>
+                            <th class="tg-yw4l">No.</th>
+                            <th class="tg-yw4l">Bank Name</th>
+                            <th class="tg-yw4l">Currency</th>
+                            <th class="tg-yw4l">Country</th>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">1</td>
+                            <td class="tg-yw4l">United Overseas Bank (UOB)</td>
+                            <td class="tg-yw4l">USD, EUR, SGD</td>
+                            <td class="tg-yw4l">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">2</td>
+                            <td class="tg-yw4l">DBS Bank</td>
+                            <td class="tg-yw4l">USD, EUR, SGD<br></td>
+                            <td class="tg-yw4l">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">3</td>
+                            <td class="tg-yw4l">First Gulf Bank (FGB)</td>
+                            <td class="tg-yw4l">SGD</td>
+                            <td class="tg-yw4l">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">4</td>
+                            <td class="tg-yw4l">OCBC Bank</td>
+                            <td class="tg-yw4l">USD, EUR, SGD</td>
+                            <td class="tg-yw4l">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">5</td>
+                            <td class="tg-yw4l">Bank Negara Indonesia-PT</td>
+                            <td class="tg-yw4l">USD, SGD</td>
+                            <td class="tg-yw4l">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">6</td>
+                            <td class="tg-yw4l">Standard Chartered Bank</td>
+                            <td class="tg-yw4l">SGD</td>
+                            <td class="tg-yw4l">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">7</td>
+                            <td class="tg-yw4l">May Bank</td>
+                            <td class="tg-yw4l">USD</td>
+                            <td class="tg-yw4l">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">8</td>
+                            <td class="tg-yw4l">CIMB Bank</td>
+                            <td class="tg-yw4l">USD, EUR, SGD</td>
+                            <td class="tg-yw4l">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">9</td>
+                            <td class="tg-yw4l">BTMU</td>
+                            <td class="tg-yw4l">SGD</td>
+                            <td class="tg-yw4l">Singapore</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">10</td>
+                            <td class="tg-yw4l">Bangkok Bank</td>
+                            <td class="tg-yw4l">USD, EUR, THB</td>
+                            <td class="tg-yw4l">Thailand</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">11</td>
+                            <td class="tg-yw4l">Kasikorn Bank</td>
+                            <td class="tg-yw4l">USD, EUR, THB</td>
+                            <td class="tg-yw4l">Thailand</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">12</td>
+                            <td class="tg-yw4l">Siam Commercial Bank</td>
+                            <td class="tg-yw4l">USD, EUR, THB</td>
+                            <td class="tg-yw4l">Thailand</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">13</td>
+                            <td class="tg-yw4l">Thanachartbank</td>
+                            <td class="tg-yw4l">USD, EUR, THB</td>
+                            <td class="tg-yw4l">Thailand</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">14</td>
+                            <td class="tg-yw4l">CIMB Bank</td>
+                            <td class="tg-yw4l">USD, EUR, THB</td>
+                            <td class="tg-yw4l">Thailand</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">15</td>
+                            <td class="tg-yw4l">Krung Thai Bank</td>
+                            <td class="tg-yw4l">USD, THB</td>
+                            <td class="tg-yw4l">Thailand</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">16</td>
+                            <td class="tg-yw4l">Commerz Bank</td>
+                            <td class="tg-yw4l">EUR</td>
+                            <td class="tg-yw4l">Germany</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">17</td>
+                            <td class="tg-yw4l">BTMU</td>
+                            <td class="tg-yw4l">USD, JPY</td>
+                            <td class="tg-yw4l">Japan</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">18</td>
+                            <td class="tg-yw4l">ICBC Bank</td>
+                            <td class="tg-yw4l">USD</td>
+                            <td class="tg-yw4l">China</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">19</td>
+                            <td class="tg-yw4l">First Commercial Bank</td>
+                            <td class="tg-yw4l">USD</td>
+                            <td class="tg-yw4l">China / Taiwan</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">20</td>
+                            <td class="tg-yw4l">Cathay United Bank</td>
+                            <td class="tg-yw4l">USD, EUR</td>
+                            <td class="tg-yw4l">Taiwan</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">21</td>
+                            <td class="tg-yw4l">OCBC Bank</td>
+                            <td class="tg-yw4l">CNY</td>
+                            <td class="tg-yw4l">China<br></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">22</td>
+                            <td class="tg-yw4l">China Construction Bank Cooperation</td>
+                            <td class="tg-yw4l">CNY</td>
+                            <td class="tg-yw4l">China</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">23</td>
+                            <td class="tg-yw4l">United Bank of India</td>
+                            <td class="tg-yw4l">USD, EUR</td>
+                            <td class="tg-yw4l">India</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">24</td>
+                            <td class="tg-yw4l">Bank of India</td>
+                            <td class="tg-yw4l">USD, EUR</td>
+                            <td class="tg-yw4l">India</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">25</td>
+                            <td class="tg-yw4l">Uninoe Di Banche</td>
+                            <td class="tg-yw4l">EUR</td>
+                            <td class="tg-yw4l">Italy</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">26</td>
+                            <td class="tg-yw4l">Banque de Commercet de Placement</td>
+                            <td class="tg-yw4l">CHF, USD</td>
+                            <td class="tg-yw4l">Switzerland</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">27</td>
+                            <td class="tg-yw4l">May Bank</td>
+                            <td class="tg-yw4l">USD, EUR, SGD</td>
+                            <td class="tg-yw4l">Malaysia</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">28</td>
+                            <td class="tg-yw4l">Korea Exchange Bank</td>
+                            <td class="tg-yw4l">USD, EUR, KRW</td>
+                            <td class="tg-yw4l">Seoul, Korea</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">29</td>
+                            <td class="tg-yw4l">Shinhan Bank</td>
+                            <td class="tg-yw4l">USD</td>
+                            <td class="tg-yw4l">Seoul, Korea</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">30</td>
+                            <td class="tg-yw4l">Skandinaviskaenskildabanken</td>
+                            <td class="tg-yw4l">EUR</td>
+                            <td class="tg-yw4l">Sweden</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">31</td>
+                            <td class="tg-yw4l">OCBC Yangon</td>
+                            <td class="tg-yw4l">USD, EUR, MMK</td>
+                            <td class="tg-yw4l">Myanmar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">32</td>
+                            <td class="tg-yw4l">Bred Bank Banque Popolartre</td>
+                            <td class="tg-yw4l">EUR</td>
+                            <td class="tg-yw4l">Paris, France</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- End eligible banks -->
             </div>
         </div>
         <!-- /.row -->

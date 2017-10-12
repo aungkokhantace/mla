@@ -1842,8 +1842,7 @@ Email:  hlaingyu2010@gmail.com</p>
         ',
             'status' =>'active', 'url' =>'', 'title' =>'PROGRAM LIBRARY', 'post_order' =>1, 'pages_id' =>13, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
-            ['name'=>'REGISTRATION FEE','description'=>'','content'=>'<div class="col-md-9 reg_fee_payment" id="reg_fee_payment">
-            <h2>REGISTRATION &gt;&gt; REGISTRATION FEES AND PAYMENTS</h2>
+            ['name'=>'REGISTRATION FEE','description'=>'','content'=>'<h2>REGISTRATION &gt;&gt; REGISTRATION FEES AND PAYMENTS</h2>
 
 <h4>Registration Information</h4>
 <p>Any person, delegate, accompanying person, student, media representative, speaker, or exhibitor is considered an attendee.</p>
@@ -1910,9 +1909,7 @@ Email:  hlaingyu2010@gmail.com</p>
 <p>If the registration form and full payment are received, a Congress Bag is included in the registration fee for full delegates, students, speakers and media representatives. All Congress materials will be handed out onsite at the Congress Bag counter. </p>
 
 <h5><b><i>Methods of Payment</i></b></h5>
-<p>All registration fees should be paid by Bank Transfer. Please do not forget to indicate your first and last name on the payment. Please make sure all bank fees are covered by the submitting account and that the payment is free of charge for the receiver account. Please mention your first and last name and "CONSAL XVII" on the bank transfer. Payment by bank transfer is only possible until 29 April 2018.</p>
-
-</div>',
+<p>All registration fees should be paid by Bank Transfer. Please do not forget to indicate your first and last name on the payment. Please make sure all bank fees are covered by the submitting account and that the payment is free of charge for the receiver account. Please mention your first and last name and "CONSAL XVII" on the bank transfer. Payment by bank transfer is only possible until 29 April 2018.</p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION FEE', 'post_order' =>1, 'pages_id' =>14, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
             ['name'=>'REGISTRATION CANCELLATION','description'=>'','content'=>'
@@ -2051,8 +2048,7 @@ Email:  hlaingyu2010@gmail.com</p>
         ['name'=>'EXHIBITION EXHIBITOR','description'=>'','content'=>'',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION EXHIBITOR', 'post_order' =>1, 'pages_id' =>19, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
-        ['name'=>'EXHIBITION BOOTH','description'=>'','content'=>'<div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="booth">
-        <h2>EXHIBITION &amp; SPONSORSHIP &gt;&gt; BOOTH PRICE AND FACILITES</h2>
+        ['name'=>'EXHIBITION BOOTH','description'=>'','content'=>'<h2>EXHIBITION &amp; SPONSORSHIP &gt;&gt; BOOTH PRICE AND FACILITES</h2>
            <div class="col-md-12">
                <div class="row">
                   <h5><b><i>Exhibition Space</i></b></h5>
@@ -2088,8 +2084,7 @@ Email:  hlaingyu2010@gmail.com</p>
                    <p>The square meter price includes raw exhibition space, shell scheme packages will be available to book in <a href="http://Exhibition@consalxvii.org">Exhibition@consalxvii.org</a> .</p>
                    <p>Take the great marketing opportunities to showcase your products!</p>
                </div>
-           </div>
-       </div>',
+           </div>',
         'status' =>'active', 'url' =>'', 'title' =>'EXHIBITION BOOTH', 'post_order' =>1, 'pages_id' =>20, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
 
         ['name'=>'EXHIBITION FLOOR PLAN','description'=>'','content'=>'<h2>EXHIBITION &amp; SPONSORSHIP &gt;&gt; FLOOR PLAN AND EXHIBITIONS</h2>

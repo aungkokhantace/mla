@@ -87,7 +87,12 @@
             <div class="col-md-6 col-lg-6">
                 <h3>{{$key}}</h3>
                 <hr>
-                <img class="default-sponsor-image" src="assets/frontend/images/bottom1.jpg">
+                <!-- <img class="default-sponsor-image" src="assets/frontend/images/bottom1.jpg"> -->
+                <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_1.png">
+                <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_2.png">
+                <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_3.png">
+                <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_4.png">
+
 
                 <!-- append logos from database -->
                 @foreach($exhibitorGroup as $exhibitor)

@@ -25,14 +25,14 @@ class PostConferenceEntryFormRequest extends Request
     {
         return [
             "name"  =>"required",
-            "image"  =>"required",
+            // "image"  =>"required",
         ];
     }
     public function messages()
     {
         return [
             "name.required" => "Image Name is required",
-            "image.required" => "Select image",
+            // "image.required" => "Select image",
         ];
     }
 }

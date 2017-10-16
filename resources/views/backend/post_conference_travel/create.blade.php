@@ -17,7 +17,7 @@
                     <label for="name">Name<span class="require">*</span></label>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <input type="text" class="form-control" id="name" name="name" value="{{isset($post_conference_travel)?$post_conference_travel->name:Request::old('name')}}" placeholder="Enter Image Name"/>
+                    <input type="text" class="form-control" id="name" name="name" value="{{isset($post_conference_travel)?$post_conference_travel->name:Request::old('name')}}" placeholder="Enter Name"/>
                     <p class="text-danger">{{$errors->first('name')}}</p>
                 </div>
             </div>
@@ -199,11 +199,11 @@
             $('#post_conference_travel_form').validate({
                 rules: {
                     name: 'required',
-                    image: 'required'
+                    // image: 'required'
                 },
                 messages: {
                     name: 'Name is required',
-                    image: 'Image is required'
+                    // image: 'Image is required'
                 },
                 submitHandler: function (form) {
                     $('input[type="submit"]').attr('disabled', 'disabled');

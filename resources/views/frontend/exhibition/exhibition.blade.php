@@ -63,6 +63,14 @@
                     @endif  -->
                 @endforeach
 
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <h3>Printing Package</h3>
+                        <hr>
+                        <img class="sponsor-logo-frontend" src="/ExhibitorImages/mcm_logo.jpg">
+                    </div>
+                </div>
+
                <!-- @foreach($exhibitorArray as $key=>$exhibitorGroup)
                     @if($key == "Platinum Package")
                         <img class="default-sponsor-image" src="assets/frontend/images/bottom1.jpg">

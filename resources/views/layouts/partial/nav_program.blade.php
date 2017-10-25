@@ -12,9 +12,9 @@
                     @endif
 
                     @if(url()->current() == asset('/program_pre_conference'))
-                    <a href="/program_pre_conference" class="list-group-item active">Pre-conference Convencing</a>
+                    <a href="/program_pre_conference" class="list-group-item active">Pre-conference Convening</a>
                     @else
-                    <a href="/program_pre_conference" class="list-group-item">Pre-conference Convencing</a>
+                    <a href="/program_pre_conference" class="list-group-item">Pre-conference Convening</a>
                     @endif
 
                     @if(url()->current() == asset('/program_conference'))

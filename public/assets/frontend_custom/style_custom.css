@@ -219,6 +219,10 @@ img[src*="data:image/"] {
   padding-left: 0px;
 }
 
+.news_date{
+  color:#337ab7;
+}
+
 /* Global font for whole site */
 html *
 {

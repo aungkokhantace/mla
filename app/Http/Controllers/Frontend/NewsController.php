@@ -64,6 +64,9 @@ class NewsController extends Controller
 
     public function detail($id){
         $latestNews = LatestNew::find($id);
+        //like "Friday, 18-August-2017"
+        $formatted_date = date("l, d-F-Y", strtotime($latestNews->news_date));
+        $latestNews->formatted_date = $formatted_date;
         return view('frontend.latest_news.latest_news_detail')
                     ->with('latestNews',$latestNews);
     }
@@ -75,7 +78,11 @@ class NewsController extends Controller
             //for short description
             $description = $news->description;
             $short_description = substr($description,0,200).'...';
-            $news->short_description = $short_description;            
+            $news->short_description = $short_description;
+            
+            //like "Friday, 18-August-2017"
+            $formatted_date = date("l, d-F-Y", strtotime($news->news_date));
+            $news->formatted_date = $formatted_date;
             
             array_push($news_array,$news);
         }

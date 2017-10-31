@@ -58,6 +58,10 @@ class HomeController extends Controller
             $description                = $news->description;
             $short_description          = substr($description,0,60);
             $news->short_description    = $short_description;
+
+            //like "Friday, 18-August-2017"
+            $formatted_date = date("l, d-F-Y", strtotime($news->news_date));
+            $news->formatted_date = $formatted_date;
         }
 
         //start sponsor logos

@@ -17,7 +17,8 @@ class LatestNewRepository implements LatestNewRepositoryInterface
 {
     public function getLatestNew()
     {
-        $pages = LatestNew::whereNull('deleted_at')->orderBy('created_at','desc')->get();
+        // $pages = LatestNew::whereNull('deleted_at')->orderBy('created_at','desc')->get();
+        $pages = LatestNew::whereNull('deleted_at')->orderBy('news_date','desc')->get();
         return $pages;
     }
 

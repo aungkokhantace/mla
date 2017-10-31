@@ -54,6 +54,7 @@
                                 <!-- <h5 class="latest-news-heading"><b>{!! $latestNew->name !!}</b></h5> -->
                                 <p class="latest-news-heading"><b>{!! $latestNew->name !!}</b></p>
                                 <!-- <p class="latest-news-short-description">{!! $latestNew->short_description !!}</p> -->
+                                <!-- <p class="news_date">{!! $latestNew->formatted_date !!}</p> -->
                                 <a href="/news_detail/{{$latestNew->id}}" class="more">MORE>></a>
                             </div>
                             @endforeach

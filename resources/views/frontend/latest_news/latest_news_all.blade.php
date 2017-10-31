@@ -16,7 +16,8 @@
                         </div>
                         <div class="col-md-9">
                             <h4 class="news-all-title"><a href="/news_detail/{{$latest_new->id}}">{{$latest_new->name}}</a></h4>
-                            <p>{{$latest_new->short_description}}</a></p>
+                            <p>{{$latest_new->short_description}}</p>
+                            <p class="news_date">{{$latest_new->formatted_date}}</p>
                             <a href="/news_detail/{{$latest_new->id}}" class="more">MORE>></a>
                         </div>
                     </div>

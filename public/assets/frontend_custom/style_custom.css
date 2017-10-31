@@ -218,3 +218,9 @@ img[src*="data:image/"] {
 .lb-album{
   padding-left: 0px;
 }
+
+/* Global font for whole site */
+html *
+{
+   font-family: Poppins !important;
+}

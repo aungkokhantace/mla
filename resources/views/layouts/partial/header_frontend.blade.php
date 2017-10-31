@@ -26,7 +26,7 @@
     <!-- <link media="all" type="text/css" rel="stylesheet" href="/assets/css/style.min.css"> -->
     <link media="all" type="text/css" rel="stylesheet" href="/assets/plugins/jasny/css/jasny-bootstrap.css">
 
- 
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
 
 

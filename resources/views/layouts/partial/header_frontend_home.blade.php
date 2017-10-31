@@ -21,6 +21,8 @@
     <link media="all" type="text/css" rel="stylesheet" href="/assets/css/sweetalert.css">
     <link media="all" type="text/css" rel="stylesheet" href="/assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
 
 </head>
 

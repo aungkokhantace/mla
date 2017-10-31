@@ -125,6 +125,13 @@
         </div>
         @endif  -->
     @endforeach
+
+    <div class="col-md-6 col-lg-6">
+        <h3>Printing Package</h3>
+        <hr>
+        <img class="sponsor-logo-frontend" src="/ExhibitorImages/mcm_logo.jpg">
+    </div>
+
     </div>
     <!-- Footer -->
     </div>

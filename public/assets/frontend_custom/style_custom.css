@@ -226,5 +226,5 @@ img[src*="data:image/"] {
 /* Global font for whole site */
 html *
 {
-   font-family: Poppins !important;
+   font-family: Poppins;
 }

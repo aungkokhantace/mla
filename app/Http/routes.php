@@ -48,6 +48,9 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/autocomplete', 'Frontend\HomeController@autocomplete');
         Route::post('/search', 'Frontend\HomeController@search');
 
+        //Email function test
+        Route::get('/email_test', 'Backend\TestController@emailTest');
+
 
         //Backend
         Route::group(['prefix' => 'backend'], function () {

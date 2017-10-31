@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\Facades\Image;
+use App\Core\Utility;
 
 class TestController extends Controller
 {
@@ -196,5 +197,15 @@ class TestController extends Controller
         return redirect()->action('Backend\TestController@index')
             ->withMessage(FormatGenerator::message('Success', 'Test deleted ...'));
 
+    }
+
+    public function emailTest(){
+        $template = "backend/registrationconfirmadminemail/registrationconfirmadminemail";
+        $email = ['aungkokhantace@gmail.com'];
+        $subject = "Email Test";
+
+        Utility::sendEmail($template, $email, $subject);
+        alert('Email successfully sent!');
+        return redirect()->action('Frontend\HomeController@index');
     }
 }

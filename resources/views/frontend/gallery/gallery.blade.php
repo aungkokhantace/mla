@@ -6,10 +6,11 @@
     <!-- <div class="container"> -->
 
         <!-- <div class="row gallery"> -->
-        <div class="col-md-9 col-sm-12 col-xs-12 gallery" id="gallery">
+        <!-- <div class="col-md-9 col-sm-12 col-xs-12 gallery" id="gallery"> -->
+        <div class="col-md-9">
            <!-- <div class="col-md-12"> -->
-            <div class="row">
-                <h2 class="gallery">GALLERY</h2>
+            <!-- <div class="row"> -->
+                <h2>GALLERY</h2>
                 <section>
                     <ul class="lb-album">
                         @if(isset($images) && count($images)>0)
@@ -27,7 +28,7 @@
                     @endif
                     </ul>
                 </section>
-            </div>
+            <!-- </div> -->
            </div>
         </div>
         <!-- /.row -->

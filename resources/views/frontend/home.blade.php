@@ -53,7 +53,7 @@
                                 <img class="img_latest_new" src="{!! $latestNew->image !!}">                              
                                 <!-- <h5 class="latest-news-heading"><b>{!! $latestNew->name !!}</b></h5> -->
                                 <p class="latest-news-heading"><b>{!! $latestNew->name !!}</b></p>
-                                <p class="latest-news-short-description">{!! $latestNew->short_description !!}</p>
+                                <!-- <p class="latest-news-short-description">{!! $latestNew->short_description !!}</p> -->
                                 <a href="/news_detail/{{$latestNew->id}}" class="more">MORE>></a>
                             </div>
                             @endforeach

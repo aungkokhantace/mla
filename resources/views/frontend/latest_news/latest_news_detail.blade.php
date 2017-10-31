@@ -9,10 +9,9 @@
         <!-- <h2>NEWS</h2>     -->
             <section>
                 @if(isset($latestNews) && count($latestNews)>0)
-                    <h4 class="news-detail-title">{{$latestNews->name}}</h4>
-                    <p class="news-detail-description">{{$latestNews->description}}</a></p>
+                    <h4 class="news-detail-title"><b>{{$latestNews->name}}</b></h4>
                     <img src="{{$latestNews->image}}" class="img-responsive">
-                    <br>
+                    <p class="news-detail-description">{{$latestNews->description}}</a></p>
                 @endif
             </section>
         </div>

@@ -27,6 +27,7 @@ class LatestNewEntryRequest extends Request
             "name"  =>"required",
             "description"  =>"required",
             "image"  =>"required",
+            "news_date"  =>"required",
         ];
     }
     public function messages()
@@ -35,6 +36,7 @@ class LatestNewEntryRequest extends Request
             "name.required" => "Name is required",
             "description.required" => "Description is required",
             "image.required" => "Image is required",
+            "news_date.required" => "Date of News is required",
         ];
     }
 }

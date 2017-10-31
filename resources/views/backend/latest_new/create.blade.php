@@ -30,6 +30,15 @@
                         <p class="text-danger">{{$errors->first('description')}}</p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <label for="news_date">Date of News<span class="require">*</span></label>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input type="text" class="form-control" id="news_date" name="news_date" value="{{isset($latest_new)?$latest_new->news_date:Request::old('news_date')}}" placeholder="Select Date of News"/>
+                        <p class="text-danger">{{$errors->first('news_date')}}</p>
+                    </div>
+                </div>
                {{-- <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                         <label for="name">Image<span class="require">*</span></label>
@@ -207,18 +216,26 @@
                 rules: {
                     name: 'required',
                     description: 'required',
-                    image: 'required'
+                    image: 'required',
+                    news_date: 'required'
                 },
                 messages: {
                     name: 'Name is required',
                     description: 'Description is required',
-                    image: 'Image is required'
+                    image: 'Image is required',
+                    news_date: 'Date of News is required'
                 },
                 submitHandler: function (form) {
                     $('input[type="submit"]').attr('disabled', 'disabled');
                     form.submit();
                 }
             });
+
+            $("#news_date").datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                showButtonPanel: true,
+            })
         });
     </script>
     <script>

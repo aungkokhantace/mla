@@ -26,6 +26,7 @@ class LatestNewEditRequest extends Request
         return [
             "name"  =>"required",
             "description"  =>"required",
+            "news_date"  =>"required",
         ];
     }
     public function messages()
@@ -33,6 +34,7 @@ class LatestNewEditRequest extends Request
         return [
             "name.required" => "Name is required",
             "description.required" => "Description is required",
+            "news_date.required" => "Date of News is required",
         ];
     }
 }

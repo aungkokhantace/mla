@@ -148,6 +148,7 @@ p{
 
 .latest-news-heading{
   margin-top: -5px;
+  text-align: left;
 }
 
 .latest-news-short-description{
@@ -212,3 +213,8 @@ img[src*="data:image/"] {
   /* max-width:100px; */
   /* max-height:80px; */
 /* } */
+
+/* for gallery to align left */
+.lb-album{
+  padding-left: 0px;
+}

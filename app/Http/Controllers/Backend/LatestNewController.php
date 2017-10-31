@@ -55,6 +55,7 @@ class LatestNewController extends Controller
 
         $name = Input::get('name');
         $description = Input::get('description');
+        $news_date = Input::get('news_date');
 
             $image = Input::file('image');
             $path = base_path().'/public/latestnewImages';
@@ -70,6 +71,7 @@ class LatestNewController extends Controller
             $latestnewObj = new LatestNew();
             $latestnewObj->name = $name;
             $latestnewObj->description = $description;
+            $latestnewObj->news_date = $news_date;
             $latestnewObj->image = $latest_new_image;
 
             $result = $this->repo->create($latestnewObj);
@@ -86,6 +88,7 @@ class LatestNewController extends Controller
             $latestnewObj = new LatestNew();
             $latestnewObj->name = $name;
             $latestnewObj->description = $description;
+            $latestnewObj->news_date = $news_date;
             $latestnewObj->image = null;
 
             $result = $this->repo->create($latestnewObj);
@@ -114,6 +117,7 @@ class LatestNewController extends Controller
         $id = Input::get('id');
         $name = Input::get('name');
         $description = Input::get('description');
+        $news_date = Input::get('news_date');
 
         $removeImageFlag          = (Input::has('removeImageFlag')) ? Input::get('removeImageFlag') : 0;
 
@@ -131,6 +135,7 @@ class LatestNewController extends Controller
             $latestnewObj = LatestNew::find($id);
             $latestnewObj->name = $name;
             $latestnewObj->description = $description;
+            $latestnewObj->news_date = $news_date;
             $latestnewObj->image = $latest_new_image;
 
             $result = $this->repo->update($latestnewObj);
@@ -149,6 +154,7 @@ class LatestNewController extends Controller
             $latestnewObj = LatestNew::find($id);
             $latestnewObj->name = $name;
             $latestnewObj->description = $description;
+            $latestnewObj->news_date = $news_date;
 
             if($removeImageFlag == 1){
                 $latestnewObj->image             = "";

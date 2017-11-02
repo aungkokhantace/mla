@@ -2,7 +2,7 @@
 @section('title','Latest News')
 @section('content')
     <div id="content" class="content">
-        <h1 class="page-header">Latest News Listing</h1>
+        <h1 class="page-header">News Listing</h1>
         @if(count(Session::get('message')) != 0)
             <div>
             </div>

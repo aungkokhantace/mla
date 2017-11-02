@@ -228,3 +228,14 @@ html *
 {
    font-family: Poppins;
 }
+
+@media screen and (max-width: 768px) {
+  div.input-group
+ {
+ width: 35% !important;
+ }
+ #seconds, #hours, #minutes
+ {
+ margin-left:0px !important;
+ }
+ }

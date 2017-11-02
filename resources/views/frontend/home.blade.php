@@ -6,7 +6,7 @@
 <header class="my-carousel">
     <!-- <img src="/assets/frontend/images/consal_slider.jpg" class="img-responsive"> -->
     <!-- <img src="/assets/frontend/images/new_consal_slider.jpg" class="img-responsive"> -->
-    <img src="/assets/frontend/images/full_width_banner.jpg" class="img-responsive">
+    <img src="/assets/frontend/images/full_width_banner.jpg" class="img-responsive banner-image">
 </header>
 
 <!-- Page Content -->

@@ -12,82 +12,6 @@
         <div class="col-md-9">
              <h2>PROGRAM >> CALL FOR PAPERS</h2>           
             
-                <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="frm_program_call">
-                    {{csrf_field()}}
-                    <fieldset>
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="title">Title</label>
-                            <div class="col-md-4">
-                                <input id="title" name="title" type="text" placeholder="Enter Title" class="form-control input-md">
-                                <p class="text-danger">{{$errors->first('title')}}</p>
-                            </div>
-                        </div>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="first_author">1st Author Affiliation</label>
-                            <div class="col-md-4">
-                                <input id="first_author" name="first_author" type="text" placeholder="Enter 1st Author Affiliation" class="form-control input-md">
-                                <p class="text-danger">{{$errors->first('first_author')}}</p>
-                            </div>
-                        </div>
-
-                        <!-- email -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="email">Email</label>
-                            <div class="col-md-4">
-                                <input id="email" name="email" type="email" placeholder="Enter Email" class="form-control input-md">
-                                <p class="text-danger">{{$errors->first('email')}}</p>
-                            </div>
-                        </div>
-
-                        <!-- Address-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="title">Address</label>
-                            <div class="col-md-4">
-                                <textarea class="form-control" id="address" name="address" placeholder="Enter Address"></textarea>
-                                <p class="text-danger">{{$errors->first('address')}}</p>
-                            </div>
-                        </div>
-
-                        <!-- 2nd Author-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="second_author">2nd Author</label>
-                            <div class="col-md-4">
-                                <input id="second_author" name="second_author" type="text" placeholder="Enter 2nd Author" class="form-control input-md">
-                                <p class="text-danger">{{$errors->first('second_author')}}</p>
-                            </div>
-                        </div>
-
-                        <!-- 3rd Author-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="third_author">3rd Author</label>
-                            <div class="col-md-4">
-                                <input id="third_author" name="third_author" type="text" placeholder="Enter 3rd Author" class="form-control input-md">
-                                <p class="text-danger">{{$errors->first('third_author')}}</p>
-                            </div>
-                        </div>
-
-                        <!-- Abstract -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="abstract">Abstract</label>
-                            <div class="col-md-4">
-                                <textarea class="form-control" id="abstract" name="abstract" placeholder="Enter Abstract"></textarea>
-                                <p class="text-danger">{{$errors->first('abstract')}}</p>
-                            </div>
-                        </div>
-
-                        <!-- Button -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="submit"></label>
-                            <div class="col-md-4">
-                                <button type="button" id="btn" class="btn btn-primary" onclick="pre_add_confirm_setup()">SUBMIT</button>
-                            </div>
-                        </div>
-
-                    </fieldset>
-                </form>
                 <h4>Theme:</h4>
                 <p><b><i>“Next Generation Libraries: Collaborate and Connect”</i></b></p>
                 <p>
@@ -181,6 +105,84 @@
                 
                 <h4>Deadline:</h4>
                 <p>Please send your abstract <b>by Saturday 30 November 2017</b> to: <a href="http://paper@consalxvii.org">paper@consalxvii.org</a></p>
+
+                <br>
+                <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="frm_program_call">
+                    {{csrf_field()}}
+                    <fieldset>
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="title">Title</label>
+                            <div class="col-md-4">
+                                <input id="title" name="title" type="text" placeholder="Enter Title" class="form-control input-md">
+                                <p class="text-danger">{{$errors->first('title')}}</p>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="first_author">1st Author Affiliation</label>
+                            <div class="col-md-4">
+                                <input id="first_author" name="first_author" type="text" placeholder="Enter 1st Author Affiliation" class="form-control input-md">
+                                <p class="text-danger">{{$errors->first('first_author')}}</p>
+                            </div>
+                        </div>
+
+                        <!-- email -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="email">Email</label>
+                            <div class="col-md-4">
+                                <input id="email" name="email" type="email" placeholder="Enter Email" class="form-control input-md">
+                                <p class="text-danger">{{$errors->first('email')}}</p>
+                            </div>
+                        </div>
+
+                        <!-- Address-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="title">Address</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" id="address" name="address" placeholder="Enter Address"></textarea>
+                                <p class="text-danger">{{$errors->first('address')}}</p>
+                            </div>
+                        </div>
+
+                        <!-- 2nd Author-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="second_author">2nd Author</label>
+                            <div class="col-md-4">
+                                <input id="second_author" name="second_author" type="text" placeholder="Enter 2nd Author" class="form-control input-md">
+                                <p class="text-danger">{{$errors->first('second_author')}}</p>
+                            </div>
+                        </div>
+
+                        <!-- 3rd Author-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="third_author">3rd Author</label>
+                            <div class="col-md-4">
+                                <input id="third_author" name="third_author" type="text" placeholder="Enter 3rd Author" class="form-control input-md">
+                                <p class="text-danger">{{$errors->first('third_author')}}</p>
+                            </div>
+                        </div>
+
+                        <!-- Abstract -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="abstract">Abstract</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" id="abstract" name="abstract" placeholder="Enter Abstract"></textarea>
+                                <p class="text-danger">{{$errors->first('abstract')}}</p>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="submit"></label>
+                            <div class="col-md-4">
+                                <button type="button" id="btn" class="btn btn-primary" onclick="pre_add_confirm_setup()">SUBMIT</button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
         </div>
     </div>
     <!-- /.row -->

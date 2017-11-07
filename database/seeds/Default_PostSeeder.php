@@ -1843,73 +1843,102 @@ Email:  hlaingyu2010@gmail.com</p>
             'status' =>'active', 'url' =>'', 'title' =>'PROGRAM LIBRARY', 'post_order' =>1, 'pages_id' =>13, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
             ['name'=>'REGISTRATION FEE','description'=>'','content'=>'<h2>REGISTRATION &gt;&gt; REGISTRATION FEES AND PAYMENTS</h2>
-
-<h4>Registration Information</h4>
-<p>Any person, delegate, accompanying person, student, media representative, speaker, or exhibitor is considered an attendee.</p>
-<p>Early Registration deadline: 	31 January 2018</p>
-<p>Standard Registration deadline:	29 April 2018</p>
-<p>Onsite Registration: 		from 30 April 2018</p>
-
-<table class="table table-bordered p-table">
-<tbody>
-<tr>
-     <td></td>
-     <td>Early Bird</td>
-     <td>Standard</td>
-     <td>Onsite</td>
-</tr>
-<tr>
-     <td>International Delegate </td>
-     <td>$250</td>
-     <td>US$ 300</td>
-     <td>US$ 350</td>
-</tr>
-<tr>
-     <td>Local Delegate(MLA Member)**</td>
-     <td>20,000 MMK</td>
-     <td></td>
-     <td>30,000 MMK</td>
-</tr>
-<tr>
-      <td>Local Delegate (Non MLA Member)</td>
-      <td>30,000 MMK</td>
-      <td></td>
-      <td>40,000 MMK</td>
-</tr>
-<tr>
-      <td>Student(Local)***</td>
-      <td>15,000 MMK</td>
-      <td></td>
-      <td>20,000 MMK</td>
-</tr>
-</tbody>
-</table>
-
-<p>Only fully completed registrations will be accepted. The registration fee is based on the date of the receipt of the registration and the payment in full in accordance with the deadlines mentioned above. </p>
-
-<h4>Registration Fees</h4>
-<p>The registration fee for regular delegates includes:</p>
-<ul>
-<li>Admission to the congress, the sessions and the exhibition</li>
-<li>Congress Material</li>
-<li>Opening / Closing Session, Farewell Dinner</li>
-<li>One local library visit (based on availability)</li>
-</ul>
-
-<p>Please contact Myanmar Library Association for the correct membership number. This number should be entered on the registration form.</p>
-<p>To be able to register as a student, you must present a proof of fulltime enrolment at a recognised university or college for both the time of registration and during the Congress. </p>
-<p>Media people have to register and submit all records in various forms on Congress to the Organizing Committee. Media representative, you must submit a copy of your official press card.</p>
-
-<p>All prices, categories and dates are indicative and subject to change.<br>
-**  MLA membership number requested<br>
-*** Student ID or official letter of University must be provided
-</p>
-
-<h5><b><i>Congress Material</i></b></h5>
-<p>If the registration form and full payment are received, a Congress Bag is included in the registration fee for full delegates, students, speakers and media representatives. All Congress materials will be handed out onsite at the Congress Bag counter. </p>
-
-<h5><b><i>Methods of Payment</i></b></h5>
-<p>All registration fees should be paid by Bank Transfer. Please do not forget to indicate your first and last name on the payment. Please make sure all bank fees are covered by the submitting account and that the payment is free of charge for the receiver account. Please mention your first and last name and "CONSAL XVII" on the bank transfer. Payment by bank transfer is only possible until 29 April 2018.</p>',
+            
+            <h4>Registration Information</h4>
+            <p>Any person, delegate, accompanying person, student, media representative, speaker, or exhibitor is considered an attendee.</p>
+            <p>Early Registration deadline: 	31 January 2018</p>
+            <p>Standard Registration deadline:	29 April 2018</p>
+            <p>Onsite Registration: 		from 30 April 2018</p>
+            
+            <table class="table table-bordered p-table">
+            <tbody>
+            <tr>
+                 <td></td>
+                 <td>Early Bird</td>
+                 <td>Standard</td>
+                 <td>Onsite</td>
+            </tr>
+            <tr>
+                 <td>International Delegate </td>
+                 <td>$250</td>
+                 <td>US$ 300</td>
+                 <td>US$ 350</td>
+            </tr>
+            <tr>
+                 <td>Local Delegate(MLA Member)**</td>
+                 <td>20,000 MMK</td>
+                 <td></td>
+                 <td>30,000 MMK</td>
+            </tr>
+            <tr>
+                  <td>Local Delegate (Non MLA Member)</td>
+                  <td>30,000 MMK</td>
+                  <td></td>
+                  <td>40,000 MMK</td>
+            </tr>
+            <tr>
+                  <td>Student(Local)***</td>
+                  <td>15,000 MMK</td>
+                  <td></td>
+                  <td>20,000 MMK</td>
+            </tr>
+            </tbody>
+            </table>
+            
+            <p>Only fully completed registrations will be accepted. The registration fee is based on the date of the receipt of the registration and the payment in full in accordance with the deadlines mentioned above. </p>
+            
+            <h4>Registration Fees</h4>
+            <p>The registration fee for regular delegates includes:</p>
+            <ul>
+            <li>Admission to the congress, the sessions and the exhibition</li>
+            <li>Congress Material</li>
+            <li>Opening / Closing Session, Farewell Dinner</li>
+            <li>One local library visit (based on availability)</li>
+            </ul>
+            
+            <p>Please contact Myanmar Library Association for the correct membership number. This number should be entered on the registration form.</p>
+            <p>To be able to register as a student, you must present a proof of fulltime enrolment at a recognised university or college for both the time of registration and during the Congress. </p>
+            <p>Media people have to register and submit all records in various forms on Congress to the Organizing Committee. Media representative, you must submit a copy of your official press card.</p>
+            
+            <p>All prices, categories and dates are indicative and subject to change.<br>
+            **  MLA membership number requested<br>
+            *** Student ID or official letter of University must be provided
+            </p>
+            
+            <h5><b><i>Congress Material</i></b></h5>
+            <p>If the registration form and full payment are received, a Congress Bag is included in the registration fee for full delegates, students, speakers and media representatives. All Congress materials will be handed out onsite at the Congress Bag counter. </p>
+            
+            <h5><b><i>Methods of Payment</i></b></h5>
+            <p>All registration fees should be paid by Bank Transfer. Please do not forget to indicate your first and last name on the payment. Please make sure all bank fees are covered by the submitting account and that the payment is free of charge for the receiver account. Please mention your first and last name and "CONSAL XVII" on the bank transfer. Payment by bank transfer is only possible until 29 April 2018.</p>
+            
+                            <h4>Bank Account Information</h4>
+                            <p>
+                                Payment can be made by:
+                            </p>
+                            <div class="solid-border">
+                                <p class="big-red-text">Bank Transfer</p>
+                                <p><b>For International (US Dollar currency)</b></p><p>
+                                </p><p>Bank Name: Cooperative Bank Limited (PLC)</p>
+                                <p>Bank Account Holder: Myanmar Library Association</p>
+                                <p><b>Account Number</b> :  0010101200726548</p>
+                                <p><b>SWIFT-CODE</b> :  CPOBMMMY</p>
+                                <p><b>Bank Address</b> :  No. 334/336, corner of 23 st, &amp; Strand Rd, Latha Township, Yangon, Myanmar</p>
+                                <p>See <a href="#">Eligible Transferring Banks</a></p>
+                                <p><b>For local (Myanmar Currency)</b></p><p>
+                                </p><p>Bank Name:  Kanbawza Bank</p>
+                                <p>Bank Account Holder: Myanmar Library Association</p>
+                                <p><b>Account Number</b> :  133-302-06002875101</p>
+                                <p><b>Bank Address</b> :  New University Avenue Road, Yankin TSP, Yangon, Myanmar</p>                    
+                            </div>
+                            <br>
+                            <p>
+                            Please make sure that your first and last names and CONSAL XVII are mentioned on the bank transfer.
+            Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
+                            </p>
+                            <br>
+                            <p>Email: <a href="http://registration@consalxvii.org">registration@consalxvii.org</a></p>
+                            <p>Tel: 95 67 418427; 418426</p>
+                            <p>Fax: 95 67 418426</p>',
             'status' =>'active', 'url' =>'', 'title' =>'REGISTRATION FEE', 'post_order' =>1, 'pages_id' =>14, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
             ['name'=>'REGISTRATION CANCELLATION','description'=>'','content'=>'

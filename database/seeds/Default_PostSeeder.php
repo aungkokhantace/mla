@@ -2261,7 +2261,20 @@ Email:  hlaingyu2010@gmail.com</p>
                 <h5><b>Map of Naypyitaw</b></h5>
                 <img class="npt_map" src="/assets/frontend/images/naypyitaw_map.jpg">',
         'status' =>'active', 'url' =>'', 'title' =>'TRAVEL ACCOMMODATION', 'post_order' =>1, 'pages_id' =>23, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
-       
+        ['name'=>'4TH REGIONAL SCHOOL LIBRARY WORKSHOP','description'=>'4TH REGIONAL SCHOOL LIBRARY WORKSHOP','content'=>'<h2>PROGRAM >> 4th REGIONAL SCHOOL LIBRARY WORKSHOP</h2>
+        <p>Coming Soon</p>',
+        'status' =>'active', 'url' =>'', 'title' =>'4th REGIONAL SCHOOL LIBRARY WORKSHOP', 'post_order' =>1, 'pages_id' =>24, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
+        ['name'=>'3rd EXECUTIVE BOARD MEETING OF CONSAL XVII','description'=>'3rd EXECUTIVE BOARD MEETING OF CONSAL XVII','content'=>'<h2>PROGRAM >> 3rd EXECUTIVE BOARD MEETING OF CONSAL XVII</h2>
+        <p>Coming Soon</p>',
+        'status' =>'active', 'url' =>'', 'title' =>'3rd EXECUTIVE BOARD MEETING OF CONSAL XVII', 'post_order' =>1, 'pages_id' =>25, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
+        ['name'=>'26th CONFERENCE OF DIRECTORS OF NATIONAL LIBRARIES IN ASIA AND OCEANIA','description'=>'26th CONFERENCE OF DIRECTORS OF NATIONAL LIBRARIES IN ASIA AND OCEANIA','content'=>'<h2>PROGRAM &gt;&gt; 26th CONFERENCE OF DIRECTORS OF NATIONAL LIBRARIES IN ASIA AND OCEANIA</h2>
+        <h4>26th Conference of Directors of National Libraries in Asia and Oceania (26 CDNLAO)</h4>
+        <p>The Conference of Directors of National Libraries in Asia and Oceania (CDNLAO) meets every year to discuss library issues of common interest and to promote resource and information sharing within the Asia Pacific region.</p>
+        <p>Myanmar participates in the CDNLAO Meetings and shares the current situation of library development in Myanmar in line with the main aims of CDNLAO. Due to the transformation of a new civilian government, Myanmar gets an opportunity to organize the 17th Congress of Southeast Asian Librarians – CONSAL XVII http://www.consalxvii.org/ in Naypyitaw, the capital city of Myanmar, in 2018.</p>
+        <p>Though Myanmar has hosted many ASEAN meetings, the CONSAL XVII is the first international congress to be hosted by Myanmar for library and information professionals. To coincide with the 17th CONSAL), the 26th CDNLAO will be held in Myanmar on 2 May 2018.</p>
+        <p>The venue of the 26th CDNLAO is MingalarThiri Hotel in Naypyitaw. Participants will get the opportunity to join the 17th CONSAL and visit cultural places in Naypyitaw after the meeting. We hope librarians from Asia and Pacific region will be able to visit various types of libraries while they are in Myanmar, many for the first time.</p>
+        <p>Myanmar would like to wish all our participants a pleasant stay in Myanmar, and fruitful discussion in the 26th CDNLAO Meeting.</p>',
+        'status' =>'active', 'url' =>'', 'title' =>'26th CONFERENCE OF DIRECTORS OF NATIONAL LIBRARIES IN ASIA AND OCEANIA', 'post_order' =>1, 'pages_id' =>26, 'created_by' =>'1', 'updated_by' =>'1', 'created_at' =>'2017-01-30 09:19:53', 'updated_at' =>'2017-01-30 09:19:53' ],
        
     );
 

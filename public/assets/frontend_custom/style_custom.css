@@ -223,6 +223,11 @@ img[src*="data:image/"] {
   color:#337ab7;
 }
 
+/* For downarrow in submenu */
+.submenu-down-arrow{
+  float:right;
+}
+
 /* Global font for whole site */
 html *
 {

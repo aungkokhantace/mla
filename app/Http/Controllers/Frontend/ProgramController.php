@@ -473,4 +473,49 @@ class ProgramController extends Controller
             ->with('posts',$posts);
     }
 
+    public function regional_school_library_workshop(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+        $page = $pageRepo->getObjByID($page_id);
+        
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.program.regional_school_library_workshop')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
+    public function executive_board_meeting(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+        $page = $pageRepo->getObjByID($page_id);
+        
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.program.executive_board_meeting')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
+    public function conference_of_directors(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+        $page = $pageRepo->getObjByID($page_id);
+        
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        return view('frontend.program.conference_of_directors')
+            ->with('page',$page)
+            ->with('posts',$posts);
+    }
+
 }

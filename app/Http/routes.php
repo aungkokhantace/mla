@@ -31,6 +31,9 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/program_poster', 'Frontend\ProgramController@program_poster');
         Route::post('/program_poster/store', 'Frontend\ProgramController@program_poster_store');
         Route::get('/program_pre_conference', 'Frontend\ProgramController@program_pre_conference');
+        Route::get('/regional_school_library_workshop', 'Frontend\ProgramController@regional_school_library_workshop');
+        Route::get('/executive_board_meeting', 'Frontend\ProgramController@executive_board_meeting');
+        Route::get('/conference_of_directors', 'Frontend\ProgramController@conference_of_directors');
 
         Route::get('/registration', 'Frontend\RegistrationController@index');
         Route::post('/registration/store', 'Frontend\RegistrationController@store');

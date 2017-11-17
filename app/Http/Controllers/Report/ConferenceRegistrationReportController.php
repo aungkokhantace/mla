@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Report;
 
 use App\Report\ConferenceRegistration\ReportConferenceRegistrationRepository;
+use App\Backend\RegistrationCategory\RegistrationCategoryRepository;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -40,7 +41,7 @@ class ConferenceRegistrationReportController extends Controller
 
             $conference_regRepo = new ReportConferenceRegistrationRepository();
             $conference_registrations = $conference_regRepo->getDataByDate($from_date,$to_date);
-
+            
             $display_ary = array();
             foreach($conference_registrations as $conference_registration){
                 if($conference_registration->status == 1){
@@ -50,13 +51,25 @@ class ConferenceRegistrationReportController extends Controller
                 }else{
                     $status = 'Cancel';
                 }
-                if($conference_registration->registration_category == 1){
-                    $reg_cat = 'Option One';
-                }else{
-                    $reg_cat = 'Option Two';
-                }
-                $country = $conference_registration->country;
 
+                // if($conference_registration->registration_category == 1){
+                //     $reg_cat = 'Option One';
+                // }else{
+                //     $reg_cat = 'Option Two';
+                // }
+
+                $registrationCategoryRepo   = new RegistrationCategoryRepository();
+                $registrationCategories     = $registrationCategoryRepo->getObjs();
+                
+                $registrationCategoryArray  = array();
+                foreach($registrationCategories as $registrationCategory){
+                    $registrationCategoryArray[$registrationCategory->id] = $registrationCategory->name; 
+                }
+                
+                $reg_cat = $registrationCategoryArray[$conference_registration->registration_category];
+                
+                $country = $conference_registration->country;
+                
                 $display_ary[$conference_registration->id]['First Name'] =  $conference_registration->first_name;
                 $display_ary[$conference_registration->id]['Middle Name'] = $conference_registration->middle_name;
                 $display_ary[$conference_registration->id]['Last Name'] = $last_name = $conference_registration->last_name;
@@ -68,6 +81,7 @@ class ConferenceRegistrationReportController extends Controller
                 $display_ary[$conference_registration->id]['Payment Type'] = $conference_registration->payment_type;
                 $display_ary[$conference_registration->id]['Status'] = $status;
             }
+            
             Excel::create('Conference_Registration_Export', function($excel)use($display_ary) {
                 $excel->sheet('Conference Registration', function($sheet)use($display_ary) {
 

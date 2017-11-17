@@ -21,9 +21,9 @@
                 <button type="button" onclick='edit_setup("registrationcategory");' class="btn btn-default btn-md second_btn">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                 </button>
-                <button type="button" onclick='delete_setup("registrationcategory");' class="btn btn-default btn-md third_btn">
+                <!-- <button type="button" onclick='delete_setup("registrationcategory");' class="btn btn-default btn-md third_btn">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                </button>
+                </button> -->
             </div>
         </div>
 

@@ -27,15 +27,16 @@ class ReportConferenceRegistrationRepository implements ReportConferenceRegistra
     {
         $query = ConferenceRegistration::query();
         $query = $query->leftjoin('countries', 'countries.id', '=', 'conference_registrations.country');
-        $query = $query->select('conference_registrations.id',
-            'conference_registrations.first_name as first_name',
-            'conference_registrations.middle_name as middle_name',
-            'conference_registrations.last_name as last_name',
-            'conference_registrations.organization as organization',
-            'conference_registrations.email as email',
-            'conference_registrations.payment_type as payment_type',
-            'countries.name as country',
-            'conference_registrations.status as status');
+        // $query = $query->select('conference_registrations.id',
+        //     'conference_registrations.first_name as first_name',
+        //     'conference_registrations.middle_name as middle_name',
+        //     'conference_registrations.last_name as last_name',
+        //     'conference_registrations.organization as organization',
+        //     'conference_registrations.email as email',
+        //     'conference_registrations.payment_type as payment_type',
+        //     'countries.name as country',
+        //     'conference_registrations.status as status');
+        $query = $query->select('conference_registrations.*', 'countries.name as country');
         if(isset($type) && $type!=null  && $type <> 'all'){
             $query =$query->where('conference_registrations.status',$type);
         }

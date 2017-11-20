@@ -43,6 +43,11 @@ class UserRepository implements UserRepositoryInterface
         $roles = DB::table('core_roles')->get();
         return $roles;
     }
+
+    public function getRolesExceptSuper(){
+        $roles = DB::table('core_roles')->where('id','!=',1)->get();
+        return $roles;
+    }
     public function delete_users($id){
         if($id != 1){
             //DB::table('core_users')->where('id',$id)->update(['deleted_at'=> date('Y-m-d H:m:i')]);

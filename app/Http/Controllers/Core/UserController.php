@@ -44,7 +44,8 @@ class UserController extends Controller
 
     public function create(){
         if (Auth::guard('User')->check()) {
-            $roles = $this->userRepository->getRoles();
+            // $roles = $this->userRepository->getRoles();
+            $roles = $this->userRepository->getRolesExceptSuper();
             return view('core.user.user')->with('roles', $roles);
         }
          return redirect('/backend/login');
@@ -76,7 +77,8 @@ class UserController extends Controller
     public function edit($id){
         if (Auth::guard('User')->check()) {
                 $user = $this->userRepository->getObjByID($id);
-                $roles = DB::table('core_roles')->get();
+                // $roles = DB::table('core_roles')->get();
+                $roles = $this->userRepository->getRolesExceptSuper();
                 return view('core.user.user')->with('user', $user)->with('roles', $roles);
         }
         return redirect('/backend/login');
@@ -118,7 +120,8 @@ class UserController extends Controller
 
             if($id == $loginUserId){
                 $user = $this->userRepository->getObjByID($id);
-                $roles = DB::table('core_roles')->get();
+                // $roles = DB::table('core_roles')->get();
+                $roles = $this->userRepository->getRolesExceptSuper();
                 return view('core.user.user')->with('user', $user)->with('roles', $roles)->with('profile',true);
             }
             else{

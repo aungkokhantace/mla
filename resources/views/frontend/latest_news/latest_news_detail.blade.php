@@ -11,7 +11,8 @@
                 @if(isset($latestNews) && count($latestNews)>0)
                     <h4 class="news-detail-title"><b>{{$latestNews->name}}</b></h4>
                     <img src="{{$latestNews->image}}" class="img-responsive">
-                    <p class="news-detail-description">{{$latestNews->description}}</p>
+                    <!-- <p class="news-detail-description">{{$latestNews->description}}</p> -->
+                    <p class="news-detail-description">{!!$latestNews->description!!}</p>
                     <p class="news_date">{{$latestNews->formatted_date}}</p>
                 @endif
             </section>

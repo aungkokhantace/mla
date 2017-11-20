@@ -24,7 +24,8 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                         <label for="name">Description<span class="require">*</span></label>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"> -->
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                         <textarea name="description" id="description" cols="145" rows="15">{{isset($latest_new)?$latest_new->description:Request::old('description')}}</textarea>
                         {{--<input type="text" class="form-control" id="description" name="description" placeholder="Enter Latest News Description" value="{{isset($latest_new)?$latest_new->description:Request::old('description')}}" placeholder="Enter Description"/>--}}
                         <p class="text-danger">{{$errors->first('description')}}</p>
@@ -273,6 +274,28 @@
                 }
                 //}
 
+            });
+
+            $('#description').summernote({
+                    height:300,
+                    toolbar: [
+                        // [groupName, [list of button]]
+                        ['style', ['style']],
+                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                        ['font', ['strikethrough', 'superscript', 'subscript']],
+                        ['fontsize', ['fontsize']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['height', ['height']],
+                        ['picture', ['picture']],
+                        ['link', ['link']],
+                        ['table', ['table']],
+                        ['hr', ['hr']],
+                        ['codeview', ['codeview']],
+                        ['undo', ['undo']],
+                        ['redo', ['redo']],
+                    //    ['help', ['help']],
+                    ]
             });
         });
 

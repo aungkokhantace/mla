@@ -56,7 +56,8 @@
                             <tr>
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $latest_new->id }}" id="all"></td>
                                 <td><a href="/backend/latest_new/edit/{{$latest_new->id}}">{{$latest_new->name}}</a></td>
-                                <td>{{$latest_new->short_description}}</td>
+                                <!-- <td>{{$latest_new->short_description}}</td> -->
+                                <td>{!!$latest_new->short_description!!}</td>
                                 <td>{{$latest_new->news_date}}</td>
                                 <td><img src="{{$latest_new->image}}" class="img-responsive list-view-img"></td>
                             </tr>

@@ -45,6 +45,19 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+      if(($e instanceof NotFoundHttpException)){         //for email format validation case, if email format is not valid, redirect to create form
+            if (Auth::guard('User')->check()) {
+                return response()->view('core.error.pagenotfound');
+            }
+            else{
+                if ($e instanceof TokenMismatchException)
+                {
+                    return redirect()->view('core.error.error')
+                }
+                return response()->view('core.error.pagenotfound_frontend', ['e'=>$e], 404);
+            }
+        }
+
         return parent::render($request, $e);
     }
 }

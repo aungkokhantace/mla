@@ -7,11 +7,11 @@
                 {{Session::get('message')['body']}}
             </div>
         @endif
-        
+
         <!-- Content Column -->
         <div class="col-md-9">
-             <h2>PROGRAM >> CALL FOR PAPERS</h2>           
-            
+             <h2>PROGRAM >> CALL FOR PAPERS</h2>
+
                 <h4>Theme:</h4>
                 <p><b><i>“Next Generation Libraries: Collaborate and Connect”</i></b></p>
                 <p>
@@ -102,7 +102,7 @@
                 <li>15 minutes will be allowed in the session for a summary presentation based on the paper, with time for questions. Presenters should not read their full written paper.</li>
                 </ol>
                 <p><b>Note:</b> in general, CONSAL has no funds available to cover the cost of speakers’ attendance at the Congress. Any person submitting a paper proposal to CONSAL XVII is responsible for arranging his/her own travel funding. </p>
-                
+
                 <h4>Deadline:</h4>
                 <p>Please send your abstract <b>by Saturday 30 November 2017</b> to: <a href="http://paper@consalxvii.org">paper@consalxvii.org</a></p>
 
@@ -167,8 +167,8 @@
                         <!-- Abstract -->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="abstract">Abstract</label>
-                            <div class="col-md-4">
-                                <textarea class="form-control" id="abstract" name="abstract" placeholder="Enter Abstract"></textarea>
+                            <div class="col-md-6">
+                                <textarea class="form-control abstract-textbox" id="abstract" name="abstract" placeholder="Enter Abstract"></textarea>
                                 <p class="text-danger">{{$errors->first('abstract')}}</p>
                             </div>
                         </div>

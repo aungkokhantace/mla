@@ -81,3 +81,13 @@
    width:100%;
    height:350px !important;
  }
+
+ .red-text{
+   color:red;
+ }
+
+ img.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

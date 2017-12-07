@@ -104,7 +104,7 @@
                 <p><b>Note:</b> in general, CONSAL has no funds available to cover the cost of speakers’ attendance at the Congress. Any person submitting a paper proposal to CONSAL XVII is responsible for arranging his/her own travel funding. </p>
 
                 <h4>Deadline:</h4>
-                <p>Please send your abstract <b>by Saturday 30 November 2017</b> to: <a href="http://paper@consalxvii.org">paper@consalxvii.org</a></p>
+                <p>Please send your abstract <b>by Saturday 30 November 2017</b> to: <a href="http://papers@consalxvii.org">papers@consalxvii.org</a></p>
 
                 <br>
                 <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="frm_program_call">

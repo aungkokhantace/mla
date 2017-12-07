@@ -199,7 +199,7 @@ class ProgramController extends Controller
 
                  //build param array for email
                  $email_param_array = ['title'=>$title, 'first_author'=>$first_author, 'second_author'=>$second_author, 'third_author'=>$third_author];
-                 
+
                  Utility::sendEmailWithParameters($template, $email_param_array, $email, $subject);
             }
             //end sending email to user
@@ -383,7 +383,7 @@ class ProgramController extends Controller
 
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
-        
+
         return view('frontend.program.program_poster')
             ->with('page',$page)
             ->with('posts',$posts);
@@ -412,7 +412,7 @@ class ProgramController extends Controller
             //start sending email to user
             $userEmailArr = array();
             $userEmailArr[0] = $email;
-            
+
             if(isset($userEmailArr) && count($userEmailArr)>0){
                 $template = "backend/programpostersubmituseremail/programpostersubmituseremail";
                 $email = $userEmailArr;
@@ -422,7 +422,7 @@ class ProgramController extends Controller
 
                 //build param array for email
                 $email_param_array = ['title'=>$title, 'author'=>$author];
-                
+
                 Utility::sendEmailWithParameters($template, $email_param_array, $email, $subject);
             }
             //end sending email to user
@@ -479,7 +479,7 @@ class ProgramController extends Controller
         $pageRepo = new PageRepository();
         $page_id  = $pageRepo->getPageIDByURL($url);
         $page = $pageRepo->getObjByID($page_id);
-        
+
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
 
@@ -494,7 +494,7 @@ class ProgramController extends Controller
         $pageRepo = new PageRepository();
         $page_id  = $pageRepo->getPageIDByURL($url);
         $page = $pageRepo->getObjByID($page_id);
-        
+
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
 
@@ -509,7 +509,7 @@ class ProgramController extends Controller
         $pageRepo = new PageRepository();
         $page_id  = $pageRepo->getPageIDByURL($url);
         $page = $pageRepo->getObjByID($page_id);
-        
+
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
 

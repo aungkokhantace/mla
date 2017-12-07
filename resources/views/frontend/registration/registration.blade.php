@@ -1,6 +1,6 @@
 @extends('layouts.master_frontend')
 @section('title','Dashboard')
-@section('content')    
+@section('content')
 @include('layouts.partial.nav_registration')
 
             @if(Session::has('message'))
@@ -16,7 +16,7 @@
                 <fieldset>
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="title">First Name</label>  
+                  <label class="col-md-4 control-label" for="title">First Name</label>
                   <div class="col-md-4">
                   <input id="first_name" name="first_name" type="text" placeholder="Enter Your First Name" class="form-control input-md">
                       <p class="text-danger" id="first_name_error">{{$errors->first('first_name')}}</p>
@@ -25,7 +25,7 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="title">Middle Name</label>  
+                  <label class="col-md-4 control-label" for="title">Middle Name</label>
                   <div class="col-md-4">
                   <input id="middle_name" name="middle_name" type="text" placeholder="Enter Your Middle Name" class="form-control input-md">
                       <p class="text-danger" id="middle_name_error">{{$errors->first('middle_name')}}</p>
@@ -34,7 +34,7 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="title">Last Name</label>  
+                  <label class="col-md-4 control-label" for="title">Last Name</label>
                   <div class="col-md-4">
                   <input id="last_name" name="last_name" type="text" placeholder="Enter Your Last Name" class="form-control input-md">
                       <p class="text-danger" id="last_name_error">{{$errors->first('last_name')}}</p>
@@ -43,7 +43,7 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="title">Organization</label>  
+                  <label class="col-md-4 control-label" for="title">Organization</label>
                   <div class="col-md-4">
                   <input id="organization" name="organization" type="text" placeholder="Enter Your Organization" class="form-control input-md">
                       <p class="text-danger" id="organization_error">{{$errors->first('organization')}}</p>
@@ -52,7 +52,7 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="title">Email</label>  
+                  <label class="col-md-4 control-label" for="title">Email</label>
                   <div class="col-md-4">
                   <input id="email" name="email" type="email" placeholder="Enter Your Email" class="form-control input-md">
                       <p class="text-danger" id="email_error">{{$errors->first('email')}}</p>
@@ -75,7 +75,7 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="title">Phone No</label>  
+                  <label class="col-md-4 control-label" for="title">Phone No</label>
                   <div class="col-md-4">
                   <input id="ph_no" name="ph_no" type="text" placeholder="Enter Your Phone" class="form-control input-md">
                       <p class="text-danger" id="ph_no_error">{{$errors->first('ph_no')}}</p>
@@ -86,13 +86,22 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="selectbasic">Registration Category</label>
                   <div class="col-md-4">
-                    <select id="registration_category" name="registration_category" class="form-control">
+                    <select id="registration_category" name="registration_category" class="form-control" onchange="check_for_member();">
                         <option value="" selected disabled>Select Registration Category</option>
                         @foreach($registrationCategories as $registrationCategory)
                             <option value="{{$registrationCategory->id}}">{{$registrationCategory->name}}</option>
                         @endforeach
                     </select>
                       <p class="text-danger" id="registration_category_error">{{$errors->first('registration_category')}}</p>
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group membership-no">
+                  <label class="col-md-4 control-label" for="title">Membership No</label>
+                  <div class="col-md-4">
+                  <input id="membership_no" name="membership_no" type="text" placeholder="Enter Your Membership No" class="form-control input-md">
+                      <p class="text-danger" id="membership_no_error">{{$errors->first('membership_no')}}</p>
                   </div>
                 </div>
 
@@ -119,7 +128,7 @@
 
                 </fieldset>
                 </form>
-                <br/> 
+                <br/>
                 <h2>Bank Account Information</h2>
                 <p>
                     Payment can be made by:
@@ -137,7 +146,7 @@
                     <p>Bank Name:  Kanbawza Bank</p>
                     <p>Bank Account Holder: Myanmar Library Association</p>
                     <p><b>Account Number</b> :  133-302-06002875101</p>
-                    <p><b>Bank Address</b> :  New University Avenue Road, Yankin TSP, Yangon, Myanmar</p>                    
+                    <p><b>Bank Address</b> :  New University Avenue Road, Yankin TSP, Yangon, Myanmar</p>
                 </div>
                 <br>
                 <p>
@@ -154,7 +163,7 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
 
                 <h2>Eligible Transferring Banks</h2>
                 <!-- Start eligible banks -->
-                <div class="tg-wrap">                    
+                <div class="tg-wrap">
                     <table class="tg">
                         <colgroup>
                         <col style="width: 30px">
@@ -369,7 +378,7 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
     </div>
 @stop
 @section('page_script')
-    <script src="/assets/js/utils.js"></script>
+    <!-- <script src="/assets/js/utils.js"></script> -->
     <script type="text/javascript">
         function pre_add_confirm_setup(){
 
@@ -424,6 +433,17 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
                 valid = false;
             }
 
+            //to check whether user selects "Member" in registration categories //if so, validate membership no text box
+            var member_flag = document.getElementById('registration_category').value;
+            if(member_flag == "2"){
+                $("#membership_no_error").text("");
+                var membership_no = $("#membership_no").val();
+                if(membership_no == "" || membership_no == "undefined"){
+                    $("#membership_no_error").text("Membership no is required !");
+                    valid = false;
+                }
+            }
+
             $("#payment_type_error").text("");
             var payment_type = $("#payment_type").val();
             if(payment_type == ""){
@@ -435,6 +455,7 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
             }
         }
         $(document).ready(function() {
+            $(".membership-no").hide();
 
             $('#frm_registration').validate({
                 rules: {
@@ -468,5 +489,16 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
                 $("#frm_registration").valid();
             });
         });
+
+        function check_for_member(){
+          var member_flag = document.getElementById('registration_category').value;
+          //check whether category is local delegate or not
+          if(member_flag == "2"){
+              $(".membership-no").show();
+          }
+          else{
+              $(".membership-no").hide();
+          }
+      }
     </script>
 @endsection

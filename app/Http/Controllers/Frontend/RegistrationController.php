@@ -165,12 +165,12 @@ class RegistrationController extends Controller
 
             //get standard registration deadline
             $standard_deadline = Utility::getStandardRegistrationDeadline();
-           
+
             $registrationCategoryRepo = new RegistrationCategoryRepository();
             $regCategoryObj = $registrationCategoryRepo->getObjByID($reg->registration_category);
 
             $registered_date = $reg->created_at;
-            
+
             //if registered date is earlier than earlybird deadline, fee_amount is earlybird fee
             if($registered_date <= $early_bird_deadline){
                 $fee_amount = $regCategoryObj->early_bird_fee;
@@ -186,13 +186,13 @@ class RegistrationController extends Controller
                     //else, fee_amount will be on_site_fee
                     else{
                         $fee_amount = $regCategoryObj->on_site_fee;
-                    }                    
+                    }
                 }
                 //this registration category has no normal_fee, so, fee_amount will be on_site_fee
                 else{
                     $fee_amount = $regCategoryObj->on_site_fee;
                 }
-                
+
             }
 
             //add currency units
@@ -215,7 +215,7 @@ class RegistrationController extends Controller
 
             //build param array for email
             $email_param_array = ['first_name'=>$first_name, 'middle_name'=>$middle_name, 'last_name'=>$last_name, 'organization'=>$organization, 'category'=>$category, 'user_email'=>$user_email, 'amount'=>$amount];
-            
+
             // Utility::sendEmail($template, $email, $subject);
             Utility::sendEmailWithParameters($template, $email_param_array, $email, $subject);
             //end sending email to user

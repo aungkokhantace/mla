@@ -21,7 +21,7 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/exhibition_sponsorship', 'Frontend\ExhibitionController@exhibition_sponsorship');
 
         Route::get('/gallery', 'Frontend\GalleryController@index');
-        
+
         Route::get('/program', 'Frontend\ProgramController@index');
         Route::get('/program_call', 'Frontend\ProgramController@program_call');
         Route::post('/program_call/store', 'Frontend\ProgramController@program_call_store');
@@ -283,7 +283,7 @@ Route::group(['middleware' => 'web'], function () {
 });
 
  Route::group(['prefix' => 'api'], function () {
-        
+
         Route::post('activate', array('as'=>'activate','uses'=>'ApiController@Activate'));
         Route::post('check', array('as'=>'check','uses'=>'ApiController@check'));
     });

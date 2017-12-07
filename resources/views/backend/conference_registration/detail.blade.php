@@ -37,8 +37,15 @@
                     </tr>
                     <tr>
                         <td><label>Registration Category</label></td>
-                        <td>{{$conference_registration->registration_category}}</td>
+                        <!-- <td>{{$conference_registration->registration_category}}</td> -->
+                        <td>{{$conference_registration->RegistrationCategory->name}}</td>
                     </tr>
+                    @if(isset($conference_registration->registration_category) && $conference_registration->registration_category == 2)
+                    <tr>
+                        <td><label>Membership Number</label></td>
+                        <td>{{$conference_registration->membership_no}}</td>
+                    </tr>
+                    @endif
                     <tr>
                         <td><label>Payment Type</label></td>
                         <td>{{$conference_registration->payment_type}}</td>

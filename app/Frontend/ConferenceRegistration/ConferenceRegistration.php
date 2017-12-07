@@ -15,4 +15,8 @@ class ConferenceRegistration extends Model
     public function Country(){
         return $this->belongsTo('App\Backend\Country\Country','country','id');
     }
+
+    public function RegistrationCategory(){
+        return $this->belongsTo('App\Backend\RegistrationCategory\RegistrationCategory','registration_category','id');
+    }
 }

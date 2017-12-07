@@ -59,10 +59,10 @@ class TestController extends Controller
 
         // $request->validate();
         $test_content = Input::get('test_content');
-        
+
         $paramObj                   = new Test();
         $paramObj->content          = $test_content;
-       
+
 
        /* //start saving image
         $dom = new DomDocument();
@@ -106,7 +106,7 @@ class TestController extends Controller
         //End saving image */
 
         $result = $this->repo->create($paramObj);
-        
+
         if($result['aceplusStatusCode'] ==  ReturnMessage::OK){
             return redirect()->action('Backend\TestController@index')
                 ->withMessage(FormatGenerator::message('Success', 'Test created ...'));

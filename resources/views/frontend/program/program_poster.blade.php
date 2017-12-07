@@ -20,7 +20,7 @@
                 Each author will have a poster board portrait format, measuring <span class='red-text'>8'</span> wide x <span class='red-text'>3'3"</span> high.  The standard  poster  size is <span class='red-text'>2' 6"</span> x <span class='red-text'>3' 6"</span>.
               </p>
               <img src="/assets/frontend/images/standard_poster.png" class="center-image" />
-              
+
               <h4>Poster Content</h4>
               <ol>
                 <li>Title</li>

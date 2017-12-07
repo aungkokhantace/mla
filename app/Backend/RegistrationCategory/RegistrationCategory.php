@@ -28,6 +28,11 @@ class RegistrationCategory extends Model
     {
         return $this->hasMany('App\Backend\Register\Register');
     }
+
+    public function conference_registration()
+    {
+        return $this->hasMany('App\Frontend\ConferenceRegistration\ConferenceRegistration');
+    }
 //
 //    public function abstractform()
 //    {

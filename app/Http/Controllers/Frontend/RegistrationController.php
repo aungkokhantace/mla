@@ -53,13 +53,12 @@ class RegistrationController extends Controller
 
         $registrationCategoryRepo    = new RegistrationCategoryRepository();
         $registrationCategories      = $registrationCategoryRepo->getObjs();
-        
+
         return view('frontend.registration.registration',compact('countries','registrationCategories'));
     }
 
     public function store(RegistrationEntryFormRequest $request)
     {
-
         $request->validate();
 
         $fname = Input::get('first_name');
@@ -70,6 +69,7 @@ class RegistrationController extends Controller
         $country = Input::get('country');
         $ph_no = Input::get('ph_no');
         $reg_cat = Input::get('registration_category');
+        $membership_no = Input::get('membership_no');
         $payment_type = Input::get('payment_type');
 
 
@@ -83,6 +83,8 @@ class RegistrationController extends Controller
         $registrationObj->country = $country;
         $registrationObj->ph_no = $ph_no;
         $registrationObj->registration_category = $reg_cat;
+        $registrationObj->membership_no = $reg_cat == 2 ? $membership_no : null;
+
         $registrationObj->payment_type = $payment_type;
 
 
@@ -140,6 +142,7 @@ class RegistrationController extends Controller
     public function detail($id){
         if (Auth::guard('User')->check()) {
             $conference_registration = $this->repo->getObjByID($id);
+            // dd($conference_registration->RegistrationCategory->name);
             return view('backend.conference_registration.detail')->with('conference_registration',$conference_registration);
         }
         return redirect('/');

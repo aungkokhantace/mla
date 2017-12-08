@@ -107,7 +107,13 @@ class PostRepository implements PostRepositoryInterface
                             ->orWhere('content', 'like', '%'.$term.'%')
                             ->orWhere('title', 'like', '%'.$term.'%')
                             ->get();
-        
+
         return $results;
+    }
+
+    public function getObjsByExcludedArray($excluded_array)
+    {
+        $objs = Post::whereNull('deleted_at')->whereNotIn('id',$excluded_array)->get();
+        return $objs;
     }
 }

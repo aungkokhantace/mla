@@ -32,7 +32,12 @@ class PostController extends Controller
     {
         try{
             if (Auth::guard('User')->check()) {
-                $posts      = $this->repo->getObjs();
+                //posts with entry form are excluded from post list
+                $excluded_post_id_array = [10,11,3,19,4];
+
+                // $posts      = $this->repo->getObjs();
+                $posts      = $this->repo->getObjsByExcludedArray($excluded_post_id_array);
+
                 foreach($posts as $post){
                     if($post->status == "active"){
                         $post->status = "Active";

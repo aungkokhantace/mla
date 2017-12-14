@@ -27,7 +27,7 @@
             @foreach($posts as $post)
                 {!! $post->content !!}<br>
             @endforeach
-            
+
         </div>
 
         <!-- Blog Sidebar Widgets Column -->
@@ -35,7 +35,7 @@
 
 
             <!-- Blog Categories Well -->
-            <div class="home-right">                
+            <div class="home-right">
                 <div class="col-md-12 timer-align">
                     <div class="col-md-3 count_down" id="days">DAYS</div>
                     <div class="col-md-3 count_down" id="hours">HOURS</div>
@@ -49,9 +49,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         @if(isset($latestNews) && count($latestNews)>0)
-                            @foreach($latestNews as $latestNew)                                
-                            <div class="row panel-body latest-news-body">  
-                                <img class="img_latest_new" src="{!! $latestNew->image !!}">                              
+                            @foreach($latestNews as $latestNew)
+                            <div class="row panel-body latest-news-body">
+                                <img class="img_latest_new" src="{!! $latestNew->image !!}">
                                 <!-- <h5 class="latest-news-heading"><b>{!! $latestNew->name !!}</b></h5> -->
                                 <p class="latest-news-heading"><b>{!! $latestNew->name !!}</b></p>
                                 <!-- <p class="latest-news-short-description">{!! $latestNew->short_description !!}</p> -->
@@ -61,9 +61,9 @@
                             @endforeach
                             <br>
                             <a href="/news_all" class="more">ALL NEWS>></a>
-                        @endif              
+                        @endif
                     </div>
-                    
+
                     <!-- /.col-lg-6 -->
                 </div>
                 <!-- /.row -->
@@ -78,68 +78,77 @@
 <!-- /.container -->
 <br/><hr>
 <div class="container">
-    <div class="row home-bottom">
-            <div class="col-lg-12">
-            <h2>They've Exhibited</h2> 
-        </div>
+      <div class="row home-bottom">
+              <div class="col-lg-12">
+              <h2>They've Exhibited</h2>
+          </div>
+      <div class="row">
+      @foreach($exhibitorArray as $key=>$exhibitorGroup)
+          @if($key == "Platinum Package")
+              <!-- Display four logos as default -->
+              <div class="col-md-6 col-lg-6">
+                  <h3>{{$key}}</h3>
+                  <hr>
+                  <!-- <img class="default-sponsor-image" src="assets/frontend/images/bottom1.jpg"> -->
+                  <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_1.png">
+                  <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_2.png">
+                  <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_3.png">
+                  <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_4.png">
 
-    @foreach($exhibitorArray as $key=>$exhibitorGroup)
-        @if($key == "Platinum Package")
-            <!-- Display four logos as default -->
-            <div class="col-md-6 col-lg-6">
-                <h3>{{$key}}</h3>
-                <hr>
-                <!-- <img class="default-sponsor-image" src="assets/frontend/images/bottom1.jpg"> -->
-                <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_1.png">
-                <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_2.png">
-                <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_3.png">
-                <img class="sponsor-logo-frontend" src="assets/frontend/images/Logo_4.png">
 
+                  <!-- append logos from database -->
+                  @foreach($exhibitorGroup as $exhibitor)
+                      <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
+                  @endforeach
+              </div>
 
-                <!-- append logos from database -->
-                @foreach($exhibitorGroup as $exhibitor)
-                    <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
-                @endforeach
-            </div>
+          <!-- Display other packages as normal -->
+          @else
+              @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
+                  <div class="col-md-6 col-lg-6">
+                      <h3>{{$key}}</h3>
+                      <hr>
 
-        <!-- Display other packages as normal -->
-        @else
-            @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
-                <div class="col-md-6 col-lg-6">
-                    <h3>{{$key}}</h3>
-                    <hr>
-                    
-                    @foreach($exhibitorGroup as $exhibitor)
-                        <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
-                    @endforeach
-                </div>
-            @endif
-        @endif
+                      @foreach($exhibitorGroup as $exhibitor)
+                          <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
+                      @endforeach
+                  </div>
+              @endif
+          @endif
 
-        <!-- @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
-        <div class="col-md-6 col-lg-6">
-            <h3>{{$key}}</h3>
-            <hr>
-            
-            @foreach($exhibitorGroup as $exhibitor)
-                <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
-            @endforeach
-        </div>
-        @endif  -->
-    @endforeach
+          <!-- @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
+          <div class="col-md-6 col-lg-6">
+              <h3>{{$key}}</h3>
+              <hr>
 
-    <div class="col-md-6 col-lg-6">
-        <h3>Printing Package</h3>
-        <hr>
-        <img class="sponsor-logo-frontend" src="/ExhibitorImages/mcm_logo.jpg">
+              @foreach($exhibitorGroup as $exhibitor)
+                  <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
+              @endforeach
+          </div>
+          @endif  -->
+      @endforeach
+
+      <div class="col-md-6 col-lg-6">
+          <h3>Printing Package</h3>
+          <hr>
+          <img class="sponsor-logo-frontend" src="/ExhibitorImages/mcm_logo.jpg">
+      </div>
     </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+            <h3>Local Business Package</h3>
+            <hr>
+            <img class="sponsor-logo-frontend" src="/ExhibitorImages/mbc_logo.jpg">
+        </div>
+      </div>
 
     </div>
     <!-- Footer -->
     </div>
 
-    
-@stop   
+
+@stop
 @section('page_script')
 <script>
 // Set the date we're counting down to
@@ -153,23 +162,23 @@ var x = setInterval(function() {
 
     // Get todays date and time
     var now = new Date().getTime();
-    
+
     // Find the distance between now an the count down date
     var distance = countDownDate - now;
-    
+
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+
     // Output the result in an element with id="demo"
     document.getElementById("days").innerHTML = '<span class="counter_value">' + days + '</span>' + '<br><span class="counter_unit"> DAYS</span>';
     document.getElementById("hours").innerHTML = '<span class="counter_value">' + hours + '</span>' + '<br><span class="counter_unit">HOURS</span>';
     document.getElementById("minutes").innerHTML = '<span class="counter_value">' + minutes + '</span>' + '<br><span class="counter_unit">MINUTES</span>';
     document.getElementById("seconds").innerHTML = '<span class="counter_value">' + seconds + '</span>' + '<br><span class="counter_unit">SECONDS</span>';
-    
-    // If the count down is over, write some text 
+
+    // If the count down is over, write some text
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
@@ -186,32 +195,32 @@ $(document).ready(function() {
     var ellipsestext = "";
     var moretext = "MORE>>";
     var lesstext = "LESS<<";
-    
+
 
     $('.more').each(function() {
         var content = $(this).html();
 
         if(content.length > showChar) {
- 
+
             var c = content.substr(0, showChar);
             var h = content.substr(showChar, content.length - showChar);
             //to replace all occurrence of </p> and <p>
             var h = h.replace(new RegExp('</p>', 'g'), '</span></span></p>');
             var h = h.replace(new RegExp('<p>', 'g'), '<p><span class="morecontent"><span>');
-            
+
             var html = c + '<span class="moreellipses">' + ellipsestext+ '</span><span class="morecontent"><span>' + h + '</span><a href="" class="morelink">' + moretext + '</a></span>';
-           
+
             $(this).html(html);
         }
- 
+
     });
-    
+
     $(".morelink").click(function(){
         // var x = document.getElementsByClassName("morecontent");
         if($(this).hasClass("less")) {
             $(this).removeClass("less");
             $(this).html(moretext);
-        } 
+        }
         else {
             $(this).addClass("less");
             $(this).html(lesstext);

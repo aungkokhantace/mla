@@ -9,7 +9,7 @@
                     <tbody>
                     <tr>
                         <td><label>Name </label></td>
-                        <td>{{$exhibitor->name}}</td>
+                        <td>{{$exhibitor->first_name}} {{$exhibitor->middle_name}} {{$exhibitor->last_name}}</td>
                     </tr>
                     <tr>
                         <td><label>Address</label></td>

@@ -5,14 +5,14 @@
 
         <!-- Content Column -->
         <div class="col-md-9 col-sm-12 col-xs-12 exhibit" id="agreement">
-            
+
             @if(isset($page->content) && $page->content !== "")
             {!! $page->content !!}
             <br>
             @endif
             @foreach($posts as $post)
                 {!! $post->content !!}<br>
-            @endforeach
+            @endforeach           
 
         </div>
     </div>

@@ -91,3 +91,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.full-width-table{
+  width:100% !important;
+}

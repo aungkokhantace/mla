@@ -42,17 +42,17 @@ class HomeController extends Controller
 
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
-        
+
         $latestNewRepo  = new LatestNewRepository();
         // $latestNews      = $latestNewRepo->getLatestNew();
 
         $latestNewsCount = Utility::getLatestNewsCount();
-        
+
         $latestNews      = $latestNewRepo->getLatestNewByLimit($latestNewsCount);  //get latest news by count in config or 5 as default
 
         //date to be counted to in timer
-        $countDownDate = Utility::getCountDownDate();        
-        
+        $countDownDate = Utility::getCountDownDate();
+
         //for short description to show before read more
         foreach($latestNews as $news){
             $description                = $news->description;
@@ -77,11 +77,11 @@ class HomeController extends Controller
         foreach($sponsorPackages as $sponsorPackage){
             $exhibitorArray[$sponsorPackage->name] = array();
         }
-        
+
         //loop through each exhibitor and group under each sponsor type name
         foreach($exhibitors as $exhibitor){
             foreach($sponsorPackages as $sponsorPackage){
-                if($exhibitor->business_type == $sponsorPackage->id){                    
+                if($exhibitor->business_type == $sponsorPackage->id){
                     // $exhibitorArray[$sponsorPackage->name] = $exhibitor;
                     array_push($exhibitorArray[$sponsorPackage->name], $exhibitor);
                 }
@@ -107,7 +107,7 @@ class HomeController extends Controller
         $search_term = Input::get('search_term');
         $postRepo = new PostRepository();
         $results = $postRepo->getPostsByTerm($search_term);
-        
+
         foreach($results as $result){
             $content = $result->content;
             $short_content = substr($content,0,250);
@@ -120,7 +120,7 @@ class HomeController extends Controller
         //  $perPage = 3; //items per page
         //  $currentPageSearchResults = $col->slice(($currentPage - 1) * $perPage, $perPage)->all();
         //  $NewsEntries = new LengthAwarePaginator($currentPageSearchResults, count($col), $perPage);
-         
+
         //  $NewsEntries->setPath($request->url());
         //  $NewsEntries->appends($request->except(['page']));
          //end paginating array

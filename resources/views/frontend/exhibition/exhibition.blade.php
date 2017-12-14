@@ -5,7 +5,7 @@
 
         <!-- Content Column -->
         <div class="col-md-9 col-sm-12 col-xs-12 sponsor" id="sponsor_support">
-                       
+
             <!-- @if(isset($page->content) && $page->content !== "")
             {!! $page->content !!}
             <br>
@@ -42,7 +42,7 @@
                             <div class="col-md-12 col-lg-12">
                                 <h3>{{$key}}</h3>
                                 <hr>
-                                
+
                                 @foreach($exhibitorGroup as $exhibitor)
                                     <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
                                 @endforeach
@@ -55,7 +55,7 @@
                     <div class="col-md-6 col-lg-6">
                         <h3>{{$key}}</h3>
                         <hr>
-                        
+
                         @foreach($exhibitorGroup as $exhibitor)
                             <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
                         @endforeach
@@ -71,6 +71,14 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <h3>Local Business Package</h3>
+                        <hr>
+                        <img class="sponsor-logo-frontend" src="/ExhibitorImages/mbc_logo.jpg">
+                    </div>
+                </div>
+
                <!-- @foreach($exhibitorArray as $key=>$exhibitorGroup)
                     @if($key == "Platinum Package")
                         <img class="default-sponsor-image" src="assets/frontend/images/bottom1.jpg">
@@ -80,15 +88,15 @@
                         <div class="col-md-12 col-lg-12">
                         <h3>{{$key}}</h3>
                         <hr>
-                        
+
                         @foreach($exhibitorGroup as $exhibitor)
                             <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
                         @endforeach
                         </div>
                     </div>
-                    @endif 
+                    @endif
                 @endforeach -->
-           <br> 
+           <br>
 
         </div>
     </div>

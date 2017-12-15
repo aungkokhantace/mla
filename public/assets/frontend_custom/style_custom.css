@@ -196,6 +196,12 @@ img[src*="data:image/"] {
   margin:5px 15px 5px 15px;
 }
 
+.sponsor-logo-frontend-large{
+  max-width:170px;
+  max-height:170px;
+  margin:5px 15px 5px 15px;
+}
+
 .default-sponsor-image{
   margin-bottom:5px;
   margin-left:15px;

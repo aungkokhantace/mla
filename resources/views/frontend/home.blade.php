@@ -137,9 +137,9 @@
 
       <div class="row">
         <div class="col-md-6 col-lg-6">
-            <h3>Local Business Package</h3>
+            <h3>Local Sponsors</h3>
             <hr>
-            <img class="sponsor-logo-frontend" src="/ExhibitorImages/mbc_logo.jpg">
+            <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/mbc_logo.jpg">
         </div>
       </div>
 

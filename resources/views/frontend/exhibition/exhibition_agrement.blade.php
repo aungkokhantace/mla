@@ -12,7 +12,7 @@
             @endif
             @foreach($posts as $post)
                 {!! $post->content !!}<br>
-            @endforeach           
+            @endforeach
 
         </div>
     </div>

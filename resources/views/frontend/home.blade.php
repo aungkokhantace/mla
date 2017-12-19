@@ -135,13 +135,22 @@
       </div>
     </div>
 
-      <div class="row">
-        <div class="col-md-6 col-lg-6">
-            <h3>Local Sponsors</h3>
-            <hr>
-            <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/mbc_logo.jpg">
-        </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+          <h3>Local Business Package</h3>
+          <hr>
+          <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/mbc_logo.jpg">
       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+          <h3>Coffee and Tea Sponsor</h3>
+          <hr>
+          <!-- <img class="sponsor-logo-frontend" src="/ExhibitorImages/MargaYouthFoundation.jpg"> -->
+          <img class="sponsor-logo-frontend" src="/ExhibitorImages/marga.jpg">
+      </div>
+    </div>
 
     </div>
     <!-- Footer -->

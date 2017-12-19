@@ -37,17 +37,17 @@
        <div class="container">
         <div class="row">
             <div class="col-md-2 inner-header-logo">
-                <img src="/assets/frontend/images/consal_logo.png" class="img-responsive head-of-mla-photo">
+                <a href="/home"><img src="/assets/frontend/images/consal_logo.png" class="img-responsive head-of-mla-photo"></a>
             </div>
             <div class="col-md-10 inner-header-text">
             <!-- <img src="/assets/frontend/images/header_logo.png" class="img-responsive head-of-mla-photo"> -->
-                <span class="inner-header-text"> 
+                <span class="inner-header-text">
                     17th Congress of Southeast Asian Librarians <br>
                     2-5 May 2018 <br>
-                    Naypyitaw, Myanmar 
+                    Naypyitaw, Myanmar
                 </span>
             </div>
-<!-- 
+<!--
             {!! Form::open(array('url' => '/search','files'=>true, 'id'=>'search', 'class'=> 'form-horizontal user-form-border')) !!}
             <div class="col-md-3">
                 <div class="input-group searchbox">
@@ -89,9 +89,9 @@
                         <a href="/program" class="active">PROGRAM</a>
                         @else
                         <a href="/program">PROGRAM</a>
-                        @endif                        
+                        @endif
                     </li>
-                    <li>                        
+                    <li>
                         @if(strpos(url()->current(),'/registration') !== false)
                         <a href="/registration" class="active">REGISTRATION</a>
                         @else
@@ -103,21 +103,21 @@
                         <a href="/exhibition" class="active">EXHIBITION & SPONSORSHIP</a>
                         @else
                         <a href="/exhibition">EXHIBITION & SPONSORSHIP</a>
-                        @endif 
+                        @endif
                     </li>
                     <li>
                         @if(strpos(url()->current(),'/travel') !== false)
                         <a href="/travel" class="active">TRAVEL & ACCOMMODATION</a>
                         @else
                         <a href="/travel">TRAVEL & ACCOMMODATION</a>
-                        @endif 
+                        @endif
                     </li>
                     <li>
                         @if(strpos(url()->current(),'/gallery') !== false)
                         <a href="/gallery" class="active">GALLERY</a>
                         @else
                         <a href="/gallery">GALLERY</a>
-                        @endif 
+                        @endif
                     </li>
                     <li>
                         @if(strpos(url()->current(),'/contact') !== false)
@@ -140,5 +140,3 @@
         </div>
         {!! Form::close() !!}
     </nav>
-
-    

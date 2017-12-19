@@ -119,7 +119,7 @@
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                     <p class="text-danger" id="image_error">{{$errors->first('image')}}</p>
-                                    </div>                    
+                                    </div>
                                 </div>
                                 <!-- End Logo -->
 
@@ -160,7 +160,7 @@
                                                     <span class="fileinput-exists">Change</span>
 
                                                     <input id="image" type="file" name="image" accept="image.*" />
-                                                    
+
                                                     {{--{{ Form::file('nric_front_img') }}--}}
                                                 </span>
                                                             {{--<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>--}}

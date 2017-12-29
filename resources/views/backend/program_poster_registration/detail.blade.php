@@ -8,18 +8,6 @@
                 <table class="table">
                     <tbody>
                     <tr>
-                        <td><label>Address </label></td>
-                        <td>{{$program_poster->address}}</td>
-                    </tr>
-                    <tr>
-                        <td><label>Email</label></td>
-                        <td>{{$program_poster->email}}</td>
-                    </tr>
-                    <tr>
-                        <td><label>Description</label></td>
-                        <td>{{$program_poster->description}}</td>
-                    </tr>
-                    <tr>
                         <td><label>Title </label></td>
                         <td>{{$program_poster->title}}</td>
                     </tr>
@@ -28,6 +16,18 @@
                         <td>
                             {{$program_poster->author}}
                         </td>
+                    </tr>
+                    <tr>
+                        <td><label>Email</label></td>
+                        <td>{{$program_poster->email}}</td>
+                    </tr>
+                    <tr>
+                        <td><label>Address</label></td>
+                        <td>{{$program_poster->address}}</td>
+                    </tr>                    
+                    <tr>
+                        <td><label>Description</label></td>
+                        <td>{{$program_poster->description}}</td>
                     </tr>
                     <tr>
                         <td><label>Status</label></td>

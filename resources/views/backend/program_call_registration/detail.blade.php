@@ -8,6 +8,10 @@
                 <table class="table">
                     <tbody>
                     <tr>
+                        <td><label>Title</label></td>
+                        <td>{{$program_call->title}}</td>
+                    </tr>
+                    <tr>
                         <td><label>1st Author Affiliation </label></td>
                         <td>{{$program_call->first_author}}</td>
                     </tr>
@@ -30,6 +34,10 @@
                     <tr>
                         <td><label>Abstract</label></td>
                         <td>{{$program_call->abstract}}</td>
+                    </tr>
+                    <tr>
+                        <td><label>Paper File</label></td>
+                        <td><a target="_blank" href="/PaperUploads/{{$program_call->paper_file}}">{{$program_call->paper_file}}</a></td>
                     </tr>
                     <tr>
                         <td><label>Status</label></td>

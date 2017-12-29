@@ -31,6 +31,8 @@ class ProgramCallEntryFormRequest extends Request
             "second_author" => "required",
             "third_author" => "required",
             "abstract" => "required",
+          "paper_file" => "required",
+            // "paper_file" => "mimes:docx,pdf",
         ];
     }
     public function messages(){
@@ -42,7 +44,10 @@ class ProgramCallEntryFormRequest extends Request
             "second_author.required" => "2nd Author is required",
             "third_author.required" => "3rd Author is required",
             "abstract.required" => "Abstract is required",
-
+            "paper_file.required" => "Paper file is required",
+            "paper_file.file" => "This must be a successfully uploaded file",
+            "paper_file.mimes" => "Please upload only docx or pdf file type",
+            "paper_file.size" => "Maximum file upload size is 5MB",
         ];
     }
 }

@@ -19,7 +19,6 @@ class ProgramCallReportController extends Controller
             $type = 'all';
             $from_date = null;
             $to_date = null;
-
             return view('report.program_call_view',compact('program_calls','from_date','to_date','type'));
         }
         return redirect('backend/login');
@@ -39,7 +38,6 @@ class ProgramCallReportController extends Controller
 
             $programCallRepo = new ReportProgramCallRepository();
             $program_calls = $programCallRepo->getDataByDate($type,$from_date,$to_date);
-
             $display_ary = array();
             foreach($program_calls as $program_call){
                 if($program_call->status == 1){
@@ -50,14 +48,17 @@ class ProgramCallReportController extends Controller
                     $status = 'Cancel';
                 }
 
+                $display_ary[$program_call->id]['Title'] =  $program_call->title;
                 $display_ary[$program_call->id]['First Author'] =  $program_call->first_author;
-                $display_ary[$program_call->id]['Email'] = $program_call->email;
-                $display_ary[$program_call->id]['Address'] = $program_call->address;
                 $display_ary[$program_call->id]['Second Author'] = $program_call->second_author;
                 $display_ary[$program_call->id]['Third Author'] = $program_call->third_author;
+                $display_ary[$program_call->id]['Email'] = $program_call->email;
+                $display_ary[$program_call->id]['Address'] = $program_call->address;
                 $display_ary[$program_call->id]['Abstract'] = $program_call->abstract;
+                $display_ary[$program_call->id]['Paper'] = $program_call->paper_file;
                 $display_ary[$program_call->id]['Status'] = $status;
             }
+
             Excel::create('Program_Call_Export', function($excel)use($display_ary) {
                 $excel->sheet('Program Call', function($sheet)use($display_ary) {
 

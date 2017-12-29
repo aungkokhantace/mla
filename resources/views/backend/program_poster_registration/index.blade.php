@@ -37,9 +37,9 @@
                         <tr>
                             <th><input type='checkbox' name='check' id='check_all'/></th>
                             <th>Title</th>
+                            <th>Author Affiliation</th>
                             <th>Email</th>
                             <th>Address</th>
-                            <th>Author Affiliation</th>
                             <th>Status</th>
                             <th>Change Status</th>
                         </tr>
@@ -48,9 +48,9 @@
                         <tr>
                             <th></th>
                             <th class="search-col" con-id="lame">Title</th>
+                            <th class="search-col" con-id="organization">Author Affiliation</th>
                             <th class="search-col" con-id="email">Email</th>
                             <th class="search-col" con-id="organization">Address</th>
-                            <th class="search-col" con-id="organization">Author Affiliation</th>
                             <th class="search-col" con-id="status">Status</th>
                             <th></th>
                         </tr>
@@ -61,9 +61,9 @@
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $program_poster->id }}" id="all"></td>
 
                                 <td><a href="/backend/program_poster/detail/{{$program_poster->id}}">{{$program_poster->title}}</a></td>
+                                <td>{{$program_poster->author}}</td>
                                 <td>{{$program_poster->email}}</td>
                                 <td>{{$program_poster->address}}</td>
-                                <td>{{$program_poster->author}}</td>
                                 <td>
                                     @if($program_poster->status == 1)
                                         Pending

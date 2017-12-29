@@ -27,12 +27,14 @@ class ReportProgramCallRepository implements ReportProgramCallRepositoryInterfac
     {
         $query = ProgramCall::query();
         $query = $query->select('program_paper.id',
+            'program_paper.title as title',
             'program_paper.first_author as first_author',
             'program_paper.email as email',
             'program_paper.address as address',
             'program_paper.second_author as second_author',
             'program_paper.third_author as third_author',
             'program_paper.abstract as abstract',
+            'program_paper.paper_file as paper_file',
             'program_paper.status as status');
         if(isset($type) && $type!=null  && $type <> 'all'){
             $query =$query->where('program_paper.status',$type);
@@ -117,7 +119,7 @@ class ReportProgramCallRepository implements ReportProgramCallRepositoryInterfac
         $url = DB::table('pages')->where('id',$page_id)->whereNull('deleted_at')->first()->url;
         return $url;
     }
-    
+
     public function getCountry(){
         $countries = DB::table('countries')->get();
         return $countries;

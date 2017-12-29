@@ -171,6 +171,47 @@ class ProgramController extends Controller
         $second_author = Input::get('second_author');
         $third_author = Input::get('third_author');
         $abstract = Input::get('abstract');
+        $paper_file = Input::file('paper_file');
+
+        //start saving file section
+        $extension = $paper_file->getClientOriginalExtension();
+
+        // SET UPLOAD PATH
+        $destinationPath = base_path().'/public/PaperUploads';
+
+        // GET THE FILE EXTENSION
+        $extension = $paper_file->getClientOriginalExtension();
+
+        $original_name = $paper_file->getClientOriginalName();
+
+        $actual_name = $original_name;
+
+        $file_in_path = $destinationPath.'/'.$original_name;
+
+        //start existing file case
+        //if the uploaded file name is already existing in folder, append random string to file name
+        if(file_exists($file_in_path))
+        {
+            //extention to be removed
+            $extension_including_dot = '.'.$extension;
+            //remove extention to get pure file name
+            $original_name_without_extention = rtrim($original_name,$extension_including_dot);
+            //generate random string
+            $random_string = uniqid();
+            //append random string to the file name
+            $actual_name = $original_name_without_extention.'_'.$random_string.$extension_including_dot;
+        }
+        //end existing file case
+
+        //create folder if not exists
+        if ( ! file_exists($destinationPath))
+        {
+            mkdir($destinationPath, 0777, true);
+        }
+
+        // MOVE THE UPLOADED FILE TO THE DESTINATION DIRECTORY
+        $upload_success = $paper_file->move($destinationPath, $actual_name);
+        //end saving file section
 
         $programCallObj = new ProgramCall();
         $programCallObj->title = $title;
@@ -180,13 +221,13 @@ class ProgramController extends Controller
         $programCallObj->second_author = $second_author;
         $programCallObj->third_author = $third_author;
         $programCallObj->abstract = $abstract;
+        $programCallObj->paper_file = $actual_name;
 
         $result = $this->programCallRepository->create($programCallObj);
 
-
         if ($result['aceplusStatusCode'] == ReturnMessage::OK) {
 
-            //start sending email to user
+            // //start sending email to user
             $userEmailArr = array();
             $userEmailArr[0] = $email;
 
@@ -223,14 +264,14 @@ class ProgramController extends Controller
 
                 Utility::sendEmail($template,$email,$subject);
             }
-            //end sending email to admin
+            // //end sending email to admin
             alert()->success('Registration successfully submitted. Please check your email for further information.')->persistent('OK');
 
             return redirect()->action('Frontend\ProgramController@program_call')
                 ->withMessage(FormatGenerator::message('Success', 'Call for paper successfully created ...'));
         } else {
             return redirect()->action('Frontend\ProgramController@program_call')
-                ->withMessage(FormatGenerator::message('Fail', 'Call for paper did not created ...'));
+                ->withMessage(FormatGenerator::message('Fail', 'Call for paper did not create ...'));
         }
     }
 

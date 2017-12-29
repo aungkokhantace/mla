@@ -107,8 +107,9 @@
                 <p>Please send your abstract <b>by Saturday 30 November 2017</b> to: <a href="http://papers@consalxvii.org">papers@consalxvii.org</a></p>
 
                 <br>
-                <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="frm_program_call">
-                    {{csrf_field()}}
+                <!-- <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="frm_program_call" enctype="multipart/form-data"> -->
+                {!! Form::open(array('id'=> 'frm_program_call' , 'url' => '/program_call/store', 'class'=> 'form-horizontal call_for_paper', 'files'=> 'true')) !!}
+                    <!-- {{csrf_field()}} -->
                     <fieldset>
                         <!-- Text input-->
                         <div class="form-group">
@@ -166,10 +167,19 @@
 
                         <!-- Abstract -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="abstract">Abstract</label>
+                            <label class="col-md-4 control-label" for="abstract">Abstract (maximum 500 words)</label>
                             <div class="col-md-6">
                                 <textarea class="form-control abstract-textbox" id="abstract" name="abstract" placeholder="Enter Abstract"></textarea>
                                 <p class="text-danger">{{$errors->first('abstract')}}</p>
+                            </div>
+                        </div>
+
+                        <!-- file upload-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="paper_file">Paper (maximum 35 MB)</label>
+                            <div class="col-md-4">
+                                <input type="file" id="paper_file" name="paper_file" class="form-control">
+                                <p class="text-danger">{{$errors->first('paper_file')}}</p>
                             </div>
                         </div>
 
@@ -182,7 +192,8 @@
                         </div>
 
                     </fieldset>
-                </form>
+                <!-- </form> -->
+                {!! Form::close() !!}
         </div>
     </div>
     <!-- /.row -->
@@ -230,6 +241,11 @@
                 valid = false;
             }
 
+            var paper_file = $("#paper_file").val();
+            if (paper_file == "") {
+                valid = false;
+            }
+
             if (valid == true) {
                 add_confirm_setup('program_call');
             }
@@ -245,7 +261,11 @@
                     address:'required',
                     second_author: 'required',
                     third_author:'required',
-                    abstract:'required'
+                    abstract:'required',
+                    paper_file: {
+                      required: true,
+                      extension: "docx|pdf"
+                    }
                 },
                 messages: {
                     title:'Title is required',
@@ -254,7 +274,8 @@
                     address:'Address is required',
                     second_author: '2nd Author is required',
                     third_author:'3rd Author is required',
-                    abstract:'Abstract is required'
+                    abstract:'Abstract is required',
+                    paper_file:{required:'Paper File is required',extension:'Please upload only docx or pdf file types.'}
                 },
                /* submitHandler: function (form) {
                     $('input[type="submit"]').attr('disabled', 'disabled');

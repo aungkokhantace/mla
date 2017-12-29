@@ -36,10 +36,11 @@
                         <thead>
                         <tr>
                             <th><input type='checkbox' name='check' id='check_all'/></th>
+                            <th>Title</th>
                             <th>1st Author Affiliation</th>
                             <th>Email</th>
-                            <th>2nd Author</th>
-                            <th>3rd Author</th>
+                            <!-- <th>2nd Author</th> -->
+                            <!-- <th>3rd Author</th> -->
                             <th>Status</th>
                             <th>Change Status</th>
                         </tr>
@@ -47,10 +48,11 @@
                         <tfoot>
                         <tr>
                             <th></th>
-                            <th class="search-col" con-id="lame">1st Author Affiliation</th>
+                            <th class="search-col" con-id="title">Title</th>
+                            <th class="search-col" con-id="1st_author">1st Author Affiliation</th>
                             <th class="search-col" con-id="email">Email</th>
-                            <th class="search-col" con-id="organization">2nd Author</th>
-                            <th class="search-col" con-id="organization">3rd Author</th>
+                            <!-- <th class="search-col" con-id="organization">2nd Author</th> -->
+                            <!-- <th class="search-col" con-id="organization">3rd Author</th> -->
                             <th class="search-col" con-id="status">Status</th>
                             <th></th>
                         </tr>
@@ -60,10 +62,11 @@
                             <tr>
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $program_call->id }}" id="all"></td>
 
+                                <td><a href="/backend/program_call/detail/{{$program_call->id}}">{{$program_call->title}}</a></td>
                                 <td><a href="/backend/program_call/detail/{{$program_call->id}}">{{$program_call->first_author}}</a></td>
                                 <td>{{$program_call->email}}</td>
-                                <td>{{$program_call->second_author}}</td>
-                                <td>{{$program_call->third_author}}</td>
+                                <!-- <td>{{$program_call->second_author}}</td> -->
+                                <!-- <td>{{$program_call->third_author}}</td> -->
                                 <td>
                                     @if($program_call->status == 1)
                                         Pending

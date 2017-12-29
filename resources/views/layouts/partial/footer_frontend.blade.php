@@ -20,7 +20,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="/assets/frontend/js/bootstrap.min.js"></script>
     <script src="/assets/frontend/js/validation/jquery.validate.js"></script>
-    <script src="/assets/frontend/js/validation/validation.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <!-- <script src="/assets/frontend/js/validation/validation.js"></script> -->
+    <!-- <script src="/assets/frontend/js/validation/validation.js"></script> -->
+    <script src="/assets/frontend/js/validation/additional-methods.js"></script>
 
     <script src="/assets/js/crud.js"></script>
     <script src="/assets/js/sweetalert.min.js"></script>

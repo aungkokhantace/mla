@@ -108,13 +108,13 @@ class Utility
             // return end of current year
             $countDownDate = date("Y").'-12-31';
         }
-        return $countDownDate;        
+        return $countDownDate;
     }
 
     //returns latest news count if it is set up in core_configs, and returns 5 as default if not set up
     public static function getLatestNewsCount(){
         $latestNewsCountRaw   = DB::table('core_configs')->where('code','=','SETTING_LATEST_NEWS_COUNT')->first();
-       
+
         if(isset($latestNewsCountRaw) && count($latestNewsCountRaw) > 0 && $latestNewsCountRaw->value > 0){
             $latestNewsCount      = $latestNewsCountRaw->value;
         }
@@ -122,7 +122,7 @@ class Utility
             // return 5 as the default count
             $latestNewsCount = 5;
         }
-        return $latestNewsCount;        
+        return $latestNewsCount;
     }
 
     //returns prefix of registration number if it is set up in core_configs, and returns "REG_000" if not set up
@@ -135,7 +135,7 @@ class Utility
             // return 'REG_000' as default value
             $registrationPrefix = 'REG_000';
         }
-        return $registrationPrefix;        
+        return $registrationPrefix;
     }
 
      //returns prefix of exhibitor registration number if it is set up in core_configs, and returns "EXH_REG_000" if not set up
@@ -148,7 +148,7 @@ class Utility
             // return 'EXH_REG_000' as default value
             $exhRegistrationPrefix = 'EXH_REG_000';
         }
-        return $exhRegistrationPrefix;        
+        return $exhRegistrationPrefix;
     }
 
     //sends email with parameters in mail blade
@@ -164,11 +164,11 @@ class Utility
     public static function getEarlyBirdRegistrationDeadline(){
         $temp = DB::select("SELECT value FROM core_configs WHERE code = 'SETTING_EARLY_BIRD_REG' AND type = 'SETTING' LIMIT 1");
         if(isset($temp) && count($temp)>0){
-            $early_bird_deadline = $temp[0]->value;    
+            $early_bird_deadline = $temp[0]->value;
         }
         else{
             $early_bird_deadline = '2018-01-31'; //default date
-        }        
+        }
         return $early_bird_deadline;
     }
 
@@ -176,11 +176,11 @@ class Utility
     public static function getStandardRegistrationDeadline(){
         $temp = DB::select("SELECT value FROM core_configs WHERE code = 'SETTING_STANDARD_REG' AND type = 'SETTING' LIMIT 1");
         if(isset($temp) && count($temp)>0){
-            $standard_deadline = $temp[0]->value;    
+            $standard_deadline = $temp[0]->value;
         }
         else{
             $standard_deadline = '2018-04-29'; //default date
-        }        
+        }
         return $standard_deadline;
     }
 

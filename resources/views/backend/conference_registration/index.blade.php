@@ -35,8 +35,8 @@
                         <thead>
                         <tr>
                             <th><input type='checkbox' name='check' id='check_all'/></th>
-                          {{--  <th>First Name</th>
-                            <th>Middle Name</th>--}}
+                            <th>First Name</th>
+                            <!-- <th>Middle Name</th> -->
                             <th>Last Name</th>
                             <th>Organization</th>
                             <th>Email</th>
@@ -47,8 +47,8 @@
                         <tfoot>
                         <tr>
                             <th></th>
-                            {{--<th class="search-col" con-id="fname">First Name</th>
-                            <th class="search-col" con-id="mame">Middle Name</th>--}}
+                            <th class="search-col" con-id="fname">First Name</th>
+                            <!-- <th class="search-col" con-id="mame">Middle Name</th> -->
                             <th class="search-col" con-id="lame">Last Name</th>
                             <th class="search-col" con-id="organization">Organization</th>
                             <th class="search-col" con-id="email">Email</th>
@@ -61,8 +61,8 @@
                             <tr>
                                 <input type="hidden" name="id" value="{{$conference_registration->id}}">
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $conference_registration->id }}" id="all"></td>
-                                {{--<td>{{$conference_registration->first_name}}</td>
-                                <td>{{$conference_registration->middle_name}}</td>--}}
+                                <td><a href="/backend/conference_registration/detail/{{$conference_registration->id}}">{{$conference_registration->first_name}}</a></td>
+                                <!-- <td>{{$conference_registration->middle_name}}</td> -->
                                 <td><a href="/backend/conference_registration/detail/{{$conference_registration->id}}">{{$conference_registration->last_name}}</a></td>
                                 <td>{{$conference_registration->organization}}</td>
                                 <td>{{$conference_registration->email}}</td>

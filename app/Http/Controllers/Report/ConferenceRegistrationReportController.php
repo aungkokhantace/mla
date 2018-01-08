@@ -41,7 +41,7 @@ class ConferenceRegistrationReportController extends Controller
 
             $conference_regRepo = new ReportConferenceRegistrationRepository();
             $conference_registrations = $conference_regRepo->getDataByDate($from_date,$to_date);
-            
+
             $display_ary = array();
             foreach($conference_registrations as $conference_registration){
                 if($conference_registration->status == 1){
@@ -60,16 +60,16 @@ class ConferenceRegistrationReportController extends Controller
 
                 $registrationCategoryRepo   = new RegistrationCategoryRepository();
                 $registrationCategories     = $registrationCategoryRepo->getObjs();
-                
+
                 $registrationCategoryArray  = array();
                 foreach($registrationCategories as $registrationCategory){
-                    $registrationCategoryArray[$registrationCategory->id] = $registrationCategory->name; 
+                    $registrationCategoryArray[$registrationCategory->id] = $registrationCategory->name;
                 }
-                
+
                 $reg_cat = $registrationCategoryArray[$conference_registration->registration_category];
-                
+
                 $country = $conference_registration->country;
-                
+
                 $display_ary[$conference_registration->id]['First Name'] =  $conference_registration->first_name;
                 $display_ary[$conference_registration->id]['Middle Name'] = $conference_registration->middle_name;
                 $display_ary[$conference_registration->id]['Last Name'] = $last_name = $conference_registration->last_name;
@@ -79,9 +79,11 @@ class ConferenceRegistrationReportController extends Controller
                 $display_ary[$conference_registration->id]['Phone'] = $conference_registration->ph_no;
                 $display_ary[$conference_registration->id]['Registration Category'] = $reg_cat;
                 $display_ary[$conference_registration->id]['Payment Type'] = $conference_registration->payment_type;
+                $display_ary[$conference_registration->id]['Itinerary Route'] = $conference_registration->itinerary_route;
+                $display_ary[$conference_registration->id]['Dietary Preferences'] = $conference_registration->food;
                 $display_ary[$conference_registration->id]['Status'] = $status;
             }
-            
+
             Excel::create('Conference_Registration_Export', function($excel)use($display_ary) {
                 $excel->sheet('Conference Registration', function($sheet)use($display_ary) {
 

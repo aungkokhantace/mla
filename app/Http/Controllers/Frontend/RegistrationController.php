@@ -71,7 +71,8 @@ class RegistrationController extends Controller
         $reg_cat = Input::get('registration_category');
         $membership_no = Input::get('membership_no');
         $payment_type = Input::get('payment_type');
-
+        $itinerary_route = Input::get('itinerary_route');
+        $food = Input::get('food');
 
 
         $registrationObj = new ConferenceRegistration();
@@ -86,7 +87,8 @@ class RegistrationController extends Controller
         $registrationObj->membership_no = $reg_cat == 2 ? $membership_no : null;
 
         $registrationObj->payment_type = $payment_type;
-
+        $registrationObj->itinerary_route = $itinerary_route;
+        $registrationObj->food = $food;
 
             $result = $this->repo->create($registrationObj);
 
@@ -142,7 +144,6 @@ class RegistrationController extends Controller
     public function detail($id){
         if (Auth::guard('User')->check()) {
             $conference_registration = $this->repo->getObjByID($id);
-            // dd($conference_registration->RegistrationCategory->name);
             return view('backend.conference_registration.detail')->with('conference_registration',$conference_registration);
         }
         return redirect('/');

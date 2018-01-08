@@ -118,6 +118,34 @@
                   </div>
                 </div>
 
+                <!-- Itinerary Route -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="itinerary_route">Itinerary Route</label>
+                  <div class="col-md-4">
+                    <select id="itinerary_route" name="itinerary_route" class="form-control">
+                        <option value="" selected disabled>Select Itinerary Route</option>
+                        <option value="Direct to Naypyitaw">Direct to Naypyitaw</option>
+                        <option value="Direct to Yangon">Direct to Yangon</option>
+                        <option value="via Bangkok to Yangon">via Bangkok to Yangon</option>
+                        <option value="Others">Others</option>
+                    </select>
+                      <p class="text-danger" id="itinerary_route">{{$errors->first('itinerary_route')}}</p>
+                  </div>
+                </div>
+
+                <!-- Food -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="food">Foods</label>
+                  <div class="col-md-4">
+                    <select id="food" name="food" class="form-control">
+                        <option value="" selected disabled>Select the Dietary Preferences</option>
+                      <option value="Halal">Halal</option>
+                      <option value="Vegetarian">Vegetarian</option>
+                    </select>
+                      <p class="text-danger" id="food">{{$errors->first('food')}}</p>
+                  </div>
+                </div>
+
                  <!-- Button -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="submit"></label>
@@ -450,6 +478,18 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
                 valid = false;
             }
 
+            $("#payment_type_error").text("");
+            var payment_type = $("#payment_type").val();
+            if(payment_type == ""){
+                valid = false;
+            }
+
+            $("#payment_type_error").text("");
+            var payment_type = $("#payment_type").val();
+            if(payment_type == ""){
+                valid = false;
+            }
+
             if (valid == true){
                 add_confirm_setup('registration');
             }
@@ -467,7 +507,9 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
                     country:'required',
                     ph_no:{required:true,number:true},
                     registration_category:'required',
-                    payment_type:'required'
+                    payment_type:'required',
+                    itinerary_route:'required',
+                    food:'required'
                 },
                 messages: {
                     first_name:'First Name is required',
@@ -478,7 +520,9 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
                     country:'Country is required',
                     ph_no:{required:'Phone is required',number:'Only number accepted'},
                     registration_category:'Registration category is required',
-                    payment_type:'Payment type is required'
+                    payment_type:'Payment type is required',
+                    itinerary_route:'Itinerary Route is required',
+                    food:'Dietary Preferences is required'
                 },
                /* submitHandler: function (form) {
                     $('button[type="button"]').attr('disabled', 'disabled');

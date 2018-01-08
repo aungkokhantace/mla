@@ -51,6 +51,14 @@
                         <td>{{$conference_registration->payment_type}}</td>
                     </tr>
                     <tr>
+                        <td><label>Itinerary Route</label></td>
+                        <td>{{$conference_registration->itinerary_route}}</td>
+                    </tr>
+                    <tr>
+                        <td><label>Dietary Preferences</label></td>
+                        <td>{{$conference_registration->food}}</td>
+                    </tr>
+                    <tr>
                         <td><label>Status</label></td>
                         <td>
                             @if($conference_registration->status == 1)

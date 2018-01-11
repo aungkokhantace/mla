@@ -169,7 +169,7 @@
                     <p><b>Account Number</b> :  0010101200726548</p>
                     <p><b>SWIFT-CODE</b> :  CPOBMMMY</p>
                     <p><b>Bank Address</b> :  No. 334/336, corner of 23 st, & Strand Rd, Latha Township, Yangon, Myanmar</p>
-                    <p>See <a href="#">Eligible Transferring Banks</a></p>
+                    <p>See <a href="#eligible_banks">Eligible Transferring Banks</a></p>
                     <p><b>For local (Myanmar Currency)</b><p>
                     <p>Bank Name:  Kanbawza Bank</p>
                     <p>Bank Account Holder: Myanmar Library Association</p>
@@ -189,7 +189,7 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
                 <p>Payment by bank transfer is only possible until 29 April 2017. </p>
                 <p>Note: all bank transfer fees are covered by the applicant’s account and not to charge for the receiver account.</p>
 
-                <h2>Eligible Transferring Banks</h2>
+                <h2 id="eligible_banks">Eligible Transferring Banks</h2>
                 <!-- Start eligible banks -->
                 <div class="tg-wrap">
                     <table class="tg">

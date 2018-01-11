@@ -26,13 +26,14 @@ class ReportExhibitorRepository implements ReportExhibitorRepositoryInterface
     public function getDataByDate($type=null,$from_date=null, $to_date=null)
     {
         $query = ExhibitionExhibitor::query();
-        $query = $query->select('exhibition_exhibitors.id',
-            'exhibition_exhibitors.name as name',
-            'exhibition_exhibitors.address as address',
-            'exhibition_exhibitors.ph_no as ph_no',
-            'exhibition_exhibitors.email as email',
-            'exhibition_exhibitors.business_type as business_type',
-            'exhibition_exhibitors.status as status');
+        // $query = $query->select('exhibition_exhibitors.id',
+        //     'exhibition_exhibitors.name as name',
+        //     'exhibition_exhibitors.address as address',
+        //     'exhibition_exhibitors.ph_no as ph_no',
+        //     'exhibition_exhibitors.email as email',
+        //     'exhibition_exhibitors.business_type as business_type',
+        //     'exhibition_exhibitors.status as status');
+        $query = $query->select('exhibition_exhibitors.*');
         if(isset($type) && $type!=null  && $type <> 'all'){
             $query =$query->where('exhibition_exhibitors.status',$type);
         }
@@ -47,6 +48,7 @@ class ReportExhibitorRepository implements ReportExhibitorRepositoryInterface
         }
         $query = $query->whereNull('exhibition_exhibitors.deleted_at');
         $result = $query->get();
+        
         return $result;
     }
 
@@ -116,7 +118,7 @@ class ReportExhibitorRepository implements ReportExhibitorRepositoryInterface
         $url = DB::table('pages')->where('id',$page_id)->whereNull('deleted_at')->first()->url;
         return $url;
     }
-    
+
     public function getCountry(){
         $countries = DB::table('countries')->get();
         return $countries;

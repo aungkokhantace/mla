@@ -192,7 +192,7 @@ class Default_PermissionSeeder extends Seeder
 
             //Report Exhibitor
             ['id'=>220,'module'=>'Report Exhibitor','name'=>'Report Listing','description'=>'Report Exhibitor Listing','url'=>'backend/report/exhibitor'],
-            ['id'=>221,'module'=>'Report Exhibitor','name'=>'Report Search','description'=>'Report Exhibitor Search','url'=>'backend/report/exhibitor/{type?}/search/{from_date?}/{to_date?}'],
+            ['id'=>221,'module'=>'Report Exhibitor','name'=>'Report Search','description'=>'Report Exhibitor Search','url'=>'backend/report/exhibitor/search/{type?}/{from_date?}/{to_date?}'],
             ['id'=>222,'module'=>'Report Exhibitor','name'=>'Report Excel','description'=>'Report Exhibitor Excel','url'=>'backend/report/exhibitor/exportexcel/{type?}/{from_date?}/{to_date?}'],
 
             //Report Program_Call

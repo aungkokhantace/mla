@@ -12,6 +12,10 @@
                         <td>{{$exhibitor->first_name}} {{$exhibitor->middle_name}} {{$exhibitor->last_name}}</td>
                     </tr>
                     <tr>
+                        <td><label>Organization</label></td>
+                        <td>{{$exhibitor->organization}}</td>
+                    </tr>
+                    <tr>
                         <td><label>Address</label></td>
                         <td>{{$exhibitor->address}}</td>
                     </tr>
@@ -22,6 +26,10 @@
                     <tr>
                         <td><label>Email </label></td>
                         <td>{{$exhibitor->email}}</td>
+                    </tr>
+                    <tr>
+                        <td><label>Business Type </label></td>
+                        <td>{{$exhibitor->business_type}}</td>
                     </tr>
                     <tr>
                         <td><label>Status</label></td>

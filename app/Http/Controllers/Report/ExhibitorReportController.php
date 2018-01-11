@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Backend\SponsorPackageType\SponsorPackageTypeRepository;
 
 class ExhibitorReportController extends Controller
 {
@@ -40,6 +41,8 @@ class ExhibitorReportController extends Controller
             $exhibitorRepo = new ReportExhibitorRepository();
             $exhibitors = $exhibitorRepo->getDataByDate($type,$from_date,$to_date);
 
+            $sponsorPackageTypeRepo  = new SponsorPackageTypeRepository();
+
             $display_ary = array();
             foreach($exhibitors as $exhibitor){
                 if($exhibitor->status == 1){
@@ -49,19 +52,23 @@ class ExhibitorReportController extends Controller
                 }else{
                     $status = 'Cancel';
                 }
-                if($exhibitor->business_type == 1){
-                    $business_type = 'Option One';
-                }else{
-                    $business_type = 'Option Two';
-                }
+                // if($exhibitor->business_type == 1){
+                //     $business_type = 'Option One';
+                // }else{
+                //     $business_type = 'Option Two';
+                // }
 
-                $display_ary[$exhibitor->id]['Name'] =  $exhibitor->name;
+                $sponsorPackage         = $sponsorPackageTypeRepo->getObjByID($exhibitor->business_type);
+                $business_type          = $sponsorPackage->name;
+                $display_ary[$exhibitor->id]['Name'] =  $exhibitor->first_name.' '.$exhibitor->middle_name.' '.$exhibitor->last_name;
+                $display_ary[$exhibitor->id]['Organization'] = $exhibitor->organization;
                 $display_ary[$exhibitor->id]['Address'] = $exhibitor->address;
                 $display_ary[$exhibitor->id]['Phone'] = $exhibitor->ph_no;
                 $display_ary[$exhibitor->id]['Email'] = $exhibitor->email;
                 $display_ary[$exhibitor->id]['Business Type'] = $business_type;
                 $display_ary[$exhibitor->id]['Status'] = $status;
             }
+
             Excel::create('Exhibitor_and_Sponsor_Export', function($excel)use($display_ary) {
                 $excel->sheet('Exhibitor & Sponsor', function($sheet)use($display_ary) {
 

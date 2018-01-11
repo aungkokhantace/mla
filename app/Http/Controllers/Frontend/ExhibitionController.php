@@ -40,7 +40,7 @@ class ExhibitionController extends Controller
 
         $postRepo = new PostRepository();
         $posts    = $postRepo->getObjByPage($page_id);
-        
+
         //start sponsor logos
         $exhibitorRepo  = new ExhibitorRepository();
         $exhibitors     = $exhibitorRepo->getConfirmedExhibitors();
@@ -58,7 +58,7 @@ class ExhibitionController extends Controller
         //loop through each exhibitor and group under each sponsor type name
         foreach($exhibitors as $exhibitor){
             foreach($sponsorPackages as $sponsorPackage){
-                if($exhibitor->business_type == $sponsorPackage->id){                    
+                if($exhibitor->business_type == $sponsorPackage->id){
                     // $exhibitorArray[$sponsorPackage->name] = $exhibitor;
                     array_push($exhibitorArray[$sponsorPackage->name], $exhibitor);
                 }
@@ -166,14 +166,14 @@ class ExhibitionController extends Controller
 
             $type           = $exhibitionExhibitors->business_type;
 
-            //start calculation for amount            
+            //start calculation for amount
             //get all package types
             $sponsorPackageTypes = DB::select('SELECT * FROM sponsor_package_type');
 
             //get package type of current exhibitor by id
             $exhibitorPackageType = DB::select("SELECT * FROM sponsor_package_type WHERE `id` = $type LIMIT 1");
             $exhibitorPackageTypeObj = $exhibitorPackageType[0]; //only one record
-            
+
             $fee_amount = $exhibitorPackageTypeObj->amount;
 
             //add currency units
@@ -196,7 +196,7 @@ class ExhibitionController extends Controller
 
             //build param array for email
             $email_param_array = ['first_name'=>$first_name, 'middle_name'=>$middle_name, 'last_name'=>$last_name, 'organization'=>$organization, 'category'=>$category, 'user_email'=>$user_email, 'amount'=>$amount];
-            
+
             Utility::sendEmailWithParameters($template, $email_param_array, $email, $subject);
             //end sending email to user
 
@@ -261,6 +261,9 @@ class ExhibitionController extends Controller
     public function exhibitor_detail($id){
         if (Auth::guard('User')->check()) {
             $exhibitor = $this->exhibitorRepository->getObjByID($id);
+            $sponsorPackageTypeRepo  = new SponsorPackageTypeRepository();
+            $sponsorPackages         = $sponsorPackageTypeRepo->getObjByID($exhibitor->business_type);
+            $exhibitor->business_type = $sponsorPackages->name;
             return view('backend.exhibitor_registration.detail')->with('exhibitor',$exhibitor);
         }
         return redirect('/');
@@ -274,9 +277,9 @@ class ExhibitionController extends Controller
     }
 
     public function exhibition_exhibitor_store(ExhibitorEntryFormRequest $request){
-        
+
         $request->validate();
-        
+
         $first_name = Input::get('first_name');
         $middle_name = Input::get('middle_name');
         $last_name = Input::get('last_name');

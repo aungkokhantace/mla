@@ -122,7 +122,7 @@
                         @foreach($exhibitors as $exhibitor)
                             <tr>
                                 <td><input type="checkbox" class="check_source" name="edit_check" value="{{ $exhibitor->id }}" id="all"></td>
-                                <td><a href="/backend/exhibitor/detail/{{$exhibitor->id}}">{{$exhibitor->name}}</a></td>
+                                <td><a href="/backend/exhibitor/detail/{{$exhibitor->id}}">{{$exhibitor->first_name}} {{$exhibitor->middle_name}} {{$exhibitor->last_name}}</a></td>
                                 <td>{{$exhibitor->address}}</td>
                                 <td>{{$exhibitor->ph_no}}</td>
                                 <td>{{$exhibitor->email}}</td>

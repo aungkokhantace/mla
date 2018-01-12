@@ -255,6 +255,14 @@ html *
   width:100% !important;
 }
 
+.blue-text{
+  color:blue;
+}
+
+.center-text{
+  text-align: center;
+}
+
 /*for 404 template page*/
 #fof{display:block; width:100%; margin:100px 0; line-height:1.6em; text-align:center;}
 #fof .hgroup{text-transform:uppercase;}

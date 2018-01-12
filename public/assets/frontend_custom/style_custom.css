@@ -197,7 +197,8 @@ img[src*="data:image/"] {
 }
 
 .sponsor-logo-frontend-large{
-  max-width:170px;
+  /* max-width:170px; */
+  max-width:190px;
   max-height:170px;
   margin:5px 15px 5px 15px;
 }

@@ -140,6 +140,7 @@
           <h3>Local Business Package</h3>
           <hr>
           <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/mbc_logo.jpg">
+          <img class="sponsor-logo-frontend" src="/ExhibitorImages/lion.jpg">
       </div>
     </div>
 

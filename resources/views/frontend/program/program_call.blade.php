@@ -101,10 +101,10 @@
                 <li>The presenter (who need not be the author) must be fluent in English: there will be no interpretation service at this open session.</li>
                 <li>15 minutes will be allowed in the session for a summary presentation based on the paper, with time for questions. Presenters should not read their full written paper.</li>
                 </ol>
-                <p><b>Note:</b> in general, CONSAL has no funds available to cover the cost of speakers’ attendance at the Congress. Any person submitting a paper proposal to CONSAL XVII is responsible for arranging his/her own travel funding. </p>
+                <p><b>Note:</b> in general, CONSAL has no funds available to cover the cost of speakers’ attendance at the Congress. Any person submitting a paper proposal to CONSAL XVII is responsible for arranging his/her own funding.</p>
 
                 <h4>Deadline:</h4>
-                <p>Please send your abstract <b>by Saturday 30 November 2017</b> to: <a href="http://papers@consalxvii.org">papers@consalxvii.org</a></p>
+                <p>Please send your abstract <b>by 31 December 2017</b> to: <a href="http://papers@consalxvii.org" target="_blank">papers@consalxvii.org</a></p>
 
                 <br>
                 <!-- <form class="form-horizontal call_for_paper" method="post" action="{{url('program_call/store')}}" id="frm_program_call" enctype="multipart/form-data"> -->

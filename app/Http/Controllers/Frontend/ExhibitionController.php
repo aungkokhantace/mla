@@ -214,7 +214,7 @@ class ExhibitionController extends Controller
             if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
                 $template = "backend/exhibitionconfirmadminemail/exhibitionconfirmadminemail";
                 $email = $adminEmailArr;
-                $subject = "Hello World";
+                $subject = "Exhibition Confirm";
 
                 Utility::sendEmail($template, $email, $subject);
             }
@@ -228,7 +228,7 @@ class ExhibitionController extends Controller
                 $email = $exhibitionExhibitor->email;
                 //start sending email to user
                 $template = "backend/exhibitioncanceluseremail/exhibitioncanceluseremail";
-                $subject = "Hello World";
+                $subject = "Exhibition Cancel";
                 Utility::sendEmail($template, $email, $subject);
                 //end sending email to user
 
@@ -246,7 +246,7 @@ class ExhibitionController extends Controller
                 if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
                     $template = "backend/exhibitioncanceladminemail/exhibitioncanceladminemail";
                     $email = $adminEmailArr;
-                    $subject = "Hello World";
+                    $subject = "Exhibition Cancel";
 
                     Utility::sendEmail($template, $email, $subject);
                 }
@@ -333,7 +333,8 @@ class ExhibitionController extends Controller
                 $template = "backend/exhibitionsubmituseremail/exhibitionsubmituseremail";
                 $email = $userEmailArr;
                 // $subject = "CONSAL XVII Exhibit Registration Confirmation:  xxxx (registration number)";
-                $subject = "CONSAL XVII Exhibit Registration Confirmation:  ".$regPrefix.$resultObjId." (registration number)";
+                // $subject = "CONSAL XVII Exhibit Registration Confirmation:  ".$regPrefix.$resultObjId." (registration number)";
+                $subject = "CONSAL XVII Exhibit Registration Confirmation:  ";
 
                 Utility::sendEmail($template,$email,$subject);
             }

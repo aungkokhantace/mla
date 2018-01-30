@@ -79,14 +79,14 @@ class ProgramController extends Controller
         return redirect('/');
     }
     public function program_call_status_change($status,$id){
-        if($status == 2){
+        if($status == 2){ //confirm
             ProgramCall::where('id',$id)->update(['status'=>$status]);
             $program_call = ProgramCall::find($id);
             $email = $program_call->email;
 
             //start sending email to user
             $template = "backend/programcallconfirmuseremail/programcallconfirmuseremail";
-            $subject = "Hello World";
+            $subject = "Program Call Confirm";
             Utility::sendEmail($template, $email, $subject);
             //end sending email to user
 
@@ -104,20 +104,20 @@ class ProgramController extends Controller
             if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
                 $template = "backend/programcallconfirmadminemail/programcallconfirmadminemail";
                 $email = $adminEmailArr;
-                $subject = "Hello World";
+                $subject = "Program Call Confirm";
 
                 Utility::sendEmail($template, $email, $subject);
             }
             //end sending email to admin
             alert()->success('Confirmation email has been sent to user.')->persistent('OK');
             return redirect()->action('Frontend\ProgramController@all_program_call')->with('status',$status);
-        }elseif($status == 3){
+        }elseif($status == 3){ //cancel
             ProgramCall::where('id',$id)->update(['status'=>$status]);
 
             $program_call = ProgramCall::find($id);
             $email = $program_call->email;
             $template = "backend/programcallcanceluseremail/programcallcanceluseremail";
-            $subject = "Hello World";
+            $subject = "Program Call Cancel";
             Utility::sendEmail($template, $email, $subject);
             //end sending email to user
 
@@ -135,7 +135,7 @@ class ProgramController extends Controller
             if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
                 $template = "backend/programcallcanceladminemail/programcallcanceladminemail";
                 $email = $adminEmailArr;
-                $subject = "Hello World";
+                $subject = "Program Call Cancel";
 
                 Utility::sendEmail($template, $email, $subject);
             }

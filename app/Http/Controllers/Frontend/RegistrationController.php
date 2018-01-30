@@ -104,7 +104,8 @@ class RegistrationController extends Controller
                 if(isset($userEmailArr) && count($userEmailArr)>0){
                     $template = "backend/registrationsubmituseremail/registrationsubmituseremail";
                     $email = $userEmailArr;
-                    $subject = "CONSAL XVII Registration Confirmation:  ".$regPrefix.$resultObjId." (registration number)";
+                    // $subject = "CONSAL XVII Registration Confirmation:  ".$regPrefix.$resultObjId." (registration number)";
+                    $subject = "CONSAL XVII Registration Confirmation:  ";
 
                     Utility::sendEmail($template,$email,$subject);
                 }

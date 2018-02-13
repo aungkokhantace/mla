@@ -84,6 +84,7 @@
                             <th>Last Name</th>
                             <th>Organization</th>
                             <th>Email</th>
+                            <th>Itinerary Route</th>
                             <th>Status</th>
                             <th>Change Status</th>
                         </tr>
@@ -96,6 +97,7 @@
                             <th class="search-col" con-id="lame">Last Name</th>
                             <th class="search-col" con-id="organization">Organization</th>
                             <th class="search-col" con-id="email">Email</th>
+                            <th class="search-col" con-id="itinerary_route">Itinerary Route</th>
                             <th class="search-col" con-id="status">Status</th>
                             <th></th>
                         </tr>
@@ -110,6 +112,7 @@
                                 <td>{{$conference_registration->last_name}}</td>
                                 <td>{{$conference_registration->organization}}</td>
                                 <td>{{$conference_registration->email}}</td>
+                                <td>{{$conference_registration->itinerary_route}}</td>
                                 <td>
                                     @if($conference_registration->status == 1)
                                         Pending

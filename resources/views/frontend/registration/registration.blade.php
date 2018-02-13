@@ -142,6 +142,7 @@
                         <option value="" selected disabled>Select the Dietary Preferences</option>
                       <option value="Halal">Halal</option>
                       <option value="Vegetarian">Vegetarian</option>
+                      <option value="No preference">No preference</option>
                     </select>
                       <p class="text-danger" id="food">{{$errors->first('food')}}</p>
                   </div>

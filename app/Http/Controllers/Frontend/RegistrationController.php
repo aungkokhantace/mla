@@ -216,8 +216,13 @@ class RegistrationController extends Controller
 
             //start sending email to user
             $template = "backend/registrationconfirmuseremail/registrationconfirmuseremail";
-            $subject = "CONSAL XVII Registration Payment Confirmation";
+            // $subject = "CONSAL XVII Registration Payment Confirmation";
 
+            $regPrefix      = Utility::getRegistrationNumberPrefix();
+            $resultObjId    = $reg->id;
+
+            $subject = "CONSAL XVII Registration Confirmation:  ".$regPrefix.$resultObjId." (registration number)";
+            
             //build param array for email
             $email_param_array = ['first_name'=>$first_name, 'middle_name'=>$middle_name, 'last_name'=>$last_name, 'organization'=>$organization, 'category'=>$category, 'user_email'=>$user_email, 'amount'=>$amount];
 

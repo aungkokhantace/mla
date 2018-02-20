@@ -78,6 +78,8 @@
                                         Cancel
                                     @endif
                                 </td>
+
+                                <!-- status 2 is confirm and status 3 is cancel -->
                                 @if($conference_registration->status != 3 or $conference_registration->status != 2)
                                 <td>
                                     <div class="btn btn-group-sm">

@@ -32,7 +32,6 @@ class TravelController extends Controller
         $url = Route::getCurrentRoute()->getPath();
         $pageRepo = new PageRepository();
         $page_id  = $pageRepo->getPageIDByURL($url);
-
         $page = $pageRepo->getObjByID($page_id);
 
         $postRepo = new PostRepository();
@@ -60,11 +59,30 @@ class TravelController extends Controller
 
         $accommoRepo    = new AccommodationRepository();
         $accommos       = $accommoRepo->getAccommodation();
-        
+
         return view('frontend.travel.travel_accommodation')
             ->with('page',$page)
             ->with('posts',$posts)
             ->with('accommos',$accommos);
+    }
+
+    public function travelOther(Request $request)
+    {
+        $url = Route::getCurrentRoute()->getPath();
+        $pageRepo = new PageRepository();
+        $page_id  = $pageRepo->getPageIDByURL($url);
+        $page = $pageRepo->getObjByID($page_id);
+
+        $postRepo = new PostRepository();
+        $posts    = $postRepo->getObjByPage($page_id);
+
+        // $postConRepo    = new PostConferenceTravelRepository();
+        // $postCons       = $postConRepo->getPostConferenceTravel();
+
+        return view('frontend.travel.travel_other')
+            ->with('page',$page)
+            ->with('posts',$posts);
+            // ->with('postConferenceTravels', $postCons);
     }
 
 }

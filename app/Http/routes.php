@@ -44,6 +44,7 @@ Route::group(['middleware' => 'web'], function () {
 
         Route::get('/travel', 'Frontend\TravelController@index');
         Route::get('/travel_accommodation', 'Frontend\TravelController@travel_accommodation');
+        Route::get('/travel_other', 'Frontend\TravelController@travelOther');
 
         Route::get('/test_frontend', 'Frontend\TestController@index');
 

@@ -4,10 +4,10 @@
 @include('layouts.partial.nav_travel')
 
         <div class="col-md-9 poster" id="poster">
-             <h2 style="margin-bottom:15px;">TRAVEL & ACCOMMODATIONS >> POST-CONFERENCE TRAVEL</h2>
-                <div class="row">                
-                    @if(isset($postConferenceTravels) && count($postConferenceTravels)>0 )            
-                        @foreach($postConferenceTravels as $postConferenceTravel)                        
+             <h2 style="margin-bottom:15px;">TRAVEL & ACCOMMODATIONS >> POST-CONFERENCE TRAVEL (YANGON)</h2>
+                <div class="row">
+                    @if(isset($postConferenceTravels) && count($postConferenceTravels)>0 )
+                        @foreach($postConferenceTravels as $postConferenceTravel)
                         <!-- <div class="row"> -->
                             <div class="col-md-12">
                                 <p><b>{!! $postConferenceTravel->name !!}</b></p>

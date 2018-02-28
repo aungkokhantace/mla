@@ -35,6 +35,21 @@
                             </div>
                         </div>
 
+                  <!-- Start Displaying Local Business Package     -->
+                  @elseif($key == "Local Business Package")
+                      <!-- Display four logos as default -->
+                      <div class="col-md-12 col-lg-12">
+                          <h3>{{$key}}</h3>
+                          <hr>
+                          <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/mbc_logo.jpg">
+                          <img class="sponsor-logo-frontend" src="/ExhibitorImages/lion.jpg">
+
+                          <!-- append logos from database -->
+                          @foreach($exhibitorGroup as $exhibitor)
+                              <img class="sponsor-logo-frontend-large" src="{{$exhibitor->image}}">
+                          @endforeach
+                      </div>
+                    <!-- End Displaying Local Business Package     -->
                     <!-- Display other packages as normal -->
                     @else
                         @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
@@ -71,14 +86,14 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-12 col-lg-12">
                         <h3>Local Business Package</h3>
                         <hr>
                         <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/mbc_logo.jpg">
                         <img class="sponsor-logo-frontend" src="/ExhibitorImages/lion.jpg">
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row">
                     <div class="col-md-12 col-lg-12">

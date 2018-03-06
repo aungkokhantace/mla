@@ -186,7 +186,7 @@
 //                });
 
                 $('#post_content').summernote({
-                    height:300,
+                    height:600,
                     toolbar: [
                         // [groupName, [list of button]]
                         ['style', ['style']],

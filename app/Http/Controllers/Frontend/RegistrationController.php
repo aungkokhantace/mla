@@ -98,7 +98,7 @@ class RegistrationController extends Controller
                 $userEmailArr   = array();
                 $userEmailArr[0]= $email;
 
-                $regPrefix      = Utility::getRegistrationNumberPrefix();
+                // $regPrefix      = Utility::getRegistrationNumberPrefix();
                 $resultObjId    = $result['resultObj']->id;
 
                 if(isset($userEmailArr) && count($userEmailArr)>0){
@@ -218,11 +218,12 @@ class RegistrationController extends Controller
             $template = "backend/registrationconfirmuseremail/registrationconfirmuseremail";
             // $subject = "CONSAL XVII Registration Payment Confirmation";
 
-            $regPrefix      = Utility::getRegistrationNumberPrefix();
+            // $regPrefix      = Utility::getRegistrationNumberPrefix();
             $resultObjId    = $reg->id;
 
-            $subject = "CONSAL XVII Registration Confirmation:  ".$regPrefix.$resultObjId." (registration number)";
-            
+            // $subject = "CONSAL XVII Registration Confirmation:  ".$regPrefix.$resultObjId." (registration number)";
+            $subject = "CONSAL XVII Registration Confirmation: ";
+
             //build param array for email
             $email_param_array = ['first_name'=>$first_name, 'middle_name'=>$middle_name, 'last_name'=>$last_name, 'organization'=>$organization, 'category'=>$category, 'user_email'=>$user_email, 'amount'=>$amount];
 

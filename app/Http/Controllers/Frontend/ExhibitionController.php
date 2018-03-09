@@ -326,7 +326,7 @@ class ExhibitionController extends Controller
             $userEmailArr = array();
             $userEmailArr[0] = $email;
 
-            $regPrefix      = Utility::getExhibitorRegistrationNumberPrefix();
+            // $regPrefix      = Utility::getExhibitorRegistrationNumberPrefix();
             $resultObjId    = $result['resultObj']->id;
 
             if(isset($userEmailArr) && count($userEmailArr)>0){

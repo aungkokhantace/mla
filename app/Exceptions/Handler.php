@@ -52,7 +52,7 @@ class Handler extends ExceptionHandler
             else{
                 if ($e instanceof TokenMismatchException)
                 {
-                    return redirect()->view('core.error.error')
+                    return redirect()->view('core.error.error');
                 }
                 return response()->view('core.error.pagenotfound_frontend', ['e'=>$e], 404);
             }

@@ -201,11 +201,11 @@ class TestController extends Controller
 
     public function emailTest(){
         $template = "backend/registrationconfirmadminemail/registrationconfirmadminemail";
-        $email = ['aungkokhantace@gmail.com'];
+        $email = ['aungkokhantace@gmail.com','aungkokhant@aceplussolutions.com'];
         $subject = "Email Test";
 
         Utility::sendEmail($template, $email, $subject);
-        alert('Email successfully sent!');
+        alert('Email successfully sent!')->persistent('OK');
         return redirect()->action('Frontend\HomeController@index');
     }
 }

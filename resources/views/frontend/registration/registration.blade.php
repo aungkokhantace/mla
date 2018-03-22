@@ -147,6 +147,15 @@
                       <p class="text-danger" id="food">{{$errors->first('food')}}</p>
                   </div>
                 </div>
+                
+                <!-- spam alert -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="third_author"></label>
+                    <div class="col-md-8">
+                        <span class="red-text">*In case you don't receive auto-reply email, please check spam mail box.</span>
+                    </div>
+                </div>
+                <!-- spam alert -->
 
                  <!-- Button -->
                 <div class="form-group">

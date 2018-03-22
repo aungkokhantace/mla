@@ -10,11 +10,11 @@
     <p>Organization/Company: {{$organization}}</p>
     <p>Category: {{$category}}</p>
     <p>Email: {{$user_email}}</p>
-    <p>Amount: {{$amount}}</p>
+    <!-- <p>Amount: {{$amount}}</p> -->
 
     <p>If you have any questions, please contact <a href="registration@consalxvii.org">registration@consalxvii.org</a></p>
     <p>Thank you, and we are looking forward meeting you at the Congress!</p>
     <p><b>CONSAL XVII Team</b></p>
-    
+
 </body>
 </html>

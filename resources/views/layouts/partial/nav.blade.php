@@ -11,7 +11,7 @@
             <li nav-id='report'  class="has-sub" >
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
-                    <i class="fa fa-calendar"></i>
+                    <i class="fa fa-table"></i>
                     <span>Reports</span>
                 </a>
 
@@ -25,7 +25,7 @@
             <li nav-id='report'  class="has-sub" >
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
-                    <i class="fa fa-calendar"></i>
+                    <i class="fa fa-table"></i>
                     <span>Conference Registration</span>
                 </a>
                 <ul class="sub-menu">
@@ -35,7 +35,7 @@
             <li nav-id='report'  class="has-sub" >
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
-                    <i class="fa fa-calendar"></i>
+                    <i class="fa fa-table"></i>
                     <span>Exhibitor & Sponsor</span>
                 </a>
 
@@ -46,7 +46,7 @@
             <li nav-id='report'  class="has-sub" >
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
-                    <i class="fa fa-calendar"></i>
+                    <i class="fa fa-table"></i>
                     <span>Program</span>
                 </a>
                 <ul class="sub-menu">
@@ -59,7 +59,7 @@
             <li nav-id='report'  class="has-sub" >
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
-                    <i class="fa fa-calendar"></i>
+                    <i class="fa fa-cog"></i>
                     <span>Setup</span>
                 </a>
 
@@ -184,7 +184,7 @@
             <li  nav-id='modifier'  class="has-sub">
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
-                    <i class="fa fa-users"></i>
+                    <i class="fa fa-cogs"></i>
                     <span>Site Setup</span>
                 </a>
                 <ul class="sub-menu">

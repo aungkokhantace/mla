@@ -121,6 +121,17 @@
                     </div>
                     @endif
                 @endforeach -->
+
+                <!-- Bronze package -->
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <h3>Bronze Package</h3>
+                        <hr>
+                        <!-- <img class="sponsor-logo-frontend" src="/ExhibitorImages/yoma-bank-logo-mm.jpg"> -->
+                        <img class="sponsor-logo-frontend" src="/ExhibitorImages/yoma-bank-logo-eng.jpg">
+                    </div>
+                </div>
+                <!-- Bronze package -->
            <br>
 
         </div>

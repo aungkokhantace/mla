@@ -167,6 +167,17 @@
       </div>
     </div>
 
+    <!-- Bronze Package -->
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+          <h3>Bronze Package</h3>
+          <hr>
+          <!-- <img class="sponsor-logo-frontend" src="/ExhibitorImages/yoma-bank-logo-mm.jpg"> -->
+          <img class="sponsor-logo-frontend" src="/ExhibitorImages/yoma-bank-logo-eng.jpg">
+      </div>
+    </div>
+    <!-- Bronze Package -->
+
     </div>
     <!-- Footer -->
     </div>

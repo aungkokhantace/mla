@@ -42,7 +42,7 @@
                           <h3>{{$key}}</h3>
                           <hr>
                           <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/mbc_logo.jpg">
-                          <img class="sponsor-logo-frontend" src="/ExhibitorImages/lion.jpg">
+                          <!-- <img class="sponsor-logo-frontend" src="/ExhibitorImages/lion.jpg"> -->
 
                           <!-- append logos from database -->
                           @foreach($exhibitorGroup as $exhibitor)

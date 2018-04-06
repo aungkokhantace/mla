@@ -116,6 +116,23 @@
                   @endforeach
               </div>
             <!-- End Displaying Local Business Package     -->
+
+            <!-- Start Displaying Bronze Package     -->
+            @elseif($key == "Bronze Package")
+                <!-- Display four logos as default -->
+                <div class="col-md-6 col-lg-6">
+                    <h3>{{$key}}</h3>
+                    <hr>
+                    <!-- <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/yoma-bank-logo-mm.jpg"> -->
+                    <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/yoma-bank-logo-eng.jpg">
+
+                    <!-- append logos from database -->
+                    @foreach($exhibitorGroup as $exhibitor)
+                        <img class="sponsor-logo-frontend-large" src="{{$exhibitor->image}}">
+                    @endforeach
+                </div>
+              <!-- End Displaying Bronze Package  -->
+
           <!-- Display other packages as normal -->
           @else
               @if(isset($exhibitorGroup) && count($exhibitorGroup) > 0)
@@ -168,14 +185,14 @@
     </div>
 
     <!-- Bronze Package -->
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-6 col-lg-6">
           <h3>Bronze Package</h3>
           <hr>
-          <!-- <img class="sponsor-logo-frontend" src="/ExhibitorImages/yoma-bank-logo-mm.jpg"> -->
+          <img class="sponsor-logo-frontend" src="/ExhibitorImages/yoma-bank-logo-mm.jpg">
           <img class="sponsor-logo-frontend" src="/ExhibitorImages/yoma-bank-logo-eng.jpg">
       </div>
-    </div>
+    </div> -->
     <!-- Bronze Package -->
 
     </div>

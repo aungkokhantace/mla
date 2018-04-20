@@ -76,7 +76,8 @@
                                 <hr>
 
                                 @foreach($exhibitorGroup as $exhibitor)
-                                    <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}">
+                                    <!-- <img class="sponsor-logo-frontend" src="{{$exhibitor->image}}"> -->
+                                    <img class="sponsor-logo-frontend-large" src="{{$exhibitor->image}}">
                                 @endforeach
                             </div>
                         </div>

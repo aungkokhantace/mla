@@ -163,7 +163,8 @@
       <div class="col-md-6 col-lg-6">
           <h3>Printing Package</h3>
           <hr>
-          <img class="sponsor-logo-frontend" src="/ExhibitorImages/mcm_logo.jpg">
+          <!-- <img class="sponsor-logo-frontend" src="/ExhibitorImages/mcm_logo.jpg"> -->
+          <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/mcm_logo.jpg">
       </div>
     </div>
 
@@ -181,7 +182,7 @@
           <h3>Coffee and Tea Sponsor</h3>
           <hr>
           <!-- <img class="sponsor-logo-frontend" src="/ExhibitorImages/MargaYouthFoundation.jpg"> -->
-          <img class="sponsor-logo-frontend" src="/ExhibitorImages/marga.jpg">
+          <img class="sponsor-logo-frontend-large" src="/ExhibitorImages/marga.jpg">
       </div>
     </div>
 

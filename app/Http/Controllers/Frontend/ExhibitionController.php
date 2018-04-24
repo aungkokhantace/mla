@@ -227,31 +227,32 @@ class ExhibitionController extends Controller
                 $exhibitionExhibitor = ExhibitionExhibitor::find($id);
                 $email = $exhibitionExhibitor->email;
                 //start sending email to user
-                $template = "backend/exhibitioncanceluseremail/exhibitioncanceluseremail";
-                $subject = "Exhibition Cancel";
-                Utility::sendEmail($template, $email, $subject);
+                // $template = "backend/exhibitioncanceluseremail/exhibitioncanceluseremail";
+                // $subject = "Exhibition Cancel";
+                // Utility::sendEmail($template, $email, $subject);
                 //end sending email to user
 
                 //start sending email to admin
-                $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 2");
-                $adminEmailArr = array();
-                foreach ($adminEmailRaw as $eRaw) {
-                    array_push($adminEmailArr, $eRaw->email);
-                }
-
-                $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
-                foreach ($superadminEmailRaw as $superRaw) {
-                    array_push($adminEmailArr, $superRaw->email);
-                }
-                if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
-                    $template = "backend/exhibitioncanceladminemail/exhibitioncanceladminemail";
-                    $email = $adminEmailArr;
-                    $subject = "Exhibition Cancel";
-
-                    Utility::sendEmail($template, $email, $subject);
-                }
+                // $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 2");
+                // $adminEmailArr = array();
+                // foreach ($adminEmailRaw as $eRaw) {
+                //     array_push($adminEmailArr, $eRaw->email);
+                // }
+                //
+                // $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+                // foreach ($superadminEmailRaw as $superRaw) {
+                //     array_push($adminEmailArr, $superRaw->email);
+                // }
+                // if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+                //     $template = "backend/exhibitioncanceladminemail/exhibitioncanceladminemail";
+                //     $email = $adminEmailArr;
+                //     $subject = "Exhibition Cancel";
+                //
+                //     Utility::sendEmail($template, $email, $subject);
+                // }
                 //end sending email to admin
-                alert()->success('Cancellation email has been sent to user.')->persistent('OK');
+                // alert()->success('Cancellation email has been sent to user.')->persistent('OK');
+                alert()->success('Exhibitor has been cancelled!')->persistent('OK');
 
                 return redirect()->action('Frontend\ExhibitionController@all_exhibitor')->with('status', $status);
             }

@@ -257,32 +257,33 @@ class RegistrationController extends Controller
             $reg = ConferenceRegistration::find($id);
             $email = $reg->email;
 
-            //start sending email to user
-            $template = "backend/registrationcanceluseremail/registrationcanceluseremail";
-            $subject = "Registration Cancel";
-            Utility::sendEmail($template, $email, $subject);
-            //end sending email to user
+            // //start sending email to user
+            // $template = "backend/registrationcanceluseremail/registrationcanceluseremail";
+            // $subject = "Registration Cancel";
+            // Utility::sendEmail($template, $email, $subject);
+            // //end sending email to user
 
-            //start sending email to admin
-            $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 2");
-            $adminEmailArr = array();
-            foreach ($adminEmailRaw as $eRaw) {
-                array_push($adminEmailArr, $eRaw->email);
-            }
-
-            $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
-            foreach ($superadminEmailRaw as $superRaw) {
-                array_push($adminEmailArr, $superRaw->email);
-            }
-            if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
-                $template = "backend/registrationcanceladminemail/registrationcanceladminemail";
-                $email = $adminEmailArr;
-                $subject = "Registration Cancel";
-
-                Utility::sendEmail($template, $email, $subject);
-            }
-            //end sending email to admin
-            alert()->success('Cancellation email has been sent to user.')->persistent('OK');
+            // //start sending email to admin
+            // $adminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 2");
+            // $adminEmailArr = array();
+            // foreach ($adminEmailRaw as $eRaw) {
+            //     array_push($adminEmailArr, $eRaw->email);
+            // }
+            //
+            // $superadminEmailRaw = DB::select("SELECT * FROM event_emails WHERE deleted_at IS NULL AND type = 5");
+            // foreach ($superadminEmailRaw as $superRaw) {
+            //     array_push($adminEmailArr, $superRaw->email);
+            // }
+            // if (isset($adminEmailArr) && count($adminEmailArr) > 0) {
+            //     $template = "backend/registrationcanceladminemail/registrationcanceladminemail";
+            //     $email = $adminEmailArr;
+            //     $subject = "Registration Cancel";
+            //
+            //     Utility::sendEmail($template, $email, $subject);
+            // }
+            // //end sending email to admin
+            // alert()->success('Cancellation email has been sent to user.')->persistent('OK');
+            alert()->success('Registration has been cancelled!')->persistent('OK');
             return redirect()->action('Frontend\RegistrationController@all_conference_reg')->with('status',$status);
         }
     }

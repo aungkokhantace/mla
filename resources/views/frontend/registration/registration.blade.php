@@ -9,12 +9,12 @@
                 </div>
             @endif
             <div class="col-md-9 reg_fee_payment">
-
-                <h2>REGISTRATION >> CONFERENCE REGISTRATION FORM</h2>
+              <!-- Start online registration -->
+                <!-- <h2>REGISTRATION >> CONFERENCE REGISTRATION FORM</h2>
              <form class="form-horizontal call_for_paper" method="post" action="{{url('registration/store')}}" id="frm_registration">
                  {{csrf_field()}}
                 <fieldset>
-                <!-- Text input-->
+
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">First Name</label>
                   <div class="col-md-4">
@@ -23,7 +23,6 @@
                   </div>
                 </div>
 
-                <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Middle Name</label>
                   <div class="col-md-4">
@@ -32,7 +31,6 @@
                   </div>
                 </div>
 
-                <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Last Name</label>
                   <div class="col-md-4">
@@ -41,7 +39,6 @@
                   </div>
                 </div>
 
-                <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Organization</label>
                   <div class="col-md-4">
@@ -50,7 +47,6 @@
                   </div>
                 </div>
 
-                <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Email</label>
                   <div class="col-md-4">
@@ -59,7 +55,6 @@
                   </div>
                 </div>
 
-                <!-- Select Basic -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="selectbasic">Country</label>
                   <div class="col-md-4">
@@ -73,7 +68,6 @@
                   </div>
                 </div>
 
-                <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="title">Phone No</label>
                   <div class="col-md-4">
@@ -82,7 +76,6 @@
                   </div>
                 </div>
 
-                <!-- Select Basic -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="selectbasic">Registration Category</label>
                   <div class="col-md-4">
@@ -96,7 +89,6 @@
                   </div>
                 </div>
 
-                <!-- Text input-->
                 <div class="form-group membership-no">
                   <label class="col-md-4 control-label" for="title">Membership No</label>
                   <div class="col-md-4">
@@ -105,13 +97,11 @@
                   </div>
                 </div>
 
-                <!-- Select Basic -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="selectbasic">Payment Type</label>
                   <div class="col-md-4">
                     <select id="payment_type" name="payment_type" class="form-control">
                         <option value="" selected disabled>Select Payment Type</option>
-                      <!-- <option value="Cash">Cash</option> -->
                       <option value="Bank Transfer">Bank Transfer</option>
                       <option value="On-Site">On-Site</option>
                     </select>
@@ -119,7 +109,6 @@
                   </div>
                 </div>
 
-                <!-- Itinerary Route -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="itinerary_route">Itinerary Route</label>
                   <div class="col-md-4">
@@ -134,7 +123,6 @@
                   </div>
                 </div>
 
-                <!-- Food -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="food">Foods</label>
                   <div class="col-md-4">
@@ -147,17 +135,14 @@
                       <p class="text-danger" id="food">{{$errors->first('food')}}</p>
                   </div>
                 </div>
-                
-                <!-- spam alert -->
+
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="third_author"></label>
                     <div class="col-md-8">
                         <span class="red-text">*In case you don't receive auto-reply email, please check spam mail box.</span>
                     </div>
                 </div>
-                <!-- spam alert -->
 
-                 <!-- Button -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="submit"></label>
                   <div class="col-md-4">
@@ -201,7 +186,7 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
                 <p>Note: all bank transfer fees are covered by the applicant’s account and not to charge for the receiver account.</p>
 
                 <h2 id="eligible_banks">Eligible Transferring Banks</h2>
-                <!-- Start eligible banks -->
+
                 <div class="tg-wrap">
                     <table class="tg">
                         <colgroup>
@@ -410,7 +395,12 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
                         </tr>
                     </table>
                 </div>
-                <!-- End eligible banks -->
+                -->
+                <!-- End online registration -->
+
+                <!-- Start April 30 post -->
+                <h2>PAGE IS UNDER RE-CONSTRUCTION!!</h2>
+                <!-- End April 30 post -->
             </div>
         </div>
         <!-- /.row -->

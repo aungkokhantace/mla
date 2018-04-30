@@ -399,7 +399,59 @@ Transfer receipt shall be scanned and send to CONSAL XVII Secretariat.
                 <!-- End online registration -->
 
                 <!-- Start April 30 post -->
-                <h2>PAGE IS UNDER RE-CONSTRUCTION!!</h2>
+                <!-- <h2>PAGE IS UNDER RE-CONSTRUCTION!!</h2> -->
+                <h2>ညီလာခံတက္ေရာက္ရန္ မွတ္ပုံတင္ျခင္း</h2>
+                <p>ညီလာခံတက္ေရာက္ရန္ မွတ္ပုံမတင္ရေသးသူမ်ားသည္ ေနျပည္ေတာ္၊ ဒကၡိဏသီရိျမိဳ႕၊ ရာဇသဂၤဟလမ္းရွိ မဂၤလာသီရိဟိုတယ္တြင္ ၃၀-၄-၂၀၁၈ မွ ၂-၅-၂၀၁၈အထိ  မနက္ ၈း၀၀ မွ ည ၈း၀၀ အတြင္းမွတ္ပုံတင္ ႏိုင္ပါသည္။</p>
+
+                <p>CONSAL XVII တက္ေရာက္ရန္ မွတ္ပုံတင္ထားသူမ်ားအားလုံး ေနျပည္ေတာ္၊ ဒကၡိဏသီရိျမိဳ႕၊ ရာဇသဂၤဟလမ္းရွိ မဂၤလာသီရိဟိုတယ္တြင္ ညီလာခံတက္ေရာက္ခြင့္ ကတ္္ျပားမ်ားႏွင့္ စာရြက္စာတမ္းမ်ား ကို ၃၀-၄-၂၀၁၈ မွ ၂-၅-၂၀၁၈အထိ  မနက္ ၈း၀၀ မွ ည ၈း၀၀ အတြင္း လာေရာက္ ထုတ္ယူၾကပါရန္ အသိေပးအပ္ပါသည္။</p>
+
+                <h2>Conference Registration</h2>
+                <p>All on-site registration to attend CONSAL XVII can be done at Mingalar Thiri Hotel, Yaza  Thingaha Rd, Datkhina Thiri City, Hotel Zone-1, Nay Pyi Taw from April 30 2018 to 2 May 2018, 8:00 AM to 8:00 PM.</p>
+                <br>
+                <h5>Registration fees: </h5>
+
+                <table class="table table-bordered">
+                  <tr>
+                    <td></td>
+                    <td>Early Bird</td>
+                    <td>Standard</td>
+                    <td>Onsite</td>
+                  </tr>
+                  <tr>
+                    <td>International Delegate</td>
+                    <td>US$ 250</td>
+                    <td>US$ 300</td>
+                    <td>US$ 350</td>
+                  </tr>
+                  <tr>
+                    <td>Local Delegate(MLA Member)**</td>
+                    <td>20,000 MMK</td>
+                    <td></td>
+                    <td>30,000 MMK</td>
+                  </tr>
+                  <tr>
+                    <td>Local Delegate (Non MLA Member)</td>
+                    <td>30,000 MMK</td>
+                    <td></td>
+                    <td>40,000 MMK</td>
+                  </tr>
+                  <tr>
+                    <td>Student(Local)***</td>
+                    <td>15,000 MMK</td>
+                    <td></td>
+                    <td>20,000 MMK</td>
+                  </tr>
+                  <tr>
+                    <td>ONE DAY</td>
+                    <td>US$ 100</td>
+                    <td>US$ 100</td>
+                    <td>US$ 100</td>
+                  </tr>
+                </table>
+
+                <p>Contact Information-</p>
+                <p>Email: <a href="http://registration@consalxvii.org">registration@consalxvii.org</a></p>
+                <p>Tel: 95 67 418427; 418426</p>
                 <!-- End April 30 post -->
             </div>
         </div>

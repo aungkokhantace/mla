@@ -36,16 +36,14 @@
 
             <!-- Blog Categories Well -->
             <div class="home-right">
-                <div class="col-md-12 timer-align">
+                <!-- <div class="col-md-12 timer-align">
                     <div class="col-md-3 count_down" id="days">DAYS</div>
                     <div class="col-md-3 count_down" id="hours">HOURS</div>
                     <div class="col-md-3 count_down" id="minutes">MINUTES</div>
                     <div class="col-md-3 count_down" id="seconds">SECONDS</div>
-                </div>
-                <br><br><br>
-                <h2 class="home-header">
-                LATEST NEWS AND EVENTS
-                </h2>
+                </div> -->
+                <!-- <br><br><br> -->
+                <h2 class="home-header">LATEST NEWS AND EVENTS</h2>
                 <div class="row">
                     <div class="col-lg-12">
                         @if(isset($latestNews) && count($latestNews)>0)
